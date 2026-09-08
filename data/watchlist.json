@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "watch_count": 2,
+    "data_source": "mock"
+  },
+  "watchlist": [
+    {
+      "code": "002475",
+      "name": "立讯精密",
+      "added_date": "2026-09-01",
+      "added_price": 34.1,
+      "current_price": 32.7,
+      "price_change_since_added": -0.0411,
+      "ma20_at_added": 34.1,
+      "current_ma20_distance": -0.0411,
+      "volume_state": "正常量能",
+      "industry": "消费电子",
+      "industry_strength": -0.004,
+      "triggered_conditions": [
+        "回踩观察",
+        "缩量"
+      ],
+      "current_labels": [
+        "等待确认",
+        "MA20下方",
+        "趋势破坏",
+        "正常量能"
+      ]
+    },
+    {
+      "code": "300750",
+      "name": "宁德时代",
+      "added_date": "2026-09-04",
+      "added_price": 226.1,
+      "current_price": 224.9,
+      "price_change_since_added": -0.0053,
+      "ma20_at_added": 208.97,
+      "current_ma20_distance": 0.0762,
+      "volume_state": "缩量",
+      "industry": "电池",
+      "industry_strength": 0.018,
+      "triggered_conditions": [
+        "MA20上方",
+        "板块较强"
+      ],
+      "current_labels": [
+        "观察",
+        "MA20上方",
+        "缩量",
+        "弱于板块"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ma_windows": [5, 10, 20],
+  "ma20_near_distance_abs": 0.03,
+  "shrink_volume_ratio_5d_max": 0.75,
+  "pullback_change_pct_min": -0.03,
+  "pullback_change_pct_max": 0.01,
+  "recent_gain_20d_overheat": 0.25,
+  "abnormal_volume_ratio_5d_min": 1.8,
+  "industry_strength_threshold": 0.01,
+  "trend_break_ma20_distance": -0.02
+}
