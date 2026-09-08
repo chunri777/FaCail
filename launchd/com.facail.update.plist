@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.facail.update</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/lq/Documents/Codex/FaCail/scripts/run_update.py</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/lq/Documents/Codex/FaCail</string>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict>
+      <key>Hour</key>
+      <integer>9</integer>
+      <key>Minute</key>
+      <integer>20</integer>
+    </dict>
+    <dict>
+      <key>Hour</key>
+      <integer>11</integer>
+      <key>Minute</key>
+      <integer>35</integer>
+    </dict>
+    <dict>
+      <key>Hour</key>
+      <integer>15</integer>
+      <key>Minute</key>
+      <integer>10</integer>
+    </dict>
+  </array>
+  <key>RunAtLoad</key>
+  <false/>
+  <key>StandardOutPath</key>
+  <string>/Users/lq/Documents/Codex/FaCail/logs/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/lq/Documents/Codex/FaCail/logs/launchd.err.log</string>
+</dict>
+</plist>

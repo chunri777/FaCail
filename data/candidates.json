@@ -1292,5 +1292,11 @@
       "satisfied_condition_count": 1
     }
   ],
-  "data_source": "mock"
+  "data_source": {
+    "id": "mock",
+    "label": "Mock",
+    "stage": "postmarket",
+    "generated_at": "2026-09-08T19:06:42+08:00",
+    "missing_data": []
+  }
 }

@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import json
-from datetime import date
+import os
+from argparse import ArgumentParser
+from datetime import date, datetime
 from pathlib import Path
 from statistics import mean
 from typing import Any
+from zoneinfo import ZoneInfo
 
-from providers.mock_provider import MockProvider
+from providers import ProviderUnavailable, create_provider
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +27,30 @@ def moving_average(values: list[float], window: int) -> float | None:
 
 def rounded(value: float | None, digits: int = 4) -> float | None:
     return round(value, digits) if value is not None else None
+
+
+def detect_trade_stage(now=None) -> str:
+    current = now or datetime_now()
+    minutes = current.hour * 60 + current.minute
+    if minutes < 9 * 60 + 30:
+        return "premarket"
+    if minutes <= 15 * 60:
+        return "intraday"
+    return "postmarket"
+
+
+def datetime_now():
+    return datetime.now(ZoneInfo("Asia/Shanghai"))
+
+
+def source_meta(provider, stage: str, missing: list[str] | None = None) -> dict[str, Any]:
+    return {
+        "id": provider.id,
+        "label": provider.label,
+        "stage": stage,
+        "generated_at": datetime_now().isoformat(timespec="seconds"),
+        "missing_data": missing or [],
+    }
 
 
 def sector_status(sector: dict[str, Any], config: dict[str, Any]) -> str:
@@ -241,7 +268,14 @@ def candidate_record(stock: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def build_market(raw: dict[str, Any], sectors: list[dict[str, Any]], config: dict[str, Any]) -> dict[str, Any]:
+def build_market(
+    raw: dict[str, Any],
+    sectors: list[dict[str, Any]],
+    config: dict[str, Any],
+    provider,
+    stage: str,
+    missing: list[str] | None = None,
+) -> dict[str, Any]:
     market_cfg = config["market"]
     index_average = mean(item["change_pct"] for item in raw["indices"])
     labels = []
@@ -259,11 +293,12 @@ def build_market(raw: dict[str, Any], sectors: list[dict[str, Any]], config: dic
         labels.append("放量")
     return {
         **raw,
+        "default_stage": stage,
         "status_labels": labels,
         "advance_ratio": rounded(raw["advance_count"] / (raw["advance_count"] + raw["decline_count"])),
         "core_sectors": sectors[:3],
-        "data_source": {"id": "mock", "label": "Mock"},
-        "missing_data": [],
+        "data_source": source_meta(provider, stage, missing),
+        "missing_data": missing or [],
     }
 
 
@@ -285,6 +320,9 @@ def build_holdings(
     positions: list[dict[str, Any]],
     intraday_raw: list[dict[str, Any]],
     config: dict[str, Any],
+    provider,
+    stage: str,
+    missing: list[str] | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     by_code = {stock["code"]: stock for stock in stocks}
     intraday_by_code = {item["code"]: item for item in intraday_raw}
@@ -445,19 +483,20 @@ def build_holdings(
         for item in rows
         if item["attention_level"] == "需要关注"
     ]
-    holdings_payload = {"summary": summary, "anomalies": anomalies, "premarket": rows, "holdings": rows, "data_source": "mock"}
-    intraday_payload = {"summary": {"trade_date": summary["trade_date"], "holding_count": len(live_rows), "stage": "intraday"}, "holdings": live_rows, "data_source": "mock"}
+    data_source = source_meta(provider, stage, missing)
+    holdings_payload = {"summary": summary, "anomalies": anomalies, "premarket": rows, "holdings": rows, "data_source": data_source}
+    intraday_payload = {"summary": {"trade_date": summary["trade_date"], "holding_count": len(live_rows), "stage": stage}, "holdings": live_rows, "data_source": data_source}
     review_text = (
         f"今日组合 {portfolio_change * 100:+.2f}%。{len(rows)} 只持仓中，"
         f"{summary['above_ma20_count']} 只位于 MA20 上方，{summary['weaker_than_sector_count']} 只弱于所属板块。"
         f"缩量回踩 {summary['shrink_pullback_count']} 只，放量异常 {summary['abnormal_volume_count']} 只。"
         "整体继续以结构变化和板块同步性为观察重点。"
     )
-    review_payload = {"summary": {**summary, "narrative": review_text}, "holdings": review_rows, "data_source": "mock"}
+    review_payload = {"summary": {**summary, "narrative": review_text}, "holdings": review_rows, "data_source": data_source}
     return holdings_payload, intraday_payload, review_payload
 
 
-def build_candidates(stocks: list[dict[str, Any]], sectors: list[dict[str, Any]]) -> dict[str, Any]:
+def build_candidates(stocks: list[dict[str, Any]], sectors: list[dict[str, Any]], provider, stage: str, missing: list[str] | None = None) -> dict[str, Any]:
     records = [candidate_record(stock) for stock in stocks]
     core = [item for item in records if item["strength_relation"] != "板块弱 + 个股弱"]
     core.sort(key=lambda item: (item["priority"], item["industry_rank"], -item["satisfied_condition_count"]))
@@ -474,11 +513,18 @@ def build_candidates(stocks: list[dict[str, Any]], sectors: list[dict[str, Any]]
         "pullback_watch": pullback_watch,
         "waiting": [item for item in core if item["selection_status"] != "条件已触发"],
         "all": core,
-        "data_source": "mock",
+        "data_source": source_meta(provider, stage, missing),
     }
 
 
-def build_watchlist(raw_stocks: list[dict[str, Any]], stocks: list[dict[str, Any]], watch_items: list[dict[str, Any]]) -> dict[str, Any]:
+def build_watchlist(
+    raw_stocks: list[dict[str, Any]],
+    stocks: list[dict[str, Any]],
+    watch_items: list[dict[str, Any]],
+    provider,
+    stage: str,
+    missing: list[str] | None = None,
+) -> dict[str, Any]:
     raw_by_code = {stock["code"]: stock for stock in raw_stocks}
     by_code = {stock["code"]: stock for stock in stocks}
     records = []
@@ -510,10 +556,10 @@ def build_watchlist(raw_stocks: list[dict[str, Any]], stocks: list[dict[str, Any
                 "current_labels": stock["labels"],
             }
         )
-    return {"summary": {"watch_count": len(records), "data_source": "mock"}, "watchlist": records}
+    return {"summary": {"watch_count": len(records), "data_source": source_meta(provider, stage, missing)}, "watchlist": records}
 
 
-def build_today(market: dict[str, Any], holdings: dict[str, Any], candidates: dict[str, Any]) -> dict[str, Any]:
+def build_today(market: dict[str, Any], holdings: dict[str, Any], candidates: dict[str, Any], provider, stage: str, missing: list[str] | None = None) -> dict[str, Any]:
     summary = holdings["summary"]
     attention = [
         f"{summary['below_ma20_count']} 只持仓位于 MA20 下方",
@@ -526,8 +572,8 @@ def build_today(market: dict[str, Any], holdings: dict[str, Any], candidates: di
             "trade_date": market["trade_date"],
             "candidate_count": candidates["summary"]["candidate_count"],
             "market_status": market["status_labels"],
-            "data_source": "mock",
-            "missing_data": [],
+            "data_source": source_meta(provider, stage, missing),
+            "missing_data": missing or [],
         },
         "attention": attention,
         "top_candidates": candidates["all"][:5],
@@ -540,29 +586,68 @@ def write_json(name: str, payload: dict[str, Any]) -> None:
     (DATA_DIR / name).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def parse_args() -> Any:
+    parser = ArgumentParser(description="Generate FaCail JSON data.")
+    parser.add_argument("--provider", choices=["mock", "ths"], default=os.getenv("FACAIL_PROVIDER", "mock"))
+    parser.add_argument("--stage", choices=["auto", "premarket", "intraday", "postmarket"], default=os.getenv("FACAIL_STAGE", "auto"))
+    parser.add_argument("--allow-fallback", action="store_true", help="fall back to MockProvider when THS is unavailable")
+    return parser.parse_args()
+
+
+def write_ths_status(provider) -> None:
+    DATA_DIR.mkdir(exist_ok=True)
+    if hasattr(provider, "check_access"):
+        write_json("ths_status.json", provider.check_access())
+
+
 def main() -> None:
+    args = parse_args()
     config = load_config()
-    provider = MockProvider()
-    raw_stocks = provider.get_daily_bars()
-    sectors = build_sectors(provider.get_sectors(), config)
+    stage = detect_trade_stage() if args.stage == "auto" else args.stage
+    provider = create_provider(args.provider)
+    missing: list[str] = []
+    if provider.id == "ths":
+        write_ths_status(provider)
+    try:
+        raw_stocks = provider.get_daily_bars()
+        raw_sectors = provider.get_sectors()
+        raw_market = provider.get_market_snapshot()
+        raw_holdings = provider.get_holdings()
+        raw_intraday = provider.get_intraday_snapshots()
+        raw_watchlist = provider.get_watchlist()
+    except ProviderUnavailable as exc:
+        if not args.allow_fallback:
+            print(f"THS provider unavailable: {exc}")
+            for item in exc.missing:
+                print(f"- {item}")
+            raise SystemExit(2) from exc
+        missing = [str(exc), *exc.missing]
+        provider = create_provider("mock")
+        raw_stocks = provider.get_daily_bars()
+        raw_sectors = provider.get_sectors()
+        raw_market = provider.get_market_snapshot()
+        raw_holdings = provider.get_holdings()
+        raw_intraday = provider.get_intraday_snapshots()
+        raw_watchlist = provider.get_watchlist()
+    sectors = build_sectors(raw_sectors, config)
     sector_by_name = {sector["name"]: sector for sector in sectors}
     stocks = [enrich_stock(stock, sector_by_name[stock["industry"]], config) for stock in raw_stocks]
-    market = build_market(provider.get_market_snapshot(), sectors, config)
-    candidates = build_candidates(stocks, sectors)
-    holdings, intraday, review = build_holdings(stocks, provider.get_holdings(), provider.get_intraday_snapshots(), config)
-    watchlist = build_watchlist(raw_stocks, stocks, provider.get_watchlist())
-    today = build_today(market, holdings, candidates)
+    market = build_market(raw_market, sectors, config, provider, stage, missing)
+    candidates = build_candidates(stocks, sectors, provider, stage, missing)
+    holdings, intraday, review = build_holdings(stocks, raw_holdings, raw_intraday, config, provider, stage, missing)
+    watchlist = build_watchlist(raw_stocks, stocks, raw_watchlist, provider, stage, missing)
+    today = build_today(market, holdings, candidates, provider, stage, missing)
 
     DATA_DIR.mkdir(exist_ok=True)
     write_json("market.json", market)
-    write_json("sectors.json", {"summary": {"sector_count": len(sectors)}, "sectors": sectors, "data_source": "mock"})
+    write_json("sectors.json", {"summary": {"sector_count": len(sectors)}, "sectors": sectors, "data_source": source_meta(provider, stage, missing)})
     write_json("candidates.json", candidates)
     write_json("holdings.json", holdings)
     write_json("intraday.json", intraday)
     write_json("review.json", review)
     write_json("watchlist.json", watchlist)
     write_json("today.json", today)
-    print("Generated FaCail phase-two JSON from MockProvider")
+    print(f"Generated FaCail JSON from {provider.label} provider for {stage}")
 
 
 if __name__ == "__main__":

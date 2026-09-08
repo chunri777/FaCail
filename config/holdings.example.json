@@ -1,0 +1,22 @@
+{
+  "holdings": [
+    {
+      "code": "600519",
+      "shares": 100,
+      "cost": 1498.0
+    },
+    {
+      "code": "000333",
+      "shares": 1200,
+      "cost": 64.8
+    }
+  ],
+  "watchlist": [
+    {
+      "code": "002475",
+      "added_date": "2026-09-01",
+      "added_price": 34.1,
+      "triggered_conditions": ["回踩观察", "缩量"]
+    }
+  ]
+}

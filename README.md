@@ -16,7 +16,7 @@ The development stage switch in the page header simulates pre-market, intraday, 
 ## Architecture
 
 ```text
-MockProvider / future ThsProvider
+MockProvider / ThsProvider
   -> Python indicators and rule engine
   -> JSON data layer
   -> GitHub Pages frontend
@@ -51,6 +51,69 @@ Open `http://localhost:8080/frontend/`.
 ## Providers
 
 - `MockProvider`: deterministic data for product and rule verification.
-- `ThsProvider`: reserved adapter for Tonghuashun QuantAPI or a local bridge. It is intentionally not connected in this phase.
+- `ThsProvider`: adapter for Tonghuashun QuantAPI/local bridge. It reads credentials only from environment variables or the local bridge, never from committed files.
+
+Switch providers with either:
+
+```bash
+FACAIL_PROVIDER=mock python3 scripts/generate_data.py
+FACAIL_PROVIDER=ths python3 scripts/generate_data.py
+python3 scripts/generate_data.py --provider ths --stage auto
+```
+
+Check THS access before generating real data:
+
+```bash
+python3 scripts/check_ths_access.py
+```
+
+Current supported local bridge endpoints:
+
+```text
+THS_LOCAL_API_URL=http://127.0.0.1:5000
+
+GET /health
+GET /market
+GET /sectors
+GET /daily-bars?codes=600519,000333
+GET /intraday?codes=600519,000333
+GET /holdings
+GET /watchlist
+```
+
+For provider-contract testing without THS authorization:
+
+```bash
+python3 scripts/dev_ths_bridge.py
+THS_LOCAL_API_URL=http://127.0.0.1:5011 python3 scripts/generate_data.py --provider ths
+```
+
+This development bridge reuses Mock data and is only for verifying the local API shape.
+
+If using the Tonghuashun SDK directly, install the SDK locally and provide one of:
+
+```text
+THS_TOKEN / THS_API_TOKEN / IFIND_TOKEN
+THS_USERNAME + THS_PASSWORD
+IFIND_USER + IFIND_PASSWORD
+```
+
+Do not commit tokens, passwords, or real account files.
+
+## Personal Holdings
+
+Copy `config/holdings.example.json` to `config/holdings.local.json`, then edit your real holdings and watchlist locally. `holdings.local.json` is ignored by Git.
+
+You can also point to another private file:
+
+```bash
+FACAIL_HOLDINGS_FILE=/path/to/holdings.json python3 scripts/generate_data.py --provider ths
+```
+
+## Local Schedule
+
+`scripts/run_update.py` runs one THS update and writes logs under `logs/`.
+
+`launchd/com.facail.update.plist` is a manual macOS `launchd` template for 09:20, 11:35, and 15:10 updates. It is not installed automatically and `RunAtLoad` is disabled.
 
 Missing provider fields must remain explicitly missing. AI may summarize structured results, but it must not invent or calculate market values.

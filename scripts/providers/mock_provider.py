@@ -1,9 +1,22 @@
 from __future__ import annotations
 
+import json
+import os
 from datetime import date, timedelta
+from pathlib import Path
 from typing import Any
 
 from .base_provider import MarketDataProvider
+
+ROOT = Path(__file__).resolve().parents[2]
+LOCAL_HOLDINGS_PATH = ROOT / "config" / "holdings.local.json"
+
+
+def load_local_user_config() -> dict[str, Any]:
+    path = Path(os.getenv("FACAIL_HOLDINGS_FILE", LOCAL_HOLDINGS_PATH))
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def _series(
@@ -47,6 +60,9 @@ def _series(
 
 class MockProvider(MarketDataProvider):
     """Deterministic mock data for local development and UI review."""
+
+    id = "mock"
+    label = "Mock"
 
     def get_market_snapshot(self) -> dict[str, Any]:
         return {
@@ -379,6 +395,9 @@ class MockProvider(MarketDataProvider):
         ]
 
     def get_holdings(self) -> list[dict[str, Any]]:
+        local = load_local_user_config().get("holdings")
+        if local:
+            return local
         return [
             {"code": "600519", "shares": 100, "cost": 1498.0},
             {"code": "000333", "shares": 1200, "cost": 64.8},
@@ -386,6 +405,9 @@ class MockProvider(MarketDataProvider):
         ]
 
     def get_watchlist(self) -> list[dict[str, Any]]:
+        local = load_local_user_config().get("watchlist")
+        if local:
+            return local
         return [
             {
                 "code": "002475",

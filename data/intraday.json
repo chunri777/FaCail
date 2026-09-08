@@ -2,7 +2,7 @@
   "summary": {
     "trade_date": "2026-09-08",
     "holding_count": 3,
-    "stage": "intraday"
+    "stage": "postmarket"
   },
   "holdings": [
     {
@@ -99,5 +99,11 @@
       "attention_score": 60
     }
   ],
-  "data_source": "mock"
+  "data_source": {
+    "id": "mock",
+    "label": "Mock",
+    "stage": "postmarket",
+    "generated_at": "2026-09-08T19:06:42+08:00",
+    "missing_data": []
+  }
 }

@@ -38,6 +38,8 @@ const amount = (value) => {
 
 const changeClass = (value) => value > 0 ? "up" : value < 0 ? "down" : "flat";
 const statusClass = (value) => value === "已满足" ? "met" : value === "接近满足" ? "near" : "";
+const sourceLabel = () => state.market?.data_source?.label || state.market?.data_source || "--";
+const sourceTime = () => state.market?.data_source?.generated_at?.slice(11, 16) || "--";
 
 const pills = (items = []) => `
   <div class="pills">${items.map((item) => `<span>${item}</span>`).join("")}</div>
@@ -198,7 +200,7 @@ function renderPremarket() {
 function renderIntraday() {
   document.querySelector("#intraday").innerHTML = `
     ${holdingTabs("intraday")}
-    <div class="phase-note live"><strong>盘中 Mock 快照 · 10:36</strong><span>异常状态置顶</span></div>
+    <div class="phase-note live"><strong>盘中${sourceLabel()}快照 · ${sourceTime()}</strong><span>异常状态置顶</span></div>
     <div class="holding-list">
       ${state.intraday.holdings.map((stock) => `
         <article class="holding-row">

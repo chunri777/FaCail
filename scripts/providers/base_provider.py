@@ -4,8 +4,19 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 
+class ProviderUnavailable(RuntimeError):
+    """Raised when a real provider is configured but not available locally."""
+
+    def __init__(self, message: str, missing: list[str] | None = None) -> None:
+        super().__init__(message)
+        self.missing = missing or []
+
+
 class MarketDataProvider(ABC):
     """Interface for swappable FaCail market data providers."""
+
+    id = "base"
+    label = "Base"
 
     @abstractmethod
     def get_daily_bars(self) -> list[dict[str, Any]]:
