@@ -11,6 +11,15 @@ class ThsProvider(MarketDataProvider):
     def get_daily_bars(self) -> list[dict[str, Any]]:
         raise NotImplementedError("THS provider is reserved for a later integration.")
 
+    def get_market_snapshot(self) -> dict[str, Any]:
+        raise NotImplementedError("THS market snapshot is reserved for a later integration.")
+
+    def get_sectors(self) -> list[dict[str, Any]]:
+        raise NotImplementedError("THS sector data is reserved for a later integration.")
+
+    def get_intraday_snapshots(self) -> list[dict[str, Any]]:
+        raise NotImplementedError("THS intraday data is reserved for a later integration.")
+
     def get_holdings(self) -> list[dict[str, Any]]:
         raise NotImplementedError("THS provider is reserved for a later integration.")
 

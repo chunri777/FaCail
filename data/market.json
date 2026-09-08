@@ -1,0 +1,111 @@
+{
+  "trade_date": "2026-09-08",
+  "default_stage": "intraday",
+  "stage_options": [
+    {
+      "id": "premarket",
+      "label": "盘前",
+      "time": "08:45"
+    },
+    {
+      "id": "intraday",
+      "label": "盘中",
+      "time": "10:36"
+    },
+    {
+      "id": "postmarket",
+      "label": "已收盘",
+      "time": "15:30"
+    }
+  ],
+  "indices": [
+    {
+      "code": "000001.SH",
+      "name": "上证",
+      "value": 3286.42,
+      "change_pct": 0.0062
+    },
+    {
+      "code": "399006.SZ",
+      "name": "创业板",
+      "value": 2198.16,
+      "change_pct": -0.0038
+    },
+    {
+      "code": "000300.SH",
+      "name": "沪深300",
+      "value": 3874.51,
+      "change_pct": 0.0046
+    }
+  ],
+  "turnover": 842600000000,
+  "turnover_change": 0.126,
+  "advance_count": 2974,
+  "decline_count": 2068,
+  "flat_count": 151,
+  "limit_up_count": 58,
+  "market_amplitude": 0.018,
+  "status_labels": [
+    "中性",
+    "放量"
+  ],
+  "advance_ratio": 0.5898,
+  "core_sectors": [
+    {
+      "name": "贵金属",
+      "return_pct": 0.026,
+      "return_5d": 0.083,
+      "return_20d": 0.226,
+      "advance_ratio": 0.76,
+      "limit_up_count": 2,
+      "turnover_change": 0.19,
+      "turnover_5d_change": 0.27,
+      "ma20_above": true,
+      "rank": 2,
+      "rank_total": 124,
+      "rank_percentile": 0.0161,
+      "ma20_status": "MA20上方",
+      "status": "高位过热",
+      "is_strong": true
+    },
+    {
+      "name": "电池",
+      "return_pct": 0.018,
+      "return_5d": 0.064,
+      "return_20d": 0.112,
+      "advance_ratio": 0.71,
+      "limit_up_count": 3,
+      "turnover_change": 0.24,
+      "turnover_5d_change": 0.31,
+      "ma20_above": true,
+      "rank": 4,
+      "rank_total": 124,
+      "rank_percentile": 0.0323,
+      "ma20_status": "MA20上方",
+      "status": "持续强势",
+      "is_strong": true
+    },
+    {
+      "name": "白酒",
+      "return_pct": 0.008,
+      "return_5d": 0.025,
+      "return_20d": 0.041,
+      "advance_ratio": 0.62,
+      "limit_up_count": 1,
+      "turnover_change": 0.12,
+      "turnover_5d_change": 0.12,
+      "ma20_above": true,
+      "rank": 12,
+      "rank_total": 124,
+      "rank_percentile": 0.0968,
+      "ma20_status": "MA20上方",
+      "status": "持续强势",
+      "is_strong": true
+    }
+  ],
+  "data_source": {
+    "id": "mock",
+    "label": "Mock"
+  },
+  "missing_data": []
+}

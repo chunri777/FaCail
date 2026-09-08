@@ -1,11 +1,59 @@
 {
   "ma_windows": [5, 10, 20],
   "ma20_near_distance_abs": 0.03,
-  "shrink_volume_ratio_5d_max": 0.75,
-  "pullback_change_pct_min": -0.03,
-  "pullback_change_pct_max": 0.01,
+  "trend_break_ma20_distance": -0.02,
   "recent_gain_20d_overheat": 0.25,
-  "abnormal_volume_ratio_5d_min": 1.8,
   "industry_strength_threshold": 0.01,
-  "trend_break_ma20_distance": -0.02
+  "abnormal_volume_ratio_5d_min": 1.8,
+  "market": {
+    "strong_index_average_min": 0.006,
+    "weak_index_average_max": -0.006,
+    "high_volatility_amplitude_min": 0.02,
+    "shrinking_turnover_change_max": -0.08,
+    "expanding_turnover_change_min": 0.1
+  },
+  "sector": {
+    "universe_size": 124,
+    "strong_rank_percentile_max": 0.2,
+    "strong_advance_ratio_min": 0.6,
+    "strong_5d_return_min": 0.02,
+    "turnover_expansion_min": 0.1,
+    "overheat_20d_return_min": 0.2,
+    "weak_5d_return_max": -0.01
+  },
+  "buy_conditions": {
+    "shrink_pullback": {
+      "ma20_distance_min": -0.01,
+      "ma20_distance_max": 0.02,
+      "daily_change_min": -0.03,
+      "daily_change_max": 0.01,
+      "volume_ratio_5d_max": 0.75,
+      "key_low_break_tolerance": -0.01
+    },
+    "volume_breakout": {
+      "volume_ratio_5d_min": 1.5,
+      "ma20_distance_max": 0.12,
+      "breakout_tolerance": 0.0
+    },
+    "strong_sector_pullback": {
+      "sector_rank_percentile_max": 0.2,
+      "sector_5d_return_min": 0.0,
+      "ma_distance_abs_max": 0.025,
+      "volume_ratio_5d_max": 0.9
+    }
+  },
+  "intraday": {
+    "high_volatility_amplitude_min": 0.05,
+    "volume_expansion_ratio_min": 1.5,
+    "near_level_distance_abs": 0.012,
+    "rush_fade_from_high_min": 0.025,
+    "bottom_rebound_from_low_min": 0.025
+  },
+  "attention_priority": {
+    "trend_break": 100,
+    "abnormal_volume": 80,
+    "weaker_than_sector": 60,
+    "overheat": 50,
+    "normal": 10
+  }
 }

@@ -1,123 +1,449 @@
 {
   "summary": {
-    "trade_date": "2026-08-31",
+    "trade_date": "2026-09-08",
     "holding_count": 3,
     "portfolio_change_pct": -0.0058,
     "total_market_value": 295150.0,
-    "stronger_than_industry_count": 0,
-    "weaker_than_industry_count": 2,
+    "stronger_than_sector_count": 0,
+    "weaker_than_sector_count": 2,
     "above_ma20_count": 1,
     "below_ma20_count": 2,
     "shrink_pullback_count": 0,
     "abnormal_volume_count": 0,
-    "review": "今日持仓主要关注 MA20 位置、相对板块强弱和量能变化；所有结论来自 Mock 数据计算结果。"
+    "anomaly_count": 3
   },
-  "holdings": [
-    {
-      "code": "600519",
-      "name": "贵州茅台",
-      "date": "2026-08-31",
-      "close": 1532.5,
-      "change_pct": -0.0023,
-      "high": 1554.43,
-      "low": 1514.11,
-      "amplitude": 0.0263,
-      "volume": 21400,
-      "avg_volume_5d": 24740,
-      "volume_ratio_5d": 0.865,
-      "ma5": 1538.1,
-      "ma10": 1548.75,
-      "ma20": 1553.1,
-      "ma20_distance": -0.0133,
-      "recent_gain_20d": 0.0052,
-      "industry": "白酒",
-      "industry_return": 0.008,
-      "industry_rank": 12,
-      "limit_up_count": 1,
-      "advance_ratio": 0.58,
-      "relative_industry_strength": -0.0103,
-      "labels": [
-        "等待确认",
-        "MA20下方",
-        "正常量能",
-        "弱于板块"
-      ],
-      "is_pullback_candidate": false,
-      "shares": 100,
-      "cost": 1498.0,
-      "market_value": 153250.0,
-      "position_return": 0.023
-    },
+  "anomalies": [
     {
       "code": "000333",
       "name": "美的集团",
-      "date": "2026-08-31",
+      "industry": "家电",
+      "labels": [
+        "MA20下方",
+        "趋势破坏"
+      ]
+    },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "industry": "白酒",
+      "labels": [
+        "MA20下方",
+        "弱于板块"
+      ]
+    },
+    {
+      "code": "601899",
+      "name": "紫金矿业",
+      "industry": "贵金属",
+      "labels": [
+        "弱于板块",
+        "过热"
+      ]
+    }
+  ],
+  "premarket": [
+    {
+      "code": "000333",
+      "name": "美的集团",
+      "date": "2026-09-08",
       "close": 66.5,
+      "previous_close": 66.4,
       "change_pct": 0.0015,
+      "open": 66.53,
       "high": 67.3,
       "low": 65.6,
       "amplitude": 0.0256,
       "volume": 486000,
-      "avg_volume_5d": 547600,
+      "volume_ma5": 547600,
       "volume_ratio_5d": 0.8875,
       "ma5": 66.74,
       "ma10": 67.59,
       "ma20": 68.16,
       "ma20_distance": -0.0244,
       "recent_gain_20d": 0.0015,
+      "previous_high": 71.24,
+      "recent_support": 65.6,
       "industry": "家电",
       "industry_return": 0.003,
       "industry_rank": 24,
       "limit_up_count": 0,
       "advance_ratio": 0.52,
-      "relative_industry_strength": -0.0015,
+      "relative_sector_strength": -0.0015,
       "labels": [
-        "等待确认",
         "MA20下方",
         "趋势破坏",
         "正常量能"
       ],
-      "is_pullback_candidate": false,
       "shares": 1200,
       "cost": 64.8,
       "market_value": 79800.0,
-      "position_return": 0.0262
+      "position_return": 0.0262,
+      "yesterday_volume_state": "正常量能",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 65.6
+        },
+        {
+          "label": "MA20",
+          "value": 68.16
+        },
+        {
+          "label": "昨日低点",
+          "value": 65.6
+        },
+        {
+          "label": "前高",
+          "value": 71.24
+        },
+        {
+          "label": "压力位",
+          "value": 71.24
+        }
+      ],
+      "conditional_plan": [
+        "若回踩 MA20 附近且成交量继续缩小，可继续观察承接。",
+        "若量能放大且所属板块同步转弱，风险状态将进一步上升。",
+        "若放量越过近期前高 71.24，同时板块保持强势，可确认趋势是否延续。"
+      ],
+      "attention_score": 100,
+      "attention_level": "需要关注"
+    },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "date": "2026-09-08",
+      "close": 1532.5,
+      "previous_close": 1536.0,
+      "change_pct": -0.0023,
+      "open": 1539.07,
+      "high": 1554.43,
+      "low": 1514.11,
+      "amplitude": 0.0263,
+      "volume": 21400,
+      "volume_ma5": 24740,
+      "volume_ratio_5d": 0.865,
+      "ma5": 1538.1,
+      "ma10": 1548.75,
+      "ma20": 1553.1,
+      "ma20_distance": -0.0133,
+      "recent_gain_20d": 0.0052,
+      "previous_high": 1603.01,
+      "recent_support": 1517.57,
+      "industry": "白酒",
+      "industry_return": 0.008,
+      "industry_rank": 12,
+      "limit_up_count": 1,
+      "advance_ratio": 0.62,
+      "relative_sector_strength": -0.0103,
+      "labels": [
+        "MA20下方",
+        "正常量能",
+        "弱于板块"
+      ],
+      "shares": 100,
+      "cost": 1498.0,
+      "market_value": 153250.0,
+      "position_return": 0.023,
+      "yesterday_volume_state": "正常量能",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 1517.57
+        },
+        {
+          "label": "MA20",
+          "value": 1553.1
+        },
+        {
+          "label": "昨日低点",
+          "value": 1514.11
+        },
+        {
+          "label": "前高",
+          "value": 1603.01
+        },
+        {
+          "label": "压力位",
+          "value": 1603.01
+        }
+      ],
+      "conditional_plan": [
+        "若回踩 MA20 附近且成交量继续缩小，可继续观察承接。",
+        "若量能放大且所属板块同步转弱，风险状态将进一步上升。",
+        "若放量越过近期前高 1603.01，同时板块保持强势，可确认趋势是否延续。"
+      ],
+      "attention_score": 60,
+      "attention_level": "需要关注"
     },
     {
       "code": "601899",
       "name": "紫金矿业",
-      "date": "2026-08-31",
+      "date": "2026-09-08",
       "close": 20.7,
+      "previous_close": 21.2,
       "change_pct": -0.0236,
+      "open": 21.24,
       "high": 21.45,
       "low": 20.45,
       "amplitude": 0.0472,
       "volume": 7050000,
-      "avg_volume_5d": 7512000,
+      "volume_ma5": 7512000,
       "volume_ratio_5d": 0.9385,
       "ma5": 20.98,
       "ma10": 19.94,
       "ma20": 17.955,
       "ma20_distance": 0.1529,
       "recent_gain_20d": 0.4476,
+      "previous_high": 21.86,
+      "recent_support": 17.29,
       "industry": "贵金属",
       "industry_return": 0.026,
       "industry_rank": 2,
       "limit_up_count": 2,
-      "advance_ratio": 0.71,
-      "relative_industry_strength": -0.0496,
+      "advance_ratio": 0.76,
+      "relative_sector_strength": -0.0496,
       "labels": [
-        "等待确认",
         "MA20上方",
         "正常量能",
         "弱于板块",
         "过热"
       ],
-      "is_pullback_candidate": false,
       "shares": 3000,
       "cost": 18.6,
       "market_value": 62100.0,
-      "position_return": 0.1129
+      "position_return": 0.1129,
+      "yesterday_volume_state": "正常量能",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 17.29
+        },
+        {
+          "label": "MA20",
+          "value": 17.955
+        },
+        {
+          "label": "昨日低点",
+          "value": 20.45
+        },
+        {
+          "label": "前高",
+          "value": 21.86
+        },
+        {
+          "label": "压力位",
+          "value": 21.86
+        }
+      ],
+      "conditional_plan": [
+        "若放量越过近期前高 21.86，同时板块保持强势，可确认趋势是否延续。"
+      ],
+      "attention_score": 60,
+      "attention_level": "需要关注"
     }
-  ]
+  ],
+  "holdings": [
+    {
+      "code": "000333",
+      "name": "美的集团",
+      "date": "2026-09-08",
+      "close": 66.5,
+      "previous_close": 66.4,
+      "change_pct": 0.0015,
+      "open": 66.53,
+      "high": 67.3,
+      "low": 65.6,
+      "amplitude": 0.0256,
+      "volume": 486000,
+      "volume_ma5": 547600,
+      "volume_ratio_5d": 0.8875,
+      "ma5": 66.74,
+      "ma10": 67.59,
+      "ma20": 68.16,
+      "ma20_distance": -0.0244,
+      "recent_gain_20d": 0.0015,
+      "previous_high": 71.24,
+      "recent_support": 65.6,
+      "industry": "家电",
+      "industry_return": 0.003,
+      "industry_rank": 24,
+      "limit_up_count": 0,
+      "advance_ratio": 0.52,
+      "relative_sector_strength": -0.0015,
+      "labels": [
+        "MA20下方",
+        "趋势破坏",
+        "正常量能"
+      ],
+      "shares": 1200,
+      "cost": 64.8,
+      "market_value": 79800.0,
+      "position_return": 0.0262,
+      "yesterday_volume_state": "正常量能",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 65.6
+        },
+        {
+          "label": "MA20",
+          "value": 68.16
+        },
+        {
+          "label": "昨日低点",
+          "value": 65.6
+        },
+        {
+          "label": "前高",
+          "value": 71.24
+        },
+        {
+          "label": "压力位",
+          "value": 71.24
+        }
+      ],
+      "conditional_plan": [
+        "若回踩 MA20 附近且成交量继续缩小，可继续观察承接。",
+        "若量能放大且所属板块同步转弱，风险状态将进一步上升。",
+        "若放量越过近期前高 71.24，同时板块保持强势，可确认趋势是否延续。"
+      ],
+      "attention_score": 100,
+      "attention_level": "需要关注"
+    },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "date": "2026-09-08",
+      "close": 1532.5,
+      "previous_close": 1536.0,
+      "change_pct": -0.0023,
+      "open": 1539.07,
+      "high": 1554.43,
+      "low": 1514.11,
+      "amplitude": 0.0263,
+      "volume": 21400,
+      "volume_ma5": 24740,
+      "volume_ratio_5d": 0.865,
+      "ma5": 1538.1,
+      "ma10": 1548.75,
+      "ma20": 1553.1,
+      "ma20_distance": -0.0133,
+      "recent_gain_20d": 0.0052,
+      "previous_high": 1603.01,
+      "recent_support": 1517.57,
+      "industry": "白酒",
+      "industry_return": 0.008,
+      "industry_rank": 12,
+      "limit_up_count": 1,
+      "advance_ratio": 0.62,
+      "relative_sector_strength": -0.0103,
+      "labels": [
+        "MA20下方",
+        "正常量能",
+        "弱于板块"
+      ],
+      "shares": 100,
+      "cost": 1498.0,
+      "market_value": 153250.0,
+      "position_return": 0.023,
+      "yesterday_volume_state": "正常量能",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 1517.57
+        },
+        {
+          "label": "MA20",
+          "value": 1553.1
+        },
+        {
+          "label": "昨日低点",
+          "value": 1514.11
+        },
+        {
+          "label": "前高",
+          "value": 1603.01
+        },
+        {
+          "label": "压力位",
+          "value": 1603.01
+        }
+      ],
+      "conditional_plan": [
+        "若回踩 MA20 附近且成交量继续缩小，可继续观察承接。",
+        "若量能放大且所属板块同步转弱，风险状态将进一步上升。",
+        "若放量越过近期前高 1603.01，同时板块保持强势，可确认趋势是否延续。"
+      ],
+      "attention_score": 60,
+      "attention_level": "需要关注"
+    },
+    {
+      "code": "601899",
+      "name": "紫金矿业",
+      "date": "2026-09-08",
+      "close": 20.7,
+      "previous_close": 21.2,
+      "change_pct": -0.0236,
+      "open": 21.24,
+      "high": 21.45,
+      "low": 20.45,
+      "amplitude": 0.0472,
+      "volume": 7050000,
+      "volume_ma5": 7512000,
+      "volume_ratio_5d": 0.9385,
+      "ma5": 20.98,
+      "ma10": 19.94,
+      "ma20": 17.955,
+      "ma20_distance": 0.1529,
+      "recent_gain_20d": 0.4476,
+      "previous_high": 21.86,
+      "recent_support": 17.29,
+      "industry": "贵金属",
+      "industry_return": 0.026,
+      "industry_rank": 2,
+      "limit_up_count": 2,
+      "advance_ratio": 0.76,
+      "relative_sector_strength": -0.0496,
+      "labels": [
+        "MA20上方",
+        "正常量能",
+        "弱于板块",
+        "过热"
+      ],
+      "shares": 3000,
+      "cost": 18.6,
+      "market_value": 62100.0,
+      "position_return": 0.1129,
+      "yesterday_volume_state": "正常量能",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 17.29
+        },
+        {
+          "label": "MA20",
+          "value": 17.955
+        },
+        {
+          "label": "昨日低点",
+          "value": 20.45
+        },
+        {
+          "label": "前高",
+          "value": 21.86
+        },
+        {
+          "label": "压力位",
+          "value": 21.86
+        }
+      ],
+      "conditional_plan": [
+        "若放量越过近期前高 21.86，同时板块保持强势，可确认趋势是否延续。"
+      ],
+      "attention_score": 60,
+      "attention_level": "需要关注"
+    }
+  ],
+  "data_source": "mock"
 }

@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "sector_count": 5
+  },
+  "sectors": [
+    {
+      "name": "贵金属",
+      "return_pct": 0.026,
+      "return_5d": 0.083,
+      "return_20d": 0.226,
+      "advance_ratio": 0.76,
+      "limit_up_count": 2,
+      "turnover_change": 0.19,
+      "turnover_5d_change": 0.27,
+      "ma20_above": true,
+      "rank": 2,
+      "rank_total": 124,
+      "rank_percentile": 0.0161,
+      "ma20_status": "MA20上方",
+      "status": "高位过热",
+      "is_strong": true
+    },
+    {
+      "name": "电池",
+      "return_pct": 0.018,
+      "return_5d": 0.064,
+      "return_20d": 0.112,
+      "advance_ratio": 0.71,
+      "limit_up_count": 3,
+      "turnover_change": 0.24,
+      "turnover_5d_change": 0.31,
+      "ma20_above": true,
+      "rank": 4,
+      "rank_total": 124,
+      "rank_percentile": 0.0323,
+      "ma20_status": "MA20上方",
+      "status": "持续强势",
+      "is_strong": true
+    },
+    {
+      "name": "白酒",
+      "return_pct": 0.008,
+      "return_5d": 0.025,
+      "return_20d": 0.041,
+      "advance_ratio": 0.62,
+      "limit_up_count": 1,
+      "turnover_change": 0.12,
+      "turnover_5d_change": 0.12,
+      "ma20_above": true,
+      "rank": 12,
+      "rank_total": 124,
+      "rank_percentile": 0.0968,
+      "ma20_status": "MA20上方",
+      "status": "持续强势",
+      "is_strong": true
+    },
+    {
+      "name": "家电",
+      "return_pct": 0.003,
+      "return_5d": 0.012,
+      "return_20d": 0.028,
+      "advance_ratio": 0.52,
+      "limit_up_count": 0,
+      "turnover_change": -0.04,
+      "turnover_5d_change": 0.03,
+      "ma20_above": true,
+      "rank": 24,
+      "rank_total": 124,
+      "rank_percentile": 0.1935,
+      "ma20_status": "MA20上方",
+      "status": "观察",
+      "is_strong": false
+    },
+    {
+      "name": "消费电子",
+      "return_pct": -0.004,
+      "return_5d": -0.018,
+      "return_20d": 0.032,
+      "advance_ratio": 0.46,
+      "limit_up_count": 0,
+      "turnover_change": -0.11,
+      "turnover_5d_change": -0.07,
+      "ma20_above": false,
+      "rank": 42,
+      "rank_total": 124,
+      "rank_percentile": 0.3387,
+      "ma20_status": "MA20下方",
+      "status": "转弱",
+      "is_strong": false
+    }
+  ],
+  "data_source": "mock"
+}

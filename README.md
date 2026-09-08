@@ -1,75 +1,56 @@
 # FaCail
 
-FaCail is a personal A-share stock screening and holdings daily review tool. It helps turn user-defined trading rules into code, structured JSON, and repeatable daily reviews.
+FaCail is a personal A-share stock screening and daily holdings review tool. It turns user-defined trading rules into Python calculations, structured JSON, and repeatable review records.
 
-FaCail is not stock recommendation software, does not provide automated trading, does not predict limit-up moves, and does not make investment decisions for the user.
+It does not provide automatic trading, control brokerage accounts, predict limit-up moves, or make investment decisions for the user.
 
-## MVP Scope
+## Current Product Structure
 
-- 今日总览
-- 今日候选
-- 我的持仓
-- 今日复盘
+- 今日交易驾驶舱
+- 持仓：早盘计划、盘中监控、盘后复盘
+- 选股：强势板块、强势个股、回踩观察
 - 观察池
+
+The development stage switch in the page header simulates pre-market, intraday, and post-market views.
 
 ## Architecture
 
 ```text
-GitHub Pages frontend
-Python data pipeline
-JSON data layer
-Provider adapter layer
+MockProvider / future ThsProvider
+  -> Python indicators and rule engine
+  -> JSON data layer
+  -> GitHub Pages frontend
 ```
 
-Current provider:
+All strategy thresholds live in `config/strategy.json`. The frontend displays calculated results and does not calculate market indicators.
 
-- Mock Provider
-
-Reserved provider:
-
-- Tonghuashun QuantAPI / local API provider
-
-## Project Structure
+## Data Outputs
 
 ```text
-config/
-  strategy.json
 data/
+  market.json
+  sectors.json
+  candidates.json
   holdings.json
-  today.json
+  intraday.json
+  review.json
   watchlist.json
-frontend/
-  index.html
-  app.js
-  styles.css
-scripts/
-  generate_data.py
-  providers/
-    base_provider.py
-    mock_provider.py
-    ths_provider.py
+  today.json
 ```
 
 ## Local Run
 
-Generate JSON data:
-
 ```bash
 python3 scripts/generate_data.py
-```
-
-Preview locally from the repository root:
-
-```bash
+python3 scripts/validate_data.py
 python3 -m http.server 8080
 ```
 
-Then open:
+Open `http://localhost:8080/frontend/`.
 
-```text
-http://localhost:8080/frontend/
-```
+## Providers
 
-## Data Principle
+- `MockProvider`: deterministic data for product and rule verification.
+- `ThsProvider`: reserved adapter for Tonghuashun QuantAPI or a local bridge. It is intentionally not connected in this phase.
 
-Key market metrics are calculated by Python before JSON is written. AI-generated summaries may explain structured results, but must not invent missing market data or calculate indicators from guesses.
+Missing provider fields must remain explicitly missing. AI may summarize structured results, but it must not invent or calculate market values.

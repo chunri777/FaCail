@@ -3,45 +3,73 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FaCail</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#f5f6f4">
+    <title>FaCail · 今日交易驾驶舱</title>
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
     <div class="app-shell">
-      <aside class="sidebar" aria-label="FaCail navigation">
+      <aside class="sidebar">
         <div class="brand">
           <span class="brand-mark">F</span>
-          <div>
-            <strong>FaCail</strong>
-            <span>个人 A 股复盘</span>
-          </div>
+          <div><strong>FaCail</strong><span>个人交易复盘</span></div>
         </div>
-        <nav class="nav">
-          <button class="nav-item active" data-view="overview">今日总览</button>
-          <button class="nav-item" data-view="candidates">今日候选</button>
-          <button class="nav-item" data-view="holdings">我的持仓</button>
-          <button class="nav-item" data-view="review">今日复盘</button>
+        <nav class="desktop-nav" aria-label="主导航">
+          <button class="nav-item active" data-view="today">今日</button>
+          <div class="nav-group">
+            <span>持仓</span>
+            <button class="nav-item sub" data-view="premarket">早盘计划</button>
+            <button class="nav-item sub" data-view="intraday">盘中监控</button>
+            <button class="nav-item sub" data-view="review">盘后复盘</button>
+          </div>
+          <div class="nav-group">
+            <span>选股</span>
+            <button class="nav-item sub" data-view="sectors">强势板块</button>
+            <button class="nav-item sub" data-view="stocks">强势个股</button>
+            <button class="nav-item sub" data-view="pullback">回踩观察</button>
+          </div>
           <button class="nav-item" data-view="watchlist">观察池</button>
         </nav>
-        <p class="boundary">仅用于个人规则复盘，不构成投资建议。</p>
+        <div class="sidebar-foot">
+          <span id="source-label">数据源 · --</span>
+          <p>仅用于个人规则复盘，不构成投资建议。</p>
+        </div>
       </aside>
 
       <main class="content">
         <header class="topbar">
           <div>
-            <p class="eyebrow">Mock Provider</p>
-            <h1 id="view-title">今日总览</h1>
+            <p class="breadcrumb" id="breadcrumb">今日</p>
+            <h1 id="view-title">今日交易驾驶舱</h1>
           </div>
-          <div class="date-pill" id="trade-date">--</div>
+          <div class="header-actions">
+            <div class="stage-switch" aria-label="开发用交易阶段切换">
+              <button data-stage="premarket">盘前</button>
+              <button class="active" data-stage="intraday">盘中</button>
+              <button data-stage="postmarket">已收盘</button>
+            </div>
+            <span class="trade-date" id="trade-date">--</span>
+          </div>
         </header>
 
-        <section class="view active" id="overview"></section>
-        <section class="view" id="candidates"></section>
-        <section class="view" id="holdings"></section>
+        <div id="loading" class="loading">正在读取规则数据…</div>
+        <section class="view" id="today"></section>
+        <section class="view" id="premarket"></section>
+        <section class="view" id="intraday"></section>
         <section class="view" id="review"></section>
+        <section class="view" id="sectors"></section>
+        <section class="view" id="stocks"></section>
+        <section class="view" id="pullback"></section>
         <section class="view" id="watchlist"></section>
       </main>
+
+      <nav class="mobile-nav" aria-label="移动端主导航">
+        <button class="active" data-mobile-view="today"><span>今</span>今日</button>
+        <button data-mobile-view="holdings"><span>持</span>持仓</button>
+        <button data-mobile-view="selection"><span>选</span>选股</button>
+        <button data-mobile-view="watchlist"><span>察</span>观察</button>
+      </nav>
     </div>
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
   </body>
 </html>

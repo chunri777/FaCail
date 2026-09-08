@@ -17,7 +17,7 @@ def _series(
     closes: list[float],
     volumes: list[int],
 ) -> dict[str, Any]:
-    start = date(2026, 8, 10)
+    start = date(2026, 8, 18)
     bars = []
     for index, close in enumerate(closes):
         previous = closes[index - 1] if index else close
@@ -47,6 +47,47 @@ def _series(
 
 class MockProvider(MarketDataProvider):
     """Deterministic mock data for local development and UI review."""
+
+    def get_market_snapshot(self) -> dict[str, Any]:
+        return {
+            "trade_date": "2026-09-08",
+            "default_stage": "intraday",
+            "stage_options": [
+                {"id": "premarket", "label": "盘前", "time": "08:45"},
+                {"id": "intraday", "label": "盘中", "time": "10:36"},
+                {"id": "postmarket", "label": "已收盘", "time": "15:30"},
+            ],
+            "indices": [
+                {"code": "000001.SH", "name": "上证", "value": 3286.42, "change_pct": 0.0062},
+                {"code": "399006.SZ", "name": "创业板", "value": 2198.16, "change_pct": -0.0038},
+                {"code": "000300.SH", "name": "沪深300", "value": 3874.51, "change_pct": 0.0046},
+            ],
+            "turnover": 842600000000,
+            "turnover_change": 0.126,
+            "advance_count": 2974,
+            "decline_count": 2068,
+            "flat_count": 151,
+            "limit_up_count": 58,
+            "market_amplitude": 0.018,
+        }
+
+    def get_sectors(self) -> list[dict[str, Any]]:
+        return [
+            {"name": "电池", "return_pct": 0.018, "return_5d": 0.064, "return_20d": 0.112, "advance_ratio": 0.71, "limit_up_count": 3, "turnover_change": 0.24, "turnover_5d_change": 0.31, "ma20_above": True, "rank": 4},
+            {"name": "贵金属", "return_pct": 0.026, "return_5d": 0.083, "return_20d": 0.226, "advance_ratio": 0.76, "limit_up_count": 2, "turnover_change": 0.19, "turnover_5d_change": 0.27, "ma20_above": True, "rank": 2},
+            {"name": "白酒", "return_pct": 0.008, "return_5d": 0.025, "return_20d": 0.041, "advance_ratio": 0.62, "limit_up_count": 1, "turnover_change": 0.12, "turnover_5d_change": 0.12, "ma20_above": True, "rank": 12},
+            {"name": "家电", "return_pct": 0.003, "return_5d": 0.012, "return_20d": 0.028, "advance_ratio": 0.52, "limit_up_count": 0, "turnover_change": -0.04, "turnover_5d_change": 0.03, "ma20_above": True, "rank": 24},
+            {"name": "消费电子", "return_pct": -0.004, "return_5d": -0.018, "return_20d": 0.032, "advance_ratio": 0.46, "limit_up_count": 0, "turnover_change": -0.11, "turnover_5d_change": -0.07, "ma20_above": False, "rank": 42},
+        ]
+
+    def get_intraday_snapshots(self) -> list[dict[str, Any]]:
+        return [
+            {"code": "600519", "current_price": 1532.5, "open": 1539.0, "high": 1554.0, "low": 1528.0, "volume": 21400, "realtime_volume_ratio": 0.82, "vwap": 1538.7, "sector_return": 0.008},
+            {"code": "300750", "current_price": 231.8, "open": 228.2, "high": 233.1, "low": 227.6, "volume": 1200000, "realtime_volume_ratio": 0.74, "vwap": 230.4, "sector_return": 0.018},
+            {"code": "002475", "current_price": 32.7, "open": 32.9, "high": 33.4, "low": 32.5, "volume": 860000, "realtime_volume_ratio": 0.91, "vwap": 32.83, "sector_return": -0.004},
+            {"code": "601899", "current_price": 20.7, "open": 21.35, "high": 21.8, "low": 20.55, "volume": 7050000, "realtime_volume_ratio": 1.62, "vwap": 21.03, "sector_return": 0.026},
+            {"code": "000333", "current_price": 66.5, "open": 66.2, "high": 67.1, "low": 65.7, "volume": 486000, "realtime_volume_ratio": 1.86, "vwap": 66.31, "sector_return": 0.003},
+        ]
 
     def get_daily_bars(self) -> list[dict[str, Any]]:
         return [
@@ -137,7 +178,7 @@ class MockProvider(MarketDataProvider):
                     226.1,
                     227.8,
                     226.5,
-                    224.9,
+                    231.8,
                 ],
                 [
                     820000,

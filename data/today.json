@@ -1,200 +1,523 @@
 {
   "summary": {
-    "trade_date": "2026-08-31",
-    "candidate_count": 1,
-    "market_note": "Mock 数据显示候选集中在回踩与缩量状态，当前输出仅用于本地开发验证。",
+    "trade_date": "2026-09-08",
+    "candidate_count": 3,
+    "market_status": [
+      "中性",
+      "放量"
+    ],
     "data_source": "mock",
     "missing_data": []
   },
-  "candidates": [
-    {
-      "code": "300750",
-      "name": "宁德时代",
-      "date": "2026-08-31",
-      "close": 224.9,
-      "change_pct": -0.0071,
-      "high": 229.22,
-      "low": 222.2,
-      "amplitude": 0.031,
-      "volume": 1200000,
-      "avg_volume_5d": 1628000,
-      "volume_ratio_5d": 0.7371,
-      "ma5": 225.98,
-      "ma10": 221.4,
-      "ma20": 208.97,
-      "ma20_distance": 0.0762,
-      "recent_gain_20d": 0.2488,
-      "industry": "电池",
-      "industry_return": 0.018,
-      "industry_rank": 4,
-      "limit_up_count": 3,
-      "advance_ratio": 0.66,
-      "relative_industry_strength": -0.0251,
-      "labels": [
-        "观察",
-        "MA20上方",
-        "缩量",
-        "弱于板块"
-      ],
-      "is_pullback_candidate": true
-    }
+  "attention": [
+    "2 只持仓位于 MA20 下方",
+    "2 只持仓弱于所属板块",
+    "2 只候选进入回踩观察区",
+    "今日放量异常持仓 0 只"
   ],
-  "universe": [
-    {
-      "code": "600519",
-      "name": "贵州茅台",
-      "date": "2026-08-31",
-      "close": 1532.5,
-      "change_pct": -0.0023,
-      "high": 1554.43,
-      "low": 1514.11,
-      "amplitude": 0.0263,
-      "volume": 21400,
-      "avg_volume_5d": 24740,
-      "volume_ratio_5d": 0.865,
-      "ma5": 1538.1,
-      "ma10": 1548.75,
-      "ma20": 1553.1,
-      "ma20_distance": -0.0133,
-      "recent_gain_20d": 0.0052,
-      "industry": "白酒",
-      "industry_return": 0.008,
-      "industry_rank": 12,
-      "limit_up_count": 1,
-      "advance_ratio": 0.58,
-      "relative_industry_strength": -0.0103,
-      "labels": [
-        "等待确认",
-        "MA20下方",
-        "正常量能",
-        "弱于板块"
-      ],
-      "is_pullback_candidate": false
-    },
+  "top_candidates": [
     {
       "code": "300750",
       "name": "宁德时代",
-      "date": "2026-08-31",
-      "close": 224.9,
-      "change_pct": -0.0071,
-      "high": 229.22,
-      "low": 222.2,
-      "amplitude": 0.031,
+      "date": "2026-09-08",
+      "close": 231.8,
+      "previous_close": 226.5,
+      "change_pct": 0.0234,
+      "open": 226.95,
+      "high": 234.58,
+      "low": 223.78,
+      "amplitude": 0.0477,
       "volume": 1200000,
-      "avg_volume_5d": 1628000,
+      "volume_ma5": 1628000,
       "volume_ratio_5d": 0.7371,
-      "ma5": 225.98,
-      "ma10": 221.4,
-      "ma20": 208.97,
-      "ma20_distance": 0.0762,
-      "recent_gain_20d": 0.2488,
+      "ma5": 227.36,
+      "ma10": 222.09,
+      "ma20": 209.315,
+      "ma20_distance": 0.1074,
+      "recent_gain_20d": 0.2871,
+      "previous_high": 230.53,
+      "recent_support": 206.49,
       "industry": "电池",
       "industry_return": 0.018,
       "industry_rank": 4,
       "limit_up_count": 3,
-      "advance_ratio": 0.66,
-      "relative_industry_strength": -0.0251,
+      "advance_ratio": 0.71,
+      "relative_sector_strength": 0.0054,
+      "sector": {
+        "name": "电池",
+        "return_pct": 0.018,
+        "return_5d": 0.064,
+        "return_20d": 0.112,
+        "advance_ratio": 0.71,
+        "limit_up_count": 3,
+        "turnover_change": 0.24,
+        "turnover_5d_change": 0.31,
+        "ma20_above": true,
+        "rank": 4,
+        "rank_total": 124,
+        "rank_percentile": 0.0323,
+        "ma20_status": "MA20上方",
+        "status": "持续强势",
+        "is_strong": true
+      },
       "labels": [
-        "观察",
         "MA20上方",
         "缩量",
-        "弱于板块"
+        "过热"
       ],
-      "is_pullback_candidate": true
-    },
-    {
-      "code": "002475",
-      "name": "立讯精密",
-      "date": "2026-08-31",
-      "close": 32.7,
-      "change_pct": -0.003,
-      "high": 33.19,
-      "low": 32.31,
-      "amplitude": 0.0268,
-      "volume": 860000,
-      "avg_volume_5d": 1038000,
-      "volume_ratio_5d": 0.8285,
-      "ma5": 33.28,
-      "ma10": 34.36,
-      "ma20": 34.1,
-      "ma20_distance": -0.0411,
-      "recent_gain_20d": 0.0381,
-      "industry": "消费电子",
-      "industry_return": -0.004,
-      "industry_rank": 42,
-      "limit_up_count": 0,
-      "advance_ratio": 0.46,
-      "relative_industry_strength": 0.001,
-      "labels": [
-        "等待确认",
-        "MA20下方",
-        "趋势破坏",
-        "正常量能"
+      "conditions": [
+        {
+          "id": "shrink_pullback",
+          "name": "条件 A · 缩量回踩",
+          "checks": [
+            {
+              "label": "价格位于 MA20 观察区",
+              "met": false
+            },
+            {
+              "label": "日涨跌位于回踩区间",
+              "met": false
+            },
+            {
+              "label": "量能缩至 5 日均量阈值内",
+              "met": true
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": true
+            },
+            {
+              "label": "未明显跌破近期支撑",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 3,
+          "total_count": 5
+        },
+        {
+          "id": "volume_breakout",
+          "name": "条件 B · 放量突破",
+          "checks": [
+            {
+              "label": "突破近 20 日关键高点",
+              "met": true
+            },
+            {
+              "label": "成交量达到 5 日均量阈值",
+              "met": false
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": true
+            },
+            {
+              "label": "个股强于所属板块",
+              "met": true
+            },
+            {
+              "label": "距离 MA20 未超过限制",
+              "met": true
+            }
+          ],
+          "status": "接近满足",
+          "met_count": 4,
+          "total_count": 5
+        },
+        {
+          "id": "strong_sector_pullback",
+          "name": "条件 C · 强势板块回踩",
+          "checks": [
+            {
+              "label": "板块排名进入市场前列",
+              "met": true
+            },
+            {
+              "label": "板块 5 日涨幅为正",
+              "met": true
+            },
+            {
+              "label": "股价接近 MA10 或 MA20",
+              "met": false
+            },
+            {
+              "label": "量能处于收缩状态",
+              "met": true
+            },
+            {
+              "label": "未出现趋势破坏",
+              "met": true
+            }
+          ],
+          "status": "接近满足",
+          "met_count": 4,
+          "total_count": 5
+        }
       ],
-      "is_pullback_candidate": false
+      "strength_relation": "板块强 + 个股强",
+      "priority": 1,
+      "selection_status": "接近触发",
+      "selection_reasons": [
+        "所属电池板块今日排名 4/124。",
+        "板块 5 日涨跌为 +6.40%，状态为持续强势。",
+        "个股位于 MA20 上方，距离 +10.74%。",
+        "今日成交量为 5 日均量的 74%。"
+      ],
+      "waiting_for": [
+        "等待价格回到 MA20 附近，当前距离 +10.74%"
+      ],
+      "satisfied_condition_count": 0
     },
     {
       "code": "601899",
       "name": "紫金矿业",
-      "date": "2026-08-31",
+      "date": "2026-09-08",
       "close": 20.7,
+      "previous_close": 21.2,
       "change_pct": -0.0236,
+      "open": 21.24,
       "high": 21.45,
       "low": 20.45,
       "amplitude": 0.0472,
       "volume": 7050000,
-      "avg_volume_5d": 7512000,
+      "volume_ma5": 7512000,
       "volume_ratio_5d": 0.9385,
       "ma5": 20.98,
       "ma10": 19.94,
       "ma20": 17.955,
       "ma20_distance": 0.1529,
       "recent_gain_20d": 0.4476,
+      "previous_high": 21.86,
+      "recent_support": 17.29,
       "industry": "贵金属",
       "industry_return": 0.026,
       "industry_rank": 2,
       "limit_up_count": 2,
-      "advance_ratio": 0.71,
-      "relative_industry_strength": -0.0496,
+      "advance_ratio": 0.76,
+      "relative_sector_strength": -0.0496,
+      "sector": {
+        "name": "贵金属",
+        "return_pct": 0.026,
+        "return_5d": 0.083,
+        "return_20d": 0.226,
+        "advance_ratio": 0.76,
+        "limit_up_count": 2,
+        "turnover_change": 0.19,
+        "turnover_5d_change": 0.27,
+        "ma20_above": true,
+        "rank": 2,
+        "rank_total": 124,
+        "rank_percentile": 0.0161,
+        "ma20_status": "MA20上方",
+        "status": "高位过热",
+        "is_strong": true
+      },
       "labels": [
-        "等待确认",
         "MA20上方",
         "正常量能",
         "弱于板块",
         "过热"
       ],
-      "is_pullback_candidate": false
+      "conditions": [
+        {
+          "id": "shrink_pullback",
+          "name": "条件 A · 缩量回踩",
+          "checks": [
+            {
+              "label": "价格位于 MA20 观察区",
+              "met": false
+            },
+            {
+              "label": "日涨跌位于回踩区间",
+              "met": true
+            },
+            {
+              "label": "量能缩至 5 日均量阈值内",
+              "met": false
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": true
+            },
+            {
+              "label": "未明显跌破近期支撑",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 3,
+          "total_count": 5
+        },
+        {
+          "id": "volume_breakout",
+          "name": "条件 B · 放量突破",
+          "checks": [
+            {
+              "label": "突破近 20 日关键高点",
+              "met": false
+            },
+            {
+              "label": "成交量达到 5 日均量阈值",
+              "met": false
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": true
+            },
+            {
+              "label": "个股强于所属板块",
+              "met": false
+            },
+            {
+              "label": "距离 MA20 未超过限制",
+              "met": false
+            }
+          ],
+          "status": "未满足",
+          "met_count": 1,
+          "total_count": 5
+        },
+        {
+          "id": "strong_sector_pullback",
+          "name": "条件 C · 强势板块回踩",
+          "checks": [
+            {
+              "label": "板块排名进入市场前列",
+              "met": true
+            },
+            {
+              "label": "板块 5 日涨幅为正",
+              "met": true
+            },
+            {
+              "label": "股价接近 MA10 或 MA20",
+              "met": false
+            },
+            {
+              "label": "量能处于收缩状态",
+              "met": false
+            },
+            {
+              "label": "未出现趋势破坏",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 3,
+          "total_count": 5
+        }
+      ],
+      "strength_relation": "板块强 + 个股弱",
+      "priority": 2,
+      "selection_status": "等待确认",
+      "selection_reasons": [
+        "所属贵金属板块今日排名 2/124。",
+        "板块 5 日涨跌为 +8.30%，状态为高位过热。",
+        "个股位于 MA20 上方，距离 +15.29%。",
+        "今日成交量为 5 日均量的 94%。"
+      ],
+      "waiting_for": [
+        "等待价格回到 MA20 附近，当前距离 +15.29%",
+        "等待量能进一步收缩，当前为 5 日均量的 94%",
+        "等待价格突破 21.86"
+      ],
+      "satisfied_condition_count": 0
     },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "date": "2026-09-08",
+      "close": 1532.5,
+      "previous_close": 1536.0,
+      "change_pct": -0.0023,
+      "open": 1539.07,
+      "high": 1554.43,
+      "low": 1514.11,
+      "amplitude": 0.0263,
+      "volume": 21400,
+      "volume_ma5": 24740,
+      "volume_ratio_5d": 0.865,
+      "ma5": 1538.1,
+      "ma10": 1548.75,
+      "ma20": 1553.1,
+      "ma20_distance": -0.0133,
+      "recent_gain_20d": 0.0052,
+      "previous_high": 1603.01,
+      "recent_support": 1517.57,
+      "industry": "白酒",
+      "industry_return": 0.008,
+      "industry_rank": 12,
+      "limit_up_count": 1,
+      "advance_ratio": 0.62,
+      "relative_sector_strength": -0.0103,
+      "sector": {
+        "name": "白酒",
+        "return_pct": 0.008,
+        "return_5d": 0.025,
+        "return_20d": 0.041,
+        "advance_ratio": 0.62,
+        "limit_up_count": 1,
+        "turnover_change": 0.12,
+        "turnover_5d_change": 0.12,
+        "ma20_above": true,
+        "rank": 12,
+        "rank_total": 124,
+        "rank_percentile": 0.0968,
+        "ma20_status": "MA20上方",
+        "status": "持续强势",
+        "is_strong": true
+      },
+      "labels": [
+        "MA20下方",
+        "正常量能",
+        "弱于板块"
+      ],
+      "conditions": [
+        {
+          "id": "shrink_pullback",
+          "name": "条件 A · 缩量回踩",
+          "checks": [
+            {
+              "label": "价格位于 MA20 观察区",
+              "met": false
+            },
+            {
+              "label": "日涨跌位于回踩区间",
+              "met": true
+            },
+            {
+              "label": "量能缩至 5 日均量阈值内",
+              "met": false
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": true
+            },
+            {
+              "label": "未明显跌破近期支撑",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 3,
+          "total_count": 5
+        },
+        {
+          "id": "volume_breakout",
+          "name": "条件 B · 放量突破",
+          "checks": [
+            {
+              "label": "突破近 20 日关键高点",
+              "met": false
+            },
+            {
+              "label": "成交量达到 5 日均量阈值",
+              "met": false
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": true
+            },
+            {
+              "label": "个股强于所属板块",
+              "met": false
+            },
+            {
+              "label": "距离 MA20 未超过限制",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 2,
+          "total_count": 5
+        },
+        {
+          "id": "strong_sector_pullback",
+          "name": "条件 C · 强势板块回踩",
+          "checks": [
+            {
+              "label": "板块排名进入市场前列",
+              "met": true
+            },
+            {
+              "label": "板块 5 日涨幅为正",
+              "met": true
+            },
+            {
+              "label": "股价接近 MA10 或 MA20",
+              "met": true
+            },
+            {
+              "label": "量能处于收缩状态",
+              "met": true
+            },
+            {
+              "label": "未出现趋势破坏",
+              "met": true
+            }
+          ],
+          "status": "已满足",
+          "met_count": 5,
+          "total_count": 5
+        }
+      ],
+      "strength_relation": "板块强 + 个股弱",
+      "priority": 2,
+      "selection_status": "条件已触发",
+      "selection_reasons": [
+        "所属白酒板块今日排名 12/124。",
+        "板块 5 日涨跌为 +2.50%，状态为持续强势。",
+        "个股位于 MA20 下方，距离 -1.33%。",
+        "今日成交量为 5 日均量的 86%。"
+      ],
+      "waiting_for": [
+        "等待价格回到 MA20 附近，当前距离 -1.33%",
+        "等待量能进一步收缩，当前为 5 日均量的 86%",
+        "等待价格突破 1603.01"
+      ],
+      "satisfied_condition_count": 1
+    }
+  ],
+  "holding_summary": {
+    "trade_date": "2026-09-08",
+    "holding_count": 3,
+    "portfolio_change_pct": -0.0058,
+    "total_market_value": 295150.0,
+    "stronger_than_sector_count": 0,
+    "weaker_than_sector_count": 2,
+    "above_ma20_count": 1,
+    "below_ma20_count": 2,
+    "shrink_pullback_count": 0,
+    "abnormal_volume_count": 0,
+    "anomaly_count": 3
+  },
+  "holding_anomalies": [
     {
       "code": "000333",
       "name": "美的集团",
-      "date": "2026-08-31",
-      "close": 66.5,
-      "change_pct": 0.0015,
-      "high": 67.3,
-      "low": 65.6,
-      "amplitude": 0.0256,
-      "volume": 486000,
-      "avg_volume_5d": 547600,
-      "volume_ratio_5d": 0.8875,
-      "ma5": 66.74,
-      "ma10": 67.59,
-      "ma20": 68.16,
-      "ma20_distance": -0.0244,
-      "recent_gain_20d": 0.0015,
       "industry": "家电",
-      "industry_return": 0.003,
-      "industry_rank": 24,
-      "limit_up_count": 0,
-      "advance_ratio": 0.52,
-      "relative_industry_strength": -0.0015,
       "labels": [
-        "等待确认",
         "MA20下方",
-        "趋势破坏",
-        "正常量能"
-      ],
-      "is_pullback_candidate": false
+        "趋势破坏"
+      ]
+    },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "industry": "白酒",
+      "labels": [
+        "MA20下方",
+        "弱于板块"
+      ]
+    },
+    {
+      "code": "601899",
+      "name": "紫金矿业",
+      "industry": "贵金属",
+      "labels": [
+        "弱于板块",
+        "过热"
+      ]
     }
   ]
 }

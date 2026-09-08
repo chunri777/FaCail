@@ -1,218 +1,390 @@
 const state = {
-  today: null,
+  market: null,
+  sectors: null,
+  candidates: null,
   holdings: null,
+  intraday: null,
+  review: null,
   watchlist: null,
+  today: null,
+  stage: "intraday",
 };
 
-const titles = {
-  overview: "今日总览",
-  candidates: "今日候选",
-  holdings: "我的持仓",
-  review: "今日复盘",
-  watchlist: "观察池",
+const viewMeta = {
+  today: ["今日", "今日交易驾驶舱"],
+  premarket: ["持仓 / 盘前", "早盘计划"],
+  intraday: ["持仓 / 盘中", "盘中监控"],
+  review: ["持仓 / 盘后", "盘后复盘"],
+  sectors: ["选股 / 板块", "强势板块"],
+  stocks: ["选股 / 个股", "强势个股"],
+  pullback: ["选股 / 观察", "回踩观察"],
+  watchlist: ["观察", "观察池"],
 };
 
-const pct = (value) => {
-  if (value === null || value === undefined) return "缺失";
-  const sign = value > 0 ? "+" : "";
-  return `${sign}${(value * 100).toFixed(2)}%`;
+const pct = (value, digits = 2) => {
+  if (value === null || value === undefined) return "数据缺失";
+  return `${value > 0 ? "+" : ""}${(value * 100).toFixed(digits)}%`;
 };
 
-const number = (value) => {
-  if (value === null || value === undefined) return "缺失";
-  return new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 2 }).format(value);
+const number = (value, digits = 2) => {
+  if (value === null || value === undefined) return "数据缺失";
+  return new Intl.NumberFormat("zh-CN", { maximumFractionDigits: digits }).format(value);
 };
 
-const changeClass = (value) => {
-  if (value > 0) return "up";
-  if (value < 0) return "down";
-  return "flat";
+const amount = (value) => {
+  if (value === null || value === undefined) return "数据缺失";
+  return `${(value / 100000000).toFixed(0)} 亿`;
 };
 
-const tagClass = (tag) => {
-  const keys = ["观察", "MA20上方", "缩量", "强于板块"];
-  return keys.includes(tag) ? "tag key" : "tag";
-};
+const changeClass = (value) => value > 0 ? "up" : value < 0 ? "down" : "flat";
+const statusClass = (value) => value === "已满足" ? "met" : value === "接近满足" ? "near" : "";
 
-const tags = (items) => `
-  <div class="tags">
-    ${items.map((tag) => `<span class="${tagClass(tag)}">${tag}</span>`).join("")}
+const pills = (items = []) => `
+  <div class="pills">${items.map((item) => `<span>${item}</span>`).join("")}</div>
+`;
+
+const stat = (label, value, note = "") => `
+  <div class="stat"><span>${label}</span><strong>${value}</strong>${note ? `<small>${note}</small>` : ""}</div>
+`;
+
+const sectionHead = (title, note = "") => `
+  <div class="section-head"><h2>${title}</h2>${note ? `<p>${note}</p>` : ""}</div>
+`;
+
+const holdingTabs = (active) => `
+  <div class="local-tabs">
+    <button data-view="premarket" class="${active === "premarket" ? "active" : ""}">早盘计划</button>
+    <button data-view="intraday" class="${active === "intraday" ? "active" : ""}">盘中监控</button>
+    <button data-view="review" class="${active === "review" ? "active" : ""}">盘后复盘</button>
   </div>
 `;
 
-const metric = (label, value, note = "") => `
-  <article class="metric">
-    <span>${label}</span>
-    <strong>${value}</strong>
-    ${note ? `<small>${note}</small>` : ""}
+const selectionTabs = (active) => `
+  <div class="local-tabs">
+    <button data-view="sectors" class="${active === "sectors" ? "active" : ""}">强势板块</button>
+    <button data-view="stocks" class="${active === "stocks" ? "active" : ""}">强势个股</button>
+    <button data-view="pullback" class="${active === "pullback" ? "active" : ""}">回踩观察</button>
+  </div>
+`;
+
+const miniMetrics = (items) => `
+  <div class="mini-metrics">
+    ${items.map(([label, value, cls = ""]) => `<div><span>${label}</span><strong class="${cls}">${value}</strong></div>`).join("")}
+  </div>
+`;
+
+const conditionList = (conditions) => `
+  <div class="condition-list">
+    ${conditions.map((condition) => `
+      <div class="condition">
+        <div><strong>${condition.name}</strong><span class="condition-state ${statusClass(condition.status)}">${condition.status}</span></div>
+        <small>${condition.met_count}/${condition.total_count} 项已符合</small>
+      </div>
+    `).join("")}
+  </div>
+`;
+
+const candidateCard = (stock) => `
+  <article class="candidate-row">
+    <div class="stock-title">
+      <div><strong>${stock.name}</strong><span>${stock.code} · ${stock.industry}</span></div>
+      <div class="stock-price"><strong>${number(stock.close)}</strong><span class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</span></div>
+    </div>
+    ${miniMetrics([
+      ["MA20 距离", pct(stock.ma20_distance)],
+      ["量能 / 5日", number(stock.volume_ratio_5d)],
+      ["板块强度", `${stock.sector.status} · ${stock.industry_rank}/${stock.sector.rank_total}`],
+      ["个股相对", pct(stock.relative_sector_strength), changeClass(stock.relative_sector_strength)],
+    ])}
+    <div class="candidate-status">
+      <span>${stock.strength_relation}</span>
+      <strong class="${statusClass(stock.selection_status === "条件已触发" ? "已满足" : stock.selection_status === "接近触发" ? "接近满足" : "")}">${stock.selection_status}</strong>
+    </div>
+    <details>
+      <summary>为什么入选与触发条件</summary>
+      <div class="detail-grid">
+        <div><h3>入选理由</h3><ul>${stock.selection_reasons.map((item) => `<li>${item}</li>`).join("")}</ul></div>
+        <div><h3>我在等什么</h3><ul>${stock.waiting_for.map((item) => `<li>${item}</li>`).join("") || "<li>当前规则条件已有触发，继续观察结构是否保持。</li>"}</ul></div>
+      </div>
+      <h3>买入触发条件</h3>
+      ${conditionList(stock.conditions)}
+    </details>
   </article>
 `;
 
-const stockCard = (stock, extra = "") => `
-  <article class="stock-card">
-    <div class="stock-head">
-      <div class="stock-name">
-        <strong>${stock.name}</strong>
-        <span>${stock.code} · ${stock.industry}</span>
-      </div>
-      <div class="price">
-        <strong>${number(stock.close ?? stock.current_price)}</strong>
-        <span class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</span>
-      </div>
-    </div>
-    <div class="kv-grid">
-      <div class="kv"><span>MA20距离</span><strong>${pct(stock.ma20_distance ?? stock.current_ma20_distance)}</strong></div>
-      <div class="kv"><span>量比5日</span><strong>${number(stock.volume_ratio_5d)}</strong></div>
-      <div class="kv"><span>相对板块</span><strong class="${changeClass(stock.relative_industry_strength)}">${pct(stock.relative_industry_strength)}</strong></div>
-    </div>
-    ${extra}
-    ${tags(stock.labels || stock.current_labels || [])}
-  </article>
-`;
-
-const renderOverview = () => {
-  const today = state.today.summary;
-  const holdings = state.holdings.summary;
-  document.querySelector("#overview").innerHTML = `
-    <div class="metric-grid">
-      ${metric("候选数量", today.candidate_count, "来自今日规则扫描")}
-      ${metric("持仓数量", holdings.holding_count, "当前 Mock 持仓")}
-      ${metric("组合今日涨跌", pct(holdings.portfolio_change_pct), "按持仓市值加权")}
-      ${metric("MA20上方", holdings.above_ma20_count, `${holdings.below_ma20_count} 只位于 MA20 下方`)}
-    </div>
-    <section class="panel">
-      <h2>今日关注</h2>
-      <p class="panel-note">${today.market_note}</p>
-    </section>
-    <section>
-      <h2>候选摘录</h2>
-      <div class="card-grid">
-        ${state.today.candidates.slice(0, 2).map((stock) => stockCard(stock)).join("") || "<p class=\"panel-note\">今日没有满足规则的候选。</p>"}
-      </div>
-    </section>
-  `;
-};
-
-const renderCandidates = () => {
-  document.querySelector("#candidates").innerHTML = `
-    <div class="card-grid">
-      ${state.today.candidates.map((stock) => stockCard(stock)).join("") || "<section class=\"panel\"><p class=\"panel-note\">今日没有满足缩量回踩与 MA20 条件的候选。</p></section>"}
-    </div>
-  `;
-};
-
-const renderHoldings = () => {
-  document.querySelector("#holdings").innerHTML = `
-    <section class="panel">
-      <h2>持仓概览</h2>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>股票</th>
-            <th>收盘</th>
-            <th>今日涨跌</th>
-            <th>MA20距离</th>
-            <th>量比5日</th>
-            <th>板块相对</th>
-            <th>标签</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${state.holdings.holdings.map((stock) => `
-            <tr>
-              <td><strong>${stock.name}</strong><br><span class="industry">${stock.code} · ${stock.industry}</span></td>
-              <td>${number(stock.close)}</td>
-              <td class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</td>
-              <td>${pct(stock.ma20_distance)}</td>
-              <td>${number(stock.volume_ratio_5d)}</td>
-              <td class="${changeClass(stock.relative_industry_strength)}">${pct(stock.relative_industry_strength)}</td>
-              <td>${tags(stock.labels)}</td>
-            </tr>
-          `).join("")}
-        </tbody>
-      </table>
-    </section>
-  `;
-};
-
-const renderReview = () => {
+function renderToday() {
+  const market = state.market;
   const summary = state.holdings.summary;
-  document.querySelector("#review").innerHTML = `
-    <div class="metric-grid">
-      ${metric("强于板块", summary.stronger_than_industry_count)}
-      ${metric("弱于板块", summary.weaker_than_industry_count)}
-      ${metric("缩量回踩", summary.shrink_pullback_count)}
-      ${metric("放量异常", summary.abnormal_volume_count)}
-    </div>
-    <section class="panel">
-      <h2>客观复盘</h2>
-      <ul class="review-list">
-        <li>${summary.review}</li>
-        <li>组合今日涨跌为 ${pct(summary.portfolio_change_pct)}，当前持仓 ${summary.holding_count} 只。</li>
-        <li>${summary.above_ma20_count} 只位于 MA20 上方，${summary.below_ma20_count} 只位于 MA20 下方。</li>
-        <li>${summary.stronger_than_industry_count} 只强于所属板块，${summary.weaker_than_industry_count} 只弱于所属板块。</li>
-      </ul>
+  const today = state.today;
+  document.querySelector("#today").innerHTML = `
+    <section class="market-band">
+      <div class="market-state">
+        <span class="stage-label" id="home-stage">${market.stage_options.find((item) => item.id === state.stage).label}</span>
+        <div><p>今日状态</p><h2>${market.status_labels.join(" · ")}</h2></div>
+      </div>
+      <div class="index-strip">
+        ${market.indices.map((item) => `<div><span>${item.name}</span><strong>${number(item.value)}</strong><small class="${changeClass(item.change_pct)}">${pct(item.change_pct)}</small></div>`).join("")}
+      </div>
+      <div class="market-facts">
+        ${stat("全市场成交额", amount(market.turnover), pct(market.turnover_change) + " 较前日")}
+        ${stat("上涨 / 下跌", `${market.advance_count} / ${market.decline_count}`)}
+        ${stat("涨停数量", market.limit_up_count)}
+        ${stat("核心板块", market.core_sectors.map((item) => item.name).join("、"))}
+      </div>
+    </section>
+
+    <section class="content-section priority-section">
+      ${sectionHead("我的持仓状态", `${summary.holding_count} 只持仓 · 异常优先排序`)}
+      <div class="summary-numbers">
+        ${stat("组合今日涨跌", pct(summary.portfolio_change_pct))}
+        ${stat("MA20 上 / 下", `${summary.above_ma20_count} / ${summary.below_ma20_count}`)}
+        ${stat("强于 / 弱于板块", `${summary.stronger_than_sector_count} / ${summary.weaker_than_sector_count}`)}
+        ${stat("需要关注", summary.anomaly_count)}
+      </div>
+      <div class="mobile-candidate-inline"><span>今日候选</span><strong>${today.summary.candidate_count}</strong><small>只进入核心池</small></div>
+      <div class="anomaly-list">
+        ${today.holding_anomalies.map((item) => `<button data-view="intraday"><strong>${item.name}</strong><span>${item.labels.join(" · ")}</span><b>查看</b></button>`).join("")}
+      </div>
+    </section>
+
+    <section class="content-section attention-grid">
+      <div>
+        ${sectionHead("今日需要关注")}
+        <ul class="focus-list">${today.attention.map((item) => `<li>${item}</li>`).join("")}</ul>
+      </div>
+      <div class="candidate-count">
+        <span>今日候选</span><strong>${today.summary.candidate_count}</strong><small>规则扫描后进入核心池</small>
+      </div>
+    </section>
+
+    <section class="content-section">
+      ${sectionHead("今日候选", "优先展示板块与个股关系清晰的标的")}
+      <div class="candidate-list">${today.top_candidates.map(candidateCard).join("") || '<p class="empty">今日没有进入核心池的候选。</p>'}</div>
     </section>
   `;
-};
+}
 
-const renderWatchlist = () => {
-  document.querySelector("#watchlist").innerHTML = `
-    <div class="card-grid">
-      ${state.watchlist.watchlist.map((item) => stockCard({
-        ...item,
-        close: item.current_price,
-        ma20_distance: item.current_ma20_distance,
-        labels: item.current_labels,
-        change_pct: item.price_change_since_added,
-        relative_industry_strength: item.industry_strength,
-      }, `
-        <div class="kv-grid">
-          <div class="kv"><span>加入日期</span><strong>${item.added_date}</strong></div>
-          <div class="kv"><span>加入价格</span><strong>${number(item.added_price)}</strong></div>
-          <div class="kv"><span>触发条件</span><strong>${item.triggered_conditions.join(" / ")}</strong></div>
-        </div>
-      `)).join("")}
+function renderPremarket() {
+  document.querySelector("#premarket").innerHTML = `
+    ${holdingTabs("premarket")}
+    <div class="phase-note"><strong>盘前依据昨日收盘数据生成</strong><span>观察位和条件式计划均由规则输出</span></div>
+    <div class="holding-list">
+      ${state.holdings.premarket.map((stock) => `
+        <article class="holding-row attention-${stock.attention_level === "需要关注" ? "high" : "normal"}">
+          <div class="stock-title">
+            <div><strong>${stock.name}</strong><span>${stock.code} · ${stock.industry} · ${stock.attention_level}</span></div>
+            <div class="stock-price"><strong>${number(stock.close)}</strong><span class="${changeClass(stock.position_return)}">浮盈亏 ${pct(stock.position_return)}</span></div>
+          </div>
+          ${miniMetrics([
+            ["昨日收盘 / 成本", `${number(stock.close)} / ${number(stock.cost)}`],
+            ["MA5 / MA10 / MA20", `${number(stock.ma5)} / ${number(stock.ma10)} / ${number(stock.ma20)}`],
+            ["距 MA20", pct(stock.ma20_distance)],
+            ["昨日量能", stock.yesterday_volume_state],
+            ["板块昨日表现", pct(stock.industry_return), changeClass(stock.industry_return)],
+            ["个股相对板块", pct(stock.relative_sector_strength), changeClass(stock.relative_sector_strength)],
+            ["昨日高 / 低", `${number(stock.high)} / ${number(stock.low)}`],
+            ["前高 / 近期支撑", `${number(stock.previous_high)} / ${number(stock.recent_support)}`],
+          ])}
+          <div class="two-columns">
+            <div><h3>今日观察位</h3><div class="levels">${stock.observation_levels.map((item) => `<span><small>${item.label}</small><strong>${number(item.value)}</strong></span>`).join("")}</div></div>
+            <div><h3>今日条件式计划</h3><ul>${stock.conditional_plan.map((item) => `<li>${item}</li>`).join("")}</ul></div>
+          </div>
+        </article>
+      `).join("")}
     </div>
   `;
-};
+}
 
-const setView = (view) => {
-  document.querySelectorAll(".nav-item").forEach((button) => {
-    button.classList.toggle("active", button.dataset.view === view);
-  });
-  document.querySelectorAll(".view").forEach((section) => {
-    section.classList.toggle("active", section.id === view);
-  });
-  document.querySelector("#view-title").textContent = titles[view];
-};
+function renderIntraday() {
+  document.querySelector("#intraday").innerHTML = `
+    ${holdingTabs("intraday")}
+    <div class="phase-note live"><strong>盘中 Mock 快照 · 10:36</strong><span>异常状态置顶</span></div>
+    <div class="holding-list">
+      ${state.intraday.holdings.map((stock) => `
+        <article class="holding-row">
+          <div class="stock-title">
+            <div><strong>${stock.name}</strong><span>${stock.code} · ${stock.industry}</span></div>
+            <div class="stock-price"><strong>${number(stock.current_price)}</strong><span class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</span></div>
+          </div>
+          ${pills(stock.statuses)}
+          ${miniMetrics([
+            ["今日高 / 低", `${number(stock.high)} / ${number(stock.low)}`],
+            ["振幅", pct(stock.amplitude)],
+            ["当前成交量", number(stock.volume, 0)],
+            ["实时量比", number(stock.realtime_volume_ratio)],
+            ["VWAP", number(stock.vwap)],
+            ["MA20 / 距离", `${number(stock.ma20)} / ${pct(stock.ma20_distance)}`],
+            ["板块实时涨跌", pct(stock.sector_return), changeClass(stock.sector_return)],
+            ["个股相对板块", pct(stock.relative_sector_strength), changeClass(stock.relative_sector_strength)],
+          ])}
+          <div class="rule-note"><span>盘中规则观察</span><p>${stock.conditional_note}</p></div>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
 
-const loadData = async () => {
-  const [today, holdings, watchlist] = await Promise.all([
-    fetch("../data/today.json").then((response) => response.json()),
-    fetch("../data/holdings.json").then((response) => response.json()),
-    fetch("../data/watchlist.json").then((response) => response.json()),
-  ]);
-  state.today = today;
-  state.holdings = holdings;
-  state.watchlist = watchlist;
-  document.querySelector("#trade-date").textContent = today.summary.trade_date;
-  renderOverview();
-  renderCandidates();
-  renderHoldings();
+function renderReview() {
+  const summary = state.review.summary;
+  document.querySelector("#review").innerHTML = `
+    ${holdingTabs("review")}
+    <section class="review-summary">
+      ${sectionHead("今日组合总结")}
+      <div class="summary-numbers">
+        ${stat("组合涨跌", pct(summary.portfolio_change_pct))}
+        ${stat("持仓数量", summary.holding_count)}
+        ${stat("强 / 弱于板块", `${summary.stronger_than_sector_count} / ${summary.weaker_than_sector_count}`)}
+        ${stat("MA20 上 / 下", `${summary.above_ma20_count} / ${summary.below_ma20_count}`)}
+        ${stat("缩量回踩", summary.shrink_pullback_count)}
+        ${stat("放量异常", summary.abnormal_volume_count)}
+      </div>
+      <p class="narrative">${summary.narrative}</p>
+    </section>
+    <section class="content-section">
+      ${sectionHead("逐只复盘", "优先记录今天发生的变化")}
+      <div class="review-list">
+        ${state.review.holdings.map((stock) => `
+          <article>
+            <div class="stock-title"><div><strong>${stock.name}</strong><span>${stock.code} · ${stock.industry}</span></div><span class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</span></div>
+            <h3>今日发生了什么</h3><p>${stock.what_happened}</p>
+            <h3>相比昨日发生什么变化</h3><ul>${stock.changes_from_yesterday.map((item) => `<li>${item}</li>`).join("")}</ul>
+          </article>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderSectors() {
+  document.querySelector("#sectors").innerHTML = `
+    ${selectionTabs("sectors")}
+    <div class="sector-list">
+      ${state.sectors.sectors.map((sector) => `
+        <article class="sector-row">
+          <div class="sector-rank"><span>${sector.rank}</span><small>/ ${sector.rank_total}</small></div>
+          <div class="sector-main"><div><strong>${sector.name}</strong><span class="sector-status">${sector.status}</span></div>
+            ${miniMetrics([
+              ["今日 / 5日 / 20日", `${pct(sector.return_pct)} / ${pct(sector.return_5d)} / ${pct(sector.return_20d)}`],
+              ["上涨家数比例", pct(sector.advance_ratio)],
+              ["涨停数量", sector.limit_up_count],
+              ["成交额变化", pct(sector.turnover_change)],
+              ["5日成交额变化", pct(sector.turnover_5d_change)],
+              ["板块趋势", sector.ma20_status],
+            ])}
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderCandidateView(target, items, active, note) {
+  document.querySelector(target).innerHTML = `
+    ${selectionTabs(active)}
+    <div class="phase-note"><strong>${note}</strong><span>所有状态均由配置规则计算</span></div>
+    <div class="candidate-list">${items.map(candidateCard).join("") || '<p class="empty">当前没有符合该分组规则的候选。</p>'}</div>
+  `;
+}
+
+function renderWatchlist() {
+  document.querySelector("#watchlist").innerHTML = `
+    <div class="phase-note"><strong>观察结果持续记录</strong><span>用于验证不同入池逻辑的实际表现</span></div>
+    <div class="watch-list">
+      ${state.watchlist.watchlist.map((item) => `
+        <article class="watch-row">
+          <div class="stock-title">
+            <div><strong>${item.name}</strong><span>${item.code} · ${item.industry} · 加入 ${item.added_date}</span></div>
+            <div class="stock-price"><strong>${number(item.current_price)}</strong><span class="${changeClass(item.return_since_added)}">${pct(item.return_since_added)}</span></div>
+          </div>
+          ${miniMetrics([
+            ["加入价格", number(item.added_price)],
+            ["已观察交易日", item.observed_trading_days],
+            ["最大涨幅", pct(item.max_gain), changeClass(item.max_gain)],
+            ["最大回撤", pct(item.max_drawdown), changeClass(item.max_drawdown)],
+            ["买入条件状态", item.buy_condition_status],
+            ["当前 MA20 距离", pct(item.current_ma20_distance)],
+          ])}
+          <div class="two-columns">
+            <div><h3>当前触发条件</h3><p>${item.current_triggered_conditions.join("、") || "暂无完整触发条件"}</p></div>
+            <div><h3>原始入池原因</h3><p>${item.original_reason.join("、")}</p></div>
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function bindDynamicNavigation() {
+  document.querySelectorAll(".view [data-view]").forEach((button) => {
+    if (button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+    button.addEventListener("click", () => setView(button.dataset.view));
+  });
+}
+
+function renderAll() {
+  renderToday();
+  renderPremarket();
+  renderIntraday();
   renderReview();
+  renderSectors();
+  renderCandidateView("#stocks", state.candidates.strong_stocks, "stocks", "板块与个股强弱关系优先");
+  renderCandidateView("#pullback", state.candidates.pullback_watch, "pullback", "接近回踩条件的候选");
   renderWatchlist();
-};
+  bindDynamicNavigation();
+}
 
-document.querySelectorAll(".nav-item").forEach((button) => {
+function setView(view) {
+  document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === view));
+  document.querySelectorAll(".desktop-nav [data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === view));
+  const [crumb, title] = viewMeta[view];
+  document.querySelector("#breadcrumb").textContent = crumb;
+  document.querySelector("#view-title").textContent = title;
+  const mobileGroup = view === "today" ? "today" : ["premarket", "intraday", "review"].includes(view) ? "holdings" : ["sectors", "stocks", "pullback"].includes(view) ? "selection" : "watchlist";
+  document.querySelectorAll("[data-mobile-view]").forEach((button) => button.classList.toggle("active", button.dataset.mobileView === mobileGroup));
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function setStage(stage) {
+  state.stage = stage;
+  document.querySelectorAll("[data-stage]").forEach((button) => button.classList.toggle("active", button.dataset.stage === stage));
+  renderToday();
+  bindDynamicNavigation();
+  if (stage === "premarket") setView("premarket");
+  if (stage === "intraday") setView("intraday");
+  if (stage === "postmarket") setView("review");
+}
+
+async function loadData() {
+  const names = ["market", "sectors", "candidates", "holdings", "intraday", "review", "watchlist", "today"];
+  const payloads = await Promise.all(names.map((name) => fetch(`../data/${name}.json`).then((response) => {
+    if (!response.ok) throw new Error(`${name}.json 加载失败`);
+    return response.json();
+  })));
+  names.forEach((name, index) => { state[name] = payloads[index]; });
+  state.stage = state.market.default_stage;
+  document.querySelector("#trade-date").textContent = state.market.trade_date;
+  document.querySelector("#source-label").textContent = `数据源 · ${state.market.data_source.label}`;
+  document.querySelector("#loading").hidden = true;
+  renderAll();
+  setView("today");
+}
+
+document.querySelectorAll(".desktop-nav [data-view]").forEach((button) => {
   button.addEventListener("click", () => setView(button.dataset.view));
 });
 
+document.querySelectorAll("[data-stage]").forEach((button) => {
+  button.addEventListener("click", () => setStage(button.dataset.stage));
+});
+
+document.querySelectorAll("[data-mobile-view]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const map = { today: "today", holdings: state.stage === "premarket" ? "premarket" : state.stage === "postmarket" ? "review" : "intraday", selection: "sectors", watchlist: "watchlist" };
+    setView(map[button.dataset.mobileView]);
+  });
+});
+
 loadData().catch((error) => {
-  document.querySelector("#overview").innerHTML = `
-    <section class="panel">
-      <h2>数据加载失败</h2>
-      <p class="panel-note">${error.message}</p>
-    </section>
-  `;
+  document.querySelector("#loading").innerHTML = `<strong>数据加载失败</strong><span>${error.message}</span>`;
 });

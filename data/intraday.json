@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "trade_date": "2026-09-08",
+    "holding_count": 3,
+    "stage": "intraday"
+  },
+  "holdings": [
+    {
+      "code": "000333",
+      "name": "美的集团",
+      "industry": "家电",
+      "current_price": 66.5,
+      "open": 66.2,
+      "high": 67.1,
+      "low": 65.7,
+      "volume": 486000,
+      "realtime_volume_ratio": 1.86,
+      "vwap": 66.31,
+      "sector_return": 0.003,
+      "change_pct": 0.0015,
+      "amplitude": 0.0211,
+      "ma20": 68.16,
+      "ma20_distance": -0.0244,
+      "relative_sector_strength": -0.0015,
+      "statuses": [
+        "跌破 MA20",
+        "放量滞涨"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": false,
+        "volume_expansion": true,
+        "key_level_break": false
+      },
+      "conditional_note": "当前弱于所属板块，并出现放量跌破 MA20，风险状态较早盘上升。",
+      "attention_score": 120
+    },
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "industry": "白酒",
+      "current_price": 1532.5,
+      "open": 1539.0,
+      "high": 1554.0,
+      "low": 1528.0,
+      "volume": 21400,
+      "realtime_volume_ratio": 0.82,
+      "vwap": 1538.7,
+      "sector_return": 0.008,
+      "change_pct": -0.0023,
+      "amplitude": 0.0169,
+      "ma20": 1553.1,
+      "ma20_distance": -0.0133,
+      "relative_sector_strength": -0.0103,
+      "statuses": [
+        "弱于板块",
+        "跌破 MA20",
+        "接近支撑"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": false,
+        "volume_expansion": false,
+        "key_level_break": false
+      },
+      "conditional_note": "当前位于 MA20 下方，等待价格与量能重新确认结构。",
+      "attention_score": 80
+    },
+    {
+      "code": "601899",
+      "name": "紫金矿业",
+      "industry": "贵金属",
+      "current_price": 20.7,
+      "open": 21.35,
+      "high": 21.8,
+      "low": 20.55,
+      "volume": 7050000,
+      "realtime_volume_ratio": 1.62,
+      "vwap": 21.03,
+      "sector_return": 0.026,
+      "change_pct": -0.0236,
+      "amplitude": 0.059,
+      "ma20": 17.955,
+      "ma20_distance": 0.1529,
+      "relative_sector_strength": -0.0496,
+      "statuses": [
+        "弱于板块",
+        "放量滞涨",
+        "冲高回落",
+        "高波动"
+      ],
+      "flags": {
+        "rush_fade": true,
+        "bottom_rebound": false,
+        "volume_expansion": true,
+        "key_level_break": false
+      },
+      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
+      "attention_score": 60
+    }
+  ],
+  "data_source": "mock"
+}
