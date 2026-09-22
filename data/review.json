@@ -71,12 +71,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:36",
-      "retrieved_at": "2026-09-23T06:06:39+08:00",
+      "retrieved_at": "2026-09-23T06:49:33+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK1259: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -1.18%，高低 8.44/8.30，振幅 +1.66%；位于 MA20 下方，距 MA20 -5.52%。行业涨跌 -0.38%，个股相对行业 -0.80%；正常量能，为前 5 日均量的 133%，未触发特定日内结构规则。",
       "changes_from_yesterday": [
@@ -137,12 +137,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:06",
-      "retrieved_at": "2026-09-23T06:07:01+08:00",
+      "retrieved_at": "2026-09-23T06:49:40+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK1027: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -1.23%，高低 55.81/54.25，振幅 +2.82%；位于 MA20 下方，距 MA20 -2.29%。行业涨跌 -0.76%，个股相对行业 -0.47%；正常量能，为前 5 日均量的 93%，未触发特定日内结构规则。",
       "changes_from_yesterday": [
@@ -190,11 +190,11 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:39",
-      "retrieved_at": "2026-09-23T06:06:50+08:00",
+      "retrieved_at": "2026-09-23T06:49:36+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "sector_history:BK1265: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -7.01%，高低 11.38/10.93，振幅 +3.76%；位于 MA20 上方，距 MA20 +7.99%。行业涨跌 +0.08%，个股相对行业 -7.09%；放量异常，为前 5 日均量的 187%，未触发特定日内结构规则。",
       "changes_from_yesterday": [
@@ -348,12 +348,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:12",
-      "retrieved_at": "2026-09-23T06:06:56+08:00",
+      "retrieved_at": "2026-09-23T06:49:38+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0735: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 +6.94%，高低 16.32/15.60，振幅 +4.85%；位于 MA20 上方，距 MA20 +10.39%。行业涨跌 +1.09%，个股相对行业 +5.85%；放量异常，为前 5 日均量的 595%，冲高回落。",
       "changes_from_yesterday": [
@@ -418,12 +418,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:40",
-      "retrieved_at": "2026-09-23T06:07:07+08:00",
+      "retrieved_at": "2026-09-23T06:49:41+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0545: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -2.19%，高低 16.80/16.02，振幅 +4.75%；位于 MA20 上方，距 MA20 +2.86%。行业涨跌 -0.10%，个股相对行业 -2.09%；正常量能，为前 5 日均量的 88%，冲高回落。",
       "changes_from_yesterday": [
@@ -504,12 +504,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:34",
-      "retrieved_at": "2026-09-23T06:07:18+08:00",
+      "retrieved_at": "2026-09-23T06:49:45+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK1019: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -2.18%，高低 52.18/48.90，振幅 +6.51%；位于 MA20 上方，距 MA20 +6.12%。行业涨跌 -0.49%，个股相对行业 -1.69%；缩量，为前 5 日均量的 72%，冲高回落。",
       "changes_from_yesterday": [
@@ -591,12 +591,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:37",
-      "retrieved_at": "2026-09-23T06:06:45+08:00",
+      "retrieved_at": "2026-09-23T06:49:34+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0465: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 +10.06%，高低 9.08/8.68，振幅 +4.85%；位于 MA20 上方，距 MA20 +12.35%。行业涨跌 +0.74%，个股相对行业 +9.32%；正常量能，为前 5 日均量的 82%，探底回升。",
       "changes_from_yesterday": [
@@ -668,12 +668,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:57",
-      "retrieved_at": "2026-09-23T06:07:12+08:00",
+      "retrieved_at": "2026-09-23T06:49:43+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK1039: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 +2.38%，高低 20.38/19.54，振幅 +4.34%；位于 MA20 上方，距 MA20 +13.23%。行业涨跌 +0.26%，个股相对行业 +2.12%；正常量能，为前 5 日均量的 78%，冲高回落。",
       "changes_from_yesterday": [
@@ -688,46 +688,46 @@
     "id": "astock",
     "label": "A股公开数据",
     "stage": "premarket",
-    "generated_at": "2026-09-23T06:07:23+08:00",
+    "generated_at": "2026-09-23T06:49:46+08:00",
     "source": "tencent",
     "source_timestamp": "2026-09-22T16:14:51",
-    "retrieved_at": "2026-09-23T06:06:23+08:00",
+    "retrieved_at": "2026-09-23T06:49:28+08:00",
     "freshness": "last_trading_day",
     "last_trading_day": "2026-09-22",
     "fallback": true,
     "missing_data": [
       "000066.concept_quotes: not requested under rate budget",
       "000066.mootdx: mootdx is not installed",
-      "000066.sector_history:BK0735: eastmoney request failed: Remote end closed connection without response",
+      "000066.sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
       "000333.concept_quotes: not requested under rate budget",
       "000333.mootdx: mootdx is not installed",
-      "000333.sector_history:BK1239: eastmoney request failed: Remote end closed connection without response",
+      "000333.sector_history:BK1239: eastmoney recently failed: Remote end closed connection without response",
       "000831.concept_quotes: not requested under rate budget",
       "000831.mootdx: mootdx is not installed",
-      "000831.sector_history:BK1027: eastmoney request failed: Remote end closed connection without response",
+      "000831.sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
       "002458.concept_quotes: not requested under rate budget",
       "002458.mootdx: mootdx is not installed",
-      "002458.sector_history:BK1259: eastmoney request failed: Remote end closed connection without response",
+      "002458.sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response",
       "002836.mootdx: mootdx is not installed",
-      "002836.sector_history:BK1265: eastmoney request failed: Remote end closed connection without response",
+      "002836.sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response",
       "300750.concept_quotes: not requested under rate budget",
       "300750.mootdx: mootdx is not installed",
-      "300750.sector_history:BK1033: eastmoney request failed: Remote end closed connection without response",
+      "300750.sector_history:BK1033: eastmoney recently failed: Remote end closed connection without response",
       "600172.concept_quotes: not requested under rate budget",
       "600172.mootdx: mootdx is not installed",
-      "600172.sector_history:BK0545: eastmoney request failed: Remote end closed connection without response",
+      "600172.sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response",
       "600519.concept_quotes: not requested under rate budget",
       "600519.mootdx: mootdx is not installed",
-      "600519.sector_history:BK1277: eastmoney request failed: Remote end closed connection without response",
+      "600519.sector_history:BK1277: eastmoney recently failed: Remote end closed connection without response",
       "600664.concept_quotes: not requested under rate budget",
       "600664.mootdx: mootdx is not installed",
-      "600664.sector_history:BK0465: eastmoney request failed: Remote end closed connection without response",
+      "600664.sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
       "603002.concept_quotes: not requested under rate budget",
       "603002.mootdx: mootdx is not installed",
-      "603002.sector_history:BK1039: eastmoney request failed: Remote end closed connection without response",
+      "603002.sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
       "603938.concept_quotes: not requested under rate budget",
       "603938.mootdx: mootdx is not installed",
-      "603938.sector_history:BK1019: eastmoney request failed: Remote end closed connection without response",
+      "603938.sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response",
       "market.advance_count",
       "market.decline_count",
       "market.flat_count",
@@ -737,13 +737,13 @@
       "market.turnover_change"
     ],
     "request_stats": {
-      "total_requests": 45,
+      "total_requests": 23,
       "tencent_requests": 12,
-      "eastmoney_requests": 33,
+      "eastmoney_requests": 11,
       "sina_requests": 0,
-      "cache_hits": 33,
-      "negative_cache_hits": 0,
-      "request_failures": 33,
+      "cache_hits": 22,
+      "negative_cache_hits": 11,
+      "request_failures": 0,
       "mootdx_requests": 0,
       "mootdx_failures": 0,
       "fallback_count": 11

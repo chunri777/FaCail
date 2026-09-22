@@ -83,12 +83,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:37",
-      "retrieved_at": "2026-09-23T06:06:45+08:00",
+      "retrieved_at": "2026-09-23T06:49:34+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0465: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK0465",
@@ -96,7 +96,7 @@
         "return_pct": 0.0074,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:03:48+08:00",
+        "retrieved_at": "2026-09-23T06:49:36+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -386,12 +386,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:12",
-      "retrieved_at": "2026-09-23T06:06:56+08:00",
+      "retrieved_at": "2026-09-23T06:49:38+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0735: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK0735",
@@ -399,7 +399,7 @@
         "return_pct": 0.0109,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:04:02+08:00",
+        "retrieved_at": "2026-09-23T06:49:40+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -604,12 +604,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:57",
-      "retrieved_at": "2026-09-23T06:07:12+08:00",
+      "retrieved_at": "2026-09-23T06:49:43+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK1039: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK1039",
@@ -617,7 +617,7 @@
         "return_pct": 0.0026,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:04:24+08:00",
+        "retrieved_at": "2026-09-23T06:49:45+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -839,12 +839,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:37",
-      "retrieved_at": "2026-09-23T06:06:45+08:00",
+      "retrieved_at": "2026-09-23T06:49:34+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0465: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK0465",
@@ -852,7 +852,7 @@
         "return_pct": 0.0074,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:03:48+08:00",
+        "retrieved_at": "2026-09-23T06:49:36+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -1142,12 +1142,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:12",
-      "retrieved_at": "2026-09-23T06:06:56+08:00",
+      "retrieved_at": "2026-09-23T06:49:38+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0735: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK0735",
@@ -1155,7 +1155,7 @@
         "return_pct": 0.0109,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:04:02+08:00",
+        "retrieved_at": "2026-09-23T06:49:40+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -1360,12 +1360,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:57",
-      "retrieved_at": "2026-09-23T06:07:12+08:00",
+      "retrieved_at": "2026-09-23T06:49:43+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK1039: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK1039",
@@ -1373,7 +1373,7 @@
         "return_pct": 0.0026,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:04:24+08:00",
+        "retrieved_at": "2026-09-23T06:49:45+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -1594,12 +1594,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:37",
-      "retrieved_at": "2026-09-23T06:06:45+08:00",
+      "retrieved_at": "2026-09-23T06:49:34+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0465: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK0465",
@@ -1607,7 +1607,7 @@
         "return_pct": 0.0074,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:03:48+08:00",
+        "retrieved_at": "2026-09-23T06:49:36+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -1897,12 +1897,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:12",
-      "retrieved_at": "2026-09-23T06:06:56+08:00",
+      "retrieved_at": "2026-09-23T06:49:38+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK0735: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK0735",
@@ -1910,7 +1910,7 @@
         "return_pct": 0.0109,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:04:02+08:00",
+        "retrieved_at": "2026-09-23T06:49:40+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -2115,12 +2115,12 @@
         "concepts": "eastmoney"
       },
       "source_timestamp": "2026-09-22T16:14:57",
-      "retrieved_at": "2026-09-23T06:07:12+08:00",
+      "retrieved_at": "2026-09-23T06:49:43+08:00",
       "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
-        "sector_history:BK1039: eastmoney request failed: Remote end closed connection without response"
+        "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response"
       ],
       "sector": {
         "code": "BK1039",
@@ -2128,7 +2128,7 @@
         "return_pct": 0.0026,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T06:04:24+08:00",
+        "retrieved_at": "2026-09-23T06:49:45+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -2276,46 +2276,46 @@
     "id": "astock",
     "label": "A股公开数据",
     "stage": "premarket",
-    "generated_at": "2026-09-23T06:07:23+08:00",
+    "generated_at": "2026-09-23T06:49:46+08:00",
     "source": "tencent",
     "source_timestamp": "2026-09-22T16:14:51",
-    "retrieved_at": "2026-09-23T06:06:23+08:00",
+    "retrieved_at": "2026-09-23T06:49:28+08:00",
     "freshness": "last_trading_day",
     "last_trading_day": "2026-09-22",
     "fallback": true,
     "missing_data": [
       "000066.concept_quotes: not requested under rate budget",
       "000066.mootdx: mootdx is not installed",
-      "000066.sector_history:BK0735: eastmoney request failed: Remote end closed connection without response",
+      "000066.sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
       "000333.concept_quotes: not requested under rate budget",
       "000333.mootdx: mootdx is not installed",
-      "000333.sector_history:BK1239: eastmoney request failed: Remote end closed connection without response",
+      "000333.sector_history:BK1239: eastmoney recently failed: Remote end closed connection without response",
       "000831.concept_quotes: not requested under rate budget",
       "000831.mootdx: mootdx is not installed",
-      "000831.sector_history:BK1027: eastmoney request failed: Remote end closed connection without response",
+      "000831.sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
       "002458.concept_quotes: not requested under rate budget",
       "002458.mootdx: mootdx is not installed",
-      "002458.sector_history:BK1259: eastmoney request failed: Remote end closed connection without response",
+      "002458.sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response",
       "002836.mootdx: mootdx is not installed",
-      "002836.sector_history:BK1265: eastmoney request failed: Remote end closed connection without response",
+      "002836.sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response",
       "300750.concept_quotes: not requested under rate budget",
       "300750.mootdx: mootdx is not installed",
-      "300750.sector_history:BK1033: eastmoney request failed: Remote end closed connection without response",
+      "300750.sector_history:BK1033: eastmoney recently failed: Remote end closed connection without response",
       "600172.concept_quotes: not requested under rate budget",
       "600172.mootdx: mootdx is not installed",
-      "600172.sector_history:BK0545: eastmoney request failed: Remote end closed connection without response",
+      "600172.sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response",
       "600519.concept_quotes: not requested under rate budget",
       "600519.mootdx: mootdx is not installed",
-      "600519.sector_history:BK1277: eastmoney request failed: Remote end closed connection without response",
+      "600519.sector_history:BK1277: eastmoney recently failed: Remote end closed connection without response",
       "600664.concept_quotes: not requested under rate budget",
       "600664.mootdx: mootdx is not installed",
-      "600664.sector_history:BK0465: eastmoney request failed: Remote end closed connection without response",
+      "600664.sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
       "603002.concept_quotes: not requested under rate budget",
       "603002.mootdx: mootdx is not installed",
-      "603002.sector_history:BK1039: eastmoney request failed: Remote end closed connection without response",
+      "603002.sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
       "603938.concept_quotes: not requested under rate budget",
       "603938.mootdx: mootdx is not installed",
-      "603938.sector_history:BK1019: eastmoney request failed: Remote end closed connection without response",
+      "603938.sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response",
       "market.advance_count",
       "market.decline_count",
       "market.flat_count",
@@ -2325,13 +2325,13 @@
       "market.turnover_change"
     ],
     "request_stats": {
-      "total_requests": 45,
+      "total_requests": 23,
       "tencent_requests": 12,
-      "eastmoney_requests": 33,
+      "eastmoney_requests": 11,
       "sina_requests": 0,
-      "cache_hits": 33,
-      "negative_cache_hits": 0,
-      "request_failures": 33,
+      "cache_hits": 22,
+      "negative_cache_hits": 11,
+      "request_failures": 0,
       "mootdx_requests": 0,
       "mootdx_failures": 0,
       "fallback_count": 11
