@@ -1,89 +1,59 @@
 {
   "summary": {
-    "trade_date": "2026-09-08",
-    "holding_count": 3,
-    "portfolio_change_pct": -0.0058,
-    "total_market_value": 295150.0,
+    "trade_date": "2026-09-22",
+    "holding_count": 0,
+    "portfolio_change_pct": null,
+    "total_market_value": 0,
     "stronger_than_sector_count": 0,
-    "weaker_than_sector_count": 2,
-    "above_ma20_count": 1,
-    "below_ma20_count": 2,
+    "weaker_than_sector_count": 0,
+    "above_ma20_count": 0,
+    "below_ma20_count": 0,
     "shrink_pullback_count": 0,
     "abnormal_volume_count": 0,
-    "anomaly_count": 3,
-    "narrative": "今日组合 -0.58%。3 只持仓中，1 只位于 MA20 上方，2 只弱于所属板块。缩量回踩 0 只，放量异常 0 只。整体继续以结构变化和板块同步性为观察重点。"
+    "anomaly_count": 0,
+    "narrative": "未配置真实持仓，暂无组合复盘。"
   },
-  "holdings": [
-    {
-      "code": "600519",
-      "name": "贵州茅台",
-      "industry": "白酒",
-      "change_pct": -0.0023,
-      "high": 1554.43,
-      "low": 1514.11,
-      "ma20": 1553.1,
-      "ma20_distance": -0.0133,
-      "volume_ratio_5d": 0.865,
-      "relative_sector_strength": -0.0103,
-      "labels": [
-        "MA20下方",
-        "正常量能",
-        "弱于板块"
-      ],
-      "what_happened": "今日涨跌 -0.23%，日内高低 1554.43/1514.11；相对板块 -1.03%，量能为 5 日均量的 86%。",
-      "changes_from_yesterday": [
-        "MA20 与量能状态相比昨日未发生级别变化"
-      ]
-    },
-    {
-      "code": "000333",
-      "name": "美的集团",
-      "industry": "家电",
-      "change_pct": 0.0015,
-      "high": 67.3,
-      "low": 65.6,
-      "ma20": 68.16,
-      "ma20_distance": -0.0244,
-      "volume_ratio_5d": 0.8875,
-      "relative_sector_strength": -0.0015,
-      "labels": [
-        "MA20下方",
-        "趋势破坏",
-        "正常量能"
-      ],
-      "what_happened": "今日涨跌 +0.15%，日内高低 67.30/65.60；相对板块 -0.15%，量能为 5 日均量的 89%。",
-      "changes_from_yesterday": [
-        "MA20 与量能状态相比昨日未发生级别变化"
-      ]
-    },
-    {
-      "code": "601899",
-      "name": "紫金矿业",
-      "industry": "贵金属",
-      "change_pct": -0.0236,
-      "high": 21.45,
-      "low": 20.45,
-      "ma20": 17.955,
-      "ma20_distance": 0.1529,
-      "volume_ratio_5d": 0.9385,
-      "relative_sector_strength": -0.0496,
-      "labels": [
-        "MA20上方",
-        "正常量能",
-        "弱于板块",
-        "过热"
-      ],
-      "what_happened": "今日涨跌 -2.36%，日内高低 21.45/20.45；相对板块 -4.96%，量能为 5 日均量的 94%。",
-      "changes_from_yesterday": [
-        "MA20 与量能状态相比昨日未发生级别变化"
-      ]
-    }
-  ],
+  "holdings": [],
   "data_source": {
-    "id": "mock",
-    "label": "Mock",
-    "stage": "postmarket",
-    "generated_at": "2026-09-08T19:06:42+08:00",
-    "missing_data": []
+    "id": "astock",
+    "label": "A股公开数据",
+    "stage": "premarket",
+    "generated_at": "2026-09-23T05:06:59+08:00",
+    "source": "tencent",
+    "source_timestamp": "2026-09-22T16:14:51",
+    "retrieved_at": "2026-09-23T05:06:43+08:00",
+    "freshness": "last_trading_day",
+    "last_trading_day": "2026-09-22",
+    "fallback": true,
+    "missing_data": [
+      "000333.concept_quotes: not requested under rate budget",
+      "000333.mootdx: mootdx is not installed",
+      "000333.sector_history:BK1239: eastmoney request failed: Remote end closed connection without response",
+      "300750.concept_quotes: not requested under rate budget",
+      "300750.mootdx: mootdx is not installed",
+      "300750.sector_history:BK1033: eastmoney request failed: Remote end closed connection without response",
+      "600519.concept_quotes: not requested under rate budget",
+      "600519.mootdx: mootdx is not installed",
+      "600519.sector_history:BK1277: eastmoney request failed: Remote end closed connection without response",
+      "market.advance_count",
+      "market.decline_count",
+      "market.flat_count",
+      "market.limit_down_count",
+      "market.limit_up_count",
+      "market.market_amplitude",
+      "market.turnover_change"
+    ],
+    "request_stats": {
+      "total_requests": 13,
+      "tencent_requests": 4,
+      "eastmoney_requests": 9,
+      "sina_requests": 0,
+      "cache_hits": 9,
+      "negative_cache_hits": 0,
+      "request_failures": 9,
+      "mootdx_requests": 0,
+      "mootdx_failures": 0,
+      "fallback_count": 3
+    }
   }
 }

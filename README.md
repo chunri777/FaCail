@@ -16,7 +16,7 @@ The development stage switch in the page header simulates pre-market, intraday, 
 ## Architecture
 
 ```text
-MockProvider / ThsProvider
+AstockProvider (production) / MockProvider (development) / ThsProvider (optional)
   -> Python indicators and rule engine
   -> JSON data layer
   -> GitHub Pages frontend
@@ -41,7 +41,7 @@ data/
 ## Local Run
 
 ```bash
-python3 scripts/generate_data.py
+python3 scripts/generate_data.py --provider astock --stage auto
 python3 scripts/validate_data.py
 python3 -m http.server 8080
 ```
@@ -52,10 +52,18 @@ Open `http://localhost:8080/frontend/`.
 
 - `MockProvider`: deterministic data for product and rule verification.
 - `ThsProvider`: adapter for Tonghuashun QuantAPI/local bridge. It reads credentials only from environment variables or the local bridge, never from committed files.
+- `AstockProvider`: production read-only public-source adapter. It uses mootdx daily bars with Sina fallback, Tencent stock/index quotes, and Eastmoney industry/concept membership and sector returns. Unavailable values stay `null` with `missing_data`. See [data source details](docs/astock-data-sources.md).
 
-Switch providers with either:
+Validate the public-source pilot without changing published data:
 
 ```bash
+python3 scripts/check_astock.py --code 600519 --days 60
+```
+
+Generate real publication JSON or switch to Mock for local development:
+
+```bash
+python3 scripts/generate_data.py --provider astock --stage auto
 FACAIL_PROVIDER=mock python3 scripts/generate_data.py
 FACAIL_PROVIDER=ths python3 scripts/generate_data.py
 python3 scripts/generate_data.py --provider ths --stage auto
@@ -107,8 +115,19 @@ Copy `config/holdings.example.json` to `config/holdings.local.json`, then edit y
 You can also point to another private file:
 
 ```bash
-FACAIL_HOLDINGS_FILE=/path/to/holdings.json python3 scripts/generate_data.py --provider ths
+FACAIL_HOLDINGS_FILE=/path/to/holdings.json python3 scripts/generate_data.py --provider astock
 ```
+
+The local configuration file is ignored by Git, but generated `data/holdings.json`,
+`data/intraday.json`, and `data/review.json` are public if committed to GitHub
+Pages. Review those outputs before publishing personal positions. With no local
+configuration, the real provider publishes empty holdings and watchlist states.
+
+`config/universe.json` defines the bounded first-version scan pool. The
+2026 trading calendar in `config/trading_calendar.json` drives pre-market,
+intraday, post-market, weekend, and holiday freshness checks. Refresh published
+JSON by running the generator and deploying it; GitHub Pages does not run Python
+or fetch live quotes itself.
 
 ## Local Schedule
 

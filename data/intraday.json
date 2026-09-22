@@ -1,109 +1,50 @@
 {
   "summary": {
-    "trade_date": "2026-09-08",
-    "holding_count": 3,
-    "stage": "postmarket"
+    "trade_date": "2026-09-22",
+    "holding_count": 0,
+    "stage": "premarket"
   },
-  "holdings": [
-    {
-      "code": "000333",
-      "name": "美的集团",
-      "industry": "家电",
-      "current_price": 66.5,
-      "open": 66.2,
-      "high": 67.1,
-      "low": 65.7,
-      "volume": 486000,
-      "realtime_volume_ratio": 1.86,
-      "vwap": 66.31,
-      "sector_return": 0.003,
-      "change_pct": 0.0015,
-      "amplitude": 0.0211,
-      "ma20": 68.16,
-      "ma20_distance": -0.0244,
-      "relative_sector_strength": -0.0015,
-      "statuses": [
-        "跌破 MA20",
-        "放量滞涨"
-      ],
-      "flags": {
-        "rush_fade": false,
-        "bottom_rebound": false,
-        "volume_expansion": true,
-        "key_level_break": false
-      },
-      "conditional_note": "当前弱于所属板块，并出现放量跌破 MA20，风险状态较早盘上升。",
-      "attention_score": 120
-    },
-    {
-      "code": "600519",
-      "name": "贵州茅台",
-      "industry": "白酒",
-      "current_price": 1532.5,
-      "open": 1539.0,
-      "high": 1554.0,
-      "low": 1528.0,
-      "volume": 21400,
-      "realtime_volume_ratio": 0.82,
-      "vwap": 1538.7,
-      "sector_return": 0.008,
-      "change_pct": -0.0023,
-      "amplitude": 0.0169,
-      "ma20": 1553.1,
-      "ma20_distance": -0.0133,
-      "relative_sector_strength": -0.0103,
-      "statuses": [
-        "弱于板块",
-        "跌破 MA20",
-        "接近支撑"
-      ],
-      "flags": {
-        "rush_fade": false,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": false
-      },
-      "conditional_note": "当前位于 MA20 下方，等待价格与量能重新确认结构。",
-      "attention_score": 80
-    },
-    {
-      "code": "601899",
-      "name": "紫金矿业",
-      "industry": "贵金属",
-      "current_price": 20.7,
-      "open": 21.35,
-      "high": 21.8,
-      "low": 20.55,
-      "volume": 7050000,
-      "realtime_volume_ratio": 1.62,
-      "vwap": 21.03,
-      "sector_return": 0.026,
-      "change_pct": -0.0236,
-      "amplitude": 0.059,
-      "ma20": 17.955,
-      "ma20_distance": 0.1529,
-      "relative_sector_strength": -0.0496,
-      "statuses": [
-        "弱于板块",
-        "放量滞涨",
-        "冲高回落",
-        "高波动"
-      ],
-      "flags": {
-        "rush_fade": true,
-        "bottom_rebound": false,
-        "volume_expansion": true,
-        "key_level_break": false
-      },
-      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
-      "attention_score": 60
-    }
-  ],
+  "holdings": [],
   "data_source": {
-    "id": "mock",
-    "label": "Mock",
-    "stage": "postmarket",
-    "generated_at": "2026-09-08T19:06:42+08:00",
-    "missing_data": []
+    "id": "astock",
+    "label": "A股公开数据",
+    "stage": "premarket",
+    "generated_at": "2026-09-23T05:06:59+08:00",
+    "source": "tencent",
+    "source_timestamp": "2026-09-22T16:14:51",
+    "retrieved_at": "2026-09-23T05:06:43+08:00",
+    "freshness": "last_trading_day",
+    "last_trading_day": "2026-09-22",
+    "fallback": true,
+    "missing_data": [
+      "000333.concept_quotes: not requested under rate budget",
+      "000333.mootdx: mootdx is not installed",
+      "000333.sector_history:BK1239: eastmoney request failed: Remote end closed connection without response",
+      "300750.concept_quotes: not requested under rate budget",
+      "300750.mootdx: mootdx is not installed",
+      "300750.sector_history:BK1033: eastmoney request failed: Remote end closed connection without response",
+      "600519.concept_quotes: not requested under rate budget",
+      "600519.mootdx: mootdx is not installed",
+      "600519.sector_history:BK1277: eastmoney request failed: Remote end closed connection without response",
+      "market.advance_count",
+      "market.decline_count",
+      "market.flat_count",
+      "market.limit_down_count",
+      "market.limit_up_count",
+      "market.market_amplitude",
+      "market.turnover_change"
+    ],
+    "request_stats": {
+      "total_requests": 13,
+      "tencent_requests": 4,
+      "eastmoney_requests": 9,
+      "sina_requests": 0,
+      "cache_hits": 9,
+      "negative_cache_hits": 0,
+      "request_failures": 9,
+      "mootdx_requests": 0,
+      "mootdx_failures": 0,
+      "fallback_count": 3
+    }
   }
 }

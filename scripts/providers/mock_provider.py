@@ -16,7 +16,12 @@ def load_local_user_config() -> dict[str, Any]:
     path = Path(os.getenv("FACAIL_HOLDINGS_FILE", LOCAL_HOLDINGS_PATH))
     if not path.exists():
         return {}
-    return json.loads(path.read_text(encoding="utf-8"))
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(payload, list):
+        return {"holdings": payload, "watchlist": []}
+    if not isinstance(payload, dict):
+        raise ValueError("Local holdings config must be an object or holdings list")
+    return payload
 
 
 def _series(

@@ -22,24 +22,25 @@ const viewMeta = {
 };
 
 const pct = (value, digits = 2) => {
-  if (value === null || value === undefined) return "数据缺失";
+  if (value === null || value === undefined || !Number.isFinite(value)) return "暂无数据";
   return `${value > 0 ? "+" : ""}${(value * 100).toFixed(digits)}%`;
 };
 
 const number = (value, digits = 2) => {
-  if (value === null || value === undefined) return "数据缺失";
+  if (value === null || value === undefined || !Number.isFinite(value)) return "暂无数据";
   return new Intl.NumberFormat("zh-CN", { maximumFractionDigits: digits }).format(value);
 };
 
 const amount = (value) => {
-  if (value === null || value === undefined) return "数据缺失";
+  if (value === null || value === undefined || !Number.isFinite(value)) return "暂无数据";
   return `${(value / 100000000).toFixed(0)} 亿`;
 };
 
 const changeClass = (value) => value > 0 ? "up" : value < 0 ? "down" : "flat";
 const statusClass = (value) => value === "已满足" ? "met" : value === "接近满足" ? "near" : "";
 const sourceLabel = () => state.market?.data_source?.label || state.market?.data_source || "--";
-const sourceTime = () => state.market?.data_source?.generated_at?.slice(11, 16) || "--";
+const sourceTime = () => state.market?.data_source?.retrieved_at?.slice(11, 16) || "--";
+const shown = (value) => value === null || value === undefined || value === "" ? "暂无数据" : value;
 
 const pills = (items = []) => `
   <div class="pills">${items.map((item) => `<span>${item}</span>`).join("")}</div>
@@ -80,7 +81,7 @@ const conditionList = (conditions) => `
     ${conditions.map((condition) => `
       <div class="condition">
         <div><strong>${condition.name}</strong><span class="condition-state ${statusClass(condition.status)}">${condition.status}</span></div>
-        <small>${condition.met_count}/${condition.total_count} 项已符合</small>
+        <small>${condition.met_count}/${condition.total_count} 项已符合${condition.missing_count ? ` · ${condition.missing_count} 项数据缺失` : ""}</small>
       </div>
     `).join("")}
   </div>
@@ -89,13 +90,13 @@ const conditionList = (conditions) => `
 const candidateCard = (stock) => `
   <article class="candidate-row">
     <div class="stock-title">
-      <div><strong>${stock.name}</strong><span>${stock.code} · ${stock.industry}</span></div>
+      <div><strong>${stock.name}</strong><span>${stock.code} · ${shown(stock.industry)}</span></div>
       <div class="stock-price"><strong>${number(stock.close)}</strong><span class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</span></div>
     </div>
     ${miniMetrics([
       ["MA20 距离", pct(stock.ma20_distance)],
       ["量能 / 5日", number(stock.volume_ratio_5d)],
-      ["板块强度", `${stock.sector.status} · ${stock.industry_rank}/${stock.sector.rank_total}`],
+      ["板块强度", stock.industry_rank === null || stock.industry_rank === undefined ? stock.sector.status : `${stock.sector.status} · ${stock.industry_rank}/${stock.sector.rank_total}`],
       ["个股相对", pct(stock.relative_sector_strength), changeClass(stock.relative_sector_strength)],
     ])}
     <div class="candidate-status">
@@ -121,17 +122,17 @@ function renderToday() {
   document.querySelector("#today").innerHTML = `
     <section class="market-band">
       <div class="market-state">
-        <span class="stage-label" id="home-stage">${market.stage_options.find((item) => item.id === state.stage).label}</span>
+        <span class="stage-label" id="home-stage">${market.stage_options.find((item) => item.id === state.stage)?.label || "盘后"}</span>
         <div><p>今日状态</p><h2>${market.status_labels.join(" · ")}</h2></div>
       </div>
       <div class="index-strip">
         ${market.indices.map((item) => `<div><span>${item.name}</span><strong>${number(item.value)}</strong><small class="${changeClass(item.change_pct)}">${pct(item.change_pct)}</small></div>`).join("")}
       </div>
       <div class="market-facts">
-        ${stat("全市场成交额", amount(market.turnover), pct(market.turnover_change) + " 较前日")}
-        ${stat("上涨 / 下跌", `${market.advance_count} / ${market.decline_count}`)}
-        ${stat("涨停数量", market.limit_up_count)}
-        ${stat("核心板块", market.core_sectors.map((item) => item.name).join("、"))}
+        ${stat("两市成交额", amount(market.turnover), market.turnover_change === null ? "" : pct(market.turnover_change) + " 较前日")}
+        ${stat("上涨 / 下跌", `${shown(market.advance_count)} / ${shown(market.decline_count)}`)}
+        ${stat("涨停数量", shown(market.limit_up_count))}
+        ${stat("核心板块", market.core_sectors.map((item) => item.name).join("、") || "暂无数据")}
       </div>
     </section>
 
@@ -147,6 +148,7 @@ function renderToday() {
       <div class="anomaly-list">
         ${today.holding_anomalies.map((item) => `<button data-view="intraday"><strong>${item.name}</strong><span>${item.labels.join(" · ")}</span><b>查看</b></button>`).join("")}
       </div>
+      ${summary.holding_count === 0 ? '<p class="empty">尚未配置真实持仓。</p>' : ""}
     </section>
 
     <section class="content-section attention-grid">
@@ -192,7 +194,7 @@ function renderPremarket() {
             <div><h3>今日条件式计划</h3><ul>${stock.conditional_plan.map((item) => `<li>${item}</li>`).join("")}</ul></div>
           </div>
         </article>
-      `).join("")}
+      `).join("") || '<p class="empty">尚未配置真实持仓。</p>'}
     </div>
   `;
 }
@@ -200,7 +202,7 @@ function renderPremarket() {
 function renderIntraday() {
   document.querySelector("#intraday").innerHTML = `
     ${holdingTabs("intraday")}
-    <div class="phase-note live"><strong>盘中${sourceLabel()}快照 · ${sourceTime()}</strong><span>异常状态置顶</span></div>
+    <div class="phase-note live"><strong>${sourceLabel()}行情 · ${sourceTime()}</strong><span>${state.market.freshness === "stale" ? "实时行情暂未更新" : "异常状态置顶"}</span></div>
     <div class="holding-list">
       ${state.intraday.holdings.map((stock) => `
         <article class="holding-row">
@@ -213,6 +215,7 @@ function renderIntraday() {
             ["今日高 / 低", `${number(stock.high)} / ${number(stock.low)}`],
             ["振幅", pct(stock.amplitude)],
             ["当前成交量", number(stock.volume, 0)],
+            ["换手率", pct(stock.turnover_rate)],
             ["实时量比", number(stock.realtime_volume_ratio)],
             ["VWAP", number(stock.vwap)],
             ["MA20 / 距离", `${number(stock.ma20)} / ${pct(stock.ma20_distance)}`],
@@ -221,7 +224,7 @@ function renderIntraday() {
           ])}
           <div class="rule-note"><span>盘中规则观察</span><p>${stock.conditional_note}</p></div>
         </article>
-      `).join("")}
+      `).join("") || '<p class="empty">尚未配置真实持仓。</p>'}
     </div>
   `;
 }
@@ -251,7 +254,7 @@ function renderReview() {
             <h3>今日发生了什么</h3><p>${stock.what_happened}</p>
             <h3>相比昨日发生什么变化</h3><ul>${stock.changes_from_yesterday.map((item) => `<li>${item}</li>`).join("")}</ul>
           </article>
-        `).join("")}
+        `).join("") || '<p class="empty">尚未配置真实持仓。</p>'}
       </div>
     </section>
   `;
@@ -263,19 +266,19 @@ function renderSectors() {
     <div class="sector-list">
       ${state.sectors.sectors.map((sector) => `
         <article class="sector-row">
-          <div class="sector-rank"><span>${sector.rank}</span><small>/ ${sector.rank_total}</small></div>
+          <div class="sector-rank"><span>${shown(sector.rank)}</span><small>${sector.rank_total == null ? "" : `/ ${sector.rank_total}`}</small></div>
           <div class="sector-main"><div><strong>${sector.name}</strong><span class="sector-status">${sector.status}</span></div>
             ${miniMetrics([
               ["今日 / 5日 / 20日", `${pct(sector.return_pct)} / ${pct(sector.return_5d)} / ${pct(sector.return_20d)}`],
               ["上涨家数比例", pct(sector.advance_ratio)],
-              ["涨停数量", sector.limit_up_count],
+              ["涨停数量", shown(sector.limit_up_count)],
               ["成交额变化", pct(sector.turnover_change)],
               ["5日成交额变化", pct(sector.turnover_5d_change)],
               ["板块趋势", sector.ma20_status],
             ])}
           </div>
         </article>
-      `).join("")}
+      `).join("") || '<p class="empty">暂无可核实的板块数据。</p>'}
     </div>
   `;
 }
@@ -295,23 +298,23 @@ function renderWatchlist() {
       ${state.watchlist.watchlist.map((item) => `
         <article class="watch-row">
           <div class="stock-title">
-            <div><strong>${item.name}</strong><span>${item.code} · ${item.industry} · 加入 ${item.added_date}</span></div>
+            <div><strong>${item.name}</strong><span>${item.code} · ${shown(item.industry)} · 加入 ${shown(item.added_date)}</span></div>
             <div class="stock-price"><strong>${number(item.current_price)}</strong><span class="${changeClass(item.return_since_added)}">${pct(item.return_since_added)}</span></div>
           </div>
           ${miniMetrics([
             ["加入价格", number(item.added_price)],
-            ["已观察交易日", item.observed_trading_days],
+            ["已观察交易日", shown(item.observed_trading_days)],
             ["最大涨幅", pct(item.max_gain), changeClass(item.max_gain)],
             ["最大回撤", pct(item.max_drawdown), changeClass(item.max_drawdown)],
-            ["买入条件状态", item.buy_condition_status],
+            ["买入条件状态", shown(item.buy_condition_status)],
             ["当前 MA20 距离", pct(item.current_ma20_distance)],
           ])}
           <div class="two-columns">
             <div><h3>当前触发条件</h3><p>${item.current_triggered_conditions.join("、") || "暂无完整触发条件"}</p></div>
-            <div><h3>原始入池原因</h3><p>${item.original_reason.join("、")}</p></div>
+            <div><h3>原始入池原因</h3><p>${item.original_reason.join("、") || "暂无数据"}</p></div>
           </div>
         </article>
-      `).join("")}
+      `).join("") || '<p class="empty">观察池为空；旧 Mock 记录未作为真实历史发布。</p>'}
     </div>
   `;
 }
@@ -365,8 +368,14 @@ async function loadData() {
   })));
   names.forEach((name, index) => { state[name] = payloads[index]; });
   state.stage = state.market.default_stage;
-  document.querySelector("#trade-date").textContent = state.market.trade_date;
+  document.querySelector("#trade-date").textContent = `最近交易日 · ${shown(state.market.trade_date)}`;
   document.querySelector("#source-label").textContent = `数据源 · ${state.market.data_source.label}`;
+  const freshness = state.market.data_source.freshness;
+  const freshnessText = freshness === "current" ? "当日行情" : freshness === "last_trading_day" ? "上一交易日" : freshness === "stale" ? "实时行情暂未更新" : "时间待核实";
+  const fallbackText = state.market.data_source.fallback ? " · 部分行情使用备用数据源" : "";
+  const status = document.querySelector("#data-status");
+  status.textContent = `${freshnessText} · 更新 ${sourceTime()}${fallbackText}`;
+  status.classList.toggle("stale", freshness === "stale");
   document.querySelector("#loading").hidden = true;
   renderAll();
   setView("today");

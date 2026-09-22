@@ -1,0 +1,28 @@
+{
+  "timeout_seconds": 8,
+  "retries": 2,
+  "mootdx_negative_cache_seconds": 300,
+  "http_negative_cache_seconds": 60,
+  "intraday_stale_after_minutes": 20,
+  "postmarket_close_minute": "14:55",
+  "market_indices": ["sh000001", "sz399001", "sz399006", "sh000300"],
+  "max_concept_quotes_per_stock": 8,
+  "publish_concept_quote_limit": 0,
+  "cache_dir": "data/.cache/astock",
+  "cache_seconds": {
+    "daily_bars": 21600,
+    "quote": 30,
+    "sector": 300,
+    "membership": 86400,
+    "sector_history": 21600
+  },
+  "min_interval_seconds": {
+    "tencent": 0.5,
+    "eastmoney": 1.5,
+    "sina": 1.0
+  },
+  "mootdx_servers": [
+    ["119.97.185.59", 7709],
+    ["124.70.133.119", 7709]
+  ]
+}
