@@ -456,12 +456,20 @@ def build_holdings(
     premarket_stocks: list[dict[str, Any]] | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     by_code = {stock["code"]: stock for stock in stocks}
-    premarket_by_code = {stock["code"]: stock for stock in (premarket_stocks or stocks)}
+    premarket_by_code = {stock["code"]: stock for stock in (stocks if premarket_stocks is None else premarket_stocks)}
     intraday_by_code = {item["code"]: item for item in intraday_raw}
     rows, premarket_rows, live_rows, review_rows = [], [], [], []
     for position in positions:
         if position.get("code") not in by_code:
+            if provider.id == "astock":
+                (missing if missing is not None else provider.missing_data).append(
+                    f"{position.get('code', 'unknown')}.holding: verified daily history unavailable")
+                continue
             raise ProviderUnavailable("Holding lacks verified daily history.", [position.get("code", "unknown")])
+        if provider.id == "astock" and position["code"] not in premarket_by_code:
+            (missing if missing is not None else provider.missing_data).append(
+                f"{position['code']}.holding: premarket history unavailable")
+            continue
         stock = by_code[position["code"]]
         plan_stock = premarket_by_code.get(position["code"], stock)
         if position.get("shares") is None or position.get("cost") is None:
@@ -867,9 +875,9 @@ def build_today(market: dict[str, Any], holdings: dict[str, Any], candidates: di
     }
 
 
-def write_json(name: str, payload: dict[str, Any]) -> None:
-    target = DATA_DIR / name
-    temporary = DATA_DIR / f".{name}.tmp"
+def write_json(name: str, payload: dict[str, Any], output_dir: Path = DATA_DIR) -> None:
+    target = output_dir / name
+    temporary = output_dir / f".{name}.tmp"
     temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     temporary.replace(target)
 
@@ -879,6 +887,7 @@ def parse_args() -> Any:
     parser.add_argument("--provider", choices=["mock", "ths", "astock"], default=os.getenv("FACAIL_PROVIDER", "astock"))
     parser.add_argument("--stage", choices=["auto", "premarket", "intraday", "postmarket"], default=os.getenv("FACAIL_STAGE", "auto"))
     parser.add_argument("--allow-fallback", action="store_true", help="fall back to MockProvider only when THS is unavailable")
+    parser.add_argument("--output-dir", type=Path, default=DATA_DIR, help="write generated JSON to this directory")
     return parser.parse_args()
 
 
@@ -933,7 +942,8 @@ def main() -> None:
             sector = sector_by_name.get(raw["industry"], unknown_sector)
             prior_bars = [bar for bar in raw["bars"] if bar["date"] < current_trade_day]
             if len(prior_bars) < 21:
-                raise ProviderUnavailable("Insufficient previous-session history for premarket plan.", [raw["code"]])
+                missing.append(f"{raw['code']}.premarket_history: insufficient previous-session history")
+                continue
             plan_raw = {**raw, "bars": prior_bars, "quote": {}, "trade_stage": "premarket",
                         "source_timestamp": prior_bars[-1]["date"]}
             plan_sector = sector if raw["bars"][-1]["date"] < current_trade_day else {
@@ -948,15 +958,15 @@ def main() -> None:
     watchlist = build_watchlist(raw_stocks, stocks, raw_watchlist, provider, stage, missing)
     today = build_today(market, holdings, candidates, provider, stage, missing)
 
-    DATA_DIR.mkdir(exist_ok=True)
-    write_json("market.json", market)
-    write_json("sectors.json", {"summary": {"sector_count": len(sectors)}, "sectors": sectors, "data_source": source_meta(provider, stage, missing)})
-    write_json("candidates.json", candidates)
-    write_json("holdings.json", holdings)
-    write_json("intraday.json", intraday)
-    write_json("review.json", review)
-    write_json("watchlist.json", watchlist)
-    write_json("today.json", today)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    write_json("market.json", market, args.output_dir)
+    write_json("sectors.json", {"summary": {"sector_count": len(sectors)}, "sectors": sectors, "data_source": source_meta(provider, stage, missing)}, args.output_dir)
+    write_json("candidates.json", candidates, args.output_dir)
+    write_json("holdings.json", holdings, args.output_dir)
+    write_json("intraday.json", intraday, args.output_dir)
+    write_json("review.json", review, args.output_dir)
+    write_json("watchlist.json", watchlist, args.output_dir)
+    write_json("today.json", today, args.output_dir)
     print(f"Generated FaCail JSON from {provider.label} provider for {stage}")
     if provider.id == "astock":
         print(json.dumps({"request_stats": provider.stats(), "missing_data": sorted(set(provider.missing_data))}, ensure_ascii=False))

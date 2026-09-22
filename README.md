@@ -126,13 +126,34 @@ configuration, the real provider publishes empty holdings and watchlist states.
 `config/universe.json` defines the bounded first-version scan pool. The
 2026 trading calendar in `config/trading_calendar.json` drives pre-market,
 intraday, post-market, weekend, and holiday freshness checks. Refresh published
-JSON by running the generator and deploying it; GitHub Pages does not run Python
-or fetch live quotes itself.
+JSON through the local update agent; GitHub Pages does not run Python or fetch
+live quotes itself. The open page checks for a newly deployed snapshot every
+five minutes.
 
-## Local Schedule
+## Automatic Updates (macOS)
 
-`scripts/run_update.py` runs one THS update and writes logs under `logs/`.
+`scripts/run_update.py` uses Shanghai time and the local trading calendar. The
+launchd agent schedules 08:30 pre-market, 09:35-11:25 and 13:05-14:55 every
+ten minutes, and 15:10 post-market. It skips weekends, configured holidays,
+and lunch, and runs only the latest missed slot after wake. A missed post-market
+review may run once later on the same trading day.
 
-`launchd/com.facail.update.plist` is a manual macOS `launchd` template for 09:20, 11:35, and 15:10 updates. It is not installed automatically and `RunAtLoad` is disabled.
+Each run generates to a temporary directory, validates all JSON, and requires
+at least seven of the eight configured holdings and three of four indices with
+stage-appropriate freshness. Only then are the eight public `data/*.json`
+files copied, committed, and pushed. A failed push leaves the local commit
+for retry before the next generation. GitHub Pages is checked after push.
+Private holdings configuration, caches, and local logs are never staged.
+
+```bash
+python3 scripts/run_update.py --check  # schedule decision; no market requests
+python3 scripts/run_update.py --force  # one real update on a trading day
+```
+
+The local agent definition is `launchd/com.facail.update.plist`. Run records
+and retry state live in ignored `logs/`. The bundled trading-holiday calendar
+currently covers **2026**; update `config/trading_calendar.json` before 2027.
+The agent requires the Mac to be logged in, awake, and online for scheduled
+runs; it cannot publish while the Mac is off.
 
 Missing provider fields must remain explicitly missing. AI may summarize structured results, but it must not invent or calculate market values.

@@ -58,6 +58,7 @@ class EastmoneyProvider:
              "fields2": "f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61",
              "klt": 101, "fqt": 0, "lmt": count, "end": "20500101"},
             self.history_ttl,
+            negative_ttl=self.http.config.get("sector_history_negative_cache_seconds"),
         )
         data = json.loads(body).get("data") or {}
         lines = data.get("klines") or []

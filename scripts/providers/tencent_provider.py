@@ -58,9 +58,16 @@ class TencentProvider:
         rows = []
         for symbol in symbols:
             code = symbol[2:]
-            fields = self._fields(body, code)
-            if len(fields) <= 35 or fields[2] != code:
-                raise ValueError(f"Tencent index fields missing for {symbol}")
+            try:
+                fields = self._fields(body, code)
+                if len(fields) <= 35 or fields[2] != code:
+                    raise ValueError(f"Tencent index fields missing for {symbol}")
+            except ValueError:
+                rows.append({"code": f"{code}.{'SH' if symbol.startswith('sh') else 'SZ'}",
+                             "name": symbol, "value": None, "change_pct": None,
+                             "turnover": None, "source": "tencent",
+                             "source_timestamp": None, "retrieved_at": retrieved_at})
+                continue
             stamp = fields[30]
             timestamp = datetime.strptime(stamp, "%Y%m%d%H%M%S").isoformat() if len(stamp) == 14 else None
             turnover_text = fields[35].split("/")[-1]

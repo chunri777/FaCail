@@ -43,12 +43,18 @@ const money = (value, signed = false) => {
 
 const changeClass = (value) => value > 0 ? "up" : value < 0 ? "down" : "flat";
 const statusClass = (value) => value === "已满足" ? "met" : value === "接近满足" ? "near" : "";
+const labelClass = (value) => {
+  if (["强于板块", "MA20上方", "放量突破", "强势", "持续强势", "刚启动"].includes(value)) return "tag-positive";
+  if (["MA20下方", "跌破 MA20", "趋势破坏", "风险升高", "高位偏离", "转弱", "放量异常"].includes(value)) return "tag-risk";
+  return "";
+};
 const sourceLabel = () => state.market?.data_source?.label || state.market?.data_source || "--";
 const sourceTime = () => state.market?.data_source?.retrieved_at?.slice(11, 16) || "--";
+const generatedTime = () => state.market?.data_source?.generated_at?.replace("T", " ").slice(0, 16) || "--";
 const shown = (value) => value === null || value === undefined || value === "" ? "暂无数据" : value;
 
 const pills = (items = []) => `
-  <div class="pills">${items.map((item) => `<span>${item}</span>`).join("")}</div>
+  <div class="pills">${items.map((item) => `<span class="${labelClass(item)}">${item}</span>`).join("")}</div>
 `;
 
 const stat = (label, value, note = "") => `
@@ -286,7 +292,7 @@ function renderSectors() {
       ${state.sectors.sectors.map((sector) => `
         <article class="sector-row">
           <div class="sector-rank"><span>${shown(sector.rank)}</span><small>${sector.rank_total == null ? "" : `/ ${sector.rank_total}`}</small></div>
-          <div class="sector-main"><div><strong>${sector.name}</strong><span class="sector-status">${sector.status}</span></div>
+          <div class="sector-main"><div><strong>${sector.name}</strong><span class="sector-status ${labelClass(sector.status)}">${sector.status}</span></div>
             ${miniMetrics([
               ["今日 / 5日 / 20日", `${pct(sector.return_pct)} / ${pct(sector.return_5d)} / ${pct(sector.return_20d)}`],
               ["上涨家数比例", pct(sector.advance_ratio)],
@@ -379,25 +385,28 @@ function setStage(stage) {
   if (stage === "postmarket") setView("review");
 }
 
-async function loadData() {
+async function loadData(preserveView = false) {
+  const activeView = preserveView ? document.querySelector(".view.active")?.id : null;
   const names = ["market", "sectors", "candidates", "holdings", "intraday", "review", "watchlist", "today"];
-  const payloads = await Promise.all(names.map((name) => fetch(`../data/${name}.json`).then((response) => {
+  const payloads = await Promise.all(names.map((name) => fetch(`../data/${name}.json`, { cache: "no-store" }).then((response) => {
     if (!response.ok) throw new Error(`${name}.json 加载失败`);
     return response.json();
   })));
   names.forEach((name, index) => { state[name] = payloads[index]; });
   state.stage = state.market.default_stage;
+  document.querySelectorAll("[data-stage]").forEach((button) => button.classList.toggle("active", button.dataset.stage === state.stage));
   document.querySelector("#trade-date").textContent = `最近交易日 · ${shown(state.market.trade_date)}`;
   document.querySelector("#source-label").textContent = `数据源 · ${state.market.data_source.label}`;
   const freshness = state.market.data_source.freshness;
   const freshnessText = freshness === "current" ? "当日行情" : freshness === "last_trading_day" ? "上一交易日" : freshness === "stale" ? "实时行情暂未更新" : "时间待核实";
   const fallbackText = state.market.data_source.fallback ? " · 部分行情使用备用数据源" : "";
   const status = document.querySelector("#data-status");
-  status.textContent = `${freshnessText} · 更新 ${sourceTime()}${fallbackText}`;
+  const stageName = state.market.stage_options.find((item) => item.id === state.stage)?.label || state.stage;
+  status.textContent = `数据更新于 ${generatedTime()} · ${stageName} · 最近交易日 ${shown(state.market.trade_date)} · ${freshnessText}${fallbackText}`;
   status.classList.toggle("stale", freshness === "stale");
   document.querySelector("#loading").hidden = true;
   renderAll();
-  setView("today");
+  setView(activeView || "today");
 }
 
 document.querySelectorAll(".desktop-nav [data-view]").forEach((button) => {
@@ -418,3 +427,16 @@ document.querySelectorAll("[data-mobile-view]").forEach((button) => {
 loadData().catch((error) => {
   document.querySelector("#loading").innerHTML = `<strong>数据加载失败</strong><span>${error.message}</span>`;
 });
+
+setInterval(async () => {
+  try {
+    const response = await fetch("../data/market.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const latest = await response.json();
+    if (state.market && latest.data_source?.generated_at !== state.market.data_source?.generated_at) {
+      await loadData(true);
+    }
+  } catch (_) {
+    // The next check retries without replacing the last successfully loaded snapshot.
+  }
+}, 5 * 60 * 1000);

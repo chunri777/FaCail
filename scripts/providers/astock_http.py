@@ -29,7 +29,8 @@ class AstockHttp:
     def _timestamp(value: float) -> str:
         return datetime.fromtimestamp(value, ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
 
-    def get(self, source: str, url: str, params: dict, ttl: int, encoding: str = "utf-8") -> str:
+    def get(self, source: str, url: str, params: dict, ttl: int, encoding: str = "utf-8",
+            negative_ttl: int | None = None) -> str:
         full_url = f"{url}?{urlencode(params)}" if params else url
         key = hashlib.sha256(full_url.encode()).hexdigest()
         cache_path = self.cache_dir / f"{key}.json"
@@ -46,7 +47,7 @@ class AstockHttp:
         if failure_path.exists():
             try:
                 failure = json.loads(failure_path.read_text(encoding="utf-8"))
-                if time.time() - failure["time"] < self.config["http_negative_cache_seconds"]:
+                if time.time() - failure["time"] < (negative_ttl or self.config["http_negative_cache_seconds"]):
                     self.stats["negative_cache_hits"] += 1
                     raise RuntimeError(f"{source} recently failed: {failure['error']}")
             except (OSError, ValueError, KeyError):

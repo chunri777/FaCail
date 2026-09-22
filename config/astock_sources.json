@@ -3,6 +3,7 @@
   "retries": 2,
   "mootdx_negative_cache_seconds": 300,
   "http_negative_cache_seconds": 60,
+  "sector_history_negative_cache_seconds": 10800,
   "intraday_stale_after_minutes": 20,
   "postmarket_close_minute": "14:55",
   "market_indices": ["sh000001", "sz399001", "sz399006", "sh000300"],

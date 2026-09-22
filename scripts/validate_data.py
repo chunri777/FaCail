@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from argparse import ArgumentParser
 import json
 from math import isclose
 from pathlib import Path
@@ -16,8 +17,11 @@ def read_json(path: Path) -> Any:
 
 
 def main() -> None:
+    parser = ArgumentParser(description="Validate FaCail published data.")
+    parser.add_argument("--data-dir", type=Path, default=DATA_DIR)
+    args = parser.parse_args()
     names = ["market", "sectors", "candidates", "holdings", "intraday", "review", "watchlist", "today"]
-    payloads = {name: read_json(DATA_DIR / f"{name}.json") for name in names}
+    payloads = {name: read_json(args.data_dir / f"{name}.json") for name in names}
     config = read_json(CONFIG_PATH)
 
     assert set(config["buy_conditions"]) == {"shrink_pullback", "volume_breakout", "strong_sector_pullback"}
@@ -54,7 +58,8 @@ def main() -> None:
         if local_path.exists():
             local = read_json(local_path)
             configured = local if isinstance(local, list) else local.get("holdings", [])
-            assert {item["code"] for item in configured} == {item["code"] for item in holdings}
+            assert {item["code"] for item in holdings} <= {item["code"] for item in configured}
+            assert len(holdings) >= max(1, len(configured) - 1)
             assert all(any(item["code"] == row["code"] and item["cost"] == row["cost"] and
                            item["shares"] == row["shares"] for row in holdings) for item in configured)
     print("FaCail data contracts and rule outputs are valid.")

@@ -1,8 +1,10 @@
 .env
+.env.local
 config/holdings.local.json
 data/ths_status.json
 data/ths_sample_*.json
 logs/
+cache/
 *.pyc
 __pycache__/
 data/.cache/

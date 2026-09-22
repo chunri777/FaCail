@@ -202,9 +202,13 @@ class AstockProvider(MarketDataProvider):
             indices = self.tencent.indices(self.config["market_indices"])
         except (RuntimeError, ValueError, IndexError) as exc:
             raise ProviderUnavailable("Four real index quotes are required for publication.", [str(exc)]) from exc
-        if len(indices) != 4 or any(item["value"] is None or item["source_timestamp"] is None for item in indices):
-            raise ProviderUnavailable("Four real index quotes are incomplete.", ["indices"])
-        timestamps = [item["source_timestamp"] for item in indices]
+        valid_indices = [item for item in indices if item["value"] is not None and item["source_timestamp"] is not None]
+        if len(indices) != 4 or len(valid_indices) < 3:
+            raise ProviderUnavailable("At least three real index quotes are required.", ["indices"])
+        for item in indices:
+            if item not in valid_indices:
+                self._missing(f"market.indices.{item['code']}: missing")
+        timestamps = [item["source_timestamp"] for item in valid_indices]
         latest = max(timestamps)
         now = datetime.now(SHANGHAI)
         freshness = quote_freshness(latest, now, self.closed_days,
@@ -230,7 +234,7 @@ class AstockProvider(MarketDataProvider):
             "advance_count": None, "decline_count": None, "flat_count": None,
             "limit_up_count": None, "limit_down_count": None, "market_amplitude": None,
             "source": "tencent", "source_timestamp": latest,
-            "retrieved_at": indices[0]["retrieved_at"], "freshness": freshness,
+            "retrieved_at": valid_indices[0]["retrieved_at"], "freshness": freshness,
             "last_trading_day": latest[:10], "missing_data": missing}
         for item in missing:
             self._missing(f"market.{item}")
