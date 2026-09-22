@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from math import isclose
 from pathlib import Path
 from typing import Any
 
@@ -10,7 +11,7 @@ DATA_DIR = ROOT / "data"
 CONFIG_PATH = ROOT / "config" / "strategy.json"
 
 
-def read_json(path: Path) -> dict[str, Any]:
+def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -38,6 +39,24 @@ def main() -> None:
         reverse=True,
     )
     assert payloads["candidates"]["summary"]["pullback_count"] == len(payloads["candidates"]["pullback_watch"])
+    if payloads["market"]["data_source"]["id"] == "astock":
+        assert all((payload.get("data_source") or payload.get("summary", {}).get("data_source"))["id"] == "astock"
+                   for payload in payloads.values())
+        holdings = payloads["holdings"]["holdings"]
+        summary = payloads["holdings"]["summary"]
+        assert len({item["code"] for item in holdings}) == holding_count
+        assert all(item.get("source") != "mock" and item.get("freshness") in {"current", "last_trading_day", "stale", "missing"}
+                   for item in holdings)
+        assert isclose(sum(item["market_value"] for item in holdings), summary["total_market_value"], abs_tol=0.01)
+        assert isclose(sum(item["cost_basis"] for item in holdings), summary["total_cost_basis"], abs_tol=0.01)
+        assert isclose(sum(item["unrealized_pnl"] for item in holdings), summary["total_unrealized_pnl"], abs_tol=0.01)
+        local_path = ROOT / "config" / "holdings.local.json"
+        if local_path.exists():
+            local = read_json(local_path)
+            configured = local if isinstance(local, list) else local.get("holdings", [])
+            assert {item["code"] for item in configured} == {item["code"] for item in holdings}
+            assert all(any(item["code"] == row["code"] and item["cost"] == row["cost"] and
+                           item["shares"] == row["shares"] for row in holdings) for item in configured)
     print("FaCail data contracts and rule outputs are valid.")
 
 

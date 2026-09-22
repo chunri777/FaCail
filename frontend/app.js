@@ -36,6 +36,11 @@ const amount = (value) => {
   return `${(value / 100000000).toFixed(0)} 亿`;
 };
 
+const money = (value, signed = false) => {
+  if (value === null || value === undefined || !Number.isFinite(value)) return "暂无数据";
+  return `${value < 0 ? "-" : signed && value > 0 ? "+" : ""}¥${number(Math.abs(value))}`;
+};
+
 const changeClass = (value) => value > 0 ? "up" : value < 0 ? "down" : "flat";
 const statusClass = (value) => value === "已满足" ? "met" : value === "接近满足" ? "near" : "";
 const sourceLabel = () => state.market?.data_source?.label || state.market?.data_source || "--";
@@ -139,7 +144,7 @@ function renderToday() {
     <section class="content-section priority-section">
       ${sectionHead("我的持仓状态", `${summary.holding_count} 只持仓 · 异常优先排序`)}
       <div class="summary-numbers">
-        ${stat("组合今日涨跌", pct(summary.portfolio_change_pct))}
+        ${stat("组合今日涨跌", pct(summary.portfolio_change_pct), `浮动盈亏 ${money(summary.total_unrealized_pnl, true)}`)}
         ${stat("MA20 上 / 下", `${summary.above_ma20_count} / ${summary.below_ma20_count}`)}
         ${stat("强于 / 弱于板块", `${summary.stronger_than_sector_count} / ${summary.weaker_than_sector_count}`)}
         ${stat("需要关注", summary.anomaly_count)}
@@ -180,7 +185,9 @@ function renderPremarket() {
             <div class="stock-price"><strong>${number(stock.close)}</strong><span class="${changeClass(stock.position_return)}">浮盈亏 ${pct(stock.position_return)}</span></div>
           </div>
           ${miniMetrics([
-            ["昨日收盘 / 成本", `${number(stock.close)} / ${number(stock.cost)}`],
+            ["持仓 / 成本总额", `${number(stock.shares, 0)} 股 / ${money(stock.cost_basis)}`],
+            ["当前市值 / 浮盈亏", `${money(stock.market_value)} / ${money(stock.unrealized_pnl, true)}`, changeClass(stock.unrealized_pnl)],
+            ["昨日收盘 / 成本", `${number(stock.close)} / ${number(stock.cost, 3)}`],
             ["MA5 / MA10 / MA20", `${number(stock.ma5)} / ${number(stock.ma10)} / ${number(stock.ma20)}`],
             ["距 MA20", pct(stock.ma20_distance)],
             ["昨日量能", stock.yesterday_volume_state],
@@ -188,6 +195,8 @@ function renderPremarket() {
             ["个股相对板块", pct(stock.relative_sector_strength), changeClass(stock.relative_sector_strength)],
             ["昨日高 / 低", `${number(stock.high)} / ${number(stock.low)}`],
             ["前高 / 近期支撑", `${number(stock.previous_high)} / ${number(stock.recent_support)}`],
+            ["所属概念", stock.concepts?.slice(0, 3).map((item) => item.name).join("、") || "暂无数据"],
+            ["行情时间", shown(stock.source_timestamp?.replace("T", " "))],
           ])}
           <div class="two-columns">
             <div><h3>今日观察位</h3><div class="levels">${stock.observation_levels.map((item) => `<span><small>${item.label}</small><strong>${number(item.value)}</strong></span>`).join("")}</div></div>
@@ -212,15 +221,21 @@ function renderIntraday() {
           </div>
           ${pills(stock.statuses)}
           ${miniMetrics([
+            ["持仓成本 / 股数", `${number(stock.cost, 3)} / ${number(stock.shares, 0)} 股`],
+            ["当前市值 / 浮盈亏", `${money(stock.market_value)} / ${money(stock.unrealized_pnl, true)}`, changeClass(stock.unrealized_pnl)],
+            ["浮盈亏比例", pct(stock.position_return), changeClass(stock.position_return)],
             ["今日高 / 低", `${number(stock.high)} / ${number(stock.low)}`],
             ["振幅", pct(stock.amplitude)],
             ["当前成交量", number(stock.volume, 0)],
+            ["5日均量 / 当日量比", `${number(stock.volume_ma5, 0)} / ${number(stock.volume_ratio_5d)}`],
+            ["量能状态", shown(stock.volume_state)],
             ["换手率", pct(stock.turnover_rate)],
             ["实时量比", number(stock.realtime_volume_ratio)],
             ["VWAP", number(stock.vwap)],
             ["MA20 / 距离", `${number(stock.ma20)} / ${pct(stock.ma20_distance)}`],
             ["板块实时涨跌", pct(stock.sector_return), changeClass(stock.sector_return)],
             ["个股相对板块", pct(stock.relative_sector_strength), changeClass(stock.relative_sector_strength)],
+            ["行情时间", shown(stock.source_timestamp?.replace("T", " "))],
           ])}
           <div class="rule-note"><span>盘中规则观察</span><p>${stock.conditional_note}</p></div>
         </article>
@@ -238,10 +253,14 @@ function renderReview() {
       <div class="summary-numbers">
         ${stat("组合涨跌", pct(summary.portfolio_change_pct))}
         ${stat("持仓数量", summary.holding_count)}
+        ${stat("持仓市值", money(summary.total_market_value))}
+        ${stat("持仓总成本", money(summary.total_cost_basis))}
+        ${stat("浮动盈亏", money(summary.total_unrealized_pnl, true), pct(summary.total_unrealized_pnl_pct))}
         ${stat("强 / 弱于板块", `${summary.stronger_than_sector_count} / ${summary.weaker_than_sector_count}`)}
         ${stat("MA20 上 / 下", `${summary.above_ma20_count} / ${summary.below_ma20_count}`)}
         ${stat("缩量回踩", summary.shrink_pullback_count)}
         ${stat("放量异常", summary.abnormal_volume_count)}
+        ${stat("趋势破坏", summary.trend_break_count)}
       </div>
       <p class="narrative">${summary.narrative}</p>
     </section>
@@ -250,7 +269,7 @@ function renderReview() {
       <div class="review-list">
         ${state.review.holdings.map((stock) => `
           <article>
-            <div class="stock-title"><div><strong>${stock.name}</strong><span>${stock.code} · ${stock.industry}</span></div><span class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</span></div>
+            <div class="stock-title"><div><strong>${stock.name}</strong><span>${stock.code} · ${shown(stock.industry)}</span></div><div class="stock-price"><strong class="${changeClass(stock.change_pct)}">${pct(stock.change_pct)}</strong><span class="${changeClass(stock.unrealized_pnl)}">浮盈亏 ${money(stock.unrealized_pnl, true)}</span></div></div>
             <h3>今日发生了什么</h3><p>${stock.what_happened}</p>
             <h3>相比昨日发生什么变化</h3><ul>${stock.changes_from_yesterday.map((item) => `<li>${item}</li>`).join("")}</ul>
           </article>

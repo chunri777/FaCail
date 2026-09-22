@@ -11,7 +11,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from generate_data import build_conditions, build_holdings, enrich_stock, load_config
+from generate_data import attention_score, build_conditions, build_holdings, enrich_stock, load_config
 from providers.mock_provider import load_local_user_config
 from trading_calendar import SHANGHAI, daily_freshness, load_closed_days, quote_freshness, trade_stage
 
@@ -74,11 +74,26 @@ class RealGenerationTests(unittest.TestCase):
             _market = {"trade_date": bars[-1]["date"]}
             missing_data = []
 
-        holdings, _, _ = build_holdings([current], [{"code": "600519", "cost": 90, "shares": 100}],
-                                        [], config, Provider(), "postmarket", premarket_stocks=[prior])
+        holdings, intraday, review = build_holdings([current], [{"code": "600519", "cost": 90, "shares": 100}],
+                                                    [], config, Provider(), "postmarket", premarket_stocks=[prior])
         self.assertEqual(holdings["premarket"][0]["close"], 100)
         self.assertEqual(holdings["holdings"][0]["close"], 120)
         self.assertAlmostEqual(holdings["summary"]["portfolio_change_pct"], 0.2)
+        self.assertEqual(holdings["summary"]["total_market_value"], 12000)
+        self.assertEqual(holdings["summary"]["total_cost_basis"], 9000)
+        self.assertEqual(holdings["summary"]["total_unrealized_pnl"], 3000)
+        self.assertEqual(holdings["premarket"][0]["unrealized_pnl"], 1000)
+        self.assertIsNone(intraday["holdings"][0]["unrealized_pnl"])
+        self.assertTrue(any("距 MA20 由" in item for item in review["holdings"][0]["changes_from_yesterday"]))
+
+    def test_attention_priority_follows_holding_rules(self) -> None:
+        config = load_config()
+        stock = {"close": 100, "recent_support": 90}
+        labels = ["跌破 MA20", "趋势破坏", "MA20下方", "放量异常", "弱于板块", "高位偏离"]
+        scores = [attention_score({**stock, "labels": [label]}, config) for label in labels]
+        self.assertEqual(scores, sorted(scores, reverse=True))
+        self.assertGreater(attention_score({"close": 100, "recent_support": 100, "labels": []}, config),
+                           attention_score({**stock, "labels": []}, config))
 
 
 if __name__ == "__main__":

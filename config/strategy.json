@@ -2,6 +2,7 @@
   "ma_windows": [5, 10, 20],
   "ma20_near_distance_abs": 0.03,
   "trend_break_ma20_distance": -0.02,
+  "high_ma20_distance_min": 0.12,
   "recent_gain_20d_overheat": 0.25,
   "industry_strength_threshold": 0.01,
   "abnormal_volume_ratio_5d_min": 1.8,
@@ -45,15 +46,19 @@
   "intraday": {
     "high_volatility_amplitude_min": 0.05,
     "volume_expansion_ratio_min": 1.5,
+    "volume_stall_change_max": 0.005,
     "near_level_distance_abs": 0.012,
     "rush_fade_from_high_min": 0.025,
     "bottom_rebound_from_low_min": 0.025
   },
   "attention_priority": {
-    "trend_break": 100,
-    "abnormal_volume": 80,
-    "weaker_than_sector": 60,
-    "overheat": 50,
+    "ma20_cross_below": 140,
+    "trend_break": 120,
+    "ma20_below": 110,
+    "abnormal_volume": 90,
+    "weaker_than_sector": 70,
+    "high_ma20_deviation": 50,
+    "near_support": 30,
     "normal": 10
   }
 }

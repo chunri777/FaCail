@@ -237,11 +237,21 @@ def enrich_stock(raw: dict[str, Any], sector: dict[str, Any], config: dict[str, 
     relative_strength = change - sector["return_pct"] if sector.get("return_pct") is not None else None
     previous_high = max(bar["high"] for bar in bars[-21:-1])
     recent_support = min(bar["low"] for bar in bars[-10:-1])
+    recent_high_20d = max(bar["high"] for bar in bars[-20:])
+    recent_low_20d = min(bar["low"] for bar in bars[-20:])
+    previous_ma20 = moving_average(closes[:-1], 20)
+    crossed_below_ma20 = previous_ma20 is not None and previous["close"] >= previous_ma20 and latest["close"] < ma20
 
     volume_complete = raw.get("trade_stage") != "intraday"
     labels = ["MA20上方" if ma20_distance >= 0 else "MA20下方"]
+    if crossed_below_ma20:
+        labels.append("跌破 MA20")
     if ma20_distance <= config["trend_break_ma20_distance"]:
         labels.append("趋势破坏")
+    if ma20_distance >= config["high_ma20_distance_min"]:
+        labels.append("高位偏离")
+    if recent_support and abs(latest["close"] / recent_support - 1) <= config["intraday"]["near_level_distance_abs"]:
+        labels.append("接近支撑")
     if volume_complete and volume_ratio is not None:
         if volume_ratio <= config["buy_conditions"]["shrink_pullback"]["volume_ratio_5d_max"]:
             labels.append("缩量")
@@ -278,6 +288,8 @@ def enrich_stock(raw: dict[str, Any], sector: dict[str, Any], config: dict[str, 
         "recent_gain_20d": rounded(recent_gain),
         "previous_high": previous_high,
         "recent_support": recent_support,
+        "recent_high_20d": recent_high_20d,
+        "recent_low_20d": recent_low_20d,
         "industry": raw["industry"],
         "industry_return": sector.get("return_pct"),
         "industry_rank": sector.get("rank"),
@@ -287,7 +299,9 @@ def enrich_stock(raw: dict[str, Any], sector: dict[str, Any], config: dict[str, 
         "turnover_rate": quote.get("turnover_rate"),
         "pe": quote.get("pe"), "pb": quote.get("pb"), "market_cap": quote.get("market_cap"),
         "concepts": raw.get("concepts", []),
-        "source": raw.get("source"), "source_timestamp": quote.get("source_timestamp") or raw.get("source_timestamp"),
+        "source": quote.get("source") or raw.get("source"),
+        "sources": raw.get("data_source", {}),
+        "source_timestamp": quote.get("source_timestamp") or raw.get("source_timestamp"),
         "retrieved_at": quote.get("retrieved_at") or raw.get("retrieved_at"),
         "freshness": raw.get("freshness"),
         "missing_data": raw.get("missing_data", []),
@@ -392,15 +406,43 @@ def build_market(
 
 def attention_score(stock: dict[str, Any], config: dict[str, Any]) -> int:
     priority = config["attention_priority"]
+    if "跌破 MA20" in stock["labels"]:
+        return priority["ma20_cross_below"]
     if "趋势破坏" in stock["labels"]:
         return priority["trend_break"]
+    if "MA20下方" in stock["labels"]:
+        return priority["ma20_below"]
     if "放量异常" in stock["labels"]:
         return priority["abnormal_volume"]
     if "弱于板块" in stock["labels"]:
         return priority["weaker_than_sector"]
-    if "过热" in stock["labels"]:
-        return priority["overheat"]
+    if "高位偏离" in stock["labels"] or "过热" in stock["labels"]:
+        return priority["high_ma20_deviation"]
+    if stock.get("recent_support") and abs(stock["close"] / stock["recent_support"] - 1) <= config["intraday"]["near_level_distance_abs"]:
+        return priority["near_support"]
     return priority["normal"]
+
+
+def holding_observation_levels(stock: dict[str, Any]) -> list[dict[str, Any]]:
+    return [
+        {"label": "第一支撑", "value": stock["recent_support"]},
+        {"label": "MA20", "value": stock["ma20"]},
+        {"label": "昨日低点", "value": stock["low"]},
+        {"label": "昨日高点", "value": stock["high"]},
+        {"label": "近期前高", "value": stock["previous_high"]},
+        {"label": "20日高点", "value": stock["recent_high_20d"]},
+        {"label": "20日低点", "value": stock["recent_low_20d"]},
+    ]
+
+
+def holding_volume_state(ratio: float | None, config: dict[str, Any]) -> str:
+    if ratio is None:
+        return "数据缺失"
+    if ratio <= config["buy_conditions"]["shrink_pullback"]["volume_ratio_5d_max"]:
+        return "缩量"
+    if ratio >= config["abnormal_volume_ratio_5d_min"]:
+        return "放量异常"
+    return "正常量能"
 
 
 def build_holdings(
@@ -426,31 +468,32 @@ def build_holdings(
             raise ProviderUnavailable("Holding requires shares and cost.", [position["code"]])
         score = attention_score(stock, config)
         market_value = stock["close"] * position["shares"]
-        position_return = (stock["close"] - position["cost"]) / position["cost"] if position["cost"] else None
-        observation_levels = [
-            {"label": "第一支撑", "value": stock["recent_support"]},
-            {"label": "MA20", "value": stock["ma20"]},
-            {"label": "昨日低点", "value": stock["low"]},
-            {"label": "前高", "value": stock["previous_high"]},
-            {"label": "压力位", "value": stock["previous_high"]},
-        ]
+        cost_basis = position["cost"] * position["shares"]
+        unrealized_pnl = market_value - cost_basis
+        position_return = unrealized_pnl / cost_basis if cost_basis else None
         plans = []
         if abs(plan_stock["ma20_distance"]) <= config["ma20_near_distance_abs"]:
-            plans.append("若回踩 MA20 附近且成交量继续缩小，可继续观察承接。")
+            plans.append("若回踩 MA20 附近且量能继续收缩，维持承接观察。")
         if plan_stock["ma20_distance"] < 0:
-            plans.append("若量能放大且所属板块同步转弱，风险状态将进一步上升。")
-        plans.append(f"若放量越过近期前高 {plan_stock['previous_high']:.2f}，同时板块保持强势，可确认趋势是否延续。")
+            plans.append("若放量跌破 MA20 且所属行业同步转弱，风险状态上升。")
+        if plan_stock["ma20_distance"] >= config["high_ma20_distance_min"]:
+            plans.append("若距离 MA20 持续过远，保持高位偏离观察。")
+        plans.append(f"若放量越过近期前高 {plan_stock['previous_high']:.2f} 且强于所属行业，观察趋势状态是否增强。")
         row = {
             **{key: value for key, value in stock.items() if key not in {"bars", "sector", "conditions"}},
             "shares": position["shares"],
             "cost": position["cost"],
+            "current_price": stock["close"],
             "market_value": round(market_value, 2),
+            "cost_basis": round(cost_basis, 2),
+            "unrealized_pnl": round(unrealized_pnl, 2),
             "position_return": rounded(position_return),
+            "volume_state": holding_volume_state(stock["volume_ratio_5d"] if stock.get("volume_complete", True) else None, config),
             "yesterday_volume_state": next((label for label in stock["labels"] if label in {"缩量", "正常量能", "放量异常"}), "暂无数据"),
-            "observation_levels": observation_levels,
+            "observation_levels": holding_observation_levels(stock),
             "conditional_plan": plans,
             "attention_score": score,
-            "attention_level": "需要关注" if score >= config["attention_priority"]["weaker_than_sector"] else "正常",
+            "attention_level": "需要关注" if score > config["attention_priority"]["normal"] else "正常",
         }
         rows.append(row)
         plan_score = attention_score(plan_stock, config)
@@ -458,17 +501,15 @@ def build_holdings(
             **row,
             **{key: value for key, value in plan_stock.items() if key not in {"bars", "sector", "conditions"}},
             "market_value": round(plan_stock["close"] * position["shares"], 2),
+            "current_price": plan_stock["close"],
+            "cost_basis": round(cost_basis, 2),
+            "unrealized_pnl": round(plan_stock["close"] * position["shares"] - cost_basis, 2),
             "position_return": rounded((plan_stock["close"] - position["cost"]) / position["cost"]) if position["cost"] else None,
+            "volume_state": holding_volume_state(plan_stock["volume_ratio_5d"], config),
             "yesterday_volume_state": next((label for label in plan_stock["labels"] if label in {"缩量", "正常量能", "放量异常"}), "暂无数据"),
-            "observation_levels": [
-                {"label": "第一支撑", "value": plan_stock["recent_support"]},
-                {"label": "MA20", "value": plan_stock["ma20"]},
-                {"label": "昨日低点", "value": plan_stock["low"]},
-                {"label": "前高", "value": plan_stock["previous_high"]},
-                {"label": "压力位", "value": plan_stock["previous_high"]},
-            ],
+            "observation_levels": holding_observation_levels(plan_stock),
             "attention_score": plan_score,
-            "attention_level": "需要关注" if plan_score >= config["attention_priority"]["weaker_than_sector"] else "正常",
+            "attention_level": "需要关注" if plan_score > config["attention_priority"]["normal"] else "正常",
         })
 
         live = intraday_by_code.get(position["code"], {"code": position["code"], "current_price": None,
@@ -483,20 +524,31 @@ def build_holdings(
         intraday_cfg = config["intraday"]
         rush_fade = (high - current_price) / high >= intraday_cfg["rush_fade_from_high_min"] if high and current_price is not None else None
         bottom_rebound = (current_price - low) / low >= intraday_cfg["bottom_rebound_from_low_min"] if low and current_price is not None else None
-        volume_expansion = live.get("realtime_volume_ratio") is not None and live["realtime_volume_ratio"] >= intraday_cfg["volume_expansion_ratio_min"]
+        live_volume_ratio = live.get("realtime_volume_ratio")
+        if live_volume_ratio is None and stock.get("volume_complete"):
+            live_volume_ratio = stock["volume_ratio_5d"]
+        volume_expansion = live_volume_ratio is not None and live_volume_ratio >= intraday_cfg["volume_expansion_ratio_min"]
         key_level_break = current_price < min(stock["ma20"], stock["recent_support"]) if current_price is not None else None
         volume_breakout = volume_expansion and current_price is not None and current_price > stock["previous_high"]
-        volume_stall = volume_expansion and current_change is not None and current_change <= 0.005
-        shrink_pullback = live.get("realtime_volume_ratio") is not None and live_distance is not None and live["realtime_volume_ratio"] <= config["buy_conditions"]["shrink_pullback"]["volume_ratio_5d_max"] and abs(live_distance) <= config["ma20_near_distance_abs"]
+        volume_stall = volume_expansion and current_change is not None and current_change <= intraday_cfg["volume_stall_change_max"]
+        shrink_pullback = live_volume_ratio is not None and live_distance is not None and live_volume_ratio <= config["buy_conditions"]["shrink_pullback"]["volume_ratio_5d_max"] and abs(live_distance) <= config["ma20_near_distance_abs"]
         statuses = []
+        if live_distance is not None:
+            statuses.append("MA20上方" if live_distance >= 0 else "MA20下方")
+            if plan_stock["ma20_distance"] >= 0 > live_distance:
+                statuses.append("跌破 MA20")
+            if live_distance <= config["trend_break_ma20_distance"]:
+                statuses.append("趋势破坏")
+            if live_distance >= config["high_ma20_distance_min"]:
+                statuses.append("高位偏离")
         if relative is not None and relative >= config["industry_strength_threshold"]:
             statuses.append("强于板块")
         elif relative is not None and relative <= -config["industry_strength_threshold"]:
             statuses.append("弱于板块")
-        if live_distance is not None and live_distance < 0:
-            statuses.append("跌破 MA20")
         if shrink_pullback:
             statuses.append("缩量回踩")
+        if live_volume_ratio is not None and live_volume_ratio <= config["buy_conditions"]["shrink_pullback"]["volume_ratio_5d_max"]:
+            statuses.append("缩量")
         if volume_breakout:
             statuses.append("放量突破")
         elif volume_stall:
@@ -514,17 +566,39 @@ def build_holdings(
         if current_price is not None and abs((current_price - stock["previous_high"]) / stock["previous_high"]) <= intraday_cfg["near_level_distance_abs"]:
             statuses.append("接近压力")
         if not statuses:
-            statuses.append("正常" if current_price is not None else "数据缺失")
+            statuses.append("数据缺失")
+        elif statuses == ["MA20上方"]:
+            statuses.append("正常")
+        if current_price is not None:
+            live_market_value = current_price * position["shares"]
+            live_pnl = live_market_value - cost_basis
+        else:
+            live_market_value = live_pnl = None
         if current_price is None:
             suggestion = "当前报价暂无数据，暂不能判断盘中结构。"
+        elif stage == "premarket":
+            if live_distance is not None and live_distance < 0:
+                suggestion = "盘前仅有上一交易日行情；若开盘后继续位于 MA20 下方且行业同步转弱，观察风险状态是否上升。"
+            elif live_distance is not None and live_distance >= config["high_ma20_distance_min"]:
+                suggestion = "盘前仅有上一交易日行情；若盘中继续远离 MA20，保持高位偏离观察。"
+            else:
+                suggestion = "盘前仅有上一交易日行情；若盘中回踩 MA20 且量能收缩，等待承接确认。"
         elif live.get("freshness") == "stale":
             suggestion = "实时行情暂未更新，以下状态仅供核对历史数据。"
+        elif "跌破 MA20" in statuses and "弱于板块" in statuses:
+            suggestion = "当前弱于所属行业且跌破 MA20，风险状态较早盘上升，继续观察量能确认。"
         elif "跌破 MA20" in statuses and volume_expansion:
-            suggestion = "当前弱于所属板块，并出现放量跌破 MA20，风险状态较早盘上升。"
+            suggestion = "当前放量跌破 MA20，风险状态较早盘上升，继续观察行业是否同步转弱。"
+        elif "缩量回踩" in statuses:
+            suggestion = "当前回踩 MA20 且量能收缩，暂处观察区，等待结构确认。"
+        elif "高位偏离" in statuses:
+            suggestion = "当前距离 MA20 较远，保持高位偏离观察，不以单日上涨推断后续走势。"
         elif "冲高回落" in statuses:
             suggestion = "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。"
+        elif "弱于板块" in statuses and live_distance is not None and live_distance < 0:
+            suggestion = "当前弱于所属行业且位于 MA20 下方，若继续放量跌破观察位，风险状态上升。"
         elif live_distance is not None and live_distance >= 0:
-            suggestion = "当前仍位于 MA20 上方，暂未出现结构性变化。"
+            suggestion = "当前仍位于 MA20 上方，量能状态以已取得的数据为准，暂未出现结构性变化。"
         else:
             suggestion = "当前位于 MA20 下方，等待价格与量能重新确认结构。"
         live_rows.append(
@@ -533,10 +607,24 @@ def build_holdings(
                 "name": stock["name"],
                 "industry": stock["industry"],
                 **live,
+                "shares": position["shares"],
+                "cost": position["cost"],
+                "cost_basis": round(cost_basis, 2),
+                "market_value": round(live_market_value, 2) if live_market_value is not None else None,
+                "unrealized_pnl": round(live_pnl, 2) if live_pnl is not None else None,
+                "position_return": rounded(live_pnl / cost_basis) if live_pnl is not None and cost_basis else None,
                 "change_pct": rounded(current_change),
                 "amplitude": rounded(amplitude),
                 "ma20": stock["ma20"],
+                "ma5": stock["ma5"],
+                "ma10": stock["ma10"],
                 "ma20_distance": rounded(live_distance),
+                "volume_ma5": stock["volume_ma5"],
+                "volume_ratio_5d": stock["volume_ratio_5d"],
+                "volume_complete": stock.get("volume_complete", True),
+                "volume_state": holding_volume_state(live_volume_ratio, config) if live_volume_ratio is not None else "数据缺失",
+                "concepts": stock.get("concepts", []),
+                "sources": stock.get("sources", {}),
                 "relative_sector_strength": rounded(relative),
                 "statuses": statuses,
                 "flags": {
@@ -546,22 +634,34 @@ def build_holdings(
                     "key_level_break": key_level_break,
                 },
                 "conditional_note": suggestion,
-                "attention_score": score + (20 if "跌破 MA20" in statuses else 0),
+                "attention_score": score,
+                "missing_data": sorted(set(stock.get("missing_data", []) + live.get("missing_data", []) +
+                                           (["volume_ratio_5d: intraday partial"] if not stock.get("volume_complete", True) else []))),
             }
         )
 
         previous_closes = [bar["close"] for bar in stock["bars"][:-1]]
         previous_ma20 = moving_average(previous_closes, 20)
         previous_distance = (stock["previous_close"] - previous_ma20) / previous_ma20
-        changes = []
+        changes = [
+            f"收盘由 {stock['previous_close']:.2f} 变为 {stock['close']:.2f}，涨跌 {pct_text(stock['change_pct'])}",
+            f"距 MA20 由 {pct_text(previous_distance)} 变为 {pct_text(stock['ma20_distance'])}",
+        ]
         if previous_distance >= 0 > stock["ma20_distance"]:
             changes.append("昨日 MA20 上方 → 今日跌破")
         elif previous_distance < 0 <= stock["ma20_distance"]:
             changes.append("昨日 MA20 下方 → 今日重新站上")
         previous_volume_average = mean(bar["volume"] for bar in stock["bars"][-7:-2])
         previous_volume_ratio = stock["bars"][-2]["volume"] / previous_volume_average if previous_volume_average else None
-        if previous_volume_ratio is not None and stock["volume_ratio_5d"] is not None and previous_volume_ratio < config["abnormal_volume_ratio_5d_min"] <= stock["volume_ratio_5d"]:
-            changes.append("昨日正常量能 → 今日放量")
+        current_volume_ratio = stock["volume_ratio_5d"] if stock.get("volume_complete", True) else None
+        if previous_volume_ratio is not None and current_volume_ratio is not None:
+            changes.append(f"量能比由 {previous_volume_ratio:.2f} 倍变为 {current_volume_ratio:.2f} 倍")
+            previous_volume_state = holding_volume_state(previous_volume_ratio, config)
+            current_volume_state = holding_volume_state(current_volume_ratio, config)
+            if previous_volume_state != current_volume_state:
+                changes.append(f"昨日{previous_volume_state} → 今日{current_volume_state}")
+        if previous_distance >= config["high_ma20_distance_min"] and stock["ma20_distance"] < previous_distance:
+            changes.append("昨日高位偏离 MA20 → 今日偏离收窄，进入回踩观察")
         previous_sector_return = stock["sector"].get("previous_return_pct")
         if previous_sector_return is not None and len(stock["bars"]) >= 3 and stock["relative_sector_strength"] is not None:
             previous_stock_return = (stock["bars"][-2]["close"] - stock["bars"][-3]["close"]) / stock["bars"][-3]["close"]
@@ -571,22 +671,56 @@ def build_holdings(
                 changes.append("上一交易日强于板块 → 最新交易日弱于板块")
             elif previous_relative <= -threshold and stock["relative_sector_strength"] >= threshold:
                 changes.append("上一交易日弱于板块 → 最新交易日强于板块")
-        if not changes:
-            changes.append("MA20 与量能状态相比昨日未发生级别变化")
+        day_structure = "未触发特定日内结构规则"
+        if stock["high"] and (stock["high"] - stock["close"]) / stock["high"] >= config["intraday"]["rush_fade_from_high_min"]:
+            day_structure = "冲高回落"
+        elif stock["low"] and (stock["close"] - stock["low"]) / stock["low"] >= config["intraday"]["bottom_rebound_from_low_min"]:
+            day_structure = "探底回升"
+        volume_description = (
+            f"{holding_volume_state(current_volume_ratio, config)}，为前 5 日均量的 {current_volume_ratio * 100:.0f}%"
+            if current_volume_ratio is not None else "量能状态暂无完整数据"
+        )
+        what_happened = (
+            f"最近交易日涨跌 {pct_text(stock['change_pct'])}，高低 {stock['high']:.2f}/{stock['low']:.2f}，"
+            f"振幅 {pct_text(stock['amplitude'])}；位于 MA20 {'上方' if stock['ma20_distance'] >= 0 else '下方'}，"
+            f"距 MA20 {pct_text(stock['ma20_distance'])}。行业涨跌 {pct_text(stock['industry_return'])}，"
+            f"个股相对行业 {pct_text(stock['relative_sector_strength'])}；{volume_description}，{day_structure}。"
+        )
         review_rows.append(
             {
                 "code": stock["code"],
                 "name": stock["name"],
                 "industry": stock["industry"],
+                "shares": position["shares"],
+                "cost": position["cost"],
+                "cost_basis": round(cost_basis, 2),
+                "market_value": round(market_value, 2),
+                "unrealized_pnl": round(unrealized_pnl, 2),
+                "position_return": rounded(position_return),
                 "change_pct": stock["change_pct"],
                 "high": stock["high"],
                 "low": stock["low"],
+                "amplitude": stock["amplitude"],
+                "ma5": stock["ma5"],
+                "ma10": stock["ma10"],
                 "ma20": stock["ma20"],
                 "ma20_distance": stock["ma20_distance"],
+                "volume": stock["volume"],
+                "volume_ma5": stock["volume_ma5"],
                 "volume_ratio_5d": stock["volume_ratio_5d"],
+                "volume_state": holding_volume_state(current_volume_ratio, config),
+                "turnover_rate": stock["turnover_rate"],
+                "industry_return": stock["industry_return"],
                 "relative_sector_strength": stock["relative_sector_strength"],
+                "concepts": stock.get("concepts", []),
                 "labels": stock["labels"],
-                "what_happened": f"最新交易日涨跌 {stock['change_pct'] * 100:+.2f}%，高低 {stock['high']:.2f}/{stock['low']:.2f}；相对板块 {pct_text(stock['relative_sector_strength'])}，量能为 5 日均量的 {stock['volume_ratio_5d'] * 100:.0f}%" + ("（盘中未完成）。" if not stock.get("volume_complete", True) else "。") if stock["volume_ratio_5d"] is not None else f"最新交易日涨跌 {stock['change_pct'] * 100:+.2f}%，高低 {stock['high']:.2f}/{stock['low']:.2f}；量能暂无数据。",
+                "source": stock.get("source"),
+                "sources": stock.get("sources", {}),
+                "source_timestamp": stock.get("source_timestamp"),
+                "retrieved_at": stock.get("retrieved_at"),
+                "freshness": stock.get("freshness"),
+                "missing_data": stock.get("missing_data", []),
+                "what_happened": what_happened,
                 "changes_from_yesterday": changes,
             }
         )
@@ -594,7 +728,11 @@ def build_holdings(
     rows.sort(key=lambda item: item["attention_score"], reverse=True)
     premarket_rows.sort(key=lambda item: item["attention_score"], reverse=True)
     live_rows.sort(key=lambda item: item["attention_score"], reverse=True)
+    scores_by_code = {item["code"]: item["attention_score"] for item in rows}
+    review_rows.sort(key=lambda item: scores_by_code[item["code"]], reverse=True)
     total_value = sum(item["market_value"] for item in rows)
+    total_cost_basis = sum(item["cost_basis"] for item in rows)
+    total_unrealized_pnl = total_value - total_cost_basis
     previous_value = sum(item["previous_close"] * item["shares"] for item in rows)
     portfolio_change = sum((item["close"] - item["previous_close"]) * item["shares"] for item in rows) / previous_value if previous_value else None
     market_date = getattr(provider, "_market", None)
@@ -603,16 +741,20 @@ def build_holdings(
         "holding_count": len(rows),
         "portfolio_change_pct": rounded(portfolio_change),
         "total_market_value": round(total_value, 2),
+        "total_cost_basis": round(total_cost_basis, 2),
+        "total_unrealized_pnl": round(total_unrealized_pnl, 2),
+        "total_unrealized_pnl_pct": rounded(total_unrealized_pnl / total_cost_basis) if total_cost_basis else None,
         "stronger_than_sector_count": sum("强于板块" in item["labels"] for item in rows),
         "weaker_than_sector_count": sum("弱于板块" in item["labels"] for item in rows),
         "above_ma20_count": sum("MA20上方" in item["labels"] for item in rows),
         "below_ma20_count": sum("MA20下方" in item["labels"] for item in rows),
         "shrink_pullback_count": sum("缩量" in item["labels"] and abs(item["ma20_distance"]) <= config["ma20_near_distance_abs"] for item in rows),
         "abnormal_volume_count": sum("放量异常" in item["labels"] for item in rows),
+        "trend_break_count": sum("趋势破坏" in item["labels"] for item in rows),
         "anomaly_count": sum(item["attention_level"] == "需要关注" for item in rows),
     }
     anomalies = [
-        {"code": item["code"], "name": item["name"], "industry": item["industry"], "labels": [label for label in item["labels"] if label in {"趋势破坏", "MA20下方", "弱于板块", "放量异常", "过热"}]}
+        {"code": item["code"], "name": item["name"], "industry": item["industry"], "labels": [label for label in item["labels"] if label in {"跌破 MA20", "趋势破坏", "MA20下方", "弱于板块", "放量异常", "高位偏离", "接近支撑", "过热"}]}
         for item in rows
         if item["attention_level"] == "需要关注"
     ]
@@ -620,9 +762,11 @@ def build_holdings(
     holdings_payload = {"summary": summary, "anomalies": anomalies, "premarket": premarket_rows, "holdings": rows, "data_source": data_source}
     intraday_payload = {"summary": {"trade_date": summary["trade_date"], "holding_count": len(live_rows), "stage": stage}, "holdings": live_rows, "data_source": data_source}
     review_text = (
-        f"今日组合 {portfolio_change * 100:+.2f}%。{len(rows)} 只持仓中，"
+        f"最近交易日组合 {portfolio_change * 100:+.2f}%，当前市值 {total_value:,.2f} 元，"
+        f"相对持仓成本浮动盈亏 {total_unrealized_pnl:+,.2f} 元。{len(rows)} 只持仓中，"
         f"{summary['above_ma20_count']} 只位于 MA20 上方，{summary['weaker_than_sector_count']} 只弱于所属板块。"
-        f"缩量回踩 {summary['shrink_pullback_count']} 只，放量异常 {summary['abnormal_volume_count']} 只。"
+        f"缩量回踩 {summary['shrink_pullback_count']} 只，放量异常 {summary['abnormal_volume_count']} 只，"
+        f"趋势破坏 {summary['trend_break_count']} 只。"
         "整体继续以结构变化和板块同步性为观察重点。"
     ) if portfolio_change is not None else "未配置真实持仓，暂无组合复盘。"
     review_payload = {"summary": {**summary, "narrative": review_text}, "holdings": review_rows, "data_source": data_source}
