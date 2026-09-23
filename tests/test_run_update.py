@@ -179,6 +179,9 @@ class PublicationTests(unittest.TestCase):
         self.assertTrue({(8, 30), (9, 35), (11, 25), (13, 5), (14, 55), (15, 10)} <= slots)
         self.assertTrue(agent["RunAtLoad"])
         self.assertEqual(agent["ProgramArguments"][0], "/usr/bin/python3")
+        self.assertEqual(agent["ProgramArguments"][1], str(ROOT / "scripts" / "run_update.py"))
+        self.assertEqual(agent["WorkingDirectory"], str(ROOT))
+        self.assertEqual(agent["StandardOutPath"], str(ROOT / "logs" / "launchd.out.log"))
         ignores = (ROOT / ".gitignore").read_text()
         for path in ("config/holdings.local.json", ".env.local", "logs/", "cache/"):
             self.assertIn(path, ignores)

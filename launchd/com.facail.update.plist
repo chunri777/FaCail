@@ -7,10 +7,10 @@
   <key>ProgramArguments</key>
   <array>
     <string>/usr/bin/python3</string>
-    <string>/Users/lq/Documents/Codex/FaCail/scripts/run_update.py</string>
+    <string>/Users/lq/Developer/FaCail/scripts/run_update.py</string>
   </array>
   <key>WorkingDirectory</key>
-  <string>/Users/lq/Documents/Codex/FaCail</string>
+  <string>/Users/lq/Developer/FaCail</string>
   <key>StartCalendarInterval</key>
   <array>
     <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
@@ -43,8 +43,8 @@
   <key>RunAtLoad</key>
   <true/>
   <key>StandardOutPath</key>
-  <string>/Users/lq/Documents/Codex/FaCail/logs/launchd.out.log</string>
+  <string>/Users/lq/Developer/FaCail/logs/launchd.out.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/lq/Documents/Codex/FaCail/logs/launchd.err.log</string>
+  <string>/Users/lq/Developer/FaCail/logs/launchd.err.log</string>
 </dict>
 </plist>

@@ -1,5 +1,7 @@
 # FaCail
 
+Fixed local workspace: `/Users/lq/Developer/FaCail`.
+
 FaCail is a personal A-share stock screening and daily holdings review tool. It turns user-defined trading rules into Python calculations, structured JSON, and repeatable review records.
 
 It does not provide automatic trading, control brokerage accounts, predict limit-up moves, or make investment decisions for the user.
