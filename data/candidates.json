@@ -1,116 +1,26 @@
 {
   "summary": {
-    "candidate_count": 7,
-    "strong_stock_count": 2,
-    "pullback_count": 1,
-    "waiting_count": 7
+    "candidate_count": 2,
+    "strong_stock_count": 0,
+    "pullback_count": 0,
+    "waiting_count": 2
   },
   "strong_sectors": [
     {
-      "code": "BK1277",
-      "name": "白酒Ⅱ",
-      "return_pct": -0.0012,
-      "source": "eastmoney",
-      "source_timestamp": null,
-      "retrieved_at": "2026-09-23T15:10:09+08:00",
-      "return_5d": 0.036854,
-      "return_20d": -0.003612,
-      "previous_return_pct": -0.001573,
-      "ma20_above": true,
-      "turnover_change": -0.259115,
-      "turnover_5d_change": -0.208935,
-      "history_source_timestamp": "2026-09-23",
-      "history_retrieved_at": "2026-09-23T10:30:28+08:00",
-      "freshness": "unknown",
-      "advance_ratio": null,
-      "limit_up_count": null,
-      "rank": null,
-      "missing_data": [
-        "advance_ratio",
-        "limit_up_count",
-        "rank"
-      ],
-      "rank_total": null,
-      "rank_percentile": null,
-      "ma20_status": "MA20上方",
-      "status": "回踩",
-      "is_strong": true
-    },
-    {
-      "code": "BK0735",
-      "name": "计算机设备",
-      "return_pct": -0.0023,
-      "source": "eastmoney",
-      "source_timestamp": null,
-      "retrieved_at": "2026-09-23T15:10:20+08:00",
-      "return_5d": 0.038077,
-      "return_20d": 0.023897,
-      "previous_return_pct": 0.010886,
-      "ma20_above": true,
-      "turnover_change": -0.615889,
-      "turnover_5d_change": -0.475974,
-      "history_source_timestamp": "2026-09-23",
-      "history_retrieved_at": "2026-09-23T10:31:50+08:00",
-      "freshness": "unknown",
-      "advance_ratio": null,
-      "limit_up_count": null,
-      "rank": null,
-      "missing_data": [
-        "advance_ratio",
-        "limit_up_count",
-        "rank"
-      ],
-      "rank_total": null,
-      "rank_percentile": null,
-      "ma20_status": "MA20上方",
-      "status": "回踩",
-      "is_strong": true
-    },
-    {
       "code": "BK0545",
       "name": "通用设备",
-      "return_pct": 0.0094,
+      "return_pct": 0.0032,
       "source": "eastmoney",
       "source_timestamp": null,
-      "retrieved_at": "2026-09-23T15:10:23+08:00",
-      "return_5d": 0.042586,
-      "return_20d": 0.04128,
-      "previous_return_pct": -0.001049,
+      "retrieved_at": "2026-09-24T10:09:41+08:00",
+      "return_5d": 0.045817,
+      "return_20d": 0.028104,
+      "previous_return_pct": 0.00936,
       "ma20_above": true,
-      "turnover_change": -0.583854,
-      "turnover_5d_change": -0.578889,
-      "history_source_timestamp": "2026-09-23",
-      "history_retrieved_at": "2026-09-23T10:31:58+08:00",
-      "freshness": "unknown",
-      "advance_ratio": null,
-      "limit_up_count": null,
-      "rank": null,
-      "missing_data": [
-        "advance_ratio",
-        "limit_up_count",
-        "rank"
-      ],
-      "rank_total": null,
-      "rank_percentile": null,
-      "ma20_status": "MA20上方",
-      "status": "强势",
-      "is_strong": true
-    },
-    {
-      "code": "BK1039",
-      "name": "电子化学品Ⅱ",
-      "return_pct": 0.0143,
-      "source": "eastmoney",
-      "source_timestamp": null,
-      "retrieved_at": "2026-09-23T15:10:25+08:00",
-      "return_5d": 0.035393,
-      "return_20d": 0.084076,
-      "previous_return_pct": 0.002626,
-      "ma20_above": true,
-      "turnover_change": -0.35243,
-      "turnover_5d_change": -0.382989,
-      "history_source_timestamp": "2026-09-23",
-      "history_retrieved_at": "2026-09-23T13:35:36+08:00",
+      "turnover_change": -0.992346,
+      "turnover_5d_change": -0.992862,
+      "history_source_timestamp": "2026-09-24",
+      "history_retrieved_at": "2026-09-24T09:29:25+08:00",
       "freshness": "unknown",
       "advance_ratio": null,
       "limit_up_count": null,
@@ -129,691 +39,39 @@
   ],
   "strong_stocks": [
     {
-      "code": "600172",
-      "name": "黄河旋风",
-      "date": "2026-09-23",
-      "close": 16.74,
-      "previous_close": 16.06,
-      "change_pct": 0.0423,
-      "open": 15.91,
-      "high": 17.18,
-      "low": 15.82,
-      "amplitude": 0.0847,
-      "volume": 219400300,
-      "volume_ma5": 186419528.2,
-      "volume_ratio_5d": 1.1769,
-      "volume_complete": true,
-      "ma5": 16.256,
-      "ma10": 16.121,
-      "ma20": 15.756,
-      "ma20_distance": 0.0625,
-      "recent_gain_20d": 0.2043,
-      "previous_high": 17.24,
-      "recent_support": 14.3,
-      "recent_high_20d": 17.24,
-      "recent_low_20d": 13.79,
-      "industry": "通用设备",
-      "industry_return": 0.0094,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0329,
-      "turnover_rate": 0.17079999999999998,
-      "pe": -27.65,
-      "pb": 71.44,
-      "market_cap": 21499000000.0,
-      "concepts": [
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0523",
-          "name": "新材料"
-        },
-        {
-          "code": "BK0494",
-          "name": "节能环保"
-        },
-        {
-          "code": "BK1023",
-          "name": "培育钻石"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:22+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK0545",
-        "name": "通用设备",
-        "return_pct": 0.0094,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:23+08:00",
-        "return_5d": 0.042586,
-        "return_20d": 0.04128,
-        "previous_return_pct": -0.001049,
-        "ma20_above": true,
-        "turnover_change": -0.583854,
-        "turnover_5d_change": -0.578889,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T10:31:58+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "强势",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20上方",
-        "正常量能",
-        "强于板块"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股强",
-      "priority": 1,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属通用设备板块今日涨跌 +0.94%。",
-        "板块 5 日涨跌 +4.26%，状态为强势。",
-        "个股今日涨跌 +4.23%，位于 MA20 上方 +6.25%。",
-        "当日累计成交量为前 5 个交易日均量的 118%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +6.25%",
-        "等待量能确认，当前为 5 日均量的 118%",
-        "等待价格突破 17.24"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "603002",
-      "name": "宏昌电子",
-      "date": "2026-09-23",
-      "close": 20.11,
-      "previous_close": 19.8,
-      "change_pct": 0.0157,
-      "open": 19.86,
-      "high": 20.63,
-      "low": 19.5,
-      "amplitude": 0.0571,
-      "volume": 85013200,
-      "volume_ma5": 94725111.8,
-      "volume_ratio_5d": 0.8975,
-      "volume_complete": true,
-      "ma5": 19.53,
-      "ma10": 18.892,
-      "ma20": 17.723,
-      "ma20_distance": 0.1347,
-      "recent_gain_20d": 0.3084,
-      "previous_high": 20.38,
-      "recent_support": 15.74,
-      "recent_high_20d": 20.63,
-      "recent_low_20d": 14.96,
-      "industry": "电子化学品Ⅱ",
-      "industry_return": 0.0143,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0014,
-      "turnover_rate": 0.075,
-      "pe": 390.33,
-      "pb": 6.56,
-      "market_cap": 22806000000.0,
-      "concepts": [
-        {
-          "code": "BK0877",
-          "name": "PCB"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0619",
-          "name": "3D打印"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1161",
-          "name": "英伟达概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:23+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1039",
-        "name": "电子化学品Ⅱ",
-        "return_pct": 0.0143,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:25+08:00",
-        "return_5d": 0.035393,
-        "return_20d": 0.084076,
-        "previous_return_pct": 0.002626,
-        "ma20_above": true,
-        "turnover_change": -0.35243,
-        "turnover_5d_change": -0.382989,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T13:35:36+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "强势",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20上方",
-        "高位偏离",
-        "正常量能",
-        "过热"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": false
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": true
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "接近满足",
-          "met_count": 4,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股强",
-      "priority": 1,
-      "selection_status": "接近触发",
-      "selection_reasons": [
-        "所属电子化学品Ⅱ板块今日涨跌 +1.43%。",
-        "板块 5 日涨跌 +3.54%，状态为强势。",
-        "个股今日涨跌 +1.57%，位于 MA20 上方 +13.47%。",
-        "当日累计成交量为前 5 个交易日均量的 90%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +13.47%",
-        "等待量能确认，当前为 5 日均量的 90%",
-        "等待价格突破 20.38"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "600664",
-      "name": "哈药股份",
-      "date": "2026-09-23",
-      "close": 9.04,
-      "previous_close": 9.08,
-      "change_pct": -0.0044,
-      "open": 9.42,
-      "high": 9.86,
-      "low": 9.02,
-      "amplitude": 0.0925,
-      "volume": 713530700,
-      "volume_ma5": 379818541.8,
-      "volume_ratio_5d": 1.8786,
-      "volume_complete": true,
-      "ma5": 8.258,
-      "ma10": 7.719,
-      "ma20": 8.125,
-      "ma20_distance": 0.1126,
-      "recent_gain_20d": 0.1051,
-      "previous_high": 9.51,
-      "recent_support": 6.92,
-      "recent_high_20d": 9.86,
-      "recent_low_20d": 6.92,
-      "industry": "化学制药",
-      "industry_return": -0.0066,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0022,
-      "turnover_rate": 0.2833,
-      "pe": 44.45,
-      "pb": 3.73,
-      "market_cap": 22767000000.0,
-      "concepts": [
-        {
-          "code": "BK0906",
-          "name": "流感"
-        },
-        {
-          "code": "BK0852",
-          "name": "冷链物流"
-        },
-        {
-          "code": "BK0838",
-          "name": "东北振兴"
-        },
-        {
-          "code": "BK0653",
-          "name": "养老概念"
-        },
-        {
-          "code": "BK0615",
-          "name": "中药概念"
-        },
-        {
-          "code": "BK1657",
-          "name": "病原体防治"
-        },
-        {
-          "code": "BK1106",
-          "name": "创新药"
-        },
-        {
-          "code": "BK1078",
-          "name": "肝炎概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:09",
-      "retrieved_at": "2026-09-23T15:10:15+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget",
-        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
-      ],
-      "sector": {
-        "code": "BK0465",
-        "name": "化学制药",
-        "return_pct": -0.0066,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:16+08:00",
-        "return_5d": null,
-        "return_20d": null,
-        "previous_return_pct": null,
-        "ma20_above": null,
-        "turnover_change": null,
-        "turnover_5d_change": null,
-        "history_source_timestamp": null,
-        "history_retrieved_at": null,
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "return_5d",
-          "return_20d",
-          "ma20_above",
-          "turnover_change",
-          "turnover_5d_change",
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "数据缺失",
-        "status": "数据缺失",
-        "is_strong": false
-      },
-      "labels": [
-        "MA20上方",
-        "放量异常"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": true
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": null
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": null
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 1,
-          "total_count": 5,
-          "missing_count": 2
-        }
-      ],
-      "strength_relation": "板块数据不足 + 个股强",
-      "priority": 3,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属化学制药板块今日涨跌 -0.66%。",
-        "个股今日涨跌 -0.44%，位于 MA20 上方 +11.26%。",
-        "当日累计成交量为前 5 个交易日均量的 188%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +11.26%",
-        "等待量能确认，当前为 5 日均量的 188%",
-        "等待化学制药板块进入强势区"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
       "code": "002836",
       "name": "新宏泽",
-      "date": "2026-09-23",
-      "close": 11.15,
-      "previous_close": 11.14,
-      "change_pct": 0.0009,
-      "open": 11.17,
-      "high": 11.6,
-      "low": 10.4,
-      "amplitude": 0.1077,
-      "volume": 25680100,
-      "volume_ma5": 16632762.6,
-      "volume_ratio_5d": 1.5439,
-      "volume_complete": true,
-      "ma5": 11.406,
-      "ma10": 10.656,
-      "ma20": 10.3785,
-      "ma20_distance": 0.0743,
-      "recent_gain_20d": 0.1263,
+      "date": "2026-09-24",
+      "close": 12.08,
+      "previous_close": 11.15,
+      "change_pct": 0.0834,
+      "open": 10.81,
+      "high": 12.18,
+      "low": 10.55,
+      "amplitude": 0.1462,
+      "volume": 14801100,
+      "volume_ma5": 20844594.8,
+      "volume_ratio_5d": 0.7101,
+      "volume_complete": false,
+      "ma5": 11.654,
+      "ma10": 10.823,
+      "ma20": 10.4945,
+      "ma20_distance": 0.1511,
+      "recent_gain_20d": 0.2377,
       "previous_high": 13.1,
       "recent_support": 9.15,
       "recent_high_20d": 13.1,
       "recent_low_20d": 9.15,
       "industry": "包装印刷",
-      "industry_return": -0.0105,
+      "industry_return": 0.0006,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0114,
-      "turnover_rate": 0.1115,
-      "pe": 71.75,
-      "pb": 7.12,
-      "market_cap": 2569000000.0,
+      "relative_sector_strength": 0.0828,
+      "turnover_rate": 0.0642,
+      "pe": 77.74,
+      "pb": 7.72,
+      "market_cap": 2783000000.0,
       "concepts": [],
       "source": "tencent",
       "sources": {
@@ -822,8 +80,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-23T15:09:45",
-      "retrieved_at": "2026-09-23T15:10:16+08:00",
+      "source_timestamp": "2026-09-24T10:07:00",
+      "retrieved_at": "2026-09-24T10:07:03+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -832,10 +90,10 @@
       "sector": {
         "code": "BK1265",
         "name": "包装印刷",
-        "return_pct": -0.0105,
+        "return_pct": 0.0006,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:18+08:00",
+        "retrieved_at": "2026-09-24T10:09:37+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -866,7 +124,7 @@
       },
       "labels": [
         "MA20上方",
-        "正常量能",
+        "高位偏离",
         "强于板块"
       ],
       "conditions": [
@@ -880,11 +138,11 @@
             },
             {
               "label": "日涨跌位于回踩区间",
-              "met": true
+              "met": false
             },
             {
               "label": "量能缩至 5 日均量阈值内",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
@@ -892,66 +150,6 @@
             },
             {
               "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": null
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": null
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
               "met": true
             }
           ],
@@ -959,501 +157,120 @@
           "met_count": 1,
           "total_count": 5,
           "missing_count": 2
-        }
-      ],
-      "strength_relation": "板块数据不足 + 个股强",
-      "priority": 3,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属包装印刷板块今日涨跌 -1.05%。",
-        "个股今日涨跌 +0.09%，位于 MA20 上方 +7.43%。",
-        "当日累计成交量为前 5 个交易日均量的 154%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +7.43%",
-        "等待量能确认，当前为 5 日均量的 154%",
-        "等待包装印刷板块进入强势区"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "603938",
-      "name": "三孚股份",
-      "date": "2026-09-23",
-      "close": 51.5,
-      "previous_close": 49.25,
-      "change_pct": 0.0457,
-      "open": 49.88,
-      "high": 51.55,
-      "low": 49.5,
-      "amplitude": 0.0416,
-      "volume": 31999000,
-      "volume_ma5": 30013700.4,
-      "volume_ratio_5d": 1.0661,
-      "volume_complete": true,
-      "ma5": 50.358,
-      "ma10": 50.19,
-      "ma20": 46.943,
-      "ma20_distance": 0.0971,
-      "recent_gain_20d": 0.2601,
-      "previous_high": 55.06,
-      "recent_support": 43.69,
-      "recent_high_20d": 55.06,
-      "recent_low_20d": 39.12,
-      "industry": "化学原料",
-      "industry_return": -0.007,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0527,
-      "turnover_rate": 0.0836,
-      "pe": 122.42,
-      "pb": 7.54,
-      "market_cap": 19705000000.0,
-      "concepts": [
-        {
-          "code": "BK0981",
-          "name": "工业气体"
         },
         {
-          "code": "BK0977",
-          "name": "碳化硅"
-        },
-        {
-          "code": "BK0961",
-          "name": "有机硅概念"
-        },
-        {
-          "code": "BK0917",
-          "name": "半导体概念"
-        },
-        {
-          "code": "BK0864",
-          "name": "氢能源"
-        },
-        {
-          "code": "BK0512",
-          "name": "化工原料"
-        },
-        {
-          "code": "BK1660",
-          "name": "光纤概念"
-        },
-        {
-          "code": "BK1137",
-          "name": "存储芯片"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:25+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1019",
-        "name": "化学原料",
-        "return_pct": -0.007,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:27+08:00",
-        "return_5d": 0.018841,
-        "return_20d": -0.002135,
-        "previous_return_pct": -0.004936,
-        "ma20_above": false,
-        "turnover_change": -0.301305,
-        "turnover_5d_change": -0.24023,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T13:35:40+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20下方",
-        "status": "转弱",
-        "is_strong": false
-      },
-      "labels": [
-        "MA20上方",
-        "正常量能",
-        "强于板块",
-        "过热"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
+          "id": "volume_breakout",
+          "name": "条件 B · 放量突破",
           "checks": [
             {
-              "label": "价格位于 MA20 观察区",
+              "label": "突破近 20 日关键高点",
               "met": false
             },
             {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
+              "label": "成交量达到 5 日均量阈值",
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
+              "met": null
+            },
+            {
+              "label": "个股强于所属板块",
+              "met": true
+            },
+            {
+              "label": "距离 MA20 未超过限制",
+              "met": false
+            }
+          ],
+          "status": "未满足",
+          "met_count": 1,
+          "total_count": 5,
+          "missing_count": 2
+        },
+        {
+          "id": "strong_sector_pullback",
+          "name": "条件 C · 强势板块回踩",
+          "checks": [
+            {
+              "label": "所属板块保持强势",
+              "met": null
+            },
+            {
+              "label": "板块 5 日涨幅为正",
+              "met": null
+            },
+            {
+              "label": "股价接近 MA10 或 MA20",
               "met": false
             },
             {
-              "label": "未明显跌破近期支撑",
+              "label": "量能处于收缩状态",
+              "met": null
+            },
+            {
+              "label": "未出现趋势破坏",
               "met": true
             }
           ],
           "status": "未满足",
           "met_count": 1,
           "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": false
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": false
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
+          "missing_count": 3
         }
       ],
-      "strength_relation": "板块弱 + 个股强",
+      "strength_relation": "板块数据不足 + 个股强",
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属化学原料板块今日涨跌 -0.70%。",
-        "板块 5 日涨跌 +1.88%，状态为转弱。",
-        "个股今日涨跌 +4.57%，位于 MA20 上方 +9.71%。",
-        "当日累计成交量为前 5 个交易日均量的 107%。"
+        "所属包装印刷板块今日涨跌 +0.06%。",
+        "个股今日涨跌 +8.34%，位于 MA20 上方 +15.11%。",
+        "当日累计成交量为前 5 个交易日均量的 71%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +9.71%",
-        "等待量能确认，当前为 5 日均量的 107%",
-        "等待化学原料板块进入强势区"
+        "等待价格回到 MA20 附近，当前距离 +15.11%",
+        "等待量能确认，当前为 5 日均量的 71%",
+        "等待包装印刷板块进入强势区"
       ],
       "satisfied_condition_count": 0
     }
   ],
-  "pullback_watch": [
-    {
-      "code": "603002",
-      "name": "宏昌电子",
-      "date": "2026-09-23",
-      "close": 20.11,
-      "previous_close": 19.8,
-      "change_pct": 0.0157,
-      "open": 19.86,
-      "high": 20.63,
-      "low": 19.5,
-      "amplitude": 0.0571,
-      "volume": 85013200,
-      "volume_ma5": 94725111.8,
-      "volume_ratio_5d": 0.8975,
-      "volume_complete": true,
-      "ma5": 19.53,
-      "ma10": 18.892,
-      "ma20": 17.723,
-      "ma20_distance": 0.1347,
-      "recent_gain_20d": 0.3084,
-      "previous_high": 20.38,
-      "recent_support": 15.74,
-      "recent_high_20d": 20.63,
-      "recent_low_20d": 14.96,
-      "industry": "电子化学品Ⅱ",
-      "industry_return": 0.0143,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0014,
-      "turnover_rate": 0.075,
-      "pe": 390.33,
-      "pb": 6.56,
-      "market_cap": 22806000000.0,
-      "concepts": [
-        {
-          "code": "BK0877",
-          "name": "PCB"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0619",
-          "name": "3D打印"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1161",
-          "name": "英伟达概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:23+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1039",
-        "name": "电子化学品Ⅱ",
-        "return_pct": 0.0143,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:25+08:00",
-        "return_5d": 0.035393,
-        "return_20d": 0.084076,
-        "previous_return_pct": 0.002626,
-        "ma20_above": true,
-        "turnover_change": -0.35243,
-        "turnover_5d_change": -0.382989,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T13:35:36+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "强势",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20上方",
-        "高位偏离",
-        "正常量能",
-        "过热"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": false
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": true
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "接近满足",
-          "met_count": 4,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股强",
-      "priority": 1,
-      "selection_status": "接近触发",
-      "selection_reasons": [
-        "所属电子化学品Ⅱ板块今日涨跌 +1.43%。",
-        "板块 5 日涨跌 +3.54%，状态为强势。",
-        "个股今日涨跌 +1.57%，位于 MA20 上方 +13.47%。",
-        "当日累计成交量为前 5 个交易日均量的 90%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +13.47%",
-        "等待量能确认，当前为 5 日均量的 90%",
-        "等待价格突破 20.38"
-      ],
-      "satisfied_condition_count": 0
-    }
-  ],
+  "pullback_watch": [],
   "waiting": [
     {
       "code": "600172",
       "name": "黄河旋风",
-      "date": "2026-09-23",
-      "close": 16.74,
-      "previous_close": 16.06,
-      "change_pct": 0.0423,
-      "open": 15.91,
-      "high": 17.18,
-      "low": 15.82,
-      "amplitude": 0.0847,
-      "volume": 219400300,
-      "volume_ma5": 186419528.2,
-      "volume_ratio_5d": 1.1769,
-      "volume_complete": true,
-      "ma5": 16.256,
-      "ma10": 16.121,
-      "ma20": 15.756,
-      "ma20_distance": 0.0625,
-      "recent_gain_20d": 0.2043,
+      "date": "2026-09-24",
+      "close": 16.72,
+      "previous_close": 16.74,
+      "change_pct": -0.0012,
+      "open": 16.49,
+      "high": 17.0,
+      "low": 16.15,
+      "amplitude": 0.0508,
+      "volume": 79841200,
+      "volume_ma5": 183177080.8,
+      "volume_ratio_5d": 0.4359,
+      "volume_complete": false,
+      "ma5": 16.388,
+      "ma10": 16.257,
+      "ma20": 15.8615,
+      "ma20_distance": 0.0541,
+      "recent_gain_20d": 0.1444,
       "previous_high": 17.24,
       "recent_support": 14.3,
       "recent_high_20d": 17.24,
-      "recent_low_20d": 13.79,
+      "recent_low_20d": 13.89,
       "industry": "通用设备",
-      "industry_return": 0.0094,
+      "industry_return": 0.0032,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0329,
-      "turnover_rate": 0.17079999999999998,
-      "pe": -27.65,
-      "pb": 71.44,
-      "market_cap": 21499000000.0,
+      "relative_sector_strength": -0.0044,
+      "turnover_rate": 0.0622,
+      "pe": -27.62,
+      "pb": 71.35,
+      "market_cap": 21473000000.0,
       "concepts": [
         {
           "code": "BK0683",
@@ -1479,8 +296,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:22+08:00",
+      "source_timestamp": "2026-09-24T10:09:37",
+      "retrieved_at": "2026-09-24T10:09:40+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -1489,18 +306,18 @@
       "sector": {
         "code": "BK0545",
         "name": "通用设备",
-        "return_pct": 0.0094,
+        "return_pct": 0.0032,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:23+08:00",
-        "return_5d": 0.042586,
-        "return_20d": 0.04128,
-        "previous_return_pct": -0.001049,
+        "retrieved_at": "2026-09-24T10:09:41+08:00",
+        "return_5d": 0.045817,
+        "return_20d": 0.028104,
+        "previous_return_pct": 0.00936,
         "ma20_above": true,
-        "turnover_change": -0.583854,
-        "turnover_5d_change": -0.578889,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T10:31:58+08:00",
+        "turnover_change": -0.992346,
+        "turnover_5d_change": -0.992862,
+        "history_source_timestamp": "2026-09-24",
+        "history_retrieved_at": "2026-09-24T09:29:25+08:00",
         "freshness": "unknown",
         "advance_ratio": null,
         "limit_up_count": null,
@@ -1517,9 +334,7 @@
         "is_strong": true
       },
       "labels": [
-        "MA20上方",
-        "正常量能",
-        "强于板块"
+        "MA20上方"
       ],
       "conditions": [
         {
@@ -1532,11 +347,11 @@
             },
             {
               "label": "日涨跌位于回踩区间",
-              "met": false
+              "met": true
             },
             {
               "label": "量能缩至 5 日均量阈值内",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
@@ -1548,9 +363,9 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 3,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 1
         },
         {
           "id": "volume_breakout",
@@ -1562,7 +377,7 @@
             },
             {
               "label": "成交量达到 5 日均量阈值",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
@@ -1570,7 +385,7 @@
             },
             {
               "label": "个股强于所属板块",
-              "met": true
+              "met": false
             },
             {
               "label": "距离 MA20 未超过限制",
@@ -1578,9 +393,9 @@
             }
           ],
           "status": "未满足",
-          "met_count": 3,
+          "met_count": 2,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 1
         },
         {
           "id": "strong_sector_pullback",
@@ -1600,7 +415,7 @@
             },
             {
               "label": "量能处于收缩状态",
-              "met": false
+              "met": null
             },
             {
               "label": "未出现趋势破坏",
@@ -1610,1021 +425,59 @@
           "status": "未满足",
           "met_count": 3,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 1
         }
       ],
-      "strength_relation": "板块强 + 个股强",
-      "priority": 1,
+      "strength_relation": "板块强 + 个股弱",
+      "priority": 2,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属通用设备板块今日涨跌 +0.94%。",
-        "板块 5 日涨跌 +4.26%，状态为强势。",
-        "个股今日涨跌 +4.23%，位于 MA20 上方 +6.25%。",
-        "当日累计成交量为前 5 个交易日均量的 118%。"
+        "所属通用设备板块今日涨跌 +0.32%。",
+        "板块 5 日涨跌 +4.58%，状态为强势。",
+        "个股今日涨跌 -0.12%，位于 MA20 上方 +5.41%。",
+        "当日累计成交量为前 5 个交易日均量的 44%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +6.25%",
-        "等待量能确认，当前为 5 日均量的 118%",
+        "等待价格回到 MA20 附近，当前距离 +5.41%",
+        "等待量能确认，当前为 5 日均量的 44%",
         "等待价格突破 17.24"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "603002",
-      "name": "宏昌电子",
-      "date": "2026-09-23",
-      "close": 20.11,
-      "previous_close": 19.8,
-      "change_pct": 0.0157,
-      "open": 19.86,
-      "high": 20.63,
-      "low": 19.5,
-      "amplitude": 0.0571,
-      "volume": 85013200,
-      "volume_ma5": 94725111.8,
-      "volume_ratio_5d": 0.8975,
-      "volume_complete": true,
-      "ma5": 19.53,
-      "ma10": 18.892,
-      "ma20": 17.723,
-      "ma20_distance": 0.1347,
-      "recent_gain_20d": 0.3084,
-      "previous_high": 20.38,
-      "recent_support": 15.74,
-      "recent_high_20d": 20.63,
-      "recent_low_20d": 14.96,
-      "industry": "电子化学品Ⅱ",
-      "industry_return": 0.0143,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0014,
-      "turnover_rate": 0.075,
-      "pe": 390.33,
-      "pb": 6.56,
-      "market_cap": 22806000000.0,
-      "concepts": [
-        {
-          "code": "BK0877",
-          "name": "PCB"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0619",
-          "name": "3D打印"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1161",
-          "name": "英伟达概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:23+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1039",
-        "name": "电子化学品Ⅱ",
-        "return_pct": 0.0143,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:25+08:00",
-        "return_5d": 0.035393,
-        "return_20d": 0.084076,
-        "previous_return_pct": 0.002626,
-        "ma20_above": true,
-        "turnover_change": -0.35243,
-        "turnover_5d_change": -0.382989,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T13:35:36+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "强势",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20上方",
-        "高位偏离",
-        "正常量能",
-        "过热"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": false
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": true
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "接近满足",
-          "met_count": 4,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股强",
-      "priority": 1,
-      "selection_status": "接近触发",
-      "selection_reasons": [
-        "所属电子化学品Ⅱ板块今日涨跌 +1.43%。",
-        "板块 5 日涨跌 +3.54%，状态为强势。",
-        "个股今日涨跌 +1.57%，位于 MA20 上方 +13.47%。",
-        "当日累计成交量为前 5 个交易日均量的 90%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +13.47%",
-        "等待量能确认，当前为 5 日均量的 90%",
-        "等待价格突破 20.38"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "600519",
-      "name": "贵州茅台",
-      "date": "2026-09-23",
-      "close": 1251.24,
-      "previous_close": 1253.8,
-      "change_pct": -0.002,
-      "open": 1255.03,
-      "high": 1271.5,
-      "low": 1250.89,
-      "amplitude": 0.0164,
-      "volume": 3098100,
-      "volume_ma5": 2365394.8,
-      "volume_ratio_5d": 1.3098,
-      "volume_complete": true,
-      "ma5": 1256.342,
-      "ma10": 1265.071,
-      "ma20": 1284.103,
-      "ma20_distance": -0.0256,
-      "recent_gain_20d": -0.0396,
-      "previous_high": 1338.86,
-      "recent_support": 1248.1,
-      "recent_high_20d": 1338.86,
-      "recent_low_20d": 1248.1,
-      "industry": "白酒Ⅱ",
-      "industry_return": -0.0012,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": -0.0008,
-      "turnover_rate": 0.0025,
-      "pe": 19.21,
-      "pb": 6.23,
-      "market_cap": 1564152000000.0,
-      "concepts": [
-        {
-          "code": "BK0896",
-          "name": "白酒"
-        },
-        {
-          "code": "BK0834",
-          "name": "乡村振兴"
-        },
-        {
-          "code": "BK0811",
-          "name": "超级品牌"
-        },
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0665",
-          "name": "电商概念"
-        },
-        {
-          "code": "BK0590",
-          "name": "西部大开发"
-        },
-        {
-          "code": "BK1653",
-          "name": "味蕾经济"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:09:50",
-      "retrieved_at": "2026-09-23T15:10:08+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1277",
-        "name": "白酒Ⅱ",
-        "return_pct": -0.0012,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:09+08:00",
-        "return_5d": 0.036854,
-        "return_20d": -0.003612,
-        "previous_return_pct": -0.001573,
-        "ma20_above": true,
-        "turnover_change": -0.259115,
-        "turnover_5d_change": -0.208935,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T10:30:28+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "回踩",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20下方",
-        "趋势破坏",
-        "接近支撑",
-        "正常量能"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": true
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": false
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": true
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": false
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股弱",
-      "priority": 2,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属白酒Ⅱ板块今日涨跌 -0.12%。",
-        "板块 5 日涨跌 +3.69%，状态为回踩。",
-        "个股今日涨跌 -0.20%，位于 MA20 下方 -2.56%。",
-        "当日累计成交量为前 5 个交易日均量的 131%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 -2.56%",
-        "等待量能确认，当前为 5 日均量的 131%",
-        "等待价格突破 1338.86"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "000066",
-      "name": "中国长城",
-      "date": "2026-09-23",
-      "close": 15.14,
-      "previous_close": 15.87,
-      "change_pct": -0.046,
-      "open": 15.61,
-      "high": 15.72,
-      "low": 15.09,
-      "amplitude": 0.0397,
-      "volume": 299629200,
-      "volume_ma5": 145212050.8,
-      "volume_ratio_5d": 2.0634,
-      "volume_complete": true,
-      "ma5": 14.768,
-      "ma10": 14.377,
-      "ma20": 14.429,
-      "ma20_distance": 0.0493,
-      "recent_gain_20d": 0.0745,
-      "previous_high": 16.32,
-      "recent_support": 13.63,
-      "recent_high_20d": 16.32,
-      "recent_low_20d": 13.63,
-      "industry": "计算机设备",
-      "industry_return": -0.0023,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": -0.0437,
-      "turnover_rate": 0.0929,
-      "pe": 413.63,
-      "pb": 4.31,
-      "market_cap": 48835000000.0,
-      "concepts": [
-        {
-          "code": "BK0988",
-          "name": "钠离子电池"
-        },
-        {
-          "code": "BK0963",
-          "name": "商业航天"
-        },
-        {
-          "code": "BK0922",
-          "name": "数据中心"
-        },
-        {
-          "code": "BK0891",
-          "name": "国产芯片"
-        },
-        {
-          "code": "BK0854",
-          "name": "华为概念"
-        },
-        {
-          "code": "BK0837",
-          "name": "互联网医疗"
-        },
-        {
-          "code": "BK0830",
-          "name": "区块链"
-        },
-        {
-          "code": "BK0808",
-          "name": "军民融合"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0710",
-          "name": "量子科技"
-        },
-        {
-          "code": "BK0700",
-          "name": "充电桩"
-        },
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0667",
-          "name": "安防概念"
-        },
-        {
-          "code": "BK0655",
-          "name": "网络安全"
-        },
-        {
-          "code": "BK0634",
-          "name": "大数据"
-        },
-        {
-          "code": "BK0629",
-          "name": "卫星导航"
-        },
-        {
-          "code": "BK0601",
-          "name": "海工装备"
-        },
-        {
-          "code": "BK0574",
-          "name": "锂电池概念"
-        },
-        {
-          "code": "BK0549",
-          "name": "深圳特区"
-        },
-        {
-          "code": "BK0490",
-          "name": "军工"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1648",
-          "name": "电池技术"
-        },
-        {
-          "code": "BK1138",
-          "name": "液冷服务器"
-        },
-        {
-          "code": "BK1104",
-          "name": "信创"
-        },
-        {
-          "code": "BK1061",
-          "name": "数字经济"
-        },
-        {
-          "code": "BK1047",
-          "name": "数据安全"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:15",
-      "retrieved_at": "2026-09-23T15:10:18+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK0735",
-        "name": "计算机设备",
-        "return_pct": -0.0023,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:20+08:00",
-        "return_5d": 0.038077,
-        "return_20d": 0.023897,
-        "previous_return_pct": 0.010886,
-        "ma20_above": true,
-        "turnover_change": -0.615889,
-        "turnover_5d_change": -0.475974,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T10:31:50+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "回踩",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20上方",
-        "放量异常",
-        "弱于板块"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": false
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股弱",
-      "priority": 2,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属计算机设备板块今日涨跌 -0.23%。",
-        "板块 5 日涨跌 +3.81%，状态为回踩。",
-        "个股今日涨跌 -4.60%，位于 MA20 上方 +4.93%。",
-        "当日累计成交量为前 5 个交易日均量的 206%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +4.93%",
-        "等待量能确认，当前为 5 日均量的 206%",
-        "等待价格突破 16.32"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "600664",
-      "name": "哈药股份",
-      "date": "2026-09-23",
-      "close": 9.04,
-      "previous_close": 9.08,
-      "change_pct": -0.0044,
-      "open": 9.42,
-      "high": 9.86,
-      "low": 9.02,
-      "amplitude": 0.0925,
-      "volume": 713530700,
-      "volume_ma5": 379818541.8,
-      "volume_ratio_5d": 1.8786,
-      "volume_complete": true,
-      "ma5": 8.258,
-      "ma10": 7.719,
-      "ma20": 8.125,
-      "ma20_distance": 0.1126,
-      "recent_gain_20d": 0.1051,
-      "previous_high": 9.51,
-      "recent_support": 6.92,
-      "recent_high_20d": 9.86,
-      "recent_low_20d": 6.92,
-      "industry": "化学制药",
-      "industry_return": -0.0066,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0022,
-      "turnover_rate": 0.2833,
-      "pe": 44.45,
-      "pb": 3.73,
-      "market_cap": 22767000000.0,
-      "concepts": [
-        {
-          "code": "BK0906",
-          "name": "流感"
-        },
-        {
-          "code": "BK0852",
-          "name": "冷链物流"
-        },
-        {
-          "code": "BK0838",
-          "name": "东北振兴"
-        },
-        {
-          "code": "BK0653",
-          "name": "养老概念"
-        },
-        {
-          "code": "BK0615",
-          "name": "中药概念"
-        },
-        {
-          "code": "BK1657",
-          "name": "病原体防治"
-        },
-        {
-          "code": "BK1106",
-          "name": "创新药"
-        },
-        {
-          "code": "BK1078",
-          "name": "肝炎概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:09",
-      "retrieved_at": "2026-09-23T15:10:15+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget",
-        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
-      ],
-      "sector": {
-        "code": "BK0465",
-        "name": "化学制药",
-        "return_pct": -0.0066,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:16+08:00",
-        "return_5d": null,
-        "return_20d": null,
-        "previous_return_pct": null,
-        "ma20_above": null,
-        "turnover_change": null,
-        "turnover_5d_change": null,
-        "history_source_timestamp": null,
-        "history_retrieved_at": null,
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "return_5d",
-          "return_20d",
-          "ma20_above",
-          "turnover_change",
-          "turnover_5d_change",
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "数据缺失",
-        "status": "数据缺失",
-        "is_strong": false
-      },
-      "labels": [
-        "MA20上方",
-        "放量异常"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": true
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": null
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": null
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 1,
-          "total_count": 5,
-          "missing_count": 2
-        }
-      ],
-      "strength_relation": "板块数据不足 + 个股强",
-      "priority": 3,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属化学制药板块今日涨跌 -0.66%。",
-        "个股今日涨跌 -0.44%，位于 MA20 上方 +11.26%。",
-        "当日累计成交量为前 5 个交易日均量的 188%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +11.26%",
-        "等待量能确认，当前为 5 日均量的 188%",
-        "等待化学制药板块进入强势区"
       ],
       "satisfied_condition_count": 0
     },
     {
       "code": "002836",
       "name": "新宏泽",
-      "date": "2026-09-23",
-      "close": 11.15,
-      "previous_close": 11.14,
-      "change_pct": 0.0009,
-      "open": 11.17,
-      "high": 11.6,
-      "low": 10.4,
-      "amplitude": 0.1077,
-      "volume": 25680100,
-      "volume_ma5": 16632762.6,
-      "volume_ratio_5d": 1.5439,
-      "volume_complete": true,
-      "ma5": 11.406,
-      "ma10": 10.656,
-      "ma20": 10.3785,
-      "ma20_distance": 0.0743,
-      "recent_gain_20d": 0.1263,
+      "date": "2026-09-24",
+      "close": 12.08,
+      "previous_close": 11.15,
+      "change_pct": 0.0834,
+      "open": 10.81,
+      "high": 12.18,
+      "low": 10.55,
+      "amplitude": 0.1462,
+      "volume": 14801100,
+      "volume_ma5": 20844594.8,
+      "volume_ratio_5d": 0.7101,
+      "volume_complete": false,
+      "ma5": 11.654,
+      "ma10": 10.823,
+      "ma20": 10.4945,
+      "ma20_distance": 0.1511,
+      "recent_gain_20d": 0.2377,
       "previous_high": 13.1,
       "recent_support": 9.15,
       "recent_high_20d": 13.1,
       "recent_low_20d": 9.15,
       "industry": "包装印刷",
-      "industry_return": -0.0105,
+      "industry_return": 0.0006,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0114,
-      "turnover_rate": 0.1115,
-      "pe": 71.75,
-      "pb": 7.12,
-      "market_cap": 2569000000.0,
+      "relative_sector_strength": 0.0828,
+      "turnover_rate": 0.0642,
+      "pe": 77.74,
+      "pb": 7.72,
+      "market_cap": 2783000000.0,
       "concepts": [],
       "source": "tencent",
       "sources": {
@@ -2633,8 +486,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-23T15:09:45",
-      "retrieved_at": "2026-09-23T15:10:16+08:00",
+      "source_timestamp": "2026-09-24T10:07:00",
+      "retrieved_at": "2026-09-24T10:07:03+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -2643,10 +496,10 @@
       "sector": {
         "code": "BK1265",
         "name": "包装印刷",
-        "return_pct": -0.0105,
+        "return_pct": 0.0006,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:18+08:00",
+        "retrieved_at": "2026-09-24T10:09:37+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -2677,7 +530,7 @@
       },
       "labels": [
         "MA20上方",
-        "正常量能",
+        "高位偏离",
         "强于板块"
       ],
       "conditions": [
@@ -2691,11 +544,11 @@
             },
             {
               "label": "日涨跌位于回踩区间",
-              "met": true
+              "met": false
             },
             {
               "label": "量能缩至 5 日均量阈值内",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
@@ -2703,66 +556,6 @@
             },
             {
               "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": null
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": null
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
               "met": true
             }
           ],
@@ -2770,171 +563,6 @@
           "met_count": 1,
           "total_count": 5,
           "missing_count": 2
-        }
-      ],
-      "strength_relation": "板块数据不足 + 个股强",
-      "priority": 3,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属包装印刷板块今日涨跌 -1.05%。",
-        "个股今日涨跌 +0.09%，位于 MA20 上方 +7.43%。",
-        "当日累计成交量为前 5 个交易日均量的 154%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +7.43%",
-        "等待量能确认，当前为 5 日均量的 154%",
-        "等待包装印刷板块进入强势区"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "603938",
-      "name": "三孚股份",
-      "date": "2026-09-23",
-      "close": 51.5,
-      "previous_close": 49.25,
-      "change_pct": 0.0457,
-      "open": 49.88,
-      "high": 51.55,
-      "low": 49.5,
-      "amplitude": 0.0416,
-      "volume": 31999000,
-      "volume_ma5": 30013700.4,
-      "volume_ratio_5d": 1.0661,
-      "volume_complete": true,
-      "ma5": 50.358,
-      "ma10": 50.19,
-      "ma20": 46.943,
-      "ma20_distance": 0.0971,
-      "recent_gain_20d": 0.2601,
-      "previous_high": 55.06,
-      "recent_support": 43.69,
-      "recent_high_20d": 55.06,
-      "recent_low_20d": 39.12,
-      "industry": "化学原料",
-      "industry_return": -0.007,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0527,
-      "turnover_rate": 0.0836,
-      "pe": 122.42,
-      "pb": 7.54,
-      "market_cap": 19705000000.0,
-      "concepts": [
-        {
-          "code": "BK0981",
-          "name": "工业气体"
-        },
-        {
-          "code": "BK0977",
-          "name": "碳化硅"
-        },
-        {
-          "code": "BK0961",
-          "name": "有机硅概念"
-        },
-        {
-          "code": "BK0917",
-          "name": "半导体概念"
-        },
-        {
-          "code": "BK0864",
-          "name": "氢能源"
-        },
-        {
-          "code": "BK0512",
-          "name": "化工原料"
-        },
-        {
-          "code": "BK1660",
-          "name": "光纤概念"
-        },
-        {
-          "code": "BK1137",
-          "name": "存储芯片"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:25+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1019",
-        "name": "化学原料",
-        "return_pct": -0.007,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:27+08:00",
-        "return_5d": 0.018841,
-        "return_20d": -0.002135,
-        "previous_return_pct": -0.004936,
-        "ma20_above": false,
-        "turnover_change": -0.301305,
-        "turnover_5d_change": -0.24023,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T13:35:40+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20下方",
-        "status": "转弱",
-        "is_strong": false
-      },
-      "labels": [
-        "MA20上方",
-        "正常量能",
-        "强于板块",
-        "过热"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": false
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 1,
-          "total_count": 5,
-          "missing_count": 0
         },
         {
           "id": "volume_breakout",
@@ -2946,11 +574,11 @@
             },
             {
               "label": "成交量达到 5 日均量阈值",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
-              "met": false
+              "met": null
             },
             {
               "label": "个股强于所属板块",
@@ -2958,13 +586,13 @@
             },
             {
               "label": "距离 MA20 未超过限制",
-              "met": true
+              "met": false
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 1,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 2
         },
         {
           "id": "strong_sector_pullback",
@@ -2972,11 +600,11 @@
           "checks": [
             {
               "label": "所属板块保持强势",
-              "met": false
+              "met": null
             },
             {
               "label": "板块 5 日涨幅为正",
-              "met": true
+              "met": null
             },
             {
               "label": "股价接近 MA10 或 MA20",
@@ -2984,7 +612,7 @@
             },
             {
               "label": "量能处于收缩状态",
-              "met": false
+              "met": null
             },
             {
               "label": "未出现趋势破坏",
@@ -2992,24 +620,23 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 1,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 3
         }
       ],
-      "strength_relation": "板块弱 + 个股强",
+      "strength_relation": "板块数据不足 + 个股强",
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属化学原料板块今日涨跌 -0.70%。",
-        "板块 5 日涨跌 +1.88%，状态为转弱。",
-        "个股今日涨跌 +4.57%，位于 MA20 上方 +9.71%。",
-        "当日累计成交量为前 5 个交易日均量的 107%。"
+        "所属包装印刷板块今日涨跌 +0.06%。",
+        "个股今日涨跌 +8.34%，位于 MA20 上方 +15.11%。",
+        "当日累计成交量为前 5 个交易日均量的 71%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +9.71%",
-        "等待量能确认，当前为 5 日均量的 107%",
-        "等待化学原料板块进入强势区"
+        "等待价格回到 MA20 附近，当前距离 +15.11%",
+        "等待量能确认，当前为 5 日均量的 71%",
+        "等待包装印刷板块进入强势区"
       ],
       "satisfied_condition_count": 0
     }
@@ -3018,37 +645,37 @@
     {
       "code": "600172",
       "name": "黄河旋风",
-      "date": "2026-09-23",
-      "close": 16.74,
-      "previous_close": 16.06,
-      "change_pct": 0.0423,
-      "open": 15.91,
-      "high": 17.18,
-      "low": 15.82,
-      "amplitude": 0.0847,
-      "volume": 219400300,
-      "volume_ma5": 186419528.2,
-      "volume_ratio_5d": 1.1769,
-      "volume_complete": true,
-      "ma5": 16.256,
-      "ma10": 16.121,
-      "ma20": 15.756,
-      "ma20_distance": 0.0625,
-      "recent_gain_20d": 0.2043,
+      "date": "2026-09-24",
+      "close": 16.72,
+      "previous_close": 16.74,
+      "change_pct": -0.0012,
+      "open": 16.49,
+      "high": 17.0,
+      "low": 16.15,
+      "amplitude": 0.0508,
+      "volume": 79841200,
+      "volume_ma5": 183177080.8,
+      "volume_ratio_5d": 0.4359,
+      "volume_complete": false,
+      "ma5": 16.388,
+      "ma10": 16.257,
+      "ma20": 15.8615,
+      "ma20_distance": 0.0541,
+      "recent_gain_20d": 0.1444,
       "previous_high": 17.24,
       "recent_support": 14.3,
       "recent_high_20d": 17.24,
-      "recent_low_20d": 13.79,
+      "recent_low_20d": 13.89,
       "industry": "通用设备",
-      "industry_return": 0.0094,
+      "industry_return": 0.0032,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0329,
-      "turnover_rate": 0.17079999999999998,
-      "pe": -27.65,
-      "pb": 71.44,
-      "market_cap": 21499000000.0,
+      "relative_sector_strength": -0.0044,
+      "turnover_rate": 0.0622,
+      "pe": -27.62,
+      "pb": 71.35,
+      "market_cap": 21473000000.0,
       "concepts": [
         {
           "code": "BK0683",
@@ -3074,8 +701,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:22+08:00",
+      "source_timestamp": "2026-09-24T10:09:37",
+      "retrieved_at": "2026-09-24T10:09:40+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -3084,18 +711,18 @@
       "sector": {
         "code": "BK0545",
         "name": "通用设备",
-        "return_pct": 0.0094,
+        "return_pct": 0.0032,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:23+08:00",
-        "return_5d": 0.042586,
-        "return_20d": 0.04128,
-        "previous_return_pct": -0.001049,
+        "retrieved_at": "2026-09-24T10:09:41+08:00",
+        "return_5d": 0.045817,
+        "return_20d": 0.028104,
+        "previous_return_pct": 0.00936,
         "ma20_above": true,
-        "turnover_change": -0.583854,
-        "turnover_5d_change": -0.578889,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T10:31:58+08:00",
+        "turnover_change": -0.992346,
+        "turnover_5d_change": -0.992862,
+        "history_source_timestamp": "2026-09-24",
+        "history_retrieved_at": "2026-09-24T09:29:25+08:00",
         "freshness": "unknown",
         "advance_ratio": null,
         "limit_up_count": null,
@@ -3112,9 +739,7 @@
         "is_strong": true
       },
       "labels": [
-        "MA20上方",
-        "正常量能",
-        "强于板块"
+        "MA20上方"
       ],
       "conditions": [
         {
@@ -3127,11 +752,11 @@
             },
             {
               "label": "日涨跌位于回踩区间",
-              "met": false
+              "met": true
             },
             {
               "label": "量能缩至 5 日均量阈值内",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
@@ -3143,9 +768,9 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 3,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 1
         },
         {
           "id": "volume_breakout",
@@ -3157,7 +782,7 @@
             },
             {
               "label": "成交量达到 5 日均量阈值",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
@@ -3165,7 +790,7 @@
             },
             {
               "label": "个股强于所属板块",
-              "met": true
+              "met": false
             },
             {
               "label": "距离 MA20 未超过限制",
@@ -3173,9 +798,9 @@
             }
           ],
           "status": "未满足",
-          "met_count": 3,
+          "met_count": 2,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 1
         },
         {
           "id": "strong_sector_pullback",
@@ -3195,7 +820,7 @@
             },
             {
               "label": "量能处于收缩状态",
-              "met": false
+              "met": null
             },
             {
               "label": "未出现趋势破坏",
@@ -3205,1021 +830,59 @@
           "status": "未满足",
           "met_count": 3,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 1
         }
       ],
-      "strength_relation": "板块强 + 个股强",
-      "priority": 1,
+      "strength_relation": "板块强 + 个股弱",
+      "priority": 2,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属通用设备板块今日涨跌 +0.94%。",
-        "板块 5 日涨跌 +4.26%，状态为强势。",
-        "个股今日涨跌 +4.23%，位于 MA20 上方 +6.25%。",
-        "当日累计成交量为前 5 个交易日均量的 118%。"
+        "所属通用设备板块今日涨跌 +0.32%。",
+        "板块 5 日涨跌 +4.58%，状态为强势。",
+        "个股今日涨跌 -0.12%，位于 MA20 上方 +5.41%。",
+        "当日累计成交量为前 5 个交易日均量的 44%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +6.25%",
-        "等待量能确认，当前为 5 日均量的 118%",
+        "等待价格回到 MA20 附近，当前距离 +5.41%",
+        "等待量能确认，当前为 5 日均量的 44%",
         "等待价格突破 17.24"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "603002",
-      "name": "宏昌电子",
-      "date": "2026-09-23",
-      "close": 20.11,
-      "previous_close": 19.8,
-      "change_pct": 0.0157,
-      "open": 19.86,
-      "high": 20.63,
-      "low": 19.5,
-      "amplitude": 0.0571,
-      "volume": 85013200,
-      "volume_ma5": 94725111.8,
-      "volume_ratio_5d": 0.8975,
-      "volume_complete": true,
-      "ma5": 19.53,
-      "ma10": 18.892,
-      "ma20": 17.723,
-      "ma20_distance": 0.1347,
-      "recent_gain_20d": 0.3084,
-      "previous_high": 20.38,
-      "recent_support": 15.74,
-      "recent_high_20d": 20.63,
-      "recent_low_20d": 14.96,
-      "industry": "电子化学品Ⅱ",
-      "industry_return": 0.0143,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0014,
-      "turnover_rate": 0.075,
-      "pe": 390.33,
-      "pb": 6.56,
-      "market_cap": 22806000000.0,
-      "concepts": [
-        {
-          "code": "BK0877",
-          "name": "PCB"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0619",
-          "name": "3D打印"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1161",
-          "name": "英伟达概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:23+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1039",
-        "name": "电子化学品Ⅱ",
-        "return_pct": 0.0143,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:25+08:00",
-        "return_5d": 0.035393,
-        "return_20d": 0.084076,
-        "previous_return_pct": 0.002626,
-        "ma20_above": true,
-        "turnover_change": -0.35243,
-        "turnover_5d_change": -0.382989,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T13:35:36+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "强势",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20上方",
-        "高位偏离",
-        "正常量能",
-        "过热"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": false
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": true
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "接近满足",
-          "met_count": 4,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股强",
-      "priority": 1,
-      "selection_status": "接近触发",
-      "selection_reasons": [
-        "所属电子化学品Ⅱ板块今日涨跌 +1.43%。",
-        "板块 5 日涨跌 +3.54%，状态为强势。",
-        "个股今日涨跌 +1.57%，位于 MA20 上方 +13.47%。",
-        "当日累计成交量为前 5 个交易日均量的 90%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +13.47%",
-        "等待量能确认，当前为 5 日均量的 90%",
-        "等待价格突破 20.38"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "600519",
-      "name": "贵州茅台",
-      "date": "2026-09-23",
-      "close": 1251.24,
-      "previous_close": 1253.8,
-      "change_pct": -0.002,
-      "open": 1255.03,
-      "high": 1271.5,
-      "low": 1250.89,
-      "amplitude": 0.0164,
-      "volume": 3098100,
-      "volume_ma5": 2365394.8,
-      "volume_ratio_5d": 1.3098,
-      "volume_complete": true,
-      "ma5": 1256.342,
-      "ma10": 1265.071,
-      "ma20": 1284.103,
-      "ma20_distance": -0.0256,
-      "recent_gain_20d": -0.0396,
-      "previous_high": 1338.86,
-      "recent_support": 1248.1,
-      "recent_high_20d": 1338.86,
-      "recent_low_20d": 1248.1,
-      "industry": "白酒Ⅱ",
-      "industry_return": -0.0012,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": -0.0008,
-      "turnover_rate": 0.0025,
-      "pe": 19.21,
-      "pb": 6.23,
-      "market_cap": 1564152000000.0,
-      "concepts": [
-        {
-          "code": "BK0896",
-          "name": "白酒"
-        },
-        {
-          "code": "BK0834",
-          "name": "乡村振兴"
-        },
-        {
-          "code": "BK0811",
-          "name": "超级品牌"
-        },
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0665",
-          "name": "电商概念"
-        },
-        {
-          "code": "BK0590",
-          "name": "西部大开发"
-        },
-        {
-          "code": "BK1653",
-          "name": "味蕾经济"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:09:50",
-      "retrieved_at": "2026-09-23T15:10:08+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1277",
-        "name": "白酒Ⅱ",
-        "return_pct": -0.0012,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:09+08:00",
-        "return_5d": 0.036854,
-        "return_20d": -0.003612,
-        "previous_return_pct": -0.001573,
-        "ma20_above": true,
-        "turnover_change": -0.259115,
-        "turnover_5d_change": -0.208935,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T10:30:28+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "回踩",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20下方",
-        "趋势破坏",
-        "接近支撑",
-        "正常量能"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": true
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": false
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": true
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": false
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股弱",
-      "priority": 2,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属白酒Ⅱ板块今日涨跌 -0.12%。",
-        "板块 5 日涨跌 +3.69%，状态为回踩。",
-        "个股今日涨跌 -0.20%，位于 MA20 下方 -2.56%。",
-        "当日累计成交量为前 5 个交易日均量的 131%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 -2.56%",
-        "等待量能确认，当前为 5 日均量的 131%",
-        "等待价格突破 1338.86"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "000066",
-      "name": "中国长城",
-      "date": "2026-09-23",
-      "close": 15.14,
-      "previous_close": 15.87,
-      "change_pct": -0.046,
-      "open": 15.61,
-      "high": 15.72,
-      "low": 15.09,
-      "amplitude": 0.0397,
-      "volume": 299629200,
-      "volume_ma5": 145212050.8,
-      "volume_ratio_5d": 2.0634,
-      "volume_complete": true,
-      "ma5": 14.768,
-      "ma10": 14.377,
-      "ma20": 14.429,
-      "ma20_distance": 0.0493,
-      "recent_gain_20d": 0.0745,
-      "previous_high": 16.32,
-      "recent_support": 13.63,
-      "recent_high_20d": 16.32,
-      "recent_low_20d": 13.63,
-      "industry": "计算机设备",
-      "industry_return": -0.0023,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": -0.0437,
-      "turnover_rate": 0.0929,
-      "pe": 413.63,
-      "pb": 4.31,
-      "market_cap": 48835000000.0,
-      "concepts": [
-        {
-          "code": "BK0988",
-          "name": "钠离子电池"
-        },
-        {
-          "code": "BK0963",
-          "name": "商业航天"
-        },
-        {
-          "code": "BK0922",
-          "name": "数据中心"
-        },
-        {
-          "code": "BK0891",
-          "name": "国产芯片"
-        },
-        {
-          "code": "BK0854",
-          "name": "华为概念"
-        },
-        {
-          "code": "BK0837",
-          "name": "互联网医疗"
-        },
-        {
-          "code": "BK0830",
-          "name": "区块链"
-        },
-        {
-          "code": "BK0808",
-          "name": "军民融合"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0710",
-          "name": "量子科技"
-        },
-        {
-          "code": "BK0700",
-          "name": "充电桩"
-        },
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0667",
-          "name": "安防概念"
-        },
-        {
-          "code": "BK0655",
-          "name": "网络安全"
-        },
-        {
-          "code": "BK0634",
-          "name": "大数据"
-        },
-        {
-          "code": "BK0629",
-          "name": "卫星导航"
-        },
-        {
-          "code": "BK0601",
-          "name": "海工装备"
-        },
-        {
-          "code": "BK0574",
-          "name": "锂电池概念"
-        },
-        {
-          "code": "BK0549",
-          "name": "深圳特区"
-        },
-        {
-          "code": "BK0490",
-          "name": "军工"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1648",
-          "name": "电池技术"
-        },
-        {
-          "code": "BK1138",
-          "name": "液冷服务器"
-        },
-        {
-          "code": "BK1104",
-          "name": "信创"
-        },
-        {
-          "code": "BK1061",
-          "name": "数字经济"
-        },
-        {
-          "code": "BK1047",
-          "name": "数据安全"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:15",
-      "retrieved_at": "2026-09-23T15:10:18+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK0735",
-        "name": "计算机设备",
-        "return_pct": -0.0023,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:20+08:00",
-        "return_5d": 0.038077,
-        "return_20d": 0.023897,
-        "previous_return_pct": 0.010886,
-        "ma20_above": true,
-        "turnover_change": -0.615889,
-        "turnover_5d_change": -0.475974,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T10:31:50+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20上方",
-        "status": "回踩",
-        "is_strong": true
-      },
-      "labels": [
-        "MA20上方",
-        "放量异常",
-        "弱于板块"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": true
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": false
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": true
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": true
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 0
-        }
-      ],
-      "strength_relation": "板块强 + 个股弱",
-      "priority": 2,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属计算机设备板块今日涨跌 -0.23%。",
-        "板块 5 日涨跌 +3.81%，状态为回踩。",
-        "个股今日涨跌 -4.60%，位于 MA20 上方 +4.93%。",
-        "当日累计成交量为前 5 个交易日均量的 206%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +4.93%",
-        "等待量能确认，当前为 5 日均量的 206%",
-        "等待价格突破 16.32"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "600664",
-      "name": "哈药股份",
-      "date": "2026-09-23",
-      "close": 9.04,
-      "previous_close": 9.08,
-      "change_pct": -0.0044,
-      "open": 9.42,
-      "high": 9.86,
-      "low": 9.02,
-      "amplitude": 0.0925,
-      "volume": 713530700,
-      "volume_ma5": 379818541.8,
-      "volume_ratio_5d": 1.8786,
-      "volume_complete": true,
-      "ma5": 8.258,
-      "ma10": 7.719,
-      "ma20": 8.125,
-      "ma20_distance": 0.1126,
-      "recent_gain_20d": 0.1051,
-      "previous_high": 9.51,
-      "recent_support": 6.92,
-      "recent_high_20d": 9.86,
-      "recent_low_20d": 6.92,
-      "industry": "化学制药",
-      "industry_return": -0.0066,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0022,
-      "turnover_rate": 0.2833,
-      "pe": 44.45,
-      "pb": 3.73,
-      "market_cap": 22767000000.0,
-      "concepts": [
-        {
-          "code": "BK0906",
-          "name": "流感"
-        },
-        {
-          "code": "BK0852",
-          "name": "冷链物流"
-        },
-        {
-          "code": "BK0838",
-          "name": "东北振兴"
-        },
-        {
-          "code": "BK0653",
-          "name": "养老概念"
-        },
-        {
-          "code": "BK0615",
-          "name": "中药概念"
-        },
-        {
-          "code": "BK1657",
-          "name": "病原体防治"
-        },
-        {
-          "code": "BK1106",
-          "name": "创新药"
-        },
-        {
-          "code": "BK1078",
-          "name": "肝炎概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:09",
-      "retrieved_at": "2026-09-23T15:10:15+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget",
-        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
-      ],
-      "sector": {
-        "code": "BK0465",
-        "name": "化学制药",
-        "return_pct": -0.0066,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:16+08:00",
-        "return_5d": null,
-        "return_20d": null,
-        "previous_return_pct": null,
-        "ma20_above": null,
-        "turnover_change": null,
-        "turnover_5d_change": null,
-        "history_source_timestamp": null,
-        "history_retrieved_at": null,
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "return_5d",
-          "return_20d",
-          "ma20_above",
-          "turnover_change",
-          "turnover_5d_change",
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "数据缺失",
-        "status": "数据缺失",
-        "is_strong": false
-      },
-      "labels": [
-        "MA20上方",
-        "放量异常"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": true
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": null
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": null
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 1,
-          "total_count": 5,
-          "missing_count": 2
-        }
-      ],
-      "strength_relation": "板块数据不足 + 个股强",
-      "priority": 3,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属化学制药板块今日涨跌 -0.66%。",
-        "个股今日涨跌 -0.44%，位于 MA20 上方 +11.26%。",
-        "当日累计成交量为前 5 个交易日均量的 188%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +11.26%",
-        "等待量能确认，当前为 5 日均量的 188%",
-        "等待化学制药板块进入强势区"
       ],
       "satisfied_condition_count": 0
     },
     {
       "code": "002836",
       "name": "新宏泽",
-      "date": "2026-09-23",
-      "close": 11.15,
-      "previous_close": 11.14,
-      "change_pct": 0.0009,
-      "open": 11.17,
-      "high": 11.6,
-      "low": 10.4,
-      "amplitude": 0.1077,
-      "volume": 25680100,
-      "volume_ma5": 16632762.6,
-      "volume_ratio_5d": 1.5439,
-      "volume_complete": true,
-      "ma5": 11.406,
-      "ma10": 10.656,
-      "ma20": 10.3785,
-      "ma20_distance": 0.0743,
-      "recent_gain_20d": 0.1263,
+      "date": "2026-09-24",
+      "close": 12.08,
+      "previous_close": 11.15,
+      "change_pct": 0.0834,
+      "open": 10.81,
+      "high": 12.18,
+      "low": 10.55,
+      "amplitude": 0.1462,
+      "volume": 14801100,
+      "volume_ma5": 20844594.8,
+      "volume_ratio_5d": 0.7101,
+      "volume_complete": false,
+      "ma5": 11.654,
+      "ma10": 10.823,
+      "ma20": 10.4945,
+      "ma20_distance": 0.1511,
+      "recent_gain_20d": 0.2377,
       "previous_high": 13.1,
       "recent_support": 9.15,
       "recent_high_20d": 13.1,
       "recent_low_20d": 9.15,
       "industry": "包装印刷",
-      "industry_return": -0.0105,
+      "industry_return": 0.0006,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0114,
-      "turnover_rate": 0.1115,
-      "pe": 71.75,
-      "pb": 7.12,
-      "market_cap": 2569000000.0,
+      "relative_sector_strength": 0.0828,
+      "turnover_rate": 0.0642,
+      "pe": 77.74,
+      "pb": 7.72,
+      "market_cap": 2783000000.0,
       "concepts": [],
       "source": "tencent",
       "sources": {
@@ -4228,8 +891,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-23T15:09:45",
-      "retrieved_at": "2026-09-23T15:10:16+08:00",
+      "source_timestamp": "2026-09-24T10:07:00",
+      "retrieved_at": "2026-09-24T10:07:03+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -4238,10 +901,10 @@
       "sector": {
         "code": "BK1265",
         "name": "包装印刷",
-        "return_pct": -0.0105,
+        "return_pct": 0.0006,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:18+08:00",
+        "retrieved_at": "2026-09-24T10:09:37+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -4272,7 +935,7 @@
       },
       "labels": [
         "MA20上方",
-        "正常量能",
+        "高位偏离",
         "强于板块"
       ],
       "conditions": [
@@ -4286,11 +949,11 @@
             },
             {
               "label": "日涨跌位于回踩区间",
-              "met": true
+              "met": false
             },
             {
               "label": "量能缩至 5 日均量阈值内",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
@@ -4298,66 +961,6 @@
             },
             {
               "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": true
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": null
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": null
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": null
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": false
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": false
-            },
-            {
-              "label": "未出现趋势破坏",
               "met": true
             }
           ],
@@ -4365,171 +968,6 @@
           "met_count": 1,
           "total_count": 5,
           "missing_count": 2
-        }
-      ],
-      "strength_relation": "板块数据不足 + 个股强",
-      "priority": 3,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属包装印刷板块今日涨跌 -1.05%。",
-        "个股今日涨跌 +0.09%，位于 MA20 上方 +7.43%。",
-        "当日累计成交量为前 5 个交易日均量的 154%。"
-      ],
-      "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +7.43%",
-        "等待量能确认，当前为 5 日均量的 154%",
-        "等待包装印刷板块进入强势区"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "603938",
-      "name": "三孚股份",
-      "date": "2026-09-23",
-      "close": 51.5,
-      "previous_close": 49.25,
-      "change_pct": 0.0457,
-      "open": 49.88,
-      "high": 51.55,
-      "low": 49.5,
-      "amplitude": 0.0416,
-      "volume": 31999000,
-      "volume_ma5": 30013700.4,
-      "volume_ratio_5d": 1.0661,
-      "volume_complete": true,
-      "ma5": 50.358,
-      "ma10": 50.19,
-      "ma20": 46.943,
-      "ma20_distance": 0.0971,
-      "recent_gain_20d": 0.2601,
-      "previous_high": 55.06,
-      "recent_support": 43.69,
-      "recent_high_20d": 55.06,
-      "recent_low_20d": 39.12,
-      "industry": "化学原料",
-      "industry_return": -0.007,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0527,
-      "turnover_rate": 0.0836,
-      "pe": 122.42,
-      "pb": 7.54,
-      "market_cap": 19705000000.0,
-      "concepts": [
-        {
-          "code": "BK0981",
-          "name": "工业气体"
-        },
-        {
-          "code": "BK0977",
-          "name": "碳化硅"
-        },
-        {
-          "code": "BK0961",
-          "name": "有机硅概念"
-        },
-        {
-          "code": "BK0917",
-          "name": "半导体概念"
-        },
-        {
-          "code": "BK0864",
-          "name": "氢能源"
-        },
-        {
-          "code": "BK0512",
-          "name": "化工原料"
-        },
-        {
-          "code": "BK1660",
-          "name": "光纤概念"
-        },
-        {
-          "code": "BK1137",
-          "name": "存储芯片"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-23T15:10:18",
-      "retrieved_at": "2026-09-23T15:10:25+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1019",
-        "name": "化学原料",
-        "return_pct": -0.007,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-09-23T15:10:27+08:00",
-        "return_5d": 0.018841,
-        "return_20d": -0.002135,
-        "previous_return_pct": -0.004936,
-        "ma20_above": false,
-        "turnover_change": -0.301305,
-        "turnover_5d_change": -0.24023,
-        "history_source_timestamp": "2026-09-23",
-        "history_retrieved_at": "2026-09-23T13:35:40+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20下方",
-        "status": "转弱",
-        "is_strong": false
-      },
-      "labels": [
-        "MA20上方",
-        "正常量能",
-        "强于板块",
-        "过热"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": false
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": false
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": false
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": false
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 1,
-          "total_count": 5,
-          "missing_count": 0
         },
         {
           "id": "volume_breakout",
@@ -4541,11 +979,11 @@
             },
             {
               "label": "成交量达到 5 日均量阈值",
-              "met": false
+              "met": null
             },
             {
               "label": "所属板块处于强势区",
-              "met": false
+              "met": null
             },
             {
               "label": "个股强于所属板块",
@@ -4553,13 +991,13 @@
             },
             {
               "label": "距离 MA20 未超过限制",
-              "met": true
+              "met": false
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 1,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 2
         },
         {
           "id": "strong_sector_pullback",
@@ -4567,11 +1005,11 @@
           "checks": [
             {
               "label": "所属板块保持强势",
-              "met": false
+              "met": null
             },
             {
               "label": "板块 5 日涨幅为正",
-              "met": true
+              "met": null
             },
             {
               "label": "股价接近 MA10 或 MA20",
@@ -4579,7 +1017,7 @@
             },
             {
               "label": "量能处于收缩状态",
-              "met": false
+              "met": null
             },
             {
               "label": "未出现趋势破坏",
@@ -4587,24 +1025,23 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 1,
           "total_count": 5,
-          "missing_count": 0
+          "missing_count": 3
         }
       ],
-      "strength_relation": "板块弱 + 个股强",
+      "strength_relation": "板块数据不足 + 个股强",
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属化学原料板块今日涨跌 -0.70%。",
-        "板块 5 日涨跌 +1.88%，状态为转弱。",
-        "个股今日涨跌 +4.57%，位于 MA20 上方 +9.71%。",
-        "当日累计成交量为前 5 个交易日均量的 107%。"
+        "所属包装印刷板块今日涨跌 +0.06%。",
+        "个股今日涨跌 +8.34%，位于 MA20 上方 +15.11%。",
+        "当日累计成交量为前 5 个交易日均量的 71%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +9.71%",
-        "等待量能确认，当前为 5 日均量的 107%",
-        "等待化学原料板块进入强势区"
+        "等待价格回到 MA20 附近，当前距离 +15.11%",
+        "等待量能确认，当前为 5 日均量的 71%",
+        "等待包装印刷板块进入强势区"
       ],
       "satisfied_condition_count": 0
     }
@@ -4612,38 +1049,46 @@
   "data_source": {
     "id": "astock",
     "label": "A股公开数据",
-    "stage": "postmarket",
-    "generated_at": "2026-09-23T15:10:27+08:00",
+    "stage": "intraday",
+    "generated_at": "2026-09-24T10:09:45+08:00",
     "source": "tencent",
-    "source_timestamp": "2026-09-23T15:10:03",
-    "retrieved_at": "2026-09-23T15:10:08+08:00",
+    "source_timestamp": "2026-09-24T10:06:51",
+    "retrieved_at": "2026-09-24T10:06:55+08:00",
     "freshness": "current",
-    "last_trading_day": "2026-09-23",
+    "last_trading_day": "2026-09-24",
     "fallback": true,
     "missing_data": [
       "000066.concept_quotes: not requested under rate budget",
       "000066.mootdx: mootdx is not installed",
+      "000066.sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
       "000333.concept_quotes: not requested under rate budget",
       "000333.mootdx: mootdx is not installed",
+      "000333.sector_history:BK1239: eastmoney recently failed: Remote end closed connection without response",
       "000831.concept_quotes: not requested under rate budget",
       "000831.mootdx: mootdx is not installed",
+      "000831.sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
       "002458.concept_quotes: not requested under rate budget",
       "002458.mootdx: mootdx is not installed",
+      "002458.sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response",
       "002836.mootdx: mootdx is not installed",
       "002836.sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response",
       "300750.concept_quotes: not requested under rate budget",
       "300750.mootdx: mootdx is not installed",
+      "300750.sector_history:BK1033: eastmoney recently failed: Remote end closed connection without response",
       "600172.concept_quotes: not requested under rate budget",
       "600172.mootdx: mootdx is not installed",
       "600519.concept_quotes: not requested under rate budget",
       "600519.mootdx: mootdx is not installed",
+      "600519.sector_history:BK1277: eastmoney recently failed: Remote end closed connection without response",
       "600664.concept_quotes: not requested under rate budget",
       "600664.mootdx: mootdx is not installed",
       "600664.sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
       "603002.concept_quotes: not requested under rate budget",
       "603002.mootdx: mootdx is not installed",
+      "603002.sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
       "603938.concept_quotes: not requested under rate budget",
       "603938.mootdx: mootdx is not installed",
+      "603938.sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response",
       "market.advance_count",
       "market.decline_count",
       "market.flat_count",
@@ -4657,8 +1102,8 @@
       "tencent_requests": 12,
       "eastmoney_requests": 11,
       "sina_requests": 0,
-      "cache_hits": 31,
-      "negative_cache_hits": 2,
+      "cache_hits": 23,
+      "negative_cache_hits": 10,
       "request_failures": 0,
       "mootdx_requests": 0,
       "mootdx_failures": 0,
