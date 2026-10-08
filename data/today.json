@@ -8,11 +8,11 @@
     "data_source": {
       "id": "astock",
       "label": "A股公开数据",
-      "stage": "intraday",
-      "generated_at": "2026-10-08T14:55:22+08:00",
+      "stage": "postmarket",
+      "generated_at": "2026-10-08T15:10:23+08:00",
       "source": "tencent",
-      "source_timestamp": "2026-10-08T14:54:57",
-      "retrieved_at": "2026-10-08T14:55:02+08:00",
+      "source_timestamp": "2026-10-08T15:10:00",
+      "retrieved_at": "2026-10-08T15:10:04+08:00",
       "freshness": "current",
       "last_trading_day": "2026-10-08",
       "fallback": true,
@@ -108,43 +108,43 @@
     "6 只持仓位于 MA20 下方",
     "4 只持仓弱于所属板块",
     "0 只候选进入回踩观察区",
-    "今日放量异常持仓 0 只"
+    "今日放量异常持仓 2 只"
   ],
   "top_candidates": [
     {
       "code": "300750",
       "name": "宁德时代",
       "date": "2026-10-08",
-      "close": 286.9,
+      "close": 286.75,
       "previous_close": 291.11,
-      "change_pct": -0.0145,
+      "change_pct": -0.015,
       "open": 292.0,
       "high": 293.47,
       "low": 285.17,
       "amplitude": 0.0285,
-      "volume": 35685800,
+      "volume": 36682500,
       "volume_ma5": 29248426.2,
-      "volume_ratio_5d": 1.2201,
-      "volume_complete": false,
-      "ma5": 290.06,
-      "ma10": 295.928,
-      "ma20": 315.3915,
-      "ma20_distance": -0.0903,
-      "recent_gain_20d": -0.1763,
+      "volume_ratio_5d": 1.2542,
+      "volume_complete": true,
+      "ma5": 290.03,
+      "ma10": 295.913,
+      "ma20": 315.384,
+      "ma20_distance": -0.0908,
+      "recent_gain_20d": -0.1767,
       "previous_high": 356.5,
       "recent_support": 285.74,
       "recent_high_20d": 354.8,
       "recent_low_20d": 285.17,
       "industry": "电池",
-      "industry_return": 0.0324,
+      "industry_return": 0.0334,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0469,
-      "turnover_rate": 0.0084,
-      "pe": 15.62,
+      "relative_sector_strength": -0.0484,
+      "turnover_rate": 0.0086,
+      "pe": 15.61,
       "pb": 3.56,
-      "market_cap": 1222371000000.0,
+      "market_cap": 1221732000000.0,
       "concepts": [
         {
           "code": "BK0989",
@@ -210,8 +210,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T14:55:03",
-      "retrieved_at": "2026-10-08T14:55:05+08:00",
+      "source_timestamp": "2026-10-08T15:10:00",
+      "retrieved_at": "2026-10-08T15:10:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -220,10 +220,10 @@
       "sector": {
         "code": "BK1033",
         "name": "电池",
-        "return_pct": 0.0324,
+        "return_pct": 0.0334,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-08T14:55:07+08:00",
+        "retrieved_at": "2026-10-08T15:10:09+08:00",
         "return_5d": 0.034938,
         "return_20d": 0.023759,
         "previous_return_pct": 0.009385,
@@ -251,6 +251,7 @@
         "MA20下方",
         "趋势破坏",
         "接近支撑",
+        "正常量能",
         "弱于板块"
       ],
       "conditions": [
@@ -268,7 +269,7 @@
             },
             {
               "label": "量能缩至 5 日均量阈值内",
-              "met": null
+              "met": false
             },
             {
               "label": "所属板块处于强势区",
@@ -282,7 +283,7 @@
           "status": "未满足",
           "met_count": 3,
           "total_count": 5,
-          "missing_count": 1
+          "missing_count": 0
         },
         {
           "id": "volume_breakout",
@@ -294,7 +295,7 @@
             },
             {
               "label": "成交量达到 5 日均量阈值",
-              "met": null
+              "met": false
             },
             {
               "label": "所属板块处于强势区",
@@ -312,7 +313,7 @@
           "status": "未满足",
           "met_count": 2,
           "total_count": 5,
-          "missing_count": 1
+          "missing_count": 0
         },
         {
           "id": "strong_sector_pullback",
@@ -332,7 +333,7 @@
             },
             {
               "label": "量能处于收缩状态",
-              "met": null
+              "met": false
             },
             {
               "label": "未出现趋势破坏",
@@ -342,21 +343,21 @@
           "status": "未满足",
           "met_count": 2,
           "total_count": 5,
-          "missing_count": 1
+          "missing_count": 0
         }
       ],
       "strength_relation": "板块强 + 个股弱",
       "priority": 2,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属电池板块今日涨跌 +3.24%。",
+        "所属电池板块今日涨跌 +3.34%。",
         "板块 5 日涨跌 +3.49%，状态为强势。",
-        "个股今日涨跌 -1.45%，位于 MA20 下方 -9.03%。",
-        "当日累计成交量为前 5 个交易日均量的 122%（盘中未完成）。"
+        "个股今日涨跌 -1.50%，位于 MA20 下方 -9.08%。",
+        "当日累计成交量为前 5 个交易日均量的 125%。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 -9.03%",
-        "等待量能确认，当前为 5 日均量的 122%",
+        "等待价格回到 MA20 附近，当前距离 -9.08%",
+        "等待量能确认，当前为 5 日均量的 125%",
         "等待价格突破 356.50"
       ],
       "satisfied_condition_count": 0
@@ -365,36 +366,36 @@
       "code": "603002",
       "name": "宏昌电子",
       "date": "2026-10-08",
-      "close": 18.68,
+      "close": 18.69,
       "previous_close": 17.34,
-      "change_pct": 0.0773,
+      "change_pct": 0.0779,
       "open": 17.67,
       "high": 19.07,
       "low": 17.6,
       "amplitude": 0.0848,
-      "volume": 133427800,
+      "volume": 135013700,
       "volume_ma5": 63093710.6,
-      "volume_ratio_5d": 2.1148,
-      "volume_complete": false,
-      "ma5": 18.068,
-      "ma10": 18.799,
-      "ma20": 17.9705,
-      "ma20_distance": 0.0395,
-      "recent_gain_20d": 0.1308,
+      "volume_ratio_5d": 2.1399,
+      "volume_complete": true,
+      "ma5": 18.07,
+      "ma10": 18.8,
+      "ma20": 17.971,
+      "ma20_distance": 0.04,
+      "recent_gain_20d": 0.1314,
       "previous_high": 20.63,
       "recent_support": 17.23,
       "recent_high_20d": 20.63,
       "recent_low_20d": 14.96,
       "industry": "电子化学品Ⅱ",
-      "industry_return": -0.0365,
+      "industry_return": -0.0353,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.1138,
-      "turnover_rate": 0.1177,
-      "pe": 362.58,
-      "pb": 6.09,
-      "market_cap": 21185000000.0,
+      "relative_sector_strength": 0.1132,
+      "turnover_rate": 0.1191,
+      "pe": 362.77,
+      "pb": 6.1,
+      "market_cap": 21196000000.0,
       "concepts": [
         {
           "code": "BK0877",
@@ -424,8 +425,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T14:55:15",
-      "retrieved_at": "2026-10-08T14:55:18+08:00",
+      "source_timestamp": "2026-10-08T15:10:12",
+      "retrieved_at": "2026-10-08T15:10:20+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -434,10 +435,10 @@
       "sector": {
         "code": "BK1039",
         "name": "电子化学品Ⅱ",
-        "return_pct": -0.0365,
+        "return_pct": -0.0353,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-08T14:55:20+08:00",
+        "retrieved_at": "2026-10-08T15:10:23+08:00",
         "return_5d": -0.102056,
         "return_20d": -0.022577,
         "previous_return_pct": -0.024179,
@@ -463,6 +464,7 @@
       },
       "labels": [
         "MA20上方",
+        "放量异常",
         "强于板块"
       ],
       "conditions": [
@@ -480,7 +482,7 @@
             },
             {
               "label": "量能缩至 5 日均量阈值内",
-              "met": null
+              "met": false
             },
             {
               "label": "所属板块处于强势区",
@@ -494,7 +496,7 @@
           "status": "未满足",
           "met_count": 1,
           "total_count": 5,
-          "missing_count": 1
+          "missing_count": 0
         },
         {
           "id": "volume_breakout",
@@ -506,7 +508,7 @@
             },
             {
               "label": "成交量达到 5 日均量阈值",
-              "met": null
+              "met": true
             },
             {
               "label": "所属板块处于强势区",
@@ -522,9 +524,9 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 3,
           "total_count": 5,
-          "missing_count": 1
+          "missing_count": 0
         },
         {
           "id": "strong_sector_pullback",
@@ -544,7 +546,7 @@
             },
             {
               "label": "量能处于收缩状态",
-              "met": null
+              "met": false
             },
             {
               "label": "未出现趋势破坏",
@@ -554,21 +556,21 @@
           "status": "未满足",
           "met_count": 2,
           "total_count": 5,
-          "missing_count": 1
+          "missing_count": 0
         }
       ],
       "strength_relation": "板块弱 + 个股强",
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属电子化学品Ⅱ板块今日涨跌 -3.65%。",
+        "所属电子化学品Ⅱ板块今日涨跌 -3.53%。",
         "板块 5 日涨跌 -10.21%，状态为转弱。",
-        "个股今日涨跌 +7.73%，位于 MA20 上方 +3.95%。",
-        "当日累计成交量为前 5 个交易日均量的 211%（盘中未完成）。"
+        "个股今日涨跌 +7.79%，位于 MA20 上方 +4.00%。",
+        "当日累计成交量为前 5 个交易日均量的 214%。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +3.95%",
-        "等待量能确认，当前为 5 日均量的 211%",
+        "等待价格回到 MA20 附近，当前距离 +4.00%",
+        "等待量能确认，当前为 5 日均量的 214%",
         "等待电子化学品Ⅱ板块进入强势区"
       ],
       "satisfied_condition_count": 0
@@ -587,9 +589,9 @@
     "above_ma20_count": 2,
     "below_ma20_count": 6,
     "shrink_pullback_count": 0,
-    "abnormal_volume_count": 0,
+    "abnormal_volume_count": 2,
     "trend_break_count": 6,
-    "anomaly_count": 7
+    "anomaly_count": 8
   },
   "holding_anomalies": [
     {
@@ -628,6 +630,7 @@
       "labels": [
         "MA20下方",
         "趋势破坏",
+        "放量异常",
         "弱于板块"
       ]
     },
@@ -649,6 +652,14 @@
         "MA20下方",
         "趋势破坏",
         "弱于板块"
+      ]
+    },
+    {
+      "code": "603002",
+      "name": "宏昌电子",
+      "industry": "电子化学品Ⅱ",
+      "labels": [
+        "放量异常"
       ]
     },
     {
