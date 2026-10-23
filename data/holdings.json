@@ -1,19 +1,19 @@
 {
   "summary": {
-    "trade_date": "2026-10-08",
+    "trade_date": "2026-10-23",
     "holding_count": 8,
-    "portfolio_change_pct": -0.0282,
-    "total_market_value": 22929.0,
+    "portfolio_change_pct": -0.0312,
+    "total_market_value": 19778.0,
     "total_cost_basis": 30877.4,
-    "total_unrealized_pnl": -7948.4,
-    "total_unrealized_pnl_pct": -0.2574,
-    "stronger_than_sector_count": 1,
-    "weaker_than_sector_count": 4,
-    "above_ma20_count": 2,
-    "below_ma20_count": 6,
+    "total_unrealized_pnl": -11099.4,
+    "total_unrealized_pnl_pct": -0.3595,
+    "stronger_than_sector_count": 3,
+    "weaker_than_sector_count": 5,
+    "above_ma20_count": 0,
+    "below_ma20_count": 8,
     "shrink_pullback_count": 0,
-    "abnormal_volume_count": 2,
-    "trend_break_count": 6,
+    "abnormal_volume_count": 0,
+    "trend_break_count": 8,
     "anomaly_count": 8
   },
   "anomalies": [
@@ -23,8 +23,7 @@
       "industry": "养殖业",
       "labels": [
         "MA20下方",
-        "趋势破坏",
-        "接近支撑"
+        "趋势破坏"
       ]
     },
     {
@@ -33,7 +32,18 @@
       "industry": "化学制药",
       "labels": [
         "MA20下方",
-        "趋势破坏"
+        "趋势破坏",
+        "弱于板块"
+      ]
+    },
+    {
+      "code": "002836",
+      "name": "新宏泽",
+      "industry": "包装印刷",
+      "labels": [
+        "MA20下方",
+        "趋势破坏",
+        "弱于板块"
       ]
     },
     {
@@ -42,8 +52,7 @@
       "industry": "计算机设备",
       "labels": [
         "MA20下方",
-        "趋势破坏",
-        "接近支撑"
+        "趋势破坏"
       ]
     },
     {
@@ -52,9 +61,7 @@
       "industry": "小金属",
       "labels": [
         "MA20下方",
-        "趋势破坏",
-        "放量异常",
-        "弱于板块"
+        "趋势破坏"
       ]
     },
     {
@@ -68,9 +75,9 @@
       ]
     },
     {
-      "code": "603938",
-      "name": "三孚股份",
-      "industry": "化学原料",
+      "code": "603002",
+      "name": "宏昌电子",
+      "industry": "电子化学品Ⅱ",
       "labels": [
         "MA20下方",
         "趋势破坏",
@@ -78,18 +85,12 @@
       ]
     },
     {
-      "code": "603002",
-      "name": "宏昌电子",
-      "industry": "电子化学品Ⅱ",
+      "code": "603938",
+      "name": "三孚股份",
+      "industry": "化学原料",
       "labels": [
-        "放量异常"
-      ]
-    },
-    {
-      "code": "002836",
-      "name": "新宏泽",
-      "industry": "包装印刷",
-      "labels": [
+        "MA20下方",
+        "趋势破坏",
         "弱于板块"
       ]
     }
@@ -98,33 +99,33 @@
     {
       "code": "002458",
       "name": "益生股份",
-      "date": "2026-09-30",
-      "close": 8.09,
-      "previous_close": 8.05,
-      "change_pct": 0.005,
-      "open": 8.08,
-      "high": 8.13,
-      "low": 8.04,
-      "amplitude": 0.0112,
-      "volume": 14181677,
-      "volume_ma5": 22444157.8,
-      "volume_ratio_5d": 0.6319,
+      "date": "2026-10-22",
+      "close": 7.55,
+      "previous_close": 7.73,
+      "change_pct": -0.0233,
+      "open": 7.69,
+      "high": 7.74,
+      "low": 7.52,
+      "amplitude": 0.0285,
+      "volume": 18371633,
+      "volume_ma5": 22266434.6,
+      "volume_ratio_5d": 0.8251,
       "volume_complete": true,
-      "ma5": 8.112,
-      "ma10": 8.253,
-      "ma20": 8.603,
-      "ma20_distance": -0.0596,
-      "recent_gain_20d": -0.1394,
-      "previous_high": 9.48,
-      "recent_support": 7.99,
-      "recent_high_20d": 9.48,
-      "recent_low_20d": 7.99,
+      "ma5": 7.604,
+      "ma10": 7.716,
+      "ma20": 7.963,
+      "ma20_distance": -0.0519,
+      "recent_gain_20d": -0.1023,
+      "previous_high": 8.5,
+      "recent_support": 7.48,
+      "recent_high_20d": 8.5,
+      "recent_low_20d": 7.48,
       "industry": "养殖业",
-      "industry_return": -0.0149,
+      "industry_return": -0.0099,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0199,
+      "relative_sector_strength": -0.0134,
       "turnover_rate": null,
       "pe": null,
       "pb": null,
@@ -150,61 +151,63 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:16+08:00",
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T09:00:14+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "缩量",
-        "强于板块"
+        "接近支撑",
+        "正常量能",
+        "弱于板块"
       ],
       "shares": 600,
       "cost": 8.412,
-      "current_price": 8.09,
-      "market_value": 4854.0,
+      "current_price": 7.55,
+      "market_value": 4530.0,
       "cost_basis": 5047.2,
-      "unrealized_pnl": -193.2,
-      "position_return": -0.0383,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
+      "unrealized_pnl": -517.2,
+      "position_return": -0.1025,
+      "volume_state": "正常量能",
+      "yesterday_volume_state": "正常量能",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 7.99
+          "value": 7.48
         },
         {
           "label": "MA20",
-          "value": 8.603
+          "value": 7.963
         },
         {
           "label": "昨日低点",
-          "value": 8.04
+          "value": 7.52
         },
         {
           "label": "昨日高点",
-          "value": 8.13
+          "value": 7.74
         },
         {
           "label": "近期前高",
-          "value": 9.48
+          "value": 8.5
         },
         {
           "label": "20日高点",
-          "value": 9.48
+          "value": 8.5
         },
         {
           "label": "20日低点",
-          "value": 7.99
+          "value": 7.48
         }
       ],
       "conditional_plan": [
         "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
-        "若放量越过近期前高 9.48 且强于所属行业，观察趋势状态是否增强。"
+        "若放量越过近期前高 8.50 且强于所属行业，观察趋势状态是否增强。"
       ],
       "attention_score": 120,
       "attention_level": "需要关注"
@@ -212,33 +215,33 @@
     {
       "code": "600664",
       "name": "哈药股份",
-      "date": "2026-09-30",
-      "close": 7.4,
-      "previous_close": 7.14,
-      "change_pct": 0.0364,
-      "open": 7.15,
-      "high": 7.83,
-      "low": 7.09,
-      "amplitude": 0.1036,
-      "volume": 519161997,
-      "volume_ma5": 479328200,
-      "volume_ratio_5d": 1.0831,
+      "date": "2026-10-22",
+      "close": 5.56,
+      "previous_close": 5.97,
+      "change_pct": -0.0687,
+      "open": 5.97,
+      "high": 5.99,
+      "low": 5.53,
+      "amplitude": 0.0771,
+      "volume": 207590754,
+      "volume_ma5": 310513450.6,
+      "volume_ratio_5d": 0.6685,
       "volume_complete": true,
-      "ma5": 7.81,
-      "ma10": 7.866,
-      "ma20": 7.8075,
-      "ma20_distance": -0.0522,
-      "recent_gain_20d": -0.2202,
+      "ma5": 5.932,
+      "ma10": 6.261,
+      "ma20": 7.0575,
+      "ma20_distance": -0.2122,
+      "recent_gain_20d": -0.2446,
       "previous_high": 9.86,
-      "recent_support": 6.92,
+      "recent_support": 5.73,
       "recent_high_20d": 9.86,
-      "recent_low_20d": 6.92,
+      "recent_low_20d": 5.53,
       "industry": "化学制药",
-      "industry_return": -0.0183,
+      "industry_return": -0.0246,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0547,
+      "relative_sector_strength": -0.0441,
       "turnover_rate": null,
       "pe": null,
       "pb": null,
@@ -284,44 +287,45 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:21+08:00",
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T09:00:24+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "正常量能",
-        "强于板块"
+        "缩量",
+        "弱于板块"
       ],
       "shares": 300,
       "cost": 9.097,
-      "current_price": 7.4,
-      "market_value": 2220.0,
+      "current_price": 5.56,
+      "market_value": 1668.0,
       "cost_basis": 2729.1,
-      "unrealized_pnl": -509.1,
-      "position_return": -0.1865,
-      "volume_state": "正常量能",
-      "yesterday_volume_state": "正常量能",
+      "unrealized_pnl": -1061.1,
+      "position_return": -0.3888,
+      "volume_state": "缩量",
+      "yesterday_volume_state": "缩量",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 6.92
+          "value": 5.73
         },
         {
           "label": "MA20",
-          "value": 7.8075
+          "value": 7.0575
         },
         {
           "label": "昨日低点",
-          "value": 7.09
+          "value": 5.53
         },
         {
           "label": "昨日高点",
-          "value": 7.83
+          "value": 5.99
         },
         {
           "label": "近期前高",
@@ -333,7 +337,7 @@
         },
         {
           "label": "20日低点",
-          "value": 6.92
+          "value": 5.53
         }
       ],
       "conditional_plan": [
@@ -344,35 +348,137 @@
       "attention_level": "需要关注"
     },
     {
-      "code": "000066",
-      "name": "中国长城",
-      "date": "2026-09-30",
-      "close": 14.1,
-      "previous_close": 14.42,
-      "change_pct": -0.0222,
-      "open": 14.43,
-      "high": 14.52,
-      "low": 14.03,
-      "amplitude": 0.034,
-      "volume": 85862801,
-      "volume_ma5": 214123358.8,
-      "volume_ratio_5d": 0.401,
+      "code": "002836",
+      "name": "新宏泽",
+      "date": "2026-10-22",
+      "close": 10.47,
+      "previous_close": 11.44,
+      "change_pct": -0.0848,
+      "open": 11.53,
+      "high": 11.59,
+      "low": 10.45,
+      "amplitude": 0.0997,
+      "volume": 8070800,
+      "volume_ma5": 12188792.6,
+      "volume_ratio_5d": 0.6621,
       "volume_complete": true,
-      "ma5": 14.524,
-      "ma10": 14.547,
-      "ma20": 14.417,
-      "ma20_distance": -0.022,
-      "recent_gain_20d": -0.0283,
-      "previous_high": 16.32,
-      "recent_support": 13.63,
-      "recent_high_20d": 16.32,
-      "recent_low_20d": 13.63,
-      "industry": "计算机设备",
-      "industry_return": -0.0192,
+      "ma5": 11.278,
+      "ma10": 11.262,
+      "ma20": 11.476,
+      "ma20_distance": -0.0877,
+      "recent_gain_20d": 0.0629,
+      "previous_high": 13.1,
+      "recent_support": 10.48,
+      "recent_high_20d": 13.1,
+      "recent_low_20d": 9.7,
+      "industry": "包装印刷",
+      "industry_return": -0.0406,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.003,
+      "relative_sector_strength": -0.0442,
+      "turnover_rate": null,
+      "pe": null,
+      "pb": null,
+      "market_cap": null,
+      "concepts": [],
+      "source": "sina_fallback",
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T09:00:34+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "mootdx: mootdx is not installed",
+        "sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response"
+      ],
+      "labels": [
+        "MA20下方",
+        "趋势破坏",
+        "接近支撑",
+        "缩量",
+        "弱于板块"
+      ],
+      "shares": 200,
+      "cost": 12.155,
+      "current_price": 10.47,
+      "market_value": 2094.0,
+      "cost_basis": 2431.0,
+      "unrealized_pnl": -337.0,
+      "position_return": -0.1386,
+      "volume_state": "缩量",
+      "yesterday_volume_state": "缩量",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 10.48
+        },
+        {
+          "label": "MA20",
+          "value": 11.476
+        },
+        {
+          "label": "昨日低点",
+          "value": 10.45
+        },
+        {
+          "label": "昨日高点",
+          "value": 11.59
+        },
+        {
+          "label": "近期前高",
+          "value": 13.1
+        },
+        {
+          "label": "20日高点",
+          "value": 13.1
+        },
+        {
+          "label": "20日低点",
+          "value": 9.7
+        }
+      ],
+      "conditional_plan": [
+        "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
+        "若放量越过近期前高 13.10 且强于所属行业，观察趋势状态是否增强。"
+      ],
+      "attention_score": 120,
+      "attention_level": "需要关注"
+    },
+    {
+      "code": "000066",
+      "name": "中国长城",
+      "date": "2026-10-22",
+      "close": 11.52,
+      "previous_close": 12.23,
+      "change_pct": -0.0581,
+      "open": 12.14,
+      "high": 12.19,
+      "low": 11.52,
+      "amplitude": 0.0548,
+      "volume": 119692349,
+      "volume_ma5": 69249315.2,
+      "volume_ratio_5d": 1.7284,
+      "volume_complete": true,
+      "ma5": 12.746,
+      "ma10": 13.122,
+      "ma20": 13.8195,
+      "ma20_distance": -0.1664,
+      "recent_gain_20d": -0.1859,
+      "previous_high": 16.32,
+      "recent_support": 12.2,
+      "recent_high_20d": 16.32,
+      "recent_low_20d": 11.52,
+      "industry": "计算机设备",
+      "industry_return": -0.0433,
+      "industry_rank": null,
+      "limit_up_count": null,
+      "advance_ratio": null,
+      "relative_sector_strength": -0.0148,
       "turnover_rate": null,
       "pe": null,
       "pb": null,
@@ -467,6 +573,10 @@
           "name": "电池技术"
         },
         {
+          "code": "BK1164",
+          "name": "AIPC"
+        },
+        {
           "code": "BK1138",
           "name": "液冷服务器"
         },
@@ -490,43 +600,45 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:32+08:00",
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T09:27:37+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "缩量"
+        "正常量能",
+        "弱于板块"
       ],
       "shares": 100,
       "cost": 16.04,
-      "current_price": 14.1,
-      "market_value": 1410.0,
+      "current_price": 11.52,
+      "market_value": 1152.0,
       "cost_basis": 1604.0,
-      "unrealized_pnl": -194.0,
-      "position_return": -0.1209,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
+      "unrealized_pnl": -452.0,
+      "position_return": -0.2818,
+      "volume_state": "正常量能",
+      "yesterday_volume_state": "正常量能",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 13.63
+          "value": 12.2
         },
         {
           "label": "MA20",
-          "value": 14.417
+          "value": 13.8195
         },
         {
           "label": "昨日低点",
-          "value": 14.03
+          "value": 11.52
         },
         {
           "label": "昨日高点",
-          "value": 14.52
+          "value": 12.19
         },
         {
           "label": "近期前高",
@@ -538,11 +650,10 @@
         },
         {
           "label": "20日低点",
-          "value": 13.63
+          "value": 11.52
         }
       ],
       "conditional_plan": [
-        "若回踩 MA20 附近且量能继续收缩，维持承接观察。",
         "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
         "若放量越过近期前高 16.32 且强于所属行业，观察趋势状态是否增强。"
       ],
@@ -552,33 +663,33 @@
     {
       "code": "000831",
       "name": "中国稀土",
-      "date": "2026-09-30",
-      "close": 52.73,
-      "previous_close": 53.23,
-      "change_pct": -0.0094,
-      "open": 53.88,
-      "high": 53.99,
-      "low": 52.48,
-      "amplitude": 0.0284,
-      "volume": 12813336,
-      "volume_ma5": 17598340.4,
-      "volume_ratio_5d": 0.7281,
+      "date": "2026-10-22",
+      "close": 49.08,
+      "previous_close": 49.5,
+      "change_pct": -0.0085,
+      "open": 49.68,
+      "high": 50.77,
+      "low": 49.05,
+      "amplitude": 0.0347,
+      "volume": 18528043,
+      "volume_ma5": 15153259.4,
+      "volume_ratio_5d": 1.2227,
       "volume_complete": true,
-      "ma5": 53.156,
-      "ma10": 53.717,
-      "ma20": 54.245,
-      "ma20_distance": -0.0279,
-      "recent_gain_20d": -0.1184,
-      "previous_high": 62.0,
-      "recent_support": 51.29,
-      "recent_high_20d": 59.3,
-      "recent_low_20d": 50.89,
+      "ma5": 48.806,
+      "ma10": 48.481,
+      "ma20": 50.8085,
+      "ma20_distance": -0.034,
+      "recent_gain_20d": -0.1029,
+      "previous_high": 56.59,
+      "recent_support": 46.06,
+      "recent_high_20d": 56.59,
+      "recent_low_20d": 46.06,
       "industry": "小金属",
-      "industry_return": -0.004,
+      "industry_return": -0.0321,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0054,
+      "relative_sector_strength": 0.0236,
       "turnover_rate": null,
       "pe": null,
       "pb": null,
@@ -604,61 +715,62 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:38+08:00",
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T09:27:55+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "缩量"
+        "正常量能",
+        "强于板块"
       ],
       "shares": 100,
       "cost": 51.208,
-      "current_price": 52.73,
-      "market_value": 5273.0,
+      "current_price": 49.08,
+      "market_value": 4908.0,
       "cost_basis": 5120.8,
-      "unrealized_pnl": 152.2,
-      "position_return": 0.0297,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
+      "unrealized_pnl": -212.8,
+      "position_return": -0.0416,
+      "volume_state": "正常量能",
+      "yesterday_volume_state": "正常量能",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 51.29
+          "value": 46.06
         },
         {
           "label": "MA20",
-          "value": 54.245
+          "value": 50.8085
         },
         {
           "label": "昨日低点",
-          "value": 52.48
+          "value": 49.05
         },
         {
           "label": "昨日高点",
-          "value": 53.99
+          "value": 50.77
         },
         {
           "label": "近期前高",
-          "value": 62.0
+          "value": 56.59
         },
         {
           "label": "20日高点",
-          "value": 59.3
+          "value": 56.59
         },
         {
           "label": "20日低点",
-          "value": 50.89
+          "value": 46.06
         }
       ],
       "conditional_plan": [
-        "若回踩 MA20 附近且量能继续收缩，维持承接观察。",
         "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
-        "若放量越过近期前高 62.00 且强于所属行业，观察趋势状态是否增强。"
+        "若放量越过近期前高 56.59 且强于所属行业，观察趋势状态是否增强。"
       ],
       "attention_score": 120,
       "attention_level": "需要关注"
@@ -666,33 +778,33 @@
     {
       "code": "600172",
       "name": "黄河旋风",
-      "date": "2026-09-30",
-      "close": 14.12,
-      "previous_close": 14.9,
-      "change_pct": -0.0523,
-      "open": 14.93,
-      "high": 15.14,
-      "low": 14.08,
-      "amplitude": 0.0711,
-      "volume": 162591669,
-      "volume_ma5": 206140561.6,
-      "volume_ratio_5d": 0.7887,
+      "date": "2026-10-22",
+      "close": 11.51,
+      "previous_close": 12.21,
+      "change_pct": -0.0573,
+      "open": 12.21,
+      "high": 12.28,
+      "low": 11.51,
+      "amplitude": 0.0631,
+      "volume": 75376351,
+      "volume_ma5": 78790056.4,
+      "volume_ratio_5d": 0.9567,
       "volume_complete": true,
-      "ma5": 15.83,
-      "ma10": 16.034,
-      "ma20": 15.97,
-      "ma20_distance": -0.1158,
-      "recent_gain_20d": -0.0355,
+      "ma5": 11.928,
+      "ma10": 12.372,
+      "ma20": 14.0455,
+      "ma20_distance": -0.1805,
+      "recent_gain_20d": -0.3087,
       "previous_high": 17.43,
-      "recent_support": 14.85,
+      "recent_support": 11.15,
       "recent_high_20d": 17.43,
-      "recent_low_20d": 14.08,
+      "recent_low_20d": 11.15,
       "industry": "通用设备",
-      "industry_return": -0.0193,
+      "industry_return": -0.0394,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.033,
+      "relative_sector_strength": -0.0179,
       "turnover_rate": null,
       "pe": null,
       "pb": null,
@@ -722,12 +834,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:43+08:00",
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T09:28:04+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
@@ -737,29 +850,29 @@
       ],
       "shares": 100,
       "cost": 20.157,
-      "current_price": 14.12,
-      "market_value": 1412.0,
+      "current_price": 11.51,
+      "market_value": 1151.0,
       "cost_basis": 2015.7,
-      "unrealized_pnl": -603.7,
-      "position_return": -0.2995,
+      "unrealized_pnl": -864.7,
+      "position_return": -0.429,
       "volume_state": "正常量能",
       "yesterday_volume_state": "正常量能",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 14.85
+          "value": 11.15
         },
         {
           "label": "MA20",
-          "value": 15.97
+          "value": 14.0455
         },
         {
           "label": "昨日低点",
-          "value": 14.08
+          "value": 11.51
         },
         {
           "label": "昨日高点",
-          "value": 15.14
+          "value": 12.28
         },
         {
           "label": "近期前高",
@@ -771,7 +884,7 @@
         },
         {
           "label": "20日低点",
-          "value": 14.08
+          "value": 11.15
         }
       ],
       "conditional_plan": [
@@ -784,33 +897,33 @@
     {
       "code": "603002",
       "name": "宏昌电子",
-      "date": "2026-09-30",
-      "close": 17.34,
-      "previous_close": 17.56,
-      "change_pct": -0.0125,
-      "open": 17.65,
-      "high": 18.47,
-      "low": 17.31,
-      "amplitude": 0.0661,
-      "volume": 62604300,
-      "volume_ma5": 66833641.8,
-      "volume_ratio_5d": 0.9367,
+      "date": "2026-10-22",
+      "close": 14.21,
+      "previous_close": 15.3,
+      "change_pct": -0.0712,
+      "open": 15.3,
+      "high": 15.43,
+      "low": 14.18,
+      "amplitude": 0.0817,
+      "volume": 53947300,
+      "volume_ma5": 59890003.2,
+      "volume_ratio_5d": 0.9008,
       "volume_complete": true,
-      "ma5": 18.354,
-      "ma10": 18.869,
-      "ma20": 17.8625,
-      "ma20_distance": -0.0293,
-      "recent_gain_20d": 0.0352,
+      "ma5": 14.826,
+      "ma10": 15.747,
+      "ma20": 17.2735,
+      "ma20_distance": -0.1774,
+      "recent_gain_20d": -0.2668,
       "previous_high": 20.63,
-      "recent_support": 17.23,
+      "recent_support": 13.85,
       "recent_high_20d": 20.63,
-      "recent_low_20d": 14.96,
+      "recent_low_20d": 13.85,
       "industry": "电子化学品Ⅱ",
-      "industry_return": -0.0353,
+      "industry_return": -0.0539,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0228,
+      "relative_sector_strength": -0.0173,
       "turnover_rate": null,
       "pe": null,
       "pb": null,
@@ -844,45 +957,45 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:48+08:00",
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T10:01:37+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "接近支撑",
         "正常量能",
-        "强于板块"
+        "弱于板块"
       ],
       "shares": 100,
       "cost": 66.545,
-      "current_price": 17.34,
-      "market_value": 1734.0,
+      "current_price": 14.21,
+      "market_value": 1421.0,
       "cost_basis": 6654.5,
-      "unrealized_pnl": -4920.5,
-      "position_return": -0.7394,
+      "unrealized_pnl": -5233.5,
+      "position_return": -0.7865,
       "volume_state": "正常量能",
       "yesterday_volume_state": "正常量能",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 17.23
+          "value": 13.85
         },
         {
           "label": "MA20",
-          "value": 17.8625
+          "value": 17.2735
         },
         {
           "label": "昨日低点",
-          "value": 17.31
+          "value": 14.18
         },
         {
           "label": "昨日高点",
-          "value": 18.47
+          "value": 15.43
         },
         {
           "label": "近期前高",
@@ -894,11 +1007,10 @@
         },
         {
           "label": "20日低点",
-          "value": 14.96
+          "value": 13.85
         }
       ],
       "conditional_plan": [
-        "若回踩 MA20 附近且量能继续收缩，维持承接观察。",
         "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
         "若放量越过近期前高 20.63 且强于所属行业，观察趋势状态是否增强。"
       ],
@@ -908,33 +1020,33 @@
     {
       "code": "603938",
       "name": "三孚股份",
-      "date": "2026-09-30",
-      "close": 42.68,
-      "previous_close": 43.56,
-      "change_pct": -0.0202,
-      "open": 44.49,
-      "high": 44.7,
-      "low": 42.53,
-      "amplitude": 0.0498,
-      "volume": 10008672,
-      "volume_ma5": 22223307.2,
-      "volume_ratio_5d": 0.4504,
+      "date": "2026-10-22",
+      "close": 34.9,
+      "previous_close": 36.91,
+      "change_pct": -0.0545,
+      "open": 37.01,
+      "high": 37.17,
+      "low": 34.9,
+      "amplitude": 0.0615,
+      "volume": 9137654,
+      "volume_ma5": 9228607.6,
+      "volume_ratio_5d": 0.9901,
       "volume_complete": true,
-      "ma5": 45.966,
-      "ma10": 48.249,
-      "ma20": 46.818,
-      "ma20_distance": -0.0884,
-      "recent_gain_20d": -0.0256,
+      "ma5": 35.794,
+      "ma10": 36.993,
+      "ma20": 42.072,
+      "ma20_distance": -0.1705,
+      "recent_gain_20d": -0.3336,
       "previous_high": 55.06,
-      "recent_support": 42.92,
-      "recent_high_20d": 55.06,
-      "recent_low_20d": 39.12,
+      "recent_support": 33.68,
+      "recent_high_20d": 52.87,
+      "recent_low_20d": 33.68,
       "industry": "化学原料",
-      "industry_return": 0.0085,
+      "industry_return": -0.0342,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0287,
+      "relative_sector_strength": -0.0203,
       "turnover_rate": null,
       "pe": null,
       "pb": null,
@@ -980,8 +1092,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:53+08:00",
+      "source_timestamp": "2026-10-22",
+      "retrieved_at": "2026-10-23T10:28:33+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -990,35 +1102,34 @@
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "接近支撑",
-        "缩量",
+        "正常量能",
         "弱于板块"
       ],
       "shares": 100,
       "cost": 52.751,
-      "current_price": 42.68,
-      "market_value": 4268.0,
+      "current_price": 34.9,
+      "market_value": 3490.0,
       "cost_basis": 5275.1,
-      "unrealized_pnl": -1007.1,
-      "position_return": -0.1909,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
+      "unrealized_pnl": -1785.1,
+      "position_return": -0.3384,
+      "volume_state": "正常量能",
+      "yesterday_volume_state": "正常量能",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 42.92
+          "value": 33.68
         },
         {
           "label": "MA20",
-          "value": 46.818
+          "value": 42.072
         },
         {
           "label": "昨日低点",
-          "value": 42.53
+          "value": 34.9
         },
         {
           "label": "昨日高点",
-          "value": 44.7
+          "value": 37.17
         },
         {
           "label": "近期前高",
@@ -1026,11 +1137,11 @@
         },
         {
           "label": "20日高点",
-          "value": 55.06
+          "value": 52.87
         },
         {
           "label": "20日低点",
-          "value": 39.12
+          "value": 33.68
         }
       ],
       "conditional_plan": [
@@ -1038,105 +1149,6 @@
         "若放量越过近期前高 55.06 且强于所属行业，观察趋势状态是否增强。"
       ],
       "attention_score": 120,
-      "attention_level": "需要关注"
-    },
-    {
-      "code": "002836",
-      "name": "新宏泽",
-      "date": "2026-09-30",
-      "close": 12.12,
-      "previous_close": 12.23,
-      "change_pct": -0.009,
-      "open": 12.11,
-      "high": 12.26,
-      "low": 11.54,
-      "amplitude": 0.0589,
-      "volume": 13616563,
-      "volume_ma5": 22557149.4,
-      "volume_ratio_5d": 0.6036,
-      "volume_complete": true,
-      "ma5": 11.868,
-      "ma10": 11.507,
-      "ma20": 10.803,
-      "ma20_distance": 0.1219,
-      "recent_gain_20d": 0.206,
-      "previous_high": 13.1,
-      "recent_support": 9.15,
-      "recent_high_20d": 13.1,
-      "recent_low_20d": 9.15,
-      "industry": "包装印刷",
-      "industry_return": -0.0053,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": -0.0037,
-      "turnover_rate": null,
-      "pe": null,
-      "pb": null,
-      "market_cap": null,
-      "concepts": [],
-      "source": "sina_fallback",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-09-30",
-      "retrieved_at": "2026-10-08T10:05:27+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed"
-      ],
-      "labels": [
-        "MA20上方",
-        "高位偏离",
-        "缩量"
-      ],
-      "shares": 200,
-      "cost": 12.155,
-      "current_price": 12.12,
-      "market_value": 2424.0,
-      "cost_basis": 2431.0,
-      "unrealized_pnl": -7.0,
-      "position_return": -0.0029,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
-      "observation_levels": [
-        {
-          "label": "第一支撑",
-          "value": 9.15
-        },
-        {
-          "label": "MA20",
-          "value": 10.803
-        },
-        {
-          "label": "昨日低点",
-          "value": 11.54
-        },
-        {
-          "label": "昨日高点",
-          "value": 12.26
-        },
-        {
-          "label": "近期前高",
-          "value": 13.1
-        },
-        {
-          "label": "20日高点",
-          "value": 13.1
-        },
-        {
-          "label": "20日低点",
-          "value": 9.15
-        }
-      ],
-      "conditional_plan": [
-        "若距离 MA20 持续过远，保持高位偏离观察。",
-        "若放量越过近期前高 13.10 且强于所属行业，观察趋势状态是否增强。"
-      ],
-      "attention_score": 50,
       "attention_level": "需要关注"
     }
   ],
@@ -1144,37 +1156,37 @@
     {
       "code": "002458",
       "name": "益生股份",
-      "date": "2026-10-08",
-      "close": 7.98,
-      "previous_close": 8.09,
-      "change_pct": -0.0136,
-      "open": 8.09,
-      "high": 8.14,
-      "low": 7.94,
-      "amplitude": 0.0247,
-      "volume": 19647900,
-      "volume_ma5": 19471003,
-      "volume_ratio_5d": 1.0091,
-      "volume_complete": true,
-      "ma5": 8.066,
-      "ma10": 8.21,
-      "ma20": 8.5595,
-      "ma20_distance": -0.0677,
-      "recent_gain_20d": -0.0983,
-      "previous_high": 9.48,
-      "recent_support": 7.99,
-      "recent_high_20d": 9.48,
-      "recent_low_20d": 7.94,
+      "date": "2026-10-23",
+      "close": 7.58,
+      "previous_close": 7.55,
+      "change_pct": 0.004,
+      "open": 7.52,
+      "high": 7.62,
+      "low": 7.46,
+      "amplitude": 0.0212,
+      "volume": 12153400,
+      "volume_ma5": 21684586.2,
+      "volume_ratio_5d": 0.5605,
+      "volume_complete": false,
+      "ma5": 7.6,
+      "ma10": 7.668,
+      "ma20": 7.9235,
+      "ma20_distance": -0.0434,
+      "recent_gain_20d": -0.0944,
+      "previous_high": 8.5,
+      "recent_support": 7.48,
+      "recent_high_20d": 8.5,
+      "recent_low_20d": 7.46,
       "industry": "养殖业",
-      "industry_return": -0.0149,
+      "industry_return": -0.0099,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0013,
-      "turnover_rate": 0.0203,
-      "pe": 24.46,
-      "pb": 2.58,
-      "market_cap": 7712000000.0,
+      "relative_sector_strength": 0.0139,
+      "turnover_rate": 0.0126,
+      "pe": 23.24,
+      "pb": 2.45,
+      "market_cap": 7325000000.0,
       "concepts": [
         {
           "code": "BK0892",
@@ -1196,61 +1208,61 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T15:09:45",
-      "retrieved_at": "2026-10-08T15:10:09+08:00",
+      "source_timestamp": "2026-10-23T11:29:33",
+      "retrieved_at": "2026-10-23T11:29:36+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "接近支撑",
-        "正常量能"
+        "强于板块"
       ],
       "shares": 600,
       "cost": 8.412,
-      "current_price": 7.98,
-      "market_value": 4788.0,
+      "current_price": 7.58,
+      "market_value": 4548.0,
       "cost_basis": 5047.2,
-      "unrealized_pnl": -259.2,
-      "position_return": -0.0514,
-      "volume_state": "正常量能",
-      "yesterday_volume_state": "正常量能",
+      "unrealized_pnl": -499.2,
+      "position_return": -0.0989,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 7.99
+          "value": 7.48
         },
         {
           "label": "MA20",
-          "value": 8.5595
+          "value": 7.9235
         },
         {
           "label": "昨日低点",
-          "value": 7.94
+          "value": 7.46
         },
         {
           "label": "昨日高点",
-          "value": 8.14
+          "value": 7.62
         },
         {
           "label": "近期前高",
-          "value": 9.48
+          "value": 8.5
         },
         {
           "label": "20日高点",
-          "value": 9.48
+          "value": 8.5
         },
         {
           "label": "20日低点",
-          "value": 7.94
+          "value": 7.46
         }
       ],
       "conditional_plan": [
         "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
-        "若放量越过近期前高 9.48 且强于所属行业，观察趋势状态是否增强。"
+        "若放量越过近期前高 8.50 且强于所属行业，观察趋势状态是否增强。"
       ],
       "attention_score": 120,
       "attention_level": "需要关注"
@@ -1258,37 +1270,37 @@
     {
       "code": "600664",
       "name": "哈药股份",
-      "date": "2026-10-08",
-      "close": 7.24,
-      "previous_close": 7.4,
-      "change_pct": -0.0216,
-      "open": 7.58,
-      "high": 7.87,
-      "low": 7.14,
-      "amplitude": 0.0986,
-      "volume": 459725300,
-      "volume_ma5": 521519497.2,
-      "volume_ratio_5d": 0.8815,
-      "volume_complete": true,
-      "ma5": 7.45,
-      "ma10": 7.854,
-      "ma20": 7.7075,
-      "ma20_distance": -0.0607,
-      "recent_gain_20d": -0.2165,
+      "date": "2026-10-23",
+      "close": 5.32,
+      "previous_close": 5.56,
+      "change_pct": -0.0432,
+      "open": 5.43,
+      "high": 5.55,
+      "low": 5.26,
+      "amplitude": 0.0522,
+      "volume": 123701800,
+      "volume_ma5": 276553692.6,
+      "volume_ratio_5d": 0.4473,
+      "volume_complete": false,
+      "ma5": 5.732,
+      "ma10": 6.054,
+      "ma20": 6.9525,
+      "ma20_distance": -0.2348,
+      "recent_gain_20d": -0.283,
       "previous_high": 9.86,
-      "recent_support": 6.92,
+      "recent_support": 5.53,
       "recent_high_20d": 9.86,
-      "recent_low_20d": 6.92,
+      "recent_low_20d": 5.26,
       "industry": "化学制药",
-      "industry_return": -0.0183,
+      "industry_return": -0.0246,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0033,
-      "turnover_rate": 0.1825,
-      "pe": 35.6,
-      "pb": 2.99,
-      "market_cap": 18234000000.0,
+      "relative_sector_strength": -0.0186,
+      "turnover_rate": 0.049100000000000005,
+      "pe": 26.16,
+      "pb": 2.19,
+      "market_cap": 13397999999.999998,
       "concepts": [
         {
           "code": "BK0906",
@@ -1330,43 +1342,44 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T15:10:09",
-      "retrieved_at": "2026-10-08T15:10:11+08:00",
+      "source_timestamp": "2026-10-23T11:29:35",
+      "retrieved_at": "2026-10-23T11:29:40+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "正常量能"
+        "弱于板块"
       ],
       "shares": 300,
       "cost": 9.097,
-      "current_price": 7.24,
-      "market_value": 2172.0,
+      "current_price": 5.32,
+      "market_value": 1596.0,
       "cost_basis": 2729.1,
-      "unrealized_pnl": -557.1,
-      "position_return": -0.2041,
-      "volume_state": "正常量能",
-      "yesterday_volume_state": "正常量能",
+      "unrealized_pnl": -1133.1,
+      "position_return": -0.4152,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 6.92
+          "value": 5.53
         },
         {
           "label": "MA20",
-          "value": 7.7075
+          "value": 6.9525
         },
         {
           "label": "昨日低点",
-          "value": 7.14
+          "value": 5.26
         },
         {
           "label": "昨日高点",
-          "value": 7.87
+          "value": 5.55
         },
         {
           "label": "近期前高",
@@ -1378,7 +1391,7 @@
         },
         {
           "label": "20日低点",
-          "value": 6.92
+          "value": 5.26
         }
       ],
       "conditional_plan": [
@@ -1389,39 +1402,139 @@
       "attention_level": "需要关注"
     },
     {
-      "code": "000066",
-      "name": "中国长城",
-      "date": "2026-10-08",
-      "close": 13.85,
-      "previous_close": 14.1,
-      "change_pct": -0.0177,
-      "open": 14.06,
-      "high": 14.33,
-      "low": 13.77,
-      "amplitude": 0.0397,
-      "volume": 75032600,
-      "volume_ma5": 148784839.6,
-      "volume_ratio_5d": 0.5043,
-      "volume_complete": true,
-      "ma5": 14.266,
-      "ma10": 14.517,
-      "ma20": 14.389,
-      "ma20_distance": -0.0375,
-      "recent_gain_20d": -0.0389,
-      "previous_high": 16.32,
-      "recent_support": 13.86,
-      "recent_high_20d": 16.32,
-      "recent_low_20d": 13.63,
-      "industry": "计算机设备",
-      "industry_return": -0.0192,
+      "code": "002836",
+      "name": "新宏泽",
+      "date": "2026-10-23",
+      "close": 9.71,
+      "previous_close": 10.47,
+      "change_pct": -0.0726,
+      "open": 10.1,
+      "high": 10.3,
+      "low": 9.54,
+      "amplitude": 0.0726,
+      "volume": 5085900,
+      "volume_ma5": 12018888.6,
+      "volume_ratio_5d": 0.4232,
+      "volume_complete": false,
+      "ma5": 10.862,
+      "ma10": 11.089,
+      "ma20": 11.4195,
+      "ma20_distance": -0.1497,
+      "recent_gain_20d": -0.1042,
+      "previous_high": 13.1,
+      "recent_support": 10.45,
+      "recent_high_20d": 13.1,
+      "recent_low_20d": 9.54,
+      "industry": "包装印刷",
+      "industry_return": -0.0406,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0015,
-      "turnover_rate": 0.0233,
-      "pe": 378.39,
-      "pb": 3.94,
-      "market_cap": 44674000000.0,
+      "relative_sector_strength": -0.032,
+      "turnover_rate": 0.022099999999999998,
+      "pe": 62.49,
+      "pb": 6.2,
+      "market_cap": 2237000000.0,
+      "concepts": [],
+      "source": "tencent",
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "source_timestamp": "2026-10-23T11:29:36",
+      "retrieved_at": "2026-10-23T11:29:40+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "mootdx: mootdx is not installed",
+        "sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response"
+      ],
+      "labels": [
+        "MA20下方",
+        "趋势破坏",
+        "弱于板块"
+      ],
+      "shares": 200,
+      "cost": 12.155,
+      "current_price": 9.71,
+      "market_value": 1942.0,
+      "cost_basis": 2431.0,
+      "unrealized_pnl": -489.0,
+      "position_return": -0.2012,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 10.45
+        },
+        {
+          "label": "MA20",
+          "value": 11.4195
+        },
+        {
+          "label": "昨日低点",
+          "value": 9.54
+        },
+        {
+          "label": "昨日高点",
+          "value": 10.3
+        },
+        {
+          "label": "近期前高",
+          "value": 13.1
+        },
+        {
+          "label": "20日高点",
+          "value": 13.1
+        },
+        {
+          "label": "20日低点",
+          "value": 9.54
+        }
+      ],
+      "conditional_plan": [
+        "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
+        "若放量越过近期前高 13.10 且强于所属行业，观察趋势状态是否增强。"
+      ],
+      "attention_score": 120,
+      "attention_level": "需要关注"
+    },
+    {
+      "code": "000066",
+      "name": "中国长城",
+      "date": "2026-10-23",
+      "close": 11.32,
+      "previous_close": 11.52,
+      "change_pct": -0.0174,
+      "open": 11.34,
+      "high": 11.35,
+      "low": 11.04,
+      "amplitude": 0.0269,
+      "volume": 52302900,
+      "volume_ma5": 83364310,
+      "volume_ratio_5d": 0.6274,
+      "volume_complete": false,
+      "ma5": 12.384,
+      "ma10": 12.86,
+      "ma20": 13.692,
+      "ma20_distance": -0.1732,
+      "recent_gain_20d": -0.1839,
+      "previous_high": 16.32,
+      "recent_support": 11.52,
+      "recent_high_20d": 16.32,
+      "recent_low_20d": 11.04,
+      "industry": "计算机设备",
+      "industry_return": -0.0433,
+      "industry_rank": null,
+      "limit_up_count": null,
+      "advance_ratio": null,
+      "relative_sector_strength": 0.0259,
+      "turnover_rate": 0.016200000000000003,
+      "pe": 309.27,
+      "pb": 3.22,
+      "market_cap": 36514000000.0,
       "concepts": [
         {
           "code": "BK0988",
@@ -1512,6 +1625,10 @@
           "name": "电池技术"
         },
         {
+          "code": "BK1164",
+          "name": "AIPC"
+        },
+        {
           "code": "BK1138",
           "name": "液冷服务器"
         },
@@ -1535,44 +1652,44 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T15:10:00",
-      "retrieved_at": "2026-10-08T15:10:14+08:00",
+      "source_timestamp": "2026-10-23T11:29:39",
+      "retrieved_at": "2026-10-23T11:29:42+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "接近支撑",
-        "缩量"
+        "强于板块"
       ],
       "shares": 100,
       "cost": 16.04,
-      "current_price": 13.85,
-      "market_value": 1385.0,
+      "current_price": 11.32,
+      "market_value": 1132.0,
       "cost_basis": 1604.0,
-      "unrealized_pnl": -219.0,
-      "position_return": -0.1365,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
+      "unrealized_pnl": -472.0,
+      "position_return": -0.2943,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 13.86
+          "value": 11.52
         },
         {
           "label": "MA20",
-          "value": 14.389
+          "value": 13.692
         },
         {
           "label": "昨日低点",
-          "value": 13.77
+          "value": 11.04
         },
         {
           "label": "昨日高点",
-          "value": 14.33
+          "value": 11.35
         },
         {
           "label": "近期前高",
@@ -1584,11 +1701,10 @@
         },
         {
           "label": "20日低点",
-          "value": 13.63
+          "value": 11.04
         }
       ],
       "conditional_plan": [
-        "若回踩 MA20 附近且量能继续收缩，维持承接观察。",
         "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
         "若放量越过近期前高 16.32 且强于所属行业，观察趋势状态是否增强。"
       ],
@@ -1598,37 +1714,37 @@
     {
       "code": "000831",
       "name": "中国稀土",
-      "date": "2026-10-08",
-      "close": 48.9,
-      "previous_close": 52.73,
-      "change_pct": -0.0726,
-      "open": 52.5,
-      "high": 52.58,
-      "low": 48.5,
-      "amplitude": 0.0774,
-      "volume": 31649400,
-      "volume_ma5": 15808705.8,
-      "volume_ratio_5d": 2.002,
-      "volume_complete": true,
-      "ma5": 52.21,
-      "ma10": 53.136,
-      "ma20": 53.7725,
-      "ma20_distance": -0.0906,
-      "recent_gain_20d": -0.162,
-      "previous_high": 59.3,
-      "recent_support": 51.29,
-      "recent_high_20d": 59.0,
-      "recent_low_20d": 48.5,
+      "date": "2026-10-23",
+      "close": 48.64,
+      "previous_close": 49.08,
+      "change_pct": -0.009,
+      "open": 48.23,
+      "high": 48.94,
+      "low": 47.2,
+      "amplitude": 0.0355,
+      "volume": 11526900,
+      "volume_ma5": 15895677.8,
+      "volume_ratio_5d": 0.7252,
+      "volume_complete": false,
+      "ma5": 49.104,
+      "ma10": 48.411,
+      "ma20": 50.572,
+      "ma20_distance": -0.0382,
+      "recent_gain_20d": -0.0886,
+      "previous_high": 56.59,
+      "recent_support": 46.06,
+      "recent_high_20d": 56.59,
+      "recent_low_20d": 46.06,
       "industry": "小金属",
-      "industry_return": -0.004,
+      "industry_return": -0.0321,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0686,
-      "turnover_rate": 0.0298,
-      "pe": 209.4,
-      "pb": 10.31,
-      "market_cap": 51894000000.00001,
+      "relative_sector_strength": 0.0231,
+      "turnover_rate": 0.0109,
+      "pe": 208.29,
+      "pb": 10.26,
+      "market_cap": 51617999999.99999,
       "concepts": [
         {
           "code": "BK0695",
@@ -1650,62 +1766,61 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T15:10:00",
-      "retrieved_at": "2026-10-08T15:10:16+08:00",
+      "source_timestamp": "2026-10-23T11:29:39",
+      "retrieved_at": "2026-10-23T11:29:44+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "放量异常",
-        "弱于板块"
+        "强于板块"
       ],
       "shares": 100,
       "cost": 51.208,
-      "current_price": 48.9,
-      "market_value": 4890.0,
+      "current_price": 48.64,
+      "market_value": 4864.0,
       "cost_basis": 5120.8,
-      "unrealized_pnl": -230.8,
-      "position_return": -0.0451,
-      "volume_state": "放量异常",
-      "yesterday_volume_state": "放量异常",
+      "unrealized_pnl": -256.8,
+      "position_return": -0.0501,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 51.29
+          "value": 46.06
         },
         {
           "label": "MA20",
-          "value": 53.7725
+          "value": 50.572
         },
         {
           "label": "昨日低点",
-          "value": 48.5
+          "value": 47.2
         },
         {
           "label": "昨日高点",
-          "value": 52.58
+          "value": 48.94
         },
         {
           "label": "近期前高",
-          "value": 59.3
+          "value": 56.59
         },
         {
           "label": "20日高点",
-          "value": 59.0
+          "value": 56.59
         },
         {
           "label": "20日低点",
-          "value": 48.5
+          "value": 46.06
         }
       ],
       "conditional_plan": [
-        "若回踩 MA20 附近且量能继续收缩，维持承接观察。",
         "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
-        "若放量越过近期前高 62.00 且强于所属行业，观察趋势状态是否增强。"
+        "若放量越过近期前高 56.59 且强于所属行业，观察趋势状态是否增强。"
       ],
       "attention_score": 120,
       "attention_level": "需要关注"
@@ -1713,37 +1828,37 @@
     {
       "code": "600172",
       "name": "黄河旋风",
-      "date": "2026-10-08",
-      "close": 13.5,
-      "previous_close": 14.12,
-      "change_pct": -0.0439,
-      "open": 14.1,
-      "high": 14.27,
-      "low": 13.38,
-      "amplitude": 0.063,
-      "volume": 127047600,
-      "volume_ma5": 203307576,
-      "volume_ratio_5d": 0.6249,
-      "volume_complete": true,
-      "ma5": 15.182,
-      "ma10": 15.719,
-      "ma20": 15.9075,
-      "ma20_distance": -0.1513,
-      "recent_gain_20d": -0.0847,
+      "date": "2026-10-23",
+      "close": 10.87,
+      "previous_close": 11.51,
+      "change_pct": -0.0556,
+      "open": 11.37,
+      "high": 11.39,
+      "low": 10.61,
+      "amplitude": 0.0678,
+      "volume": 54541900,
+      "volume_ma5": 77454541.8,
+      "volume_ratio_5d": 0.7042,
+      "volume_complete": false,
+      "ma5": 11.694,
+      "ma10": 12.098,
+      "ma20": 13.786,
+      "ma20_distance": -0.2115,
+      "recent_gain_20d": -0.3232,
       "previous_high": 17.43,
-      "recent_support": 14.08,
+      "recent_support": 11.15,
       "recent_high_20d": 17.43,
-      "recent_low_20d": 13.38,
+      "recent_low_20d": 10.61,
       "industry": "通用设备",
-      "industry_return": -0.0193,
+      "industry_return": -0.0394,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0246,
-      "turnover_rate": 0.0989,
-      "pe": -22.3,
-      "pb": 57.61,
-      "market_cap": 17338000000.0,
+      "relative_sector_strength": -0.0162,
+      "turnover_rate": 0.0425,
+      "pe": -17.96,
+      "pb": 46.39,
+      "market_cap": 13960000000.0,
       "concepts": [
         {
           "code": "BK0683",
@@ -1769,44 +1884,44 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T15:10:15",
-      "retrieved_at": "2026-10-08T15:10:18+08:00",
+      "source_timestamp": "2026-10-23T11:29:45",
+      "retrieved_at": "2026-10-23T11:29:47+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response"
       ],
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "缩量",
         "弱于板块"
       ],
       "shares": 100,
       "cost": 20.157,
-      "current_price": 13.5,
-      "market_value": 1350.0,
+      "current_price": 10.87,
+      "market_value": 1087.0,
       "cost_basis": 2015.7,
-      "unrealized_pnl": -665.7,
-      "position_return": -0.3303,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
+      "unrealized_pnl": -928.7,
+      "position_return": -0.4607,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 14.08
+          "value": 11.15
         },
         {
           "label": "MA20",
-          "value": 15.9075
+          "value": 13.786
         },
         {
           "label": "昨日低点",
-          "value": 13.38
+          "value": 10.61
         },
         {
           "label": "昨日高点",
-          "value": 14.27
+          "value": 11.39
         },
         {
           "label": "近期前高",
@@ -1818,7 +1933,7 @@
         },
         {
           "label": "20日低点",
-          "value": 13.38
+          "value": 10.61
         }
       ],
       "conditional_plan": [
@@ -1829,39 +1944,161 @@
       "attention_level": "需要关注"
     },
     {
-      "code": "603938",
-      "name": "三孚股份",
-      "date": "2026-10-08",
-      "close": 41.39,
-      "previous_close": 42.68,
-      "change_pct": -0.0302,
-      "open": 42.64,
-      "high": 43.29,
-      "low": 41.0,
-      "amplitude": 0.0537,
-      "volume": 10438100,
-      "volume_ma5": 19222866.4,
-      "volume_ratio_5d": 0.543,
-      "volume_complete": true,
-      "ma5": 43.944,
-      "ma10": 47.151,
-      "ma20": 46.747,
-      "ma20_distance": -0.1146,
-      "recent_gain_20d": -0.0332,
-      "previous_high": 55.06,
-      "recent_support": 42.53,
-      "recent_high_20d": 55.06,
-      "recent_low_20d": 39.12,
-      "industry": "化学原料",
-      "industry_return": 0.0085,
+      "code": "603002",
+      "name": "宏昌电子",
+      "date": "2026-10-23",
+      "close": 13.23,
+      "previous_close": 14.21,
+      "change_pct": -0.069,
+      "open": 13.83,
+      "high": 14.0,
+      "low": 12.88,
+      "amplitude": 0.0788,
+      "volume": 37909100,
+      "volume_ma5": 59284140.8,
+      "volume_ratio_5d": 0.6394,
+      "volume_complete": false,
+      "ma5": 14.468,
+      "ma10": 15.302,
+      "ma20": 16.974,
+      "ma20_distance": -0.2206,
+      "recent_gain_20d": -0.3117,
+      "previous_high": 20.63,
+      "recent_support": 13.85,
+      "recent_high_20d": 20.63,
+      "recent_low_20d": 12.88,
+      "industry": "电子化学品Ⅱ",
+      "industry_return": -0.0539,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0387,
-      "turnover_rate": 0.0273,
-      "pe": 98.39,
-      "pb": 6.06,
-      "market_cap": 15837000000.0,
+      "relative_sector_strength": -0.0151,
+      "turnover_rate": 0.0334,
+      "pe": 256.79,
+      "pb": 4.31,
+      "market_cap": 15004000000.0,
+      "concepts": [
+        {
+          "code": "BK0877",
+          "name": "PCB"
+        },
+        {
+          "code": "BK0714",
+          "name": "5G概念"
+        },
+        {
+          "code": "BK0619",
+          "name": "3D打印"
+        },
+        {
+          "code": "BK1650",
+          "name": "通信技术"
+        },
+        {
+          "code": "BK1161",
+          "name": "英伟达概念"
+        }
+      ],
+      "source": "tencent",
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "source_timestamp": "2026-10-23T11:29:44",
+      "retrieved_at": "2026-10-23T11:29:48+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "mootdx: mootdx is not installed",
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response"
+      ],
+      "labels": [
+        "MA20下方",
+        "趋势破坏",
+        "弱于板块"
+      ],
+      "shares": 100,
+      "cost": 66.545,
+      "current_price": 13.23,
+      "market_value": 1323.0,
+      "cost_basis": 6654.5,
+      "unrealized_pnl": -5331.5,
+      "position_return": -0.8012,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
+      "observation_levels": [
+        {
+          "label": "第一支撑",
+          "value": 13.85
+        },
+        {
+          "label": "MA20",
+          "value": 16.974
+        },
+        {
+          "label": "昨日低点",
+          "value": 12.88
+        },
+        {
+          "label": "昨日高点",
+          "value": 14.0
+        },
+        {
+          "label": "近期前高",
+          "value": 20.63
+        },
+        {
+          "label": "20日高点",
+          "value": 20.63
+        },
+        {
+          "label": "20日低点",
+          "value": 12.88
+        }
+      ],
+      "conditional_plan": [
+        "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
+        "若放量越过近期前高 20.63 且强于所属行业，观察趋势状态是否增强。"
+      ],
+      "attention_score": 120,
+      "attention_level": "需要关注"
+    },
+    {
+      "code": "603938",
+      "name": "三孚股份",
+      "date": "2026-10-23",
+      "close": 32.86,
+      "previous_close": 34.9,
+      "change_pct": -0.0585,
+      "open": 33.84,
+      "high": 34.19,
+      "low": 31.97,
+      "amplitude": 0.0636,
+      "volume": 7698400,
+      "volume_ma5": 9217647,
+      "volume_ratio_5d": 0.8352,
+      "volume_complete": false,
+      "ma5": 35.292,
+      "ma10": 36.239,
+      "ma20": 41.197,
+      "ma20_distance": -0.2024,
+      "recent_gain_20d": -0.3475,
+      "previous_high": 52.87,
+      "recent_support": 33.68,
+      "recent_high_20d": 52.18,
+      "recent_low_20d": 31.97,
+      "industry": "化学原料",
+      "industry_return": -0.0342,
+      "industry_rank": null,
+      "limit_up_count": null,
+      "advance_ratio": null,
+      "relative_sector_strength": -0.0243,
+      "turnover_rate": 0.020099999999999996,
+      "pe": 78.11,
+      "pb": 4.81,
+      "market_cap": 12573000000.0,
       "concepts": [
         {
           "code": "BK0981",
@@ -1903,8 +2140,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-08T15:10:08",
-      "retrieved_at": "2026-10-08T15:10:23+08:00",
+      "source_timestamp": "2026-10-23T11:29:49",
+      "retrieved_at": "2026-10-23T11:29:51+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -1913,46 +2150,45 @@
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "缩量",
         "弱于板块"
       ],
       "shares": 100,
       "cost": 52.751,
-      "current_price": 41.39,
-      "market_value": 4139.0,
+      "current_price": 32.86,
+      "market_value": 3286.0,
       "cost_basis": 5275.1,
-      "unrealized_pnl": -1136.1,
-      "position_return": -0.2154,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
+      "unrealized_pnl": -1989.1,
+      "position_return": -0.3771,
+      "volume_state": "数据缺失",
+      "yesterday_volume_state": "暂无数据",
       "observation_levels": [
         {
           "label": "第一支撑",
-          "value": 42.53
+          "value": 33.68
         },
         {
           "label": "MA20",
-          "value": 46.747
+          "value": 41.197
         },
         {
           "label": "昨日低点",
-          "value": 41.0
+          "value": 31.97
         },
         {
           "label": "昨日高点",
-          "value": 43.29
+          "value": 34.19
         },
         {
           "label": "近期前高",
-          "value": 55.06
+          "value": 52.87
         },
         {
           "label": "20日高点",
-          "value": 55.06
+          "value": 52.18
         },
         {
           "label": "20日低点",
-          "value": 39.12
+          "value": 31.97
         }
       ],
       "conditional_plan": [
@@ -1961,260 +2197,47 @@
       ],
       "attention_score": 120,
       "attention_level": "需要关注"
-    },
-    {
-      "code": "603002",
-      "name": "宏昌电子",
-      "date": "2026-10-08",
-      "close": 18.69,
-      "previous_close": 17.34,
-      "change_pct": 0.0779,
-      "open": 17.67,
-      "high": 19.07,
-      "low": 17.6,
-      "amplitude": 0.0848,
-      "volume": 135013700,
-      "volume_ma5": 63093710.6,
-      "volume_ratio_5d": 2.1399,
-      "volume_complete": true,
-      "ma5": 18.07,
-      "ma10": 18.8,
-      "ma20": 17.971,
-      "ma20_distance": 0.04,
-      "recent_gain_20d": 0.1314,
-      "previous_high": 20.63,
-      "recent_support": 17.23,
-      "recent_high_20d": 20.63,
-      "recent_low_20d": 14.96,
-      "industry": "电子化学品Ⅱ",
-      "industry_return": -0.0353,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.1132,
-      "turnover_rate": 0.1191,
-      "pe": 362.77,
-      "pb": 6.1,
-      "market_cap": 21196000000.0,
-      "concepts": [
-        {
-          "code": "BK0877",
-          "name": "PCB"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0619",
-          "name": "3D打印"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1161",
-          "name": "英伟达概念"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-10-08T15:10:12",
-      "retrieved_at": "2026-10-08T15:10:20+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "labels": [
-        "MA20上方",
-        "放量异常",
-        "强于板块"
-      ],
-      "shares": 100,
-      "cost": 66.545,
-      "current_price": 18.69,
-      "market_value": 1869.0,
-      "cost_basis": 6654.5,
-      "unrealized_pnl": -4785.5,
-      "position_return": -0.7191,
-      "volume_state": "放量异常",
-      "yesterday_volume_state": "放量异常",
-      "observation_levels": [
-        {
-          "label": "第一支撑",
-          "value": 17.23
-        },
-        {
-          "label": "MA20",
-          "value": 17.971
-        },
-        {
-          "label": "昨日低点",
-          "value": 17.6
-        },
-        {
-          "label": "昨日高点",
-          "value": 19.07
-        },
-        {
-          "label": "近期前高",
-          "value": 20.63
-        },
-        {
-          "label": "20日高点",
-          "value": 20.63
-        },
-        {
-          "label": "20日低点",
-          "value": 14.96
-        }
-      ],
-      "conditional_plan": [
-        "若回踩 MA20 附近且量能继续收缩，维持承接观察。",
-        "若放量跌破 MA20 且所属行业同步转弱，风险状态上升。",
-        "若放量越过近期前高 20.63 且强于所属行业，观察趋势状态是否增强。"
-      ],
-      "attention_score": 90,
-      "attention_level": "需要关注"
-    },
-    {
-      "code": "002836",
-      "name": "新宏泽",
-      "date": "2026-10-08",
-      "close": 11.68,
-      "previous_close": 12.12,
-      "change_pct": -0.0363,
-      "open": 11.91,
-      "high": 12.11,
-      "low": 11.62,
-      "amplitude": 0.0404,
-      "volume": 8747400,
-      "volume_ma5": 20541151,
-      "volume_ratio_5d": 0.4258,
-      "volume_complete": true,
-      "ma5": 11.974,
-      "ma10": 11.69,
-      "ma20": 10.884,
-      "ma20_distance": 0.0731,
-      "recent_gain_20d": 0.161,
-      "previous_high": 13.1,
-      "recent_support": 9.7,
-      "recent_high_20d": 13.1,
-      "recent_low_20d": 9.15,
-      "industry": "包装印刷",
-      "industry_return": -0.0053,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": -0.031,
-      "turnover_rate": 0.038,
-      "pe": 75.16,
-      "pb": 7.46,
-      "market_cap": 2691000000.0,
-      "concepts": [],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-10-08T15:10:00",
-      "retrieved_at": "2026-10-08T15:10:12+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed"
-      ],
-      "labels": [
-        "MA20上方",
-        "缩量",
-        "弱于板块"
-      ],
-      "shares": 200,
-      "cost": 12.155,
-      "current_price": 11.68,
-      "market_value": 2336.0,
-      "cost_basis": 2431.0,
-      "unrealized_pnl": -95.0,
-      "position_return": -0.0391,
-      "volume_state": "缩量",
-      "yesterday_volume_state": "缩量",
-      "observation_levels": [
-        {
-          "label": "第一支撑",
-          "value": 9.7
-        },
-        {
-          "label": "MA20",
-          "value": 10.884
-        },
-        {
-          "label": "昨日低点",
-          "value": 11.62
-        },
-        {
-          "label": "昨日高点",
-          "value": 12.11
-        },
-        {
-          "label": "近期前高",
-          "value": 13.1
-        },
-        {
-          "label": "20日高点",
-          "value": 13.1
-        },
-        {
-          "label": "20日低点",
-          "value": 9.15
-        }
-      ],
-      "conditional_plan": [
-        "若距离 MA20 持续过远，保持高位偏离观察。",
-        "若放量越过近期前高 13.10 且强于所属行业，观察趋势状态是否增强。"
-      ],
-      "attention_score": 70,
-      "attention_level": "需要关注"
     }
   ],
   "data_source": {
     "id": "astock",
     "label": "A股公开数据",
-    "stage": "postmarket",
-    "generated_at": "2026-10-08T15:10:23+08:00",
+    "stage": "intraday",
+    "generated_at": "2026-10-23T11:29:52+08:00",
     "source": "tencent",
-    "source_timestamp": "2026-10-08T15:10:00",
-    "retrieved_at": "2026-10-08T15:10:04+08:00",
+    "source_timestamp": "2026-10-23T10:46:12",
+    "retrieved_at": "2026-10-23T10:46:15+08:00",
     "freshness": "current",
-    "last_trading_day": "2026-10-08",
+    "last_trading_day": "2026-10-23",
     "fallback": true,
     "missing_data": [
       "000066.concept_quotes: not requested under rate budget",
       "000066.mootdx: mootdx is not installed",
+      "000066.sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
       "000333.concept_quotes: not requested under rate budget",
       "000333.mootdx: mootdx is not installed",
       "000831.concept_quotes: not requested under rate budget",
       "000831.mootdx: mootdx is not installed",
+      "000831.sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
       "002458.concept_quotes: not requested under rate budget",
       "002458.mootdx: mootdx is not installed",
+      "002458.sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response",
       "002836.mootdx: mootdx is not installed",
+      "002836.sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response",
       "300750.concept_quotes: not requested under rate budget",
       "300750.mootdx: mootdx is not installed",
+      "300750.sector_history:BK1033: eastmoney recently failed: Remote end closed connection without response",
       "600172.concept_quotes: not requested under rate budget",
       "600172.mootdx: mootdx is not installed",
+      "600172.sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response",
       "600519.concept_quotes: not requested under rate budget",
       "600519.mootdx: mootdx is not installed",
       "600664.concept_quotes: not requested under rate budget",
       "600664.mootdx: mootdx is not installed",
+      "600664.sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
       "603002.concept_quotes: not requested under rate budget",
       "603002.mootdx: mootdx is not installed",
+      "603002.sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
       "603938.concept_quotes: not requested under rate budget",
       "603938.mootdx: mootdx is not installed",
       "market.advance_count",
@@ -2226,13 +2249,13 @@
       "market.turnover_change"
     ],
     "request_stats": {
-      "total_requests": 23,
-      "tencent_requests": 12,
-      "eastmoney_requests": 11,
+      "total_requests": 25,
+      "tencent_requests": 13,
+      "eastmoney_requests": 12,
       "sina_requests": 0,
-      "cache_hits": 33,
-      "negative_cache_hits": 0,
-      "request_failures": 0,
+      "cache_hits": 25,
+      "negative_cache_hits": 8,
+      "request_failures": 2,
       "mootdx_requests": 0,
       "mootdx_failures": 0,
       "fallback_count": 11
