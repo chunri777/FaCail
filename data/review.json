@@ -69,12 +69,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:10:06",
-      "retrieved_at": "2026-10-26T15:10:11+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:30",
+      "retrieved_at": "2026-10-27T08:30:19+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1259: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -1.68%，高低 7.77/7.58，振幅 +2.45%；位于 MA20 下方，距 MA20 -3.58%。行业涨跌 -1.36%，个股相对行业 -0.32%；正常量能，为前 5 日均量的 77%，未触发特定日内结构规则。",
       "changes_from_yesterday": [
@@ -155,12 +156,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:10:10",
-      "retrieved_at": "2026-10-26T15:10:13+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:35",
+      "retrieved_at": "2026-10-27T08:30:27+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0465: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -1.08%，高低 5.59/5.38，振幅 +3.78%；位于 MA20 下方，距 MA20 -19.88%。行业涨跌 +0.10%，个股相对行业 -1.18%；缩量，为前 5 日均量的 64%，未触发特定日内结构规则。",
       "changes_from_yesterday": [
@@ -209,11 +211,12 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:09:21",
-      "retrieved_at": "2026-10-26T15:10:15+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:30",
+      "retrieved_at": "2026-10-27T08:30:34+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
-        "mootdx: mootdx is not installed"
+        "mootdx: mootdx is not installed",
+        "sector_history:BK1265: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -3.04%，高低 10.58/9.96，振幅 +5.89%；位于 MA20 下方，距 MA20 -10.32%。行业涨跌 -0.41%，个股相对行业 -2.63%；缩量，为前 5 日均量的 52%，冲高回落。",
       "changes_from_yesterday": [
@@ -369,12 +372,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:10:00",
-      "retrieved_at": "2026-10-26T15:10:17+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:30",
+      "retrieved_at": "2026-10-27T08:30:42+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0735: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -0.34%，高低 11.87/11.63，振幅 +2.04%；位于 MA20 下方，距 MA20 -13.65%。行业涨跌 -0.51%，个股相对行业 +0.17%；缩量，为前 5 日均量的 51%，未触发特定日内结构规则。",
       "changes_from_yesterday": [
@@ -435,12 +439,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:10:15",
-      "retrieved_at": "2026-10-26T15:10:18+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:30",
+      "retrieved_at": "2026-10-27T08:30:50+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1027: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -2.87%，高低 50.57/48.41，振幅 +4.31%；位于 MA20 下方，距 MA20 -3.41%。行业涨跌 -2.34%，个股相对行业 -0.53%；正常量能，为前 5 日均量的 89%，冲高回落。",
       "changes_from_yesterday": [
@@ -505,12 +510,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:10:18",
-      "retrieved_at": "2026-10-26T15:10:20+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:52",
+      "retrieved_at": "2026-10-27T08:30:58+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK0545: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -3.57%，高低 11.91/11.26，振幅 +5.52%；位于 MA20 下方，距 MA20 -16.53%。行业涨跌 -1.74%，个股相对行业 -1.83%；正常量能，为前 5 日均量的 76%，冲高回落。",
       "changes_from_yesterday": [
@@ -579,12 +585,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:10:19",
-      "retrieved_at": "2026-10-26T15:10:22+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:37",
+      "retrieved_at": "2026-10-27T08:31:06+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1039: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -6.05%，高低 13.82/13.11，振幅 +5.05%；位于 MA20 下方，距 MA20 -21.03%。行业涨跌 -3.50%，个股相对行业 -2.55%；正常量能，为前 5 日均量的 77%，冲高回落。",
       "changes_from_yesterday": [
@@ -666,12 +673,13 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-26T15:10:06",
-      "retrieved_at": "2026-10-26T15:10:23+08:00",
-      "freshness": "current",
+      "source_timestamp": "2026-10-26T16:14:36",
+      "retrieved_at": "2026-10-27T08:31:14+08:00",
+      "freshness": "last_trading_day",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
+        "concept_quotes: not requested under rate budget",
+        "sector_history:BK1019: eastmoney request failed: Remote end closed connection without response"
       ],
       "what_happened": "最近交易日涨跌 -8.01%，高低 34.80/32.26，振幅 +7.24%；位于 MA20 下方，距 MA20 -20.11%。行业涨跌 -1.06%，个股相对行业 -6.95%；正常量能，为前 5 日均量的 117%，冲高回落。",
       "changes_from_yesterday": [
@@ -684,36 +692,44 @@
   "data_source": {
     "id": "astock",
     "label": "A股公开数据",
-    "stage": "postmarket",
-    "generated_at": "2026-10-26T15:10:25+08:00",
+    "stage": "premarket",
+    "generated_at": "2026-10-27T08:31:21+08:00",
     "source": "tencent",
-    "source_timestamp": "2026-10-26T15:10:00",
-    "retrieved_at": "2026-10-26T15:10:06+08:00",
-    "freshness": "current",
+    "source_timestamp": "2026-10-26T16:14:57",
+    "retrieved_at": "2026-10-27T08:30:06+08:00",
+    "freshness": "last_trading_day",
     "last_trading_day": "2026-10-26",
     "fallback": true,
     "missing_data": [
       "000066.concept_quotes: not requested under rate budget",
       "000066.mootdx: mootdx is not installed",
+      "000066.sector_history:BK0735: eastmoney request failed: Remote end closed connection without response",
       "000333.concept_quotes: not requested under rate budget",
       "000333.mootdx: mootdx is not installed",
       "000831.concept_quotes: not requested under rate budget",
       "000831.mootdx: mootdx is not installed",
+      "000831.sector_history:BK1027: eastmoney request failed: Remote end closed connection without response",
       "002458.concept_quotes: not requested under rate budget",
       "002458.mootdx: mootdx is not installed",
+      "002458.sector_history:BK1259: eastmoney request failed: Remote end closed connection without response",
       "002836.mootdx: mootdx is not installed",
+      "002836.sector_history:BK1265: eastmoney request failed: Remote end closed connection without response",
       "300750.concept_quotes: not requested under rate budget",
       "300750.mootdx: mootdx is not installed",
       "600172.concept_quotes: not requested under rate budget",
       "600172.mootdx: mootdx is not installed",
+      "600172.sector_history:BK0545: eastmoney request failed: Remote end closed connection without response",
       "600519.concept_quotes: not requested under rate budget",
       "600519.mootdx: mootdx is not installed",
       "600664.concept_quotes: not requested under rate budget",
       "600664.mootdx: mootdx is not installed",
+      "600664.sector_history:BK0465: eastmoney request failed: Remote end closed connection without response",
       "603002.concept_quotes: not requested under rate budget",
       "603002.mootdx: mootdx is not installed",
+      "603002.sector_history:BK1039: eastmoney request failed: Remote end closed connection without response",
       "603938.concept_quotes: not requested under rate budget",
       "603938.mootdx: mootdx is not installed",
+      "603938.sector_history:BK1019: eastmoney request failed: Remote end closed connection without response",
       "market.advance_count",
       "market.decline_count",
       "market.flat_count",
@@ -723,13 +739,13 @@
       "market.turnover_change"
     ],
     "request_stats": {
-      "total_requests": 23,
+      "total_requests": 62,
       "tencent_requests": 12,
-      "eastmoney_requests": 11,
-      "sina_requests": 0,
-      "cache_hits": 33,
+      "eastmoney_requests": 39,
+      "sina_requests": 11,
+      "cache_hits": 11,
       "negative_cache_hits": 0,
-      "request_failures": 0,
+      "request_failures": 25,
       "mootdx_requests": 0,
       "mootdx_failures": 0,
       "fallback_count": 11
