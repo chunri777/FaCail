@@ -1,7 +1,7 @@
 {
   "summary": {
     "trade_date": "2026-10-27",
-    "candidate_count": 1,
+    "candidate_count": 2,
     "market_status": [
       "中性"
     ],
@@ -9,10 +9,10 @@
       "id": "astock",
       "label": "A股公开数据",
       "stage": "intraday",
-      "generated_at": "2026-10-27T10:35:25+08:00",
+      "generated_at": "2026-10-27T10:55:30+08:00",
       "source": "tencent",
-      "source_timestamp": "2026-10-27T10:35:03",
-      "retrieved_at": "2026-10-27T10:35:05+08:00",
+      "source_timestamp": "2026-10-27T10:55:06",
+      "retrieved_at": "2026-10-27T10:55:09+08:00",
       "freshness": "current",
       "last_trading_day": "2026-10-27",
       "fallback": true,
@@ -62,11 +62,11 @@
         "turnover_change"
       ],
       "request_stats": {
-        "total_requests": 23,
+        "total_requests": 24,
         "tencent_requests": 12,
-        "eastmoney_requests": 11,
+        "eastmoney_requests": 12,
         "sina_requests": 0,
-        "cache_hits": 25,
+        "cache_hits": 24,
         "negative_cache_hits": 8,
         "request_failures": 0,
         "mootdx_requests": 0,
@@ -122,45 +122,264 @@
   },
   "attention": [
     "8 只持仓位于 MA20 下方",
-    "1 只持仓弱于所属板块",
+    "0 只持仓弱于所属板块",
     "0 只候选进入回踩观察区",
     "今日放量异常持仓 0 只"
   ],
   "top_candidates": [
     {
+      "code": "600519",
+      "name": "贵州茅台",
+      "date": "2026-10-27",
+      "close": 1350.8,
+      "previous_close": 1349.98,
+      "change_pct": 0.0006,
+      "open": 1343.88,
+      "high": 1352.9,
+      "low": 1338.01,
+      "amplitude": 0.011,
+      "volume": 1461700,
+      "volume_ma5": 4188524.6,
+      "volume_ratio_5d": 0.349,
+      "volume_complete": false,
+      "ma5": 1332.792,
+      "ma10": 1324.878,
+      "ma20": 1290.529,
+      "ma20_distance": 0.0467,
+      "recent_gain_20d": 0.0784,
+      "previous_high": 1350.0,
+      "recent_support": 1266.0,
+      "recent_high_20d": 1352.9,
+      "recent_low_20d": 1228.1,
+      "industry": "白酒Ⅱ",
+      "industry_return": -0.0023,
+      "industry_rank": null,
+      "limit_up_count": null,
+      "advance_ratio": null,
+      "relative_sector_strength": 0.0029,
+      "turnover_rate": 0.0012,
+      "pe": 20.74,
+      "pb": 6.72,
+      "market_cap": 1688609999999.9998,
+      "concepts": [
+        {
+          "code": "BK0896",
+          "name": "白酒"
+        },
+        {
+          "code": "BK0834",
+          "name": "乡村振兴"
+        },
+        {
+          "code": "BK0811",
+          "name": "超级品牌"
+        },
+        {
+          "code": "BK0683",
+          "name": "央国企改革"
+        },
+        {
+          "code": "BK0665",
+          "name": "电商概念"
+        },
+        {
+          "code": "BK0590",
+          "name": "西部大开发"
+        },
+        {
+          "code": "BK1653",
+          "name": "味蕾经济"
+        }
+      ],
+      "source": "tencent",
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "source_timestamp": "2026-10-27T10:55:04",
+      "retrieved_at": "2026-10-27T10:55:09+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "mootdx: mootdx is not installed",
+        "concept_quotes: not requested under rate budget"
+      ],
+      "sector": {
+        "code": "BK1277",
+        "name": "白酒Ⅱ",
+        "return_pct": -0.0023,
+        "source": "eastmoney",
+        "source_timestamp": null,
+        "retrieved_at": "2026-10-27T10:55:12+08:00",
+        "return_5d": -0.005304,
+        "return_20d": 0.038689,
+        "previous_return_pct": 0.025347,
+        "ma20_above": true,
+        "turnover_change": -0.170947,
+        "turnover_5d_change": 0.052755,
+        "history_source_timestamp": "2026-10-26",
+        "history_retrieved_at": "2026-10-27T08:30:10+08:00",
+        "freshness": "unknown",
+        "advance_ratio": null,
+        "limit_up_count": null,
+        "rank": null,
+        "missing_data": [
+          "advance_ratio",
+          "limit_up_count",
+          "rank"
+        ],
+        "rank_total": null,
+        "rank_percentile": null,
+        "ma20_status": "MA20上方",
+        "status": "观察",
+        "is_strong": false
+      },
+      "labels": [
+        "MA20上方"
+      ],
+      "conditions": [
+        {
+          "id": "shrink_pullback",
+          "name": "条件 A · 缩量回踩",
+          "checks": [
+            {
+              "label": "价格位于 MA20 观察区",
+              "met": false
+            },
+            {
+              "label": "日涨跌位于回踩区间",
+              "met": true
+            },
+            {
+              "label": "量能缩至 5 日均量阈值内",
+              "met": null
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": false
+            },
+            {
+              "label": "未明显跌破近期支撑",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 2,
+          "total_count": 5,
+          "missing_count": 1
+        },
+        {
+          "id": "volume_breakout",
+          "name": "条件 B · 放量突破",
+          "checks": [
+            {
+              "label": "突破近 20 日关键高点",
+              "met": true
+            },
+            {
+              "label": "成交量达到 5 日均量阈值",
+              "met": null
+            },
+            {
+              "label": "所属板块处于强势区",
+              "met": false
+            },
+            {
+              "label": "个股强于所属板块",
+              "met": true
+            },
+            {
+              "label": "距离 MA20 未超过限制",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 3,
+          "total_count": 5,
+          "missing_count": 1
+        },
+        {
+          "id": "strong_sector_pullback",
+          "name": "条件 C · 强势板块回踩",
+          "checks": [
+            {
+              "label": "所属板块保持强势",
+              "met": false
+            },
+            {
+              "label": "板块 5 日涨幅为正",
+              "met": false
+            },
+            {
+              "label": "股价接近 MA10 或 MA20",
+              "met": true
+            },
+            {
+              "label": "量能处于收缩状态",
+              "met": null
+            },
+            {
+              "label": "未出现趋势破坏",
+              "met": true
+            }
+          ],
+          "status": "未满足",
+          "met_count": 2,
+          "total_count": 5,
+          "missing_count": 1
+        }
+      ],
+      "strength_relation": "板块弱 + 个股强",
+      "priority": 3,
+      "selection_status": "等待确认",
+      "selection_reasons": [
+        "所属白酒Ⅱ板块今日涨跌 -0.23%。",
+        "板块 5 日涨跌 -0.53%，状态为观察。",
+        "个股今日涨跌 +0.06%，位于 MA20 上方 +4.67%。",
+        "当日累计成交量为前 5 个交易日均量的 35%（盘中未完成）。"
+      ],
+      "waiting_for": [
+        "等待价格回到 MA20 附近，当前距离 +4.67%",
+        "等待量能确认，当前为 5 日均量的 35%",
+        "等待白酒Ⅱ板块进入强势区"
+      ],
+      "satisfied_condition_count": 0
+    },
+    {
       "code": "000333",
       "name": "美的集团",
       "date": "2026-10-27",
-      "close": 85.07,
+      "close": 85.43,
       "previous_close": 85.5,
-      "change_pct": -0.005,
+      "change_pct": -0.0008,
       "open": 85.0,
       "high": 85.64,
       "low": 84.29,
       "amplitude": 0.0158,
-      "volume": 9342800,
+      "volume": 10623500,
       "volume_ma5": 32069865.2,
-      "volume_ratio_5d": 0.2913,
+      "volume_ratio_5d": 0.3313,
       "volume_complete": false,
-      "ma5": 85.062,
-      "ma10": 85.014,
-      "ma20": 83.6025,
-      "ma20_distance": 0.0176,
-      "recent_gain_20d": 0.0515,
+      "ma5": 85.134,
+      "ma10": 85.05,
+      "ma20": 83.6205,
+      "ma20_distance": 0.0216,
+      "recent_gain_20d": 0.056,
       "previous_high": 87.18,
       "recent_support": 82.21,
       "recent_high_20d": 87.18,
       "recent_low_20d": 78.3,
       "industry": "白色家电",
-      "industry_return": -0.0104,
+      "industry_return": -0.0129,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0054,
-      "turnover_rate": 0.0014000000000000002,
-      "pe": 14.63,
-      "pb": 3.07,
-      "market_cap": 585823000000.0,
+      "relative_sector_strength": 0.0121,
+      "turnover_rate": 0.0015,
+      "pe": 14.69,
+      "pb": 3.08,
+      "market_cap": 588302000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -218,8 +437,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-27T10:35:03",
-      "retrieved_at": "2026-10-27T10:35:07+08:00",
+      "source_timestamp": "2026-10-27T10:55:09",
+      "retrieved_at": "2026-10-27T10:55:12+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -228,10 +447,10 @@
       "sector": {
         "code": "BK1239",
         "name": "白色家电",
-        "return_pct": -0.0104,
+        "return_pct": -0.0129,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-27T10:35:09+08:00",
+        "retrieved_at": "2026-10-27T10:55:13+08:00",
         "return_5d": -0.034705,
         "return_20d": -0.050819,
         "previous_return_pct": 0.005201,
@@ -256,7 +475,8 @@
         "is_strong": false
       },
       "labels": [
-        "MA20上方"
+        "MA20上方",
+        "强于板块"
       ],
       "conditions": [
         {
@@ -265,7 +485,7 @@
           "checks": [
             {
               "label": "价格位于 MA20 观察区",
-              "met": true
+              "met": false
             },
             {
               "label": "日涨跌位于回踩区间",
@@ -285,7 +505,7 @@
             }
           ],
           "status": "未满足",
-          "met_count": 3,
+          "met_count": 2,
           "total_count": 5,
           "missing_count": 1
         },
@@ -354,15 +574,15 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白色家电板块今日涨跌 -1.04%。",
+        "所属白色家电板块今日涨跌 -1.29%。",
         "板块 5 日涨跌 -3.47%，状态为转弱。",
-        "个股今日涨跌 -0.50%，位于 MA20 上方 +1.76%。",
-        "当日累计成交量为前 5 个交易日均量的 29%（盘中未完成）。"
+        "个股今日涨跌 -0.08%，位于 MA20 上方 +2.16%。",
+        "当日累计成交量为前 5 个交易日均量的 33%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待量能确认，当前为 5 日均量的 29%",
-        "等待白色家电板块进入强势区",
-        "等待价格突破 87.18"
+        "等待价格回到 MA20 附近，当前距离 +2.16%",
+        "等待量能确认，当前为 5 日均量的 33%",
+        "等待白色家电板块进入强势区"
       ],
       "satisfied_condition_count": 0
     }
@@ -370,13 +590,13 @@
   "holding_summary": {
     "trade_date": "2026-10-27",
     "holding_count": 8,
-    "portfolio_change_pct": 0.0019,
-    "total_market_value": 20020.0,
+    "portfolio_change_pct": -0.0021,
+    "total_market_value": 19941.0,
     "total_cost_basis": 30877.4,
-    "total_unrealized_pnl": -10857.4,
-    "total_unrealized_pnl_pct": -0.3516,
-    "stronger_than_sector_count": 2,
-    "weaker_than_sector_count": 1,
+    "total_unrealized_pnl": -10936.4,
+    "total_unrealized_pnl_pct": -0.3542,
+    "stronger_than_sector_count": 3,
+    "weaker_than_sector_count": 0,
     "above_ma20_count": 0,
     "below_ma20_count": 8,
     "shrink_pullback_count": 0,
@@ -392,8 +612,7 @@
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "接近支撑",
-        "弱于板块"
+        "接近支撑"
       ]
     },
     {
