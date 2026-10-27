@@ -11,22 +11,22 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-10-27",
-      "close": 85.49,
+      "close": 85.24,
       "previous_close": 85.5,
-      "change_pct": -0.0001,
+      "change_pct": -0.003,
       "open": 85.0,
-      "high": 85.6,
+      "high": 85.64,
       "low": 84.29,
-      "amplitude": 0.0153,
-      "volume": 6590000,
+      "amplitude": 0.0158,
+      "volume": 7504000,
       "volume_ma5": 32069865.2,
-      "volume_ratio_5d": 0.2055,
+      "volume_ratio_5d": 0.234,
       "volume_complete": false,
-      "ma5": 85.146,
-      "ma10": 85.056,
-      "ma20": 83.6235,
-      "ma20_distance": 0.0223,
-      "recent_gain_20d": 0.0567,
+      "ma5": 85.096,
+      "ma10": 85.031,
+      "ma20": 83.611,
+      "ma20_distance": 0.0195,
+      "recent_gain_20d": 0.0536,
       "previous_high": 87.18,
       "recent_support": 82.21,
       "recent_high_20d": 87.18,
@@ -36,11 +36,11 @@
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0087,
-      "turnover_rate": 0.001,
-      "pe": 14.7,
-      "pb": 3.08,
-      "market_cap": 588715000000.0,
+      "relative_sector_strength": 0.0058,
+      "turnover_rate": 0.0011,
+      "pe": 14.66,
+      "pb": 3.07,
+      "market_cap": 586994000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -98,8 +98,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-27T10:05:03",
-      "retrieved_at": "2026-10-27T10:05:07+08:00",
+      "source_timestamp": "2026-10-27T10:15:03",
+      "retrieved_at": "2026-10-27T10:15:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -111,7 +111,7 @@
         "return_pct": -0.0088,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-27T10:05:09+08:00",
+        "retrieved_at": "2026-10-27T10:15:08+08:00",
         "return_5d": -0.034705,
         "return_20d": -0.050819,
         "previous_return_pct": 0.005201,
@@ -145,7 +145,7 @@
           "checks": [
             {
               "label": "价格位于 MA20 观察区",
-              "met": false
+              "met": true
             },
             {
               "label": "日涨跌位于回踩区间",
@@ -165,7 +165,7 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 3,
           "total_count": 5,
           "missing_count": 1
         },
@@ -236,13 +236,13 @@
       "selection_reasons": [
         "所属白色家电板块今日涨跌 -0.88%。",
         "板块 5 日涨跌 -3.47%，状态为转弱。",
-        "个股今日涨跌 -0.01%，位于 MA20 上方 +2.23%。",
-        "当日累计成交量为前 5 个交易日均量的 21%（盘中未完成）。"
+        "个股今日涨跌 -0.30%，位于 MA20 上方 +1.95%。",
+        "当日累计成交量为前 5 个交易日均量的 23%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +2.23%",
-        "等待量能确认，当前为 5 日均量的 21%",
-        "等待白色家电板块进入强势区"
+        "等待量能确认，当前为 5 日均量的 23%",
+        "等待白色家电板块进入强势区",
+        "等待价格突破 87.18"
       ],
       "satisfied_condition_count": 0
     }
@@ -253,22 +253,22 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-10-27",
-      "close": 85.49,
+      "close": 85.24,
       "previous_close": 85.5,
-      "change_pct": -0.0001,
+      "change_pct": -0.003,
       "open": 85.0,
-      "high": 85.6,
+      "high": 85.64,
       "low": 84.29,
-      "amplitude": 0.0153,
-      "volume": 6590000,
+      "amplitude": 0.0158,
+      "volume": 7504000,
       "volume_ma5": 32069865.2,
-      "volume_ratio_5d": 0.2055,
+      "volume_ratio_5d": 0.234,
       "volume_complete": false,
-      "ma5": 85.146,
-      "ma10": 85.056,
-      "ma20": 83.6235,
-      "ma20_distance": 0.0223,
-      "recent_gain_20d": 0.0567,
+      "ma5": 85.096,
+      "ma10": 85.031,
+      "ma20": 83.611,
+      "ma20_distance": 0.0195,
+      "recent_gain_20d": 0.0536,
       "previous_high": 87.18,
       "recent_support": 82.21,
       "recent_high_20d": 87.18,
@@ -278,11 +278,11 @@
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0087,
-      "turnover_rate": 0.001,
-      "pe": 14.7,
-      "pb": 3.08,
-      "market_cap": 588715000000.0,
+      "relative_sector_strength": 0.0058,
+      "turnover_rate": 0.0011,
+      "pe": 14.66,
+      "pb": 3.07,
+      "market_cap": 586994000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -340,8 +340,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-27T10:05:03",
-      "retrieved_at": "2026-10-27T10:05:07+08:00",
+      "source_timestamp": "2026-10-27T10:15:03",
+      "retrieved_at": "2026-10-27T10:15:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -353,7 +353,7 @@
         "return_pct": -0.0088,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-27T10:05:09+08:00",
+        "retrieved_at": "2026-10-27T10:15:08+08:00",
         "return_5d": -0.034705,
         "return_20d": -0.050819,
         "previous_return_pct": 0.005201,
@@ -387,7 +387,7 @@
           "checks": [
             {
               "label": "价格位于 MA20 观察区",
-              "met": false
+              "met": true
             },
             {
               "label": "日涨跌位于回踩区间",
@@ -407,7 +407,7 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 3,
           "total_count": 5,
           "missing_count": 1
         },
@@ -478,13 +478,13 @@
       "selection_reasons": [
         "所属白色家电板块今日涨跌 -0.88%。",
         "板块 5 日涨跌 -3.47%，状态为转弱。",
-        "个股今日涨跌 -0.01%，位于 MA20 上方 +2.23%。",
-        "当日累计成交量为前 5 个交易日均量的 21%（盘中未完成）。"
+        "个股今日涨跌 -0.30%，位于 MA20 上方 +1.95%。",
+        "当日累计成交量为前 5 个交易日均量的 23%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +2.23%",
-        "等待量能确认，当前为 5 日均量的 21%",
-        "等待白色家电板块进入强势区"
+        "等待量能确认，当前为 5 日均量的 23%",
+        "等待白色家电板块进入强势区",
+        "等待价格突破 87.18"
       ],
       "satisfied_condition_count": 0
     }
@@ -494,22 +494,22 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-10-27",
-      "close": 85.49,
+      "close": 85.24,
       "previous_close": 85.5,
-      "change_pct": -0.0001,
+      "change_pct": -0.003,
       "open": 85.0,
-      "high": 85.6,
+      "high": 85.64,
       "low": 84.29,
-      "amplitude": 0.0153,
-      "volume": 6590000,
+      "amplitude": 0.0158,
+      "volume": 7504000,
       "volume_ma5": 32069865.2,
-      "volume_ratio_5d": 0.2055,
+      "volume_ratio_5d": 0.234,
       "volume_complete": false,
-      "ma5": 85.146,
-      "ma10": 85.056,
-      "ma20": 83.6235,
-      "ma20_distance": 0.0223,
-      "recent_gain_20d": 0.0567,
+      "ma5": 85.096,
+      "ma10": 85.031,
+      "ma20": 83.611,
+      "ma20_distance": 0.0195,
+      "recent_gain_20d": 0.0536,
       "previous_high": 87.18,
       "recent_support": 82.21,
       "recent_high_20d": 87.18,
@@ -519,11 +519,11 @@
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0087,
-      "turnover_rate": 0.001,
-      "pe": 14.7,
-      "pb": 3.08,
-      "market_cap": 588715000000.0,
+      "relative_sector_strength": 0.0058,
+      "turnover_rate": 0.0011,
+      "pe": 14.66,
+      "pb": 3.07,
+      "market_cap": 586994000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -581,8 +581,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-27T10:05:03",
-      "retrieved_at": "2026-10-27T10:05:07+08:00",
+      "source_timestamp": "2026-10-27T10:15:03",
+      "retrieved_at": "2026-10-27T10:15:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -594,7 +594,7 @@
         "return_pct": -0.0088,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-27T10:05:09+08:00",
+        "retrieved_at": "2026-10-27T10:15:08+08:00",
         "return_5d": -0.034705,
         "return_20d": -0.050819,
         "previous_return_pct": 0.005201,
@@ -628,7 +628,7 @@
           "checks": [
             {
               "label": "价格位于 MA20 观察区",
-              "met": false
+              "met": true
             },
             {
               "label": "日涨跌位于回踩区间",
@@ -648,7 +648,7 @@
             }
           ],
           "status": "未满足",
-          "met_count": 2,
+          "met_count": 3,
           "total_count": 5,
           "missing_count": 1
         },
@@ -719,13 +719,13 @@
       "selection_reasons": [
         "所属白色家电板块今日涨跌 -0.88%。",
         "板块 5 日涨跌 -3.47%，状态为转弱。",
-        "个股今日涨跌 -0.01%，位于 MA20 上方 +2.23%。",
-        "当日累计成交量为前 5 个交易日均量的 21%（盘中未完成）。"
+        "个股今日涨跌 -0.30%，位于 MA20 上方 +1.95%。",
+        "当日累计成交量为前 5 个交易日均量的 23%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +2.23%",
-        "等待量能确认，当前为 5 日均量的 21%",
-        "等待白色家电板块进入强势区"
+        "等待量能确认，当前为 5 日均量的 23%",
+        "等待白色家电板块进入强势区",
+        "等待价格突破 87.18"
       ],
       "satisfied_condition_count": 0
     }
@@ -734,10 +734,10 @@
     "id": "astock",
     "label": "A股公开数据",
     "stage": "intraday",
-    "generated_at": "2026-10-27T10:05:25+08:00",
+    "generated_at": "2026-10-27T10:15:25+08:00",
     "source": "tencent",
-    "source_timestamp": "2026-10-27T10:05:03",
-    "retrieved_at": "2026-10-27T10:05:06+08:00",
+    "source_timestamp": "2026-10-27T10:15:03",
+    "retrieved_at": "2026-10-27T10:15:05+08:00",
     "freshness": "current",
     "last_trading_day": "2026-10-27",
     "fallback": true,
