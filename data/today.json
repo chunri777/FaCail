@@ -1,7 +1,7 @@
 {
   "summary": {
     "trade_date": "2026-10-30",
-    "candidate_count": 2,
+    "candidate_count": 1,
     "market_status": [
       "偏弱"
     ],
@@ -9,10 +9,10 @@
       "id": "astock",
       "label": "A股公开数据",
       "stage": "intraday",
-      "generated_at": "2026-10-30T13:45:21+08:00",
+      "generated_at": "2026-10-30T13:55:25+08:00",
       "source": "tencent",
-      "source_timestamp": "2026-10-30T13:45:00",
-      "retrieved_at": "2026-10-30T13:45:02+08:00",
+      "source_timestamp": "2026-10-30T13:55:03",
+      "retrieved_at": "2026-10-30T13:55:05+08:00",
       "freshness": "current",
       "last_trading_day": "2026-10-30",
       "fallback": true,
@@ -113,7 +113,7 @@
     ]
   },
   "attention": [
-    "7 只持仓位于 MA20 下方",
+    "8 只持仓位于 MA20 下方",
     "3 只持仓弱于所属板块",
     "0 只候选进入回踩观察区",
     "今日放量异常持仓 0 只"
@@ -123,36 +123,36 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-10-30",
-      "close": 89.43,
+      "close": 89.4,
       "previous_close": 87.48,
-      "change_pct": 0.0223,
+      "change_pct": 0.0219,
       "open": 87.5,
       "high": 89.49,
       "low": 87.03,
       "amplitude": 0.0281,
-      "volume": 26135200,
+      "volume": 27002000,
       "volume_ma5": 29933460.2,
-      "volume_ratio_5d": 0.8731,
+      "volume_ratio_5d": 0.9021,
       "volume_complete": false,
-      "ma5": 86.672,
-      "ma10": 85.992,
-      "ma20": 84.359,
-      "ma20_distance": 0.0601,
-      "recent_gain_20d": 0.082,
+      "ma5": 86.666,
+      "ma10": 85.989,
+      "ma20": 84.3575,
+      "ma20_distance": 0.0598,
+      "recent_gain_20d": 0.0817,
       "previous_high": 87.58,
       "recent_support": 83.0,
       "recent_high_20d": 89.49,
       "recent_low_20d": 78.3,
       "industry": "白色家电",
-      "industry_return": 0.0107,
+      "industry_return": 0.0108,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0116,
-      "turnover_rate": 0.0038,
-      "pe": 14.38,
+      "relative_sector_strength": 0.0111,
+      "turnover_rate": 0.0039000000000000003,
+      "pe": 14.37,
       "pb": 3.07,
-      "market_cap": 615847000000.0,
+      "market_cap": 615641000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -210,8 +210,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-30T13:45:00",
-      "retrieved_at": "2026-10-30T13:45:03+08:00",
+      "source_timestamp": "2026-10-30T13:55:03",
+      "retrieved_at": "2026-10-30T13:55:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -220,10 +220,10 @@
       "sector": {
         "code": "BK1239",
         "name": "白色家电",
-        "return_pct": 0.0107,
+        "return_pct": 0.0108,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-30T13:45:05+08:00",
+        "retrieved_at": "2026-10-30T13:55:08+08:00",
         "return_5d": -0.00966,
         "return_20d": -0.046315,
         "previous_return_pct": -0.005441,
@@ -347,219 +347,15 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白色家电板块今日涨跌 +1.07%。",
+        "所属白色家电板块今日涨跌 +1.08%。",
         "板块 5 日涨跌 -0.97%，状态为转弱。",
-        "个股今日涨跌 +2.23%，位于 MA20 上方 +6.01%。",
-        "当日累计成交量为前 5 个交易日均量的 87%（盘中未完成）。"
+        "个股今日涨跌 +2.19%，位于 MA20 上方 +5.98%。",
+        "当日累计成交量为前 5 个交易日均量的 90%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +6.01%",
-        "等待量能确认，当前为 5 日均量的 87%",
+        "等待价格回到 MA20 附近，当前距离 +5.98%",
+        "等待量能确认，当前为 5 日均量的 90%",
         "等待白色家电板块进入强势区"
-      ],
-      "satisfied_condition_count": 0
-    },
-    {
-      "code": "000831",
-      "name": "中国稀土",
-      "date": "2026-10-30",
-      "close": 49.52,
-      "previous_close": 49.12,
-      "change_pct": 0.0081,
-      "open": 48.45,
-      "high": 49.56,
-      "low": 47.78,
-      "amplitude": 0.0362,
-      "volume": 11673200,
-      "volume_ma5": 15317389,
-      "volume_ratio_5d": 0.7621,
-      "volume_complete": false,
-      "ma5": 48.832,
-      "ma10": 49.117,
-      "ma20": 49.3125,
-      "ma20_distance": 0.0042,
-      "recent_gain_20d": -0.0813,
-      "previous_high": 54.0,
-      "recent_support": 47.2,
-      "recent_high_20d": 53.99,
-      "recent_low_20d": 46.06,
-      "industry": "小金属",
-      "industry_return": -0.0045,
-      "industry_rank": null,
-      "limit_up_count": null,
-      "advance_ratio": null,
-      "relative_sector_strength": 0.0126,
-      "turnover_rate": 0.011000000000000001,
-      "pe": 135.26,
-      "pb": 10.1,
-      "market_cap": 52552000000.0,
-      "concepts": [
-        {
-          "code": "BK0695",
-          "name": "小金属概念"
-        },
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0578",
-          "name": "稀土永磁"
-        }
-      ],
-      "source": "tencent",
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "source_timestamp": "2026-10-30T13:45:09",
-      "retrieved_at": "2026-10-30T13:45:14+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget"
-      ],
-      "sector": {
-        "code": "BK1027",
-        "name": "小金属",
-        "return_pct": -0.0045,
-        "source": "eastmoney",
-        "source_timestamp": null,
-        "retrieved_at": "2026-10-30T13:45:16+08:00",
-        "return_5d": -0.052331,
-        "return_20d": -0.167701,
-        "previous_return_pct": -0.02478,
-        "ma20_above": false,
-        "turnover_change": -0.080035,
-        "turnover_5d_change": -0.133876,
-        "history_source_timestamp": "2026-10-30",
-        "history_retrieved_at": "2026-10-30T13:15:42+08:00",
-        "freshness": "unknown",
-        "advance_ratio": null,
-        "limit_up_count": null,
-        "rank": null,
-        "missing_data": [
-          "advance_ratio",
-          "limit_up_count",
-          "rank"
-        ],
-        "rank_total": null,
-        "rank_percentile": null,
-        "ma20_status": "MA20下方",
-        "status": "转弱",
-        "is_strong": false
-      },
-      "labels": [
-        "MA20上方",
-        "强于板块"
-      ],
-      "conditions": [
-        {
-          "id": "shrink_pullback",
-          "name": "条件 A · 缩量回踩",
-          "checks": [
-            {
-              "label": "价格位于 MA20 观察区",
-              "met": true
-            },
-            {
-              "label": "日涨跌位于回踩区间",
-              "met": true
-            },
-            {
-              "label": "量能缩至 5 日均量阈值内",
-              "met": null
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": false
-            },
-            {
-              "label": "未明显跌破近期支撑",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 3,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "volume_breakout",
-          "name": "条件 B · 放量突破",
-          "checks": [
-            {
-              "label": "突破近 20 日关键高点",
-              "met": false
-            },
-            {
-              "label": "成交量达到 5 日均量阈值",
-              "met": null
-            },
-            {
-              "label": "所属板块处于强势区",
-              "met": false
-            },
-            {
-              "label": "个股强于所属板块",
-              "met": true
-            },
-            {
-              "label": "距离 MA20 未超过限制",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        },
-        {
-          "id": "strong_sector_pullback",
-          "name": "条件 C · 强势板块回踩",
-          "checks": [
-            {
-              "label": "所属板块保持强势",
-              "met": false
-            },
-            {
-              "label": "板块 5 日涨幅为正",
-              "met": false
-            },
-            {
-              "label": "股价接近 MA10 或 MA20",
-              "met": true
-            },
-            {
-              "label": "量能处于收缩状态",
-              "met": null
-            },
-            {
-              "label": "未出现趋势破坏",
-              "met": true
-            }
-          ],
-          "status": "未满足",
-          "met_count": 2,
-          "total_count": 5,
-          "missing_count": 1
-        }
-      ],
-      "strength_relation": "板块弱 + 个股强",
-      "priority": 3,
-      "selection_status": "等待确认",
-      "selection_reasons": [
-        "所属小金属板块今日涨跌 -0.45%。",
-        "板块 5 日涨跌 -5.23%，状态为转弱。",
-        "个股今日涨跌 +0.81%，位于 MA20 上方 +0.42%。",
-        "当日累计成交量为前 5 个交易日均量的 76%（盘中未完成）。"
-      ],
-      "waiting_for": [
-        "等待量能确认，当前为 5 日均量的 76%",
-        "等待小金属板块进入强势区",
-        "等待价格突破 54.00"
       ],
       "satisfied_condition_count": 0
     }
@@ -567,19 +363,19 @@
   "holding_summary": {
     "trade_date": "2026-10-30",
     "holding_count": 8,
-    "portfolio_change_pct": 0.0019,
-    "total_market_value": 19381.0,
+    "portfolio_change_pct": -0.001,
+    "total_market_value": 19325.0,
     "total_cost_basis": 30877.4,
-    "total_unrealized_pnl": -11496.4,
-    "total_unrealized_pnl_pct": -0.3723,
-    "stronger_than_sector_count": 4,
+    "total_unrealized_pnl": -11552.4,
+    "total_unrealized_pnl_pct": -0.3741,
+    "stronger_than_sector_count": 3,
     "weaker_than_sector_count": 3,
-    "above_ma20_count": 1,
-    "below_ma20_count": 7,
+    "above_ma20_count": 0,
+    "below_ma20_count": 8,
     "shrink_pullback_count": 0,
     "abnormal_volume_count": 0,
     "trend_break_count": 7,
-    "anomaly_count": 7
+    "anomaly_count": 8
   },
   "holding_anomalies": [
     {
@@ -647,6 +443,14 @@
         "MA20下方",
         "趋势破坏",
         "弱于板块"
+      ]
+    },
+    {
+      "code": "000831",
+      "name": "中国稀土",
+      "industry": "小金属",
+      "labels": [
+        "MA20下方"
       ]
     }
   ]
