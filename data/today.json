@@ -3,50 +3,45 @@
     "trade_date": "2026-10-30",
     "candidate_count": 1,
     "market_status": [
-      "偏弱"
+      "中性"
     ],
     "data_source": {
       "id": "astock",
       "label": "A股公开数据",
       "stage": "intraday",
-      "generated_at": "2026-10-30T11:25:22+08:00",
+      "generated_at": "2026-10-30T13:15:57+08:00",
       "source": "tencent",
-      "source_timestamp": "2026-10-30T11:25:00",
-      "retrieved_at": "2026-10-30T11:25:03+08:00",
+      "source_timestamp": "2026-10-30T13:15:03",
+      "retrieved_at": "2026-10-30T13:15:05+08:00",
       "freshness": "current",
       "last_trading_day": "2026-10-30",
       "fallback": true,
       "missing_data": [
         "000066.concept_quotes: not requested under rate budget",
         "000066.mootdx: mootdx is not installed",
-        "000066.sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
         "000333.concept_quotes: not requested under rate budget",
         "000333.mootdx: mootdx is not installed",
-        "000333.sector_history:BK1239: eastmoney recently failed: Remote end closed connection without response",
         "000831.concept_quotes: not requested under rate budget",
         "000831.mootdx: mootdx is not installed",
-        "000831.sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
         "002458.concept_quotes: not requested under rate budget",
         "002458.mootdx: mootdx is not installed",
         "002836.mootdx: mootdx is not installed",
-        "002836.sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response",
+        "002836.sector_history:BK1265: eastmoney request failed: Remote end closed connection without response",
         "300750.concept_quotes: not requested under rate budget",
         "300750.mootdx: mootdx is not installed",
-        "300750.sector_history:BK1033: eastmoney recently failed: Remote end closed connection without response",
+        "300750.sector_history:BK1033: eastmoney request failed: Remote end closed connection without response",
         "600172.concept_quotes: not requested under rate budget",
         "600172.mootdx: mootdx is not installed",
-        "600172.sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response",
         "600519.concept_quotes: not requested under rate budget",
         "600519.mootdx: mootdx is not installed",
         "600664.concept_quotes: not requested under rate budget",
         "600664.mootdx: mootdx is not installed",
-        "600664.sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
+        "600664.sector_history:BK0465: eastmoney request failed: Remote end closed connection without response",
         "603002.concept_quotes: not requested under rate budget",
         "603002.mootdx: mootdx is not installed",
-        "603002.sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
         "603938.concept_quotes: not requested under rate budget",
         "603938.mootdx: mootdx is not installed",
-        "603938.sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response",
+        "603938.sector_history:BK1019: eastmoney request failed: Remote end closed connection without response",
         "advance_count",
         "decline_count",
         "flat_count",
@@ -63,13 +58,13 @@
         "turnover_change"
       ],
       "request_stats": {
-        "total_requests": 23,
+        "total_requests": 40,
         "tencent_requests": 12,
-        "eastmoney_requests": 11,
+        "eastmoney_requests": 28,
         "sina_requests": 0,
         "cache_hits": 24,
-        "negative_cache_hits": 9,
-        "request_failures": 0,
+        "negative_cache_hits": 0,
+        "request_failures": 12,
         "mootdx_requests": 0,
         "mootdx_failures": 0,
         "fallback_count": 11
@@ -78,34 +73,29 @@
     "missing_data": [
       "000066.concept_quotes: not requested under rate budget",
       "000066.mootdx: mootdx is not installed",
-      "000066.sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
       "000333.concept_quotes: not requested under rate budget",
       "000333.mootdx: mootdx is not installed",
-      "000333.sector_history:BK1239: eastmoney recently failed: Remote end closed connection without response",
       "000831.concept_quotes: not requested under rate budget",
       "000831.mootdx: mootdx is not installed",
-      "000831.sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
       "002458.concept_quotes: not requested under rate budget",
       "002458.mootdx: mootdx is not installed",
       "002836.mootdx: mootdx is not installed",
-      "002836.sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response",
+      "002836.sector_history:BK1265: eastmoney request failed: Remote end closed connection without response",
       "300750.concept_quotes: not requested under rate budget",
       "300750.mootdx: mootdx is not installed",
-      "300750.sector_history:BK1033: eastmoney recently failed: Remote end closed connection without response",
+      "300750.sector_history:BK1033: eastmoney request failed: Remote end closed connection without response",
       "600172.concept_quotes: not requested under rate budget",
       "600172.mootdx: mootdx is not installed",
-      "600172.sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response",
       "600519.concept_quotes: not requested under rate budget",
       "600519.mootdx: mootdx is not installed",
       "600664.concept_quotes: not requested under rate budget",
       "600664.mootdx: mootdx is not installed",
-      "600664.sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
+      "600664.sector_history:BK0465: eastmoney request failed: Remote end closed connection without response",
       "603002.concept_quotes: not requested under rate budget",
       "603002.mootdx: mootdx is not installed",
-      "603002.sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
       "603938.concept_quotes: not requested under rate budget",
       "603938.mootdx: mootdx is not installed",
-      "603938.sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response",
+      "603938.sector_history:BK1019: eastmoney request failed: Remote end closed connection without response",
       "advance_count",
       "decline_count",
       "flat_count",
@@ -133,36 +123,36 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-10-30",
-      "close": 89.27,
+      "close": 89.28,
       "previous_close": 87.48,
-      "change_pct": 0.0205,
+      "change_pct": 0.0206,
       "open": 87.5,
-      "high": 89.28,
+      "high": 89.38,
       "low": 87.03,
-      "amplitude": 0.0257,
-      "volume": 18985900,
+      "amplitude": 0.0269,
+      "volume": 22500900,
       "volume_ma5": 29933460.2,
-      "volume_ratio_5d": 0.6343,
+      "volume_ratio_5d": 0.7517,
       "volume_complete": false,
-      "ma5": 86.64,
-      "ma10": 85.976,
-      "ma20": 84.351,
-      "ma20_distance": 0.0583,
-      "recent_gain_20d": 0.0801,
+      "ma5": 86.642,
+      "ma10": 85.977,
+      "ma20": 84.3515,
+      "ma20_distance": 0.0584,
+      "recent_gain_20d": 0.0802,
       "previous_high": 87.58,
       "recent_support": 83.0,
-      "recent_high_20d": 89.28,
+      "recent_high_20d": 89.38,
       "recent_low_20d": 78.3,
       "industry": "白色家电",
-      "industry_return": 0.0086,
+      "industry_return": 0.0133,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0119,
-      "turnover_rate": 0.0028000000000000004,
-      "pe": 14.35,
+      "relative_sector_strength": 0.0073,
+      "turnover_rate": 0.0033,
+      "pe": 14.36,
       "pb": 3.06,
-      "market_cap": 614746000000.0,
+      "market_cap": 614814000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -220,52 +210,45 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-30T11:25:00",
-      "retrieved_at": "2026-10-30T11:25:04+08:00",
+      "source_timestamp": "2026-10-30T13:15:03",
+      "retrieved_at": "2026-10-30T13:15:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
-        "concept_quotes: not requested under rate budget",
-        "sector_history:BK1239: eastmoney recently failed: Remote end closed connection without response"
+        "concept_quotes: not requested under rate budget"
       ],
       "sector": {
         "code": "BK1239",
         "name": "白色家电",
-        "return_pct": 0.0086,
+        "return_pct": 0.0133,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-30T11:25:06+08:00",
-        "return_5d": null,
-        "return_20d": null,
-        "previous_return_pct": null,
-        "ma20_above": null,
-        "turnover_change": null,
-        "turnover_5d_change": null,
-        "history_source_timestamp": null,
-        "history_retrieved_at": null,
+        "retrieved_at": "2026-10-30T13:15:08+08:00",
+        "return_5d": -0.00966,
+        "return_20d": -0.046315,
+        "previous_return_pct": -0.005441,
+        "ma20_above": false,
+        "turnover_change": -0.007077,
+        "turnover_5d_change": -0.209664,
+        "history_source_timestamp": "2026-10-30",
+        "history_retrieved_at": "2026-10-30T13:15:10+08:00",
         "freshness": "unknown",
         "advance_ratio": null,
         "limit_up_count": null,
         "rank": null,
         "missing_data": [
-          "return_5d",
-          "return_20d",
-          "ma20_above",
-          "turnover_change",
-          "turnover_5d_change",
           "advance_ratio",
           "limit_up_count",
           "rank"
         ],
         "rank_total": null,
         "rank_percentile": null,
-        "ma20_status": "数据缺失",
-        "status": "数据缺失",
+        "ma20_status": "MA20下方",
+        "status": "转弱",
         "is_strong": false
       },
       "labels": [
-        "MA20上方",
-        "强于板块"
+        "MA20上方"
       ],
       "conditions": [
         {
@@ -286,7 +269,7 @@
             },
             {
               "label": "所属板块处于强势区",
-              "met": null
+              "met": false
             },
             {
               "label": "未明显跌破近期支撑",
@@ -296,7 +279,7 @@
           "status": "未满足",
           "met_count": 1,
           "total_count": 5,
-          "missing_count": 2
+          "missing_count": 1
         },
         {
           "id": "volume_breakout",
@@ -312,7 +295,7 @@
             },
             {
               "label": "所属板块处于强势区",
-              "met": null
+              "met": false
             },
             {
               "label": "个股强于所属板块",
@@ -326,7 +309,7 @@
           "status": "未满足",
           "met_count": 3,
           "total_count": 5,
-          "missing_count": 2
+          "missing_count": 1
         },
         {
           "id": "strong_sector_pullback",
@@ -334,11 +317,11 @@
           "checks": [
             {
               "label": "所属板块保持强势",
-              "met": null
+              "met": false
             },
             {
               "label": "板块 5 日涨幅为正",
-              "met": null
+              "met": false
             },
             {
               "label": "股价接近 MA10 或 MA20",
@@ -356,20 +339,21 @@
           "status": "未满足",
           "met_count": 1,
           "total_count": 5,
-          "missing_count": 3
+          "missing_count": 1
         }
       ],
-      "strength_relation": "板块数据不足 + 个股强",
+      "strength_relation": "板块弱 + 个股强",
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白色家电板块今日涨跌 +0.86%。",
-        "个股今日涨跌 +2.05%，位于 MA20 上方 +5.83%。",
-        "当日累计成交量为前 5 个交易日均量的 63%（盘中未完成）。"
+        "所属白色家电板块今日涨跌 +1.33%。",
+        "板块 5 日涨跌 -0.97%，状态为转弱。",
+        "个股今日涨跌 +2.06%，位于 MA20 上方 +5.84%。",
+        "当日累计成交量为前 5 个交易日均量的 75%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +5.83%",
-        "等待量能确认，当前为 5 日均量的 63%",
+        "等待价格回到 MA20 附近，当前距离 +5.84%",
+        "等待量能确认，当前为 5 日均量的 75%",
         "等待白色家电板块进入强势区"
       ],
       "satisfied_condition_count": 0
@@ -378,11 +362,11 @@
   "holding_summary": {
     "trade_date": "2026-10-30",
     "holding_count": 8,
-    "portfolio_change_pct": -0.0096,
-    "total_market_value": 19158.0,
+    "portfolio_change_pct": 0.0064,
+    "total_market_value": 19467.0,
     "total_cost_basis": 30877.4,
-    "total_unrealized_pnl": -11719.4,
-    "total_unrealized_pnl_pct": -0.3795,
+    "total_unrealized_pnl": -11410.4,
+    "total_unrealized_pnl_pct": -0.3695,
     "stronger_than_sector_count": 3,
     "weaker_than_sector_count": 3,
     "above_ma20_count": 0,
@@ -399,7 +383,8 @@
       "industry": "养殖业",
       "labels": [
         "MA20下方",
-        "趋势破坏"
+        "趋势破坏",
+        "接近支撑"
       ]
     },
     {
