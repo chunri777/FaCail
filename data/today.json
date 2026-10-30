@@ -9,10 +9,10 @@
       "id": "astock",
       "label": "A股公开数据",
       "stage": "intraday",
-      "generated_at": "2026-10-30T09:47:30+08:00",
+      "generated_at": "2026-10-30T10:09:28+08:00",
       "source": "tencent",
-      "source_timestamp": "2026-10-30T09:46:51",
-      "retrieved_at": "2026-10-30T09:46:54+08:00",
+      "source_timestamp": "2026-10-30T10:09:03",
+      "retrieved_at": "2026-10-30T10:09:04+08:00",
       "freshness": "current",
       "last_trading_day": "2026-10-30",
       "fallback": true,
@@ -63,11 +63,11 @@
         "turnover_change"
       ],
       "request_stats": {
-        "total_requests": 32,
+        "total_requests": 25,
         "tencent_requests": 12,
-        "eastmoney_requests": 20,
+        "eastmoney_requests": 13,
         "sina_requests": 0,
-        "cache_hits": 15,
+        "cache_hits": 22,
         "negative_cache_hits": 9,
         "request_failures": 0,
         "mootdx_requests": 0,
@@ -133,36 +133,36 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-10-30",
-      "close": 88.75,
+      "close": 88.66,
       "previous_close": 87.48,
-      "change_pct": 0.0145,
+      "change_pct": 0.0135,
       "open": 87.5,
-      "high": 88.78,
+      "high": 89.12,
       "low": 87.03,
-      "amplitude": 0.02,
-      "volume": 6423400,
+      "amplitude": 0.0239,
+      "volume": 11307800,
       "volume_ma5": 29933460.2,
-      "volume_ratio_5d": 0.2146,
+      "volume_ratio_5d": 0.3778,
       "volume_complete": false,
-      "ma5": 86.536,
-      "ma10": 85.924,
-      "ma20": 84.325,
-      "ma20_distance": 0.0525,
-      "recent_gain_20d": 0.0738,
+      "ma5": 86.518,
+      "ma10": 85.915,
+      "ma20": 84.3205,
+      "ma20_distance": 0.0515,
+      "recent_gain_20d": 0.0727,
       "previous_high": 87.58,
       "recent_support": 83.0,
-      "recent_high_20d": 88.78,
+      "recent_high_20d": 89.12,
       "recent_low_20d": 78.3,
       "industry": "白色家电",
-      "industry_return": 0.0002,
+      "industry_return": 0.0088,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0143,
-      "turnover_rate": 0.0009,
-      "pe": 14.27,
+      "relative_sector_strength": 0.0047,
+      "turnover_rate": 0.0016,
+      "pe": 14.26,
       "pb": 3.04,
-      "market_cap": 611165000000.0,
+      "market_cap": 610545000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -220,8 +220,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-10-30T09:46:54",
-      "retrieved_at": "2026-10-30T09:46:58+08:00",
+      "source_timestamp": "2026-10-30T10:09:03",
+      "retrieved_at": "2026-10-30T10:09:06+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -231,10 +231,10 @@
       "sector": {
         "code": "BK1239",
         "name": "白色家电",
-        "return_pct": 0.0002,
+        "return_pct": 0.0088,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-10-30T09:47:01+08:00",
+        "retrieved_at": "2026-10-30T10:09:07+08:00",
         "return_5d": null,
         "return_20d": null,
         "previous_return_pct": null,
@@ -264,8 +264,7 @@
         "is_strong": false
       },
       "labels": [
-        "MA20上方",
-        "强于板块"
+        "MA20上方"
       ],
       "conditions": [
         {
@@ -363,13 +362,13 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白色家电板块今日涨跌 +0.02%。",
-        "个股今日涨跌 +1.45%，位于 MA20 上方 +5.25%。",
-        "当日累计成交量为前 5 个交易日均量的 21%（盘中未完成）。"
+        "所属白色家电板块今日涨跌 +0.88%。",
+        "个股今日涨跌 +1.35%，位于 MA20 上方 +5.15%。",
+        "当日累计成交量为前 5 个交易日均量的 38%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +5.25%",
-        "等待量能确认，当前为 5 日均量的 21%",
+        "等待价格回到 MA20 附近，当前距离 +5.15%",
+        "等待量能确认，当前为 5 日均量的 38%",
         "等待白色家电板块进入强势区"
       ],
       "satisfied_condition_count": 0
@@ -378,18 +377,18 @@
   "holding_summary": {
     "trade_date": "2026-10-30",
     "holding_count": 8,
-    "portfolio_change_pct": -0.0272,
-    "total_market_value": 18818.0,
+    "portfolio_change_pct": -0.0181,
+    "total_market_value": 18993.0,
     "total_cost_basis": 30877.4,
-    "total_unrealized_pnl": -12059.4,
-    "total_unrealized_pnl_pct": -0.3906,
-    "stronger_than_sector_count": 1,
+    "total_unrealized_pnl": -11884.4,
+    "total_unrealized_pnl_pct": -0.3849,
+    "stronger_than_sector_count": 2,
     "weaker_than_sector_count": 4,
     "above_ma20_count": 0,
     "below_ma20_count": 8,
     "shrink_pullback_count": 0,
     "abnormal_volume_count": 0,
-    "trend_break_count": 8,
+    "trend_break_count": 7,
     "anomaly_count": 8
   },
   "holding_anomalies": [
@@ -399,7 +398,8 @@
       "industry": "养殖业",
       "labels": [
         "MA20下方",
-        "趋势破坏"
+        "趋势破坏",
+        "弱于板块"
       ]
     },
     {
@@ -408,8 +408,7 @@
       "industry": "化学制药",
       "labels": [
         "MA20下方",
-        "趋势破坏",
-        "弱于板块"
+        "趋势破坏"
       ]
     },
     {
@@ -427,16 +426,6 @@
       "code": "000066",
       "name": "中国长城",
       "industry": "计算机设备",
-      "labels": [
-        "MA20下方",
-        "趋势破坏",
-        "接近支撑"
-      ]
-    },
-    {
-      "code": "000831",
-      "name": "中国稀土",
-      "industry": "小金属",
       "labels": [
         "MA20下方",
         "趋势破坏"
@@ -469,6 +458,14 @@
         "MA20下方",
         "趋势破坏",
         "弱于板块"
+      ]
+    },
+    {
+      "code": "000831",
+      "name": "中国稀土",
+      "industry": "小金属",
+      "labels": [
+        "MA20下方"
       ]
     }
   ]
