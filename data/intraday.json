@@ -1,53 +1,656 @@
 {
   "summary": {
-    "trade_date": "2026-11-16",
+    "trade_date": "2026-11-17",
     "holding_count": 8,
-    "stage": "postmarket"
+    "stage": "intraday"
   },
   "holdings": [
     {
-      "code": "000066",
-      "name": "中国长城",
-      "industry": "计算机设备",
-      "current_price": 11.55,
-      "open": 11.89,
-      "high": 12.11,
-      "low": 11.47,
-      "volume": 85148800,
-      "turnover_rate": 0.0264,
-      "pe": 218.04,
-      "pb": 3.31,
-      "market_cap": 37256000000.0,
+      "code": "000831",
+      "name": "中国稀土",
+      "industry": "小金属",
+      "current_price": 46.12,
+      "open": 47.0,
+      "high": 47.0,
+      "low": 44.82,
+      "volume": 32105800,
+      "turnover_rate": 0.030299999999999997,
+      "pe": 125.97,
+      "pb": 9.41,
+      "market_cap": 48944000000.0,
       "realtime_volume_ratio": null,
       "vwap": null,
-      "sector_return": -0.0323,
+      "sector_return": -0.0013,
       "source": "tencent",
-      "source_timestamp": "2026-11-16T15:09:45",
-      "retrieved_at": "2026-11-16T15:10:16+08:00",
+      "source_timestamp": "2026-11-17T13:25:27",
+      "retrieved_at": "2026-11-17T13:25:30+08:00",
       "freshness": "current",
       "missing_data": [
         "concept_quotes: not requested under rate budget",
         "mootdx: mootdx is not installed",
         "realtime_volume_ratio",
-        "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
+        "volume_ratio_5d: intraday partial",
+        "vwap"
+      ],
+      "shares": 100,
+      "cost": 51.208,
+      "cost_basis": 5120.8,
+      "market_value": 4612.0,
+      "unrealized_pnl": -508.8,
+      "position_return": -0.0994,
+      "change_pct": -0.0739,
+      "amplitude": 0.0438,
+      "ma20": 48.736,
+      "ma5": 48.276,
+      "ma10": 48.686,
+      "ma20_distance": -0.0537,
+      "volume_ma5": 28800331.2,
+      "volume_ratio_5d": 1.1148,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
+      "concepts": [
+        {
+          "code": "BK0695",
+          "name": "小金属概念"
+        },
+        {
+          "code": "BK0683",
+          "name": "央国企改革"
+        },
+        {
+          "code": "BK0578",
+          "name": "稀土永磁"
+        }
+      ],
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "relative_sector_strength": -0.0726,
+      "statuses": [
+        "MA20下方",
+        "跌破 MA20",
+        "趋势破坏",
+        "弱于板块",
+        "探底回升"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": true,
+        "volume_expansion": false,
+        "key_level_break": true
+      },
+      "conditional_note": "当前弱于所属行业且跌破 MA20，风险状态较早盘上升，继续观察量能确认。",
+      "attention_score": 140
+    },
+    {
+      "code": "002458",
+      "name": "益生股份",
+      "industry": "养殖业",
+      "current_price": 6.99,
+      "open": 6.94,
+      "high": 7.02,
+      "low": 6.89,
+      "volume": 7980300,
+      "turnover_rate": 0.0083,
+      "pe": 17.35,
+      "pb": 2.19,
+      "market_cap": 6755000000.0,
+      "realtime_volume_ratio": null,
+      "vwap": null,
+      "sector_return": -0.0101,
+      "source": "tencent",
+      "source_timestamp": "2026-11-17T13:25:12",
+      "retrieved_at": "2026-11-17T13:25:16+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "concept_quotes: not requested under rate budget",
+        "mootdx: mootdx is not installed",
+        "realtime_volume_ratio",
+        "volume_ratio_5d: intraday partial",
+        "vwap"
+      ],
+      "shares": 600,
+      "cost": 8.412,
+      "cost_basis": 5047.2,
+      "market_value": 4194.0,
+      "unrealized_pnl": -853.2,
+      "position_return": -0.169,
+      "change_pct": -0.0014,
+      "amplitude": 0.0186,
+      "ma20": 7.262,
+      "ma5": 7.066,
+      "ma10": 7.155,
+      "ma20_distance": -0.0375,
+      "volume_ma5": 14837550,
+      "volume_ratio_5d": 0.5378,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
+      "concepts": [
+        {
+          "code": "BK0892",
+          "name": "乳业"
+        },
+        {
+          "code": "BK0887",
+          "name": "鸡肉概念"
+        },
+        {
+          "code": "BK0882",
+          "name": "猪肉概念"
+        }
+      ],
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "relative_sector_strength": 0.0087,
+      "statuses": [
+        "MA20下方",
+        "趋势破坏",
+        "接近支撑"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": false,
+        "volume_expansion": false,
+        "key_level_break": false
+      },
+      "conditional_note": "当前位于 MA20 下方，等待价格与量能重新确认结构。",
+      "attention_score": 120
+    },
+    {
+      "code": "600664",
+      "name": "哈药股份",
+      "industry": "化学制药",
+      "current_price": 4.89,
+      "open": 4.95,
+      "high": 4.98,
+      "low": 4.83,
+      "volume": 98461800,
+      "turnover_rate": 0.0391,
+      "pe": 19.45,
+      "pb": 1.96,
+      "market_cap": 12316000000.0,
+      "realtime_volume_ratio": null,
+      "vwap": null,
+      "sector_return": -0.0058,
+      "source": "tencent",
+      "source_timestamp": "2026-11-17T13:25:17",
+      "retrieved_at": "2026-11-17T13:25:19+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "concept_quotes: not requested under rate budget",
+        "mootdx: mootdx is not installed",
+        "realtime_volume_ratio",
+        "volume_ratio_5d: intraday partial",
+        "vwap"
+      ],
+      "shares": 300,
+      "cost": 9.097,
+      "cost_basis": 2729.1,
+      "market_value": 1467.0,
+      "unrealized_pnl": -1262.1,
+      "position_return": -0.4625,
+      "change_pct": -0.024,
+      "amplitude": 0.0299,
+      "ma20": 5.523,
+      "ma5": 5.298,
+      "ma10": 5.504,
+      "ma20_distance": -0.1146,
+      "volume_ma5": 240265250.4,
+      "volume_ratio_5d": 0.4098,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
+      "concepts": [
+        {
+          "code": "BK0906",
+          "name": "流感"
+        },
+        {
+          "code": "BK0852",
+          "name": "冷链物流"
+        },
+        {
+          "code": "BK0838",
+          "name": "东北振兴"
+        },
+        {
+          "code": "BK0653",
+          "name": "养老概念"
+        },
+        {
+          "code": "BK0615",
+          "name": "中药概念"
+        },
+        {
+          "code": "BK1775",
+          "name": "民营医院"
+        },
+        {
+          "code": "BK1763",
+          "name": "医药电商"
+        },
+        {
+          "code": "BK1657",
+          "name": "病原体防治"
+        },
+        {
+          "code": "BK1106",
+          "name": "创新药"
+        },
+        {
+          "code": "BK1078",
+          "name": "肝炎概念"
+        }
+      ],
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "relative_sector_strength": -0.0182,
+      "statuses": [
+        "MA20下方",
+        "趋势破坏",
+        "弱于板块"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": false,
+        "volume_expansion": false,
+        "key_level_break": true
+      },
+      "conditional_note": "当前弱于所属行业且位于 MA20 下方，若继续放量跌破观察位，风险状态上升。",
+      "attention_score": 120
+    },
+    {
+      "code": "002836",
+      "name": "新宏泽",
+      "industry": "包装印刷",
+      "current_price": 9.37,
+      "open": 9.4,
+      "high": 9.54,
+      "low": 9.13,
+      "volume": 1904500,
+      "turnover_rate": 0.0083,
+      "pe": 66.96,
+      "pb": 5.48,
+      "market_cap": 2159000000.0,
+      "realtime_volume_ratio": null,
+      "vwap": null,
+      "sector_return": -0.0025,
+      "source": "tencent",
+      "source_timestamp": "2026-11-17T13:25:03",
+      "retrieved_at": "2026-11-17T13:25:23+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "mootdx: mootdx is not installed",
+        "realtime_volume_ratio",
+        "volume_ratio_5d: intraday partial",
+        "vwap"
+      ],
+      "shares": 200,
+      "cost": 12.155,
+      "cost_basis": 2431.0,
+      "market_value": 1874.0,
+      "unrealized_pnl": -557.0,
+      "position_return": -0.2291,
+      "change_pct": -0.0043,
+      "amplitude": 0.0436,
+      "ma20": 9.8465,
+      "ma5": 9.74,
+      "ma10": 9.817,
+      "ma20_distance": -0.0484,
+      "volume_ma5": 2783271.4,
+      "volume_ratio_5d": 0.6843,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
+      "concepts": [],
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "relative_sector_strength": -0.0018,
+      "statuses": [
+        "MA20下方",
+        "趋势破坏",
+        "探底回升"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": true,
+        "volume_expansion": false,
+        "key_level_break": false
+      },
+      "conditional_note": "当前位于 MA20 下方，等待价格与量能重新确认结构。",
+      "attention_score": 120
+    },
+    {
+      "code": "600172",
+      "name": "黄河旋风",
+      "industry": "通用设备",
+      "current_price": 10.23,
+      "open": 10.06,
+      "high": 10.42,
+      "low": 9.76,
+      "volume": 45913300,
+      "turnover_rate": 0.035699999999999996,
+      "pe": -19.83,
+      "pb": 60.61,
+      "market_cap": 13138999999.999998,
+      "realtime_volume_ratio": null,
+      "vwap": null,
+      "sector_return": -0.0038,
+      "source": "tencent",
+      "source_timestamp": "2026-11-17T13:25:29",
+      "retrieved_at": "2026-11-17T13:25:34+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "concept_quotes: not requested under rate budget",
+        "mootdx: mootdx is not installed",
+        "realtime_volume_ratio",
+        "volume_ratio_5d: intraday partial",
+        "vwap"
+      ],
+      "shares": 100,
+      "cost": 20.157,
+      "cost_basis": 2015.7,
+      "market_value": 1023.0,
+      "unrealized_pnl": -992.7,
+      "position_return": -0.4925,
+      "change_pct": -0.0058,
+      "amplitude": 0.0641,
+      "ma20": 11.2315,
+      "ma5": 11.07,
+      "ma10": 11.182,
+      "ma20_distance": -0.0892,
+      "volume_ma5": 118289717.6,
+      "volume_ratio_5d": 0.3881,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
+      "concepts": [
+        {
+          "code": "BK0683",
+          "name": "央国企改革"
+        },
+        {
+          "code": "BK0523",
+          "name": "新材料"
+        },
+        {
+          "code": "BK0494",
+          "name": "节能环保"
+        },
+        {
+          "code": "BK1023",
+          "name": "培育钻石"
+        }
+      ],
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "relative_sector_strength": -0.002,
+      "statuses": [
+        "MA20下方",
+        "趋势破坏",
+        "探底回升",
+        "高波动"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": true,
+        "volume_expansion": false,
+        "key_level_break": false
+      },
+      "conditional_note": "当前位于 MA20 下方，等待价格与量能重新确认结构。",
+      "attention_score": 120
+    },
+    {
+      "code": "603002",
+      "name": "宏昌电子",
+      "industry": "电子化学品Ⅱ",
+      "current_price": 11.72,
+      "open": 11.36,
+      "high": 11.95,
+      "low": 11.1,
+      "volume": 27218600,
+      "turnover_rate": 0.024,
+      "pe": 49.86,
+      "pb": 3.6,
+      "market_cap": 13291000000.0,
+      "realtime_volume_ratio": null,
+      "vwap": null,
+      "sector_return": 0.0343,
+      "source": "tencent",
+      "source_timestamp": "2026-11-17T13:25:34",
+      "retrieved_at": "2026-11-17T13:25:37+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "concept_quotes: not requested under rate budget",
+        "mootdx: mootdx is not installed",
+        "realtime_volume_ratio",
+        "volume_ratio_5d: intraday partial",
+        "vwap"
+      ],
+      "shares": 100,
+      "cost": 66.545,
+      "cost_basis": 6654.5,
+      "market_value": 1172.0,
+      "unrealized_pnl": -5482.5,
+      "position_return": -0.8239,
+      "change_pct": 0.0147,
+      "amplitude": 0.0736,
+      "ma20": 13.2375,
+      "ma5": 12.58,
+      "ma10": 12.923,
+      "ma20_distance": -0.1146,
+      "volume_ma5": 50033172.4,
+      "volume_ratio_5d": 0.544,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
+      "concepts": [
+        {
+          "code": "BK0877",
+          "name": "PCB"
+        },
+        {
+          "code": "BK0714",
+          "name": "5G概念"
+        },
+        {
+          "code": "BK0619",
+          "name": "3D打印"
+        },
+        {
+          "code": "BK1650",
+          "name": "通信技术"
+        },
+        {
+          "code": "BK1161",
+          "name": "英伟达概念"
+        },
+        {
+          "code": "BK1101",
+          "name": "先进封装"
+        }
+      ],
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "relative_sector_strength": -0.0196,
+      "statuses": [
+        "MA20下方",
+        "趋势破坏",
+        "弱于板块",
+        "探底回升",
+        "高波动"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": true,
+        "volume_expansion": false,
+        "key_level_break": false
+      },
+      "conditional_note": "当前弱于所属行业且位于 MA20 下方，若继续放量跌破观察位，风险状态上升。",
+      "attention_score": 120
+    },
+    {
+      "code": "603938",
+      "name": "三孚股份",
+      "industry": "化学原料",
+      "current_price": 28.66,
+      "open": 27.9,
+      "high": 29.39,
+      "low": 27.22,
+      "volume": 5856100,
+      "turnover_rate": 0.015300000000000001,
+      "pe": 56.76,
+      "pb": 4.06,
+      "market_cap": 10966000000.0,
+      "realtime_volume_ratio": null,
+      "vwap": null,
+      "sector_return": 0.0085,
+      "source": "tencent",
+      "source_timestamp": "2026-11-17T13:25:37",
+      "retrieved_at": "2026-11-17T13:25:41+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "concept_quotes: not requested under rate budget",
+        "mootdx: mootdx is not installed",
+        "realtime_volume_ratio",
+        "volume_ratio_5d: intraday partial",
+        "vwap"
+      ],
+      "shares": 100,
+      "cost": 52.751,
+      "cost_basis": 5275.1,
+      "market_value": 2866.0,
+      "unrealized_pnl": -2409.1,
+      "position_return": -0.4567,
+      "change_pct": 0.0309,
+      "amplitude": 0.0781,
+      "ma20": 30.9645,
+      "ma5": 29.79,
+      "ma10": 30.016,
+      "ma20_distance": -0.0744,
+      "volume_ma5": 7935989.4,
+      "volume_ratio_5d": 0.7379,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
+      "concepts": [
+        {
+          "code": "BK0981",
+          "name": "工业气体"
+        },
+        {
+          "code": "BK0977",
+          "name": "碳化硅"
+        },
+        {
+          "code": "BK0961",
+          "name": "有机硅概念"
+        },
+        {
+          "code": "BK0917",
+          "name": "半导体概念"
+        },
+        {
+          "code": "BK0864",
+          "name": "氢能源"
+        },
+        {
+          "code": "BK0512",
+          "name": "化工原料"
+        },
+        {
+          "code": "BK1660",
+          "name": "光纤概念"
+        },
+        {
+          "code": "BK1137",
+          "name": "存储芯片"
+        }
+      ],
+      "sources": {
+        "daily_bars": "sina_fallback",
+        "quote": "tencent",
+        "industry": "eastmoney",
+        "concepts": "eastmoney"
+      },
+      "relative_sector_strength": 0.0224,
+      "statuses": [
+        "MA20下方",
+        "趋势破坏",
+        "强于板块",
+        "探底回升",
+        "高波动"
+      ],
+      "flags": {
+        "rush_fade": false,
+        "bottom_rebound": true,
+        "volume_expansion": false,
+        "key_level_break": false
+      },
+      "conditional_note": "当前位于 MA20 下方，等待价格与量能重新确认结构。",
+      "attention_score": 120
+    },
+    {
+      "code": "000066",
+      "name": "中国长城",
+      "industry": "计算机设备",
+      "current_price": 11.86,
+      "open": 11.52,
+      "high": 11.98,
+      "low": 11.5,
+      "volume": 63719700,
+      "turnover_rate": 0.019799999999999998,
+      "pe": 223.89,
+      "pb": 3.4,
+      "market_cap": 38255000000.0,
+      "realtime_volume_ratio": null,
+      "vwap": null,
+      "sector_return": 0.0037,
+      "source": "tencent",
+      "source_timestamp": "2026-11-17T13:25:24",
+      "retrieved_at": "2026-11-17T13:25:26+08:00",
+      "freshness": "current",
+      "missing_data": [
+        "concept_quotes: not requested under rate budget",
+        "mootdx: mootdx is not installed",
+        "realtime_volume_ratio",
+        "volume_ratio_5d: intraday partial",
         "vwap"
       ],
       "shares": 100,
       "cost": 16.04,
       "cost_basis": 1604.0,
-      "market_value": 1155.0,
-      "unrealized_pnl": -449.0,
-      "position_return": -0.2799,
-      "change_pct": -0.0548,
-      "amplitude": 0.0524,
-      "ma20": 11.676,
-      "ma5": 11.834,
-      "ma10": 11.651,
-      "ma20_distance": -0.0108,
-      "volume_ma5": 82815685.2,
-      "volume_ratio_5d": 1.0282,
-      "volume_complete": true,
-      "volume_state": "正常量能",
+      "market_value": 1186.0,
+      "unrealized_pnl": -418.0,
+      "position_return": -0.2606,
+      "change_pct": 0.0268,
+      "amplitude": 0.0416,
+      "ma20": 11.5975,
+      "ma5": 11.868,
+      "ma10": 11.73,
+      "ma20_distance": 0.0226,
+      "volume_ma5": 91236186,
+      "volume_ratio_5d": 0.6984,
+      "volume_complete": false,
+      "volume_state": "数据缺失",
       "concepts": [
         {
           "code": "BK0988",
@@ -164,673 +767,55 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "relative_sector_strength": -0.0225,
-      "statuses": [
-        "MA20下方",
-        "跌破 MA20",
-        "弱于板块",
-        "冲高回落",
-        "高波动"
-      ],
-      "flags": {
-        "rush_fade": true,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": false
-      },
-      "conditional_note": "当前弱于所属行业且跌破 MA20，风险状态较早盘上升，继续观察量能确认。",
-      "attention_score": 140
-    },
-    {
-      "code": "002458",
-      "name": "益生股份",
-      "industry": "养殖业",
-      "current_price": 7.0,
-      "open": 7.05,
-      "high": 7.06,
-      "low": 6.96,
-      "volume": 15177000,
-      "turnover_rate": 0.015700000000000002,
-      "pe": 17.37,
-      "pb": 2.2,
-      "market_cap": 6765000000.000001,
-      "realtime_volume_ratio": null,
-      "vwap": null,
-      "sector_return": -0.0071,
-      "source": "tencent",
-      "source_timestamp": "2026-11-16T15:10:00",
-      "retrieved_at": "2026-11-16T15:10:10+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "concept_quotes: not requested under rate budget",
-        "mootdx: mootdx is not installed",
-        "realtime_volume_ratio",
-        "sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response",
-        "vwap"
-      ],
-      "shares": 600,
-      "cost": 8.412,
-      "cost_basis": 5047.2,
-      "market_value": 4200.0,
-      "unrealized_pnl": -847.2,
-      "position_return": -0.1679,
-      "change_pct": -0.0099,
-      "amplitude": 0.0141,
-      "ma20": 7.2905,
-      "ma5": 7.098,
-      "ma10": 7.172,
-      "ma20_distance": -0.0398,
-      "volume_ma5": 14629754.6,
-      "volume_ratio_5d": 1.0374,
-      "volume_complete": true,
-      "volume_state": "正常量能",
-      "concepts": [
-        {
-          "code": "BK0892",
-          "name": "乳业"
-        },
-        {
-          "code": "BK0887",
-          "name": "鸡肉概念"
-        },
-        {
-          "code": "BK0882",
-          "name": "猪肉概念"
-        }
-      ],
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "relative_sector_strength": -0.0028,
-      "statuses": [
-        "MA20下方",
-        "趋势破坏",
-        "接近支撑"
-      ],
-      "flags": {
-        "rush_fade": false,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": false
-      },
-      "conditional_note": "当前位于 MA20 下方，等待价格与量能重新确认结构。",
-      "attention_score": 120
-    },
-    {
-      "code": "600664",
-      "name": "哈药股份",
-      "industry": "化学制药",
-      "current_price": 5.01,
-      "open": 5.18,
-      "high": 5.22,
-      "low": 4.97,
-      "volume": 181469700,
-      "turnover_rate": 0.0721,
-      "pe": 19.93,
-      "pb": 2.0,
-      "market_cap": 12618000000.0,
-      "realtime_volume_ratio": null,
-      "vwap": null,
-      "sector_return": -0.0178,
-      "source": "tencent",
-      "source_timestamp": "2026-11-16T15:10:10",
-      "retrieved_at": "2026-11-16T15:10:12+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "concept_quotes: not requested under rate budget",
-        "mootdx: mootdx is not installed",
-        "realtime_volume_ratio",
-        "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
-        "vwap"
-      ],
-      "shares": 300,
-      "cost": 9.097,
-      "cost_basis": 2729.1,
-      "market_value": 1503.0,
-      "unrealized_pnl": -1226.1,
-      "position_return": -0.4493,
-      "change_pct": -0.0309,
-      "amplitude": 0.0484,
-      "ma20": 5.5715,
-      "ma5": 5.474,
-      "ma10": 5.563,
-      "ma20_distance": -0.1008,
-      "volume_ma5": 249347555.4,
-      "volume_ratio_5d": 0.7278,
-      "volume_complete": true,
-      "volume_state": "缩量",
-      "concepts": [
-        {
-          "code": "BK0906",
-          "name": "流感"
-        },
-        {
-          "code": "BK0852",
-          "name": "冷链物流"
-        },
-        {
-          "code": "BK0838",
-          "name": "东北振兴"
-        },
-        {
-          "code": "BK0653",
-          "name": "养老概念"
-        },
-        {
-          "code": "BK0615",
-          "name": "中药概念"
-        },
-        {
-          "code": "BK1775",
-          "name": "民营医院"
-        },
-        {
-          "code": "BK1763",
-          "name": "医药电商"
-        },
-        {
-          "code": "BK1657",
-          "name": "病原体防治"
-        },
-        {
-          "code": "BK1106",
-          "name": "创新药"
-        },
-        {
-          "code": "BK1078",
-          "name": "肝炎概念"
-        }
-      ],
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "relative_sector_strength": -0.0131,
-      "statuses": [
-        "MA20下方",
-        "趋势破坏",
-        "弱于板块",
-        "缩量",
-        "冲高回落"
-      ],
-      "flags": {
-        "rush_fade": true,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": true
-      },
-      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
-      "attention_score": 120
-    },
-    {
-      "code": "002836",
-      "name": "新宏泽",
-      "industry": "包装印刷",
-      "current_price": 9.41,
-      "open": 9.85,
-      "high": 9.85,
-      "low": 9.32,
-      "volume": 2260100,
-      "turnover_rate": 0.0098,
-      "pe": 67.25,
-      "pb": 5.51,
-      "market_cap": 2168000000.0,
-      "realtime_volume_ratio": null,
-      "vwap": null,
-      "sector_return": -0.0184,
-      "source": "tencent",
-      "source_timestamp": "2026-11-16T15:09:33",
-      "retrieved_at": "2026-11-16T15:10:14+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "mootdx: mootdx is not installed",
-        "realtime_volume_ratio",
-        "vwap"
-      ],
-      "shares": 200,
-      "cost": 12.155,
-      "cost_basis": 2431.0,
-      "market_value": 1882.0,
-      "unrealized_pnl": -549.0,
-      "position_return": -0.2258,
-      "change_pct": -0.0447,
-      "amplitude": 0.0538,
-      "ma20": 9.9425,
-      "ma5": 9.852,
-      "ma10": 9.778,
-      "ma20_distance": -0.0536,
-      "volume_ma5": 3012187.4,
-      "volume_ratio_5d": 0.7503,
-      "volume_complete": true,
-      "volume_state": "正常量能",
-      "concepts": [],
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "relative_sector_strength": -0.0263,
-      "statuses": [
-        "MA20下方",
-        "趋势破坏",
-        "弱于板块",
-        "冲高回落",
-        "高波动"
-      ],
-      "flags": {
-        "rush_fade": true,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": false
-      },
-      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
-      "attention_score": 120
-    },
-    {
-      "code": "600172",
-      "name": "黄河旋风",
-      "industry": "通用设备",
-      "current_price": 10.29,
-      "open": 10.8,
-      "high": 10.85,
-      "low": 10.12,
-      "volume": 77711700,
-      "turnover_rate": 0.0605,
-      "pe": -19.94,
-      "pb": 60.97,
-      "market_cap": 13216000000.0,
-      "realtime_volume_ratio": null,
-      "vwap": null,
-      "sector_return": -0.0386,
-      "source": "tencent",
-      "source_timestamp": "2026-11-16T15:10:15",
-      "retrieved_at": "2026-11-16T15:10:19+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "concept_quotes: not requested under rate budget",
-        "mootdx: mootdx is not installed",
-        "realtime_volume_ratio",
-        "sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response",
-        "vwap"
-      ],
-      "shares": 100,
-      "cost": 20.157,
-      "cost_basis": 2015.7,
-      "market_value": 1029.0,
-      "unrealized_pnl": -986.7,
-      "position_return": -0.4895,
-      "change_pct": -0.0645,
-      "amplitude": 0.0664,
-      "ma20": 11.3225,
-      "ma5": 11.282,
-      "ma10": 11.218,
-      "ma20_distance": -0.0912,
-      "volume_ma5": 120133858.6,
-      "volume_ratio_5d": 0.6469,
-      "volume_complete": true,
-      "volume_state": "缩量",
-      "concepts": [
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0523",
-          "name": "新材料"
-        },
-        {
-          "code": "BK0494",
-          "name": "节能环保"
-        },
-        {
-          "code": "BK1023",
-          "name": "培育钻石"
-        }
-      ],
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "relative_sector_strength": -0.0259,
-      "statuses": [
-        "MA20下方",
-        "趋势破坏",
-        "弱于板块",
-        "缩量",
-        "冲高回落",
-        "高波动"
-      ],
-      "flags": {
-        "rush_fade": true,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": false
-      },
-      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
-      "attention_score": 120
-    },
-    {
-      "code": "603002",
-      "name": "宏昌电子",
-      "industry": "电子化学品Ⅱ",
-      "current_price": 11.55,
-      "open": 12.2,
-      "high": 12.23,
-      "low": 11.48,
-      "volume": 40430500,
-      "turnover_rate": 0.035699999999999996,
-      "pe": 49.13,
-      "pb": 3.55,
-      "market_cap": 13099000000.0,
-      "realtime_volume_ratio": null,
-      "vwap": null,
-      "sector_return": -0.0538,
-      "source": "tencent",
-      "source_timestamp": "2026-11-16T15:10:09",
-      "retrieved_at": "2026-11-16T15:10:21+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "concept_quotes: not requested under rate budget",
-        "mootdx: mootdx is not installed",
-        "realtime_volume_ratio",
-        "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
-        "vwap"
-      ],
-      "shares": 100,
-      "cost": 66.545,
-      "cost_basis": 6654.5,
-      "market_value": 1155.0,
-      "unrealized_pnl": -5499.5,
-      "position_return": -0.8264,
-      "change_pct": -0.0685,
-      "amplitude": 0.0605,
-      "ma20": 13.3925,
-      "ma5": 12.89,
-      "ma10": 12.993,
-      "ma20_distance": -0.1376,
-      "volume_ma5": 52326822.4,
-      "volume_ratio_5d": 0.7727,
-      "volume_complete": true,
-      "volume_state": "正常量能",
-      "concepts": [
-        {
-          "code": "BK0877",
-          "name": "PCB"
-        },
-        {
-          "code": "BK0714",
-          "name": "5G概念"
-        },
-        {
-          "code": "BK0619",
-          "name": "3D打印"
-        },
-        {
-          "code": "BK1650",
-          "name": "通信技术"
-        },
-        {
-          "code": "BK1161",
-          "name": "英伟达概念"
-        },
-        {
-          "code": "BK1101",
-          "name": "先进封装"
-        }
-      ],
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "relative_sector_strength": -0.0147,
-      "statuses": [
-        "MA20下方",
-        "趋势破坏",
-        "弱于板块",
-        "冲高回落",
-        "高波动"
-      ],
-      "flags": {
-        "rush_fade": true,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": true
-      },
-      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
-      "attention_score": 120
-    },
-    {
-      "code": "603938",
-      "name": "三孚股份",
-      "industry": "化学原料",
-      "current_price": 27.8,
-      "open": 29.18,
-      "high": 29.2,
-      "low": 27.65,
-      "volume": 6826700,
-      "turnover_rate": 0.0178,
-      "pe": 55.06,
-      "pb": 3.94,
-      "market_cap": 10637000000.0,
-      "realtime_volume_ratio": null,
-      "vwap": null,
-      "sector_return": -0.0091,
-      "source": "tencent",
-      "source_timestamp": "2026-11-16T15:10:19",
-      "retrieved_at": "2026-11-16T15:10:23+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "concept_quotes: not requested under rate budget",
-        "mootdx: mootdx is not installed",
-        "realtime_volume_ratio",
-        "sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response",
-        "vwap"
-      ],
-      "shares": 100,
-      "cost": 52.751,
-      "cost_basis": 5275.1,
-      "market_value": 2780.0,
-      "unrealized_pnl": -2495.1,
-      "position_return": -0.473,
-      "change_pct": -0.0595,
-      "amplitude": 0.0524,
-      "ma20": 31.35,
-      "ma5": 30.214,
-      "ma10": 29.938,
-      "ma20_distance": -0.1132,
-      "volume_ma5": 7769108,
-      "volume_ratio_5d": 0.8787,
-      "volume_complete": true,
-      "volume_state": "正常量能",
-      "concepts": [
-        {
-          "code": "BK0981",
-          "name": "工业气体"
-        },
-        {
-          "code": "BK0977",
-          "name": "碳化硅"
-        },
-        {
-          "code": "BK0961",
-          "name": "有机硅概念"
-        },
-        {
-          "code": "BK0917",
-          "name": "半导体概念"
-        },
-        {
-          "code": "BK0864",
-          "name": "氢能源"
-        },
-        {
-          "code": "BK0512",
-          "name": "化工原料"
-        },
-        {
-          "code": "BK1660",
-          "name": "光纤概念"
-        },
-        {
-          "code": "BK1137",
-          "name": "存储芯片"
-        }
-      ],
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "relative_sector_strength": -0.0504,
-      "statuses": [
-        "MA20下方",
-        "趋势破坏",
-        "弱于板块",
-        "冲高回落",
-        "高波动"
-      ],
-      "flags": {
-        "rush_fade": true,
-        "bottom_rebound": false,
-        "volume_expansion": false,
-        "key_level_break": false
-      },
-      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
-      "attention_score": 120
-    },
-    {
-      "code": "000831",
-      "name": "中国稀土",
-      "industry": "小金属",
-      "current_price": 49.8,
-      "open": 52.35,
-      "high": 52.35,
-      "low": 47.59,
-      "volume": 85318100,
-      "turnover_rate": 0.08039999999999999,
-      "pe": 136.02,
-      "pb": 10.16,
-      "market_cap": 52849000000.0,
-      "realtime_volume_ratio": null,
-      "vwap": null,
-      "sector_return": -0.0495,
-      "source": "tencent",
-      "source_timestamp": "2026-11-16T15:10:15",
-      "retrieved_at": "2026-11-16T15:10:18+08:00",
-      "freshness": "current",
-      "missing_data": [
-        "concept_quotes: not requested under rate budget",
-        "mootdx: mootdx is not installed",
-        "realtime_volume_ratio",
-        "sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
-        "vwap"
-      ],
-      "shares": 100,
-      "cost": 51.208,
-      "cost_basis": 5120.8,
-      "market_value": 4980.0,
-      "unrealized_pnl": -140.8,
-      "position_return": -0.0275,
-      "change_pct": 0.0464,
-      "amplitude": 0.1,
-      "ma20": 49.0915,
-      "ma5": 48.668,
-      "ma10": 48.998,
-      "ma20_distance": 0.0144,
-      "volume_ma5": 14864042.4,
-      "volume_ratio_5d": 5.7399,
-      "volume_complete": true,
-      "volume_state": "放量异常",
-      "concepts": [
-        {
-          "code": "BK0695",
-          "name": "小金属概念"
-        },
-        {
-          "code": "BK0683",
-          "name": "央国企改革"
-        },
-        {
-          "code": "BK0578",
-          "name": "稀土永磁"
-        }
-      ],
-      "sources": {
-        "daily_bars": "sina_fallback",
-        "quote": "tencent",
-        "industry": "eastmoney",
-        "concepts": "eastmoney"
-      },
-      "relative_sector_strength": 0.0959,
+      "relative_sector_strength": 0.0231,
       "statuses": [
         "MA20上方",
         "强于板块",
-        "放量",
-        "冲高回落",
-        "探底回升",
-        "高波动"
+        "探底回升"
       ],
       "flags": {
-        "rush_fade": true,
+        "rush_fade": false,
         "bottom_rebound": true,
-        "volume_expansion": true,
+        "volume_expansion": false,
         "key_level_break": false
       },
-      "conditional_note": "当前从日内高点回落，结合量能与板块同步性继续观察结构变化。",
-      "attention_score": 90
+      "conditional_note": "当前仍位于 MA20 上方，量能状态以已取得的数据为准，暂未出现结构性变化。",
+      "attention_score": 10
     }
   ],
   "data_source": {
     "id": "astock",
     "label": "A股公开数据",
-    "stage": "postmarket",
-    "generated_at": "2026-11-16T15:10:25+08:00",
+    "stage": "intraday",
+    "generated_at": "2026-11-17T13:25:44+08:00",
     "source": "tencent",
-    "source_timestamp": "2026-11-16T15:10:00",
-    "retrieved_at": "2026-11-16T15:10:05+08:00",
+    "source_timestamp": "2026-11-17T13:25:03",
+    "retrieved_at": "2026-11-17T13:25:05+08:00",
     "freshness": "current",
-    "last_trading_day": "2026-11-16",
+    "last_trading_day": "2026-11-17",
     "fallback": true,
     "missing_data": [
       "000066.concept_quotes: not requested under rate budget",
       "000066.mootdx: mootdx is not installed",
-      "000066.sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response",
       "000333.concept_quotes: not requested under rate budget",
       "000333.mootdx: mootdx is not installed",
       "000831.concept_quotes: not requested under rate budget",
       "000831.mootdx: mootdx is not installed",
-      "000831.sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response",
       "002458.concept_quotes: not requested under rate budget",
       "002458.mootdx: mootdx is not installed",
-      "002458.sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response",
       "002836.mootdx: mootdx is not installed",
       "300750.concept_quotes: not requested under rate budget",
       "300750.mootdx: mootdx is not installed",
       "600172.concept_quotes: not requested under rate budget",
       "600172.mootdx: mootdx is not installed",
-      "600172.sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response",
       "600519.concept_quotes: not requested under rate budget",
       "600519.mootdx: mootdx is not installed",
       "600664.concept_quotes: not requested under rate budget",
       "600664.mootdx: mootdx is not installed",
-      "600664.sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response",
       "603002.concept_quotes: not requested under rate budget",
       "603002.mootdx: mootdx is not installed",
-      "603002.sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response",
       "603938.concept_quotes: not requested under rate budget",
       "603938.mootdx: mootdx is not installed",
-      "603938.sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response",
       "market.advance_count",
       "market.decline_count",
       "market.flat_count",
@@ -840,12 +825,12 @@
       "market.turnover_change"
     ],
     "request_stats": {
-      "total_requests": 23,
+      "total_requests": 45,
       "tencent_requests": 12,
-      "eastmoney_requests": 11,
-      "sina_requests": 0,
-      "cache_hits": 26,
-      "negative_cache_hits": 7,
+      "eastmoney_requests": 22,
+      "sina_requests": 11,
+      "cache_hits": 11,
+      "negative_cache_hits": 0,
       "request_failures": 0,
       "mootdx_requests": 0,
       "mootdx_failures": 0,
