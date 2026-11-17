@@ -9,10 +9,10 @@
     {
       "code": "BK1239",
       "name": "白色家电",
-      "return_pct": 0.0168,
+      "return_pct": 0.0153,
       "source": "eastmoney",
       "source_timestamp": null,
-      "retrieved_at": "2026-11-17T13:45:08+08:00",
+      "retrieved_at": "2026-11-17T13:55:13+08:00",
       "return_5d": 0.03035,
       "return_20d": 0.010287,
       "previous_return_pct": 0.030177,
@@ -42,36 +42,36 @@
       "code": "600519",
       "name": "贵州茅台",
       "date": "2026-11-17",
-      "close": 1452.99,
+      "close": 1454.5,
       "previous_close": 1453.9,
-      "change_pct": -0.0006,
+      "change_pct": 0.0004,
       "open": 1458.88,
       "high": 1461.6,
       "low": 1437.71,
       "amplitude": 0.0164,
-      "volume": 2025400,
+      "volume": 2131300,
       "volume_ma5": 3540110.6,
-      "volume_ratio_5d": 0.5721,
+      "volume_ratio_5d": 0.602,
       "volume_complete": false,
-      "ma5": 1430.944,
-      "ma10": 1439.015,
-      "ma20": 1402.7555,
-      "ma20_distance": 0.0358,
-      "recent_gain_20d": 0.0909,
+      "ma5": 1431.246,
+      "ma10": 1439.166,
+      "ma20": 1402.831,
+      "ma20_distance": 0.0368,
+      "recent_gain_20d": 0.0921,
       "previous_high": 1480.6,
       "recent_support": 1388.11,
       "recent_high_20d": 1480.6,
       "recent_low_20d": 1296.0,
       "industry": "白酒Ⅱ",
-      "industry_return": -0.0086,
+      "industry_return": -0.0099,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.008,
-      "turnover_rate": 0.0016,
-      "pe": 22.11,
+      "relative_sector_strength": 0.0103,
+      "turnover_rate": 0.0017000000000000001,
+      "pe": 22.13,
       "pb": 6.7,
-      "market_cap": 1816356000000.0002,
+      "market_cap": 1818243999999.9998,
       "concepts": [
         {
           "code": "BK0896",
@@ -109,8 +109,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:04",
-      "retrieved_at": "2026-11-17T13:45:06+08:00",
+      "source_timestamp": "2026-11-17T13:55:04",
+      "retrieved_at": "2026-11-17T13:55:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -119,10 +119,10 @@
       "sector": {
         "code": "BK1277",
         "name": "白酒Ⅱ",
-        "return_pct": -0.0086,
+        "return_pct": -0.0099,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:07+08:00",
+        "retrieved_at": "2026-11-17T13:55:09+08:00",
         "return_5d": -0.013792,
         "return_20d": 0.05918,
         "previous_return_pct": 0.008662,
@@ -147,7 +147,8 @@
         "is_strong": false
       },
       "labels": [
-        "MA20上方"
+        "MA20上方",
+        "强于板块"
       ],
       "conditions": [
         {
@@ -245,14 +246,14 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白酒Ⅱ板块今日涨跌 -0.86%。",
+        "所属白酒Ⅱ板块今日涨跌 -0.99%。",
         "板块 5 日涨跌 -1.38%，状态为转弱。",
-        "个股今日涨跌 -0.06%，位于 MA20 上方 +3.58%。",
-        "当日累计成交量为前 5 个交易日均量的 57%（盘中未完成）。"
+        "个股今日涨跌 +0.04%，位于 MA20 上方 +3.68%。",
+        "当日累计成交量为前 5 个交易日均量的 60%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +3.58%",
-        "等待量能确认，当前为 5 日均量的 57%",
+        "等待价格回到 MA20 附近，当前距离 +3.68%",
+        "等待量能确认，当前为 5 日均量的 60%",
         "等待白酒Ⅱ板块进入强势区"
       ],
       "satisfied_condition_count": 0
@@ -261,36 +262,36 @@
       "code": "000066",
       "name": "中国长城",
       "date": "2026-11-17",
-      "close": 11.81,
+      "close": 11.75,
       "previous_close": 11.55,
-      "change_pct": 0.0225,
+      "change_pct": 0.0173,
       "open": 11.52,
       "high": 11.98,
       "low": 11.5,
       "amplitude": 0.0416,
-      "volume": 66949800,
+      "volume": 69232900,
       "volume_ma5": 91236186,
-      "volume_ratio_5d": 0.7338,
+      "volume_ratio_5d": 0.7588,
       "volume_complete": false,
-      "ma5": 11.858,
-      "ma10": 11.725,
-      "ma20": 11.595,
-      "ma20_distance": 0.0185,
-      "recent_gain_20d": -0.1206,
+      "ma5": 11.846,
+      "ma10": 11.719,
+      "ma20": 11.592,
+      "ma20_distance": 0.0136,
+      "recent_gain_20d": -0.1251,
       "previous_high": 13.55,
       "recent_support": 11.07,
       "recent_high_20d": 13.55,
       "recent_low_20d": 10.88,
       "industry": "计算机设备",
-      "industry_return": 0.0014,
+      "industry_return": -0.0041,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0211,
-      "turnover_rate": 0.0208,
-      "pe": 222.95,
-      "pb": 3.39,
-      "market_cap": 38094000000.0,
+      "relative_sector_strength": 0.0214,
+      "turnover_rate": 0.0215,
+      "pe": 221.81,
+      "pb": 3.37,
+      "market_cap": 37901000000.0,
       "concepts": [
         {
           "code": "BK0988",
@@ -373,6 +374,14 @@
           "name": "军工"
         },
         {
+          "code": "BK1794",
+          "name": "智算中心（AIDC）"
+        },
+        {
+          "code": "BK1781",
+          "name": "华为鲲鹏"
+        },
+        {
           "code": "BK1650",
           "name": "通信技术"
         },
@@ -408,8 +417,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:12",
-      "retrieved_at": "2026-11-17T13:45:16+08:00",
+      "source_timestamp": "2026-11-17T13:55:24",
+      "retrieved_at": "2026-11-17T13:55:27+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -418,10 +427,10 @@
       "sector": {
         "code": "BK0735",
         "name": "计算机设备",
-        "return_pct": 0.0014,
+        "return_pct": -0.0041,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:17+08:00",
+        "retrieved_at": "2026-11-17T13:55:30+08:00",
         "return_5d": -0.052775,
         "return_20d": -0.092901,
         "previous_return_pct": -0.032272,
@@ -545,13 +554,13 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属计算机设备板块今日涨跌 +0.14%。",
+        "所属计算机设备板块今日涨跌 -0.41%。",
         "板块 5 日涨跌 -5.28%，状态为转弱。",
-        "个股今日涨跌 +2.25%，位于 MA20 上方 +1.85%。",
-        "当日累计成交量为前 5 个交易日均量的 73%（盘中未完成）。"
+        "个股今日涨跌 +1.73%，位于 MA20 上方 +1.36%。",
+        "当日累计成交量为前 5 个交易日均量的 76%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待量能确认，当前为 5 日均量的 73%",
+        "等待量能确认，当前为 5 日均量的 76%",
         "等待计算机设备板块进入强势区",
         "等待价格突破 13.55"
       ],
@@ -564,36 +573,36 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-11-17",
-      "close": 93.45,
+      "close": 93.78,
       "previous_close": 92.68,
-      "change_pct": 0.0083,
+      "change_pct": 0.0119,
       "open": 92.68,
-      "high": 93.66,
+      "high": 93.9,
       "low": 92.0,
-      "amplitude": 0.0179,
-      "volume": 22495100,
+      "amplitude": 0.0205,
+      "volume": 24617100,
       "volume_ma5": 28068278,
-      "volume_ratio_5d": 0.8014,
+      "volume_ratio_5d": 0.877,
       "volume_complete": false,
-      "ma5": 90.47,
-      "ma10": 89.637,
-      "ma20": 88.038,
-      "ma20_distance": 0.0615,
-      "recent_gain_20d": 0.0958,
+      "ma5": 90.536,
+      "ma10": 89.67,
+      "ma20": 88.0545,
+      "ma20_distance": 0.065,
+      "recent_gain_20d": 0.0997,
       "previous_high": 92.8,
       "recent_support": 86.36,
-      "recent_high_20d": 93.66,
+      "recent_high_20d": 93.9,
       "recent_low_20d": 83.0,
       "industry": "白色家电",
-      "industry_return": 0.0168,
+      "industry_return": 0.0153,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0085,
-      "turnover_rate": 0.0033,
-      "pe": 15.03,
-      "pb": 3.21,
-      "market_cap": 643574000000.0,
+      "relative_sector_strength": -0.0034,
+      "turnover_rate": 0.0036,
+      "pe": 15.08,
+      "pb": 3.22,
+      "market_cap": 645847000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -628,6 +637,14 @@
           "name": "物联网"
         },
         {
+          "code": "BK1794",
+          "name": "智算中心（AIDC）"
+        },
+        {
+          "code": "BK1777",
+          "name": "MCU芯片"
+        },
+        {
           "code": "BK1184",
           "name": "人形机器人"
         },
@@ -651,8 +668,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:03",
-      "retrieved_at": "2026-11-17T13:45:07+08:00",
+      "source_timestamp": "2026-11-17T13:55:06",
+      "retrieved_at": "2026-11-17T13:55:09+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -661,10 +678,10 @@
       "sector": {
         "code": "BK1239",
         "name": "白色家电",
-        "return_pct": 0.0168,
+        "return_pct": 0.0153,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:08+08:00",
+        "retrieved_at": "2026-11-17T13:55:13+08:00",
         "return_5d": 0.03035,
         "return_20d": 0.010287,
         "previous_return_pct": 0.030177,
@@ -702,7 +719,7 @@
             },
             {
               "label": "日涨跌位于回踩区间",
-              "met": true
+              "met": false
             },
             {
               "label": "量能缩至 5 日均量阈值内",
@@ -718,7 +735,7 @@
             }
           ],
           "status": "未满足",
-          "met_count": 3,
+          "met_count": 2,
           "total_count": 5,
           "missing_count": 1
         },
@@ -787,14 +804,14 @@
       "priority": 2,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白色家电板块今日涨跌 +1.68%。",
+        "所属白色家电板块今日涨跌 +1.53%。",
         "板块 5 日涨跌 +3.03%，状态为强势。",
-        "个股今日涨跌 +0.83%，位于 MA20 上方 +6.15%。",
-        "当日累计成交量为前 5 个交易日均量的 80%（盘中未完成）。"
+        "个股今日涨跌 +1.19%，位于 MA20 上方 +6.50%。",
+        "当日累计成交量为前 5 个交易日均量的 88%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +6.15%",
-        "等待量能确认，当前为 5 日均量的 80%"
+        "等待价格回到 MA20 附近，当前距离 +6.50%",
+        "等待量能确认，当前为 5 日均量的 88%"
       ],
       "satisfied_condition_count": 0
     },
@@ -802,36 +819,36 @@
       "code": "600519",
       "name": "贵州茅台",
       "date": "2026-11-17",
-      "close": 1452.99,
+      "close": 1454.5,
       "previous_close": 1453.9,
-      "change_pct": -0.0006,
+      "change_pct": 0.0004,
       "open": 1458.88,
       "high": 1461.6,
       "low": 1437.71,
       "amplitude": 0.0164,
-      "volume": 2025400,
+      "volume": 2131300,
       "volume_ma5": 3540110.6,
-      "volume_ratio_5d": 0.5721,
+      "volume_ratio_5d": 0.602,
       "volume_complete": false,
-      "ma5": 1430.944,
-      "ma10": 1439.015,
-      "ma20": 1402.7555,
-      "ma20_distance": 0.0358,
-      "recent_gain_20d": 0.0909,
+      "ma5": 1431.246,
+      "ma10": 1439.166,
+      "ma20": 1402.831,
+      "ma20_distance": 0.0368,
+      "recent_gain_20d": 0.0921,
       "previous_high": 1480.6,
       "recent_support": 1388.11,
       "recent_high_20d": 1480.6,
       "recent_low_20d": 1296.0,
       "industry": "白酒Ⅱ",
-      "industry_return": -0.0086,
+      "industry_return": -0.0099,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.008,
-      "turnover_rate": 0.0016,
-      "pe": 22.11,
+      "relative_sector_strength": 0.0103,
+      "turnover_rate": 0.0017000000000000001,
+      "pe": 22.13,
       "pb": 6.7,
-      "market_cap": 1816356000000.0002,
+      "market_cap": 1818243999999.9998,
       "concepts": [
         {
           "code": "BK0896",
@@ -869,8 +886,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:04",
-      "retrieved_at": "2026-11-17T13:45:06+08:00",
+      "source_timestamp": "2026-11-17T13:55:04",
+      "retrieved_at": "2026-11-17T13:55:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -879,10 +896,10 @@
       "sector": {
         "code": "BK1277",
         "name": "白酒Ⅱ",
-        "return_pct": -0.0086,
+        "return_pct": -0.0099,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:07+08:00",
+        "retrieved_at": "2026-11-17T13:55:09+08:00",
         "return_5d": -0.013792,
         "return_20d": 0.05918,
         "previous_return_pct": 0.008662,
@@ -907,7 +924,8 @@
         "is_strong": false
       },
       "labels": [
-        "MA20上方"
+        "MA20上方",
+        "强于板块"
       ],
       "conditions": [
         {
@@ -1005,14 +1023,14 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白酒Ⅱ板块今日涨跌 -0.86%。",
+        "所属白酒Ⅱ板块今日涨跌 -0.99%。",
         "板块 5 日涨跌 -1.38%，状态为转弱。",
-        "个股今日涨跌 -0.06%，位于 MA20 上方 +3.58%。",
-        "当日累计成交量为前 5 个交易日均量的 57%（盘中未完成）。"
+        "个股今日涨跌 +0.04%，位于 MA20 上方 +3.68%。",
+        "当日累计成交量为前 5 个交易日均量的 60%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +3.58%",
-        "等待量能确认，当前为 5 日均量的 57%",
+        "等待价格回到 MA20 附近，当前距离 +3.68%",
+        "等待量能确认，当前为 5 日均量的 60%",
         "等待白酒Ⅱ板块进入强势区"
       ],
       "satisfied_condition_count": 0
@@ -1021,36 +1039,36 @@
       "code": "000066",
       "name": "中国长城",
       "date": "2026-11-17",
-      "close": 11.81,
+      "close": 11.75,
       "previous_close": 11.55,
-      "change_pct": 0.0225,
+      "change_pct": 0.0173,
       "open": 11.52,
       "high": 11.98,
       "low": 11.5,
       "amplitude": 0.0416,
-      "volume": 66949800,
+      "volume": 69232900,
       "volume_ma5": 91236186,
-      "volume_ratio_5d": 0.7338,
+      "volume_ratio_5d": 0.7588,
       "volume_complete": false,
-      "ma5": 11.858,
-      "ma10": 11.725,
-      "ma20": 11.595,
-      "ma20_distance": 0.0185,
-      "recent_gain_20d": -0.1206,
+      "ma5": 11.846,
+      "ma10": 11.719,
+      "ma20": 11.592,
+      "ma20_distance": 0.0136,
+      "recent_gain_20d": -0.1251,
       "previous_high": 13.55,
       "recent_support": 11.07,
       "recent_high_20d": 13.55,
       "recent_low_20d": 10.88,
       "industry": "计算机设备",
-      "industry_return": 0.0014,
+      "industry_return": -0.0041,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0211,
-      "turnover_rate": 0.0208,
-      "pe": 222.95,
-      "pb": 3.39,
-      "market_cap": 38094000000.0,
+      "relative_sector_strength": 0.0214,
+      "turnover_rate": 0.0215,
+      "pe": 221.81,
+      "pb": 3.37,
+      "market_cap": 37901000000.0,
       "concepts": [
         {
           "code": "BK0988",
@@ -1133,6 +1151,14 @@
           "name": "军工"
         },
         {
+          "code": "BK1794",
+          "name": "智算中心（AIDC）"
+        },
+        {
+          "code": "BK1781",
+          "name": "华为鲲鹏"
+        },
+        {
           "code": "BK1650",
           "name": "通信技术"
         },
@@ -1168,8 +1194,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:12",
-      "retrieved_at": "2026-11-17T13:45:16+08:00",
+      "source_timestamp": "2026-11-17T13:55:24",
+      "retrieved_at": "2026-11-17T13:55:27+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -1178,10 +1204,10 @@
       "sector": {
         "code": "BK0735",
         "name": "计算机设备",
-        "return_pct": 0.0014,
+        "return_pct": -0.0041,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:17+08:00",
+        "retrieved_at": "2026-11-17T13:55:30+08:00",
         "return_5d": -0.052775,
         "return_20d": -0.092901,
         "previous_return_pct": -0.032272,
@@ -1305,13 +1331,13 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属计算机设备板块今日涨跌 +0.14%。",
+        "所属计算机设备板块今日涨跌 -0.41%。",
         "板块 5 日涨跌 -5.28%，状态为转弱。",
-        "个股今日涨跌 +2.25%，位于 MA20 上方 +1.85%。",
-        "当日累计成交量为前 5 个交易日均量的 73%（盘中未完成）。"
+        "个股今日涨跌 +1.73%，位于 MA20 上方 +1.36%。",
+        "当日累计成交量为前 5 个交易日均量的 76%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待量能确认，当前为 5 日均量的 73%",
+        "等待量能确认，当前为 5 日均量的 76%",
         "等待计算机设备板块进入强势区",
         "等待价格突破 13.55"
       ],
@@ -1323,36 +1349,36 @@
       "code": "000333",
       "name": "美的集团",
       "date": "2026-11-17",
-      "close": 93.45,
+      "close": 93.78,
       "previous_close": 92.68,
-      "change_pct": 0.0083,
+      "change_pct": 0.0119,
       "open": 92.68,
-      "high": 93.66,
+      "high": 93.9,
       "low": 92.0,
-      "amplitude": 0.0179,
-      "volume": 22495100,
+      "amplitude": 0.0205,
+      "volume": 24617100,
       "volume_ma5": 28068278,
-      "volume_ratio_5d": 0.8014,
+      "volume_ratio_5d": 0.877,
       "volume_complete": false,
-      "ma5": 90.47,
-      "ma10": 89.637,
-      "ma20": 88.038,
-      "ma20_distance": 0.0615,
-      "recent_gain_20d": 0.0958,
+      "ma5": 90.536,
+      "ma10": 89.67,
+      "ma20": 88.0545,
+      "ma20_distance": 0.065,
+      "recent_gain_20d": 0.0997,
       "previous_high": 92.8,
       "recent_support": 86.36,
-      "recent_high_20d": 93.66,
+      "recent_high_20d": 93.9,
       "recent_low_20d": 83.0,
       "industry": "白色家电",
-      "industry_return": 0.0168,
+      "industry_return": 0.0153,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": -0.0085,
-      "turnover_rate": 0.0033,
-      "pe": 15.03,
-      "pb": 3.21,
-      "market_cap": 643574000000.0,
+      "relative_sector_strength": -0.0034,
+      "turnover_rate": 0.0036,
+      "pe": 15.08,
+      "pb": 3.22,
+      "market_cap": 645847000000.0,
       "concepts": [
         {
           "code": "BK0953",
@@ -1387,6 +1413,14 @@
           "name": "物联网"
         },
         {
+          "code": "BK1794",
+          "name": "智算中心（AIDC）"
+        },
+        {
+          "code": "BK1777",
+          "name": "MCU芯片"
+        },
+        {
           "code": "BK1184",
           "name": "人形机器人"
         },
@@ -1410,8 +1444,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:03",
-      "retrieved_at": "2026-11-17T13:45:07+08:00",
+      "source_timestamp": "2026-11-17T13:55:06",
+      "retrieved_at": "2026-11-17T13:55:09+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -1420,10 +1454,10 @@
       "sector": {
         "code": "BK1239",
         "name": "白色家电",
-        "return_pct": 0.0168,
+        "return_pct": 0.0153,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:08+08:00",
+        "retrieved_at": "2026-11-17T13:55:13+08:00",
         "return_5d": 0.03035,
         "return_20d": 0.010287,
         "previous_return_pct": 0.030177,
@@ -1461,7 +1495,7 @@
             },
             {
               "label": "日涨跌位于回踩区间",
-              "met": true
+              "met": false
             },
             {
               "label": "量能缩至 5 日均量阈值内",
@@ -1477,7 +1511,7 @@
             }
           ],
           "status": "未满足",
-          "met_count": 3,
+          "met_count": 2,
           "total_count": 5,
           "missing_count": 1
         },
@@ -1546,14 +1580,14 @@
       "priority": 2,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白色家电板块今日涨跌 +1.68%。",
+        "所属白色家电板块今日涨跌 +1.53%。",
         "板块 5 日涨跌 +3.03%，状态为强势。",
-        "个股今日涨跌 +0.83%，位于 MA20 上方 +6.15%。",
-        "当日累计成交量为前 5 个交易日均量的 80%（盘中未完成）。"
+        "个股今日涨跌 +1.19%，位于 MA20 上方 +6.50%。",
+        "当日累计成交量为前 5 个交易日均量的 88%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +6.15%",
-        "等待量能确认，当前为 5 日均量的 80%"
+        "等待价格回到 MA20 附近，当前距离 +6.50%",
+        "等待量能确认，当前为 5 日均量的 88%"
       ],
       "satisfied_condition_count": 0
     },
@@ -1561,36 +1595,36 @@
       "code": "600519",
       "name": "贵州茅台",
       "date": "2026-11-17",
-      "close": 1452.99,
+      "close": 1454.5,
       "previous_close": 1453.9,
-      "change_pct": -0.0006,
+      "change_pct": 0.0004,
       "open": 1458.88,
       "high": 1461.6,
       "low": 1437.71,
       "amplitude": 0.0164,
-      "volume": 2025400,
+      "volume": 2131300,
       "volume_ma5": 3540110.6,
-      "volume_ratio_5d": 0.5721,
+      "volume_ratio_5d": 0.602,
       "volume_complete": false,
-      "ma5": 1430.944,
-      "ma10": 1439.015,
-      "ma20": 1402.7555,
-      "ma20_distance": 0.0358,
-      "recent_gain_20d": 0.0909,
+      "ma5": 1431.246,
+      "ma10": 1439.166,
+      "ma20": 1402.831,
+      "ma20_distance": 0.0368,
+      "recent_gain_20d": 0.0921,
       "previous_high": 1480.6,
       "recent_support": 1388.11,
       "recent_high_20d": 1480.6,
       "recent_low_20d": 1296.0,
       "industry": "白酒Ⅱ",
-      "industry_return": -0.0086,
+      "industry_return": -0.0099,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.008,
-      "turnover_rate": 0.0016,
-      "pe": 22.11,
+      "relative_sector_strength": 0.0103,
+      "turnover_rate": 0.0017000000000000001,
+      "pe": 22.13,
       "pb": 6.7,
-      "market_cap": 1816356000000.0002,
+      "market_cap": 1818243999999.9998,
       "concepts": [
         {
           "code": "BK0896",
@@ -1628,8 +1662,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:04",
-      "retrieved_at": "2026-11-17T13:45:06+08:00",
+      "source_timestamp": "2026-11-17T13:55:04",
+      "retrieved_at": "2026-11-17T13:55:07+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -1638,10 +1672,10 @@
       "sector": {
         "code": "BK1277",
         "name": "白酒Ⅱ",
-        "return_pct": -0.0086,
+        "return_pct": -0.0099,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:07+08:00",
+        "retrieved_at": "2026-11-17T13:55:09+08:00",
         "return_5d": -0.013792,
         "return_20d": 0.05918,
         "previous_return_pct": 0.008662,
@@ -1666,7 +1700,8 @@
         "is_strong": false
       },
       "labels": [
-        "MA20上方"
+        "MA20上方",
+        "强于板块"
       ],
       "conditions": [
         {
@@ -1764,14 +1799,14 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属白酒Ⅱ板块今日涨跌 -0.86%。",
+        "所属白酒Ⅱ板块今日涨跌 -0.99%。",
         "板块 5 日涨跌 -1.38%，状态为转弱。",
-        "个股今日涨跌 -0.06%，位于 MA20 上方 +3.58%。",
-        "当日累计成交量为前 5 个交易日均量的 57%（盘中未完成）。"
+        "个股今日涨跌 +0.04%，位于 MA20 上方 +3.68%。",
+        "当日累计成交量为前 5 个交易日均量的 60%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待价格回到 MA20 附近，当前距离 +3.58%",
-        "等待量能确认，当前为 5 日均量的 57%",
+        "等待价格回到 MA20 附近，当前距离 +3.68%",
+        "等待量能确认，当前为 5 日均量的 60%",
         "等待白酒Ⅱ板块进入强势区"
       ],
       "satisfied_condition_count": 0
@@ -1780,36 +1815,36 @@
       "code": "000066",
       "name": "中国长城",
       "date": "2026-11-17",
-      "close": 11.81,
+      "close": 11.75,
       "previous_close": 11.55,
-      "change_pct": 0.0225,
+      "change_pct": 0.0173,
       "open": 11.52,
       "high": 11.98,
       "low": 11.5,
       "amplitude": 0.0416,
-      "volume": 66949800,
+      "volume": 69232900,
       "volume_ma5": 91236186,
-      "volume_ratio_5d": 0.7338,
+      "volume_ratio_5d": 0.7588,
       "volume_complete": false,
-      "ma5": 11.858,
-      "ma10": 11.725,
-      "ma20": 11.595,
-      "ma20_distance": 0.0185,
-      "recent_gain_20d": -0.1206,
+      "ma5": 11.846,
+      "ma10": 11.719,
+      "ma20": 11.592,
+      "ma20_distance": 0.0136,
+      "recent_gain_20d": -0.1251,
       "previous_high": 13.55,
       "recent_support": 11.07,
       "recent_high_20d": 13.55,
       "recent_low_20d": 10.88,
       "industry": "计算机设备",
-      "industry_return": 0.0014,
+      "industry_return": -0.0041,
       "industry_rank": null,
       "limit_up_count": null,
       "advance_ratio": null,
-      "relative_sector_strength": 0.0211,
-      "turnover_rate": 0.0208,
-      "pe": 222.95,
-      "pb": 3.39,
-      "market_cap": 38094000000.0,
+      "relative_sector_strength": 0.0214,
+      "turnover_rate": 0.0215,
+      "pe": 221.81,
+      "pb": 3.37,
+      "market_cap": 37901000000.0,
       "concepts": [
         {
           "code": "BK0988",
@@ -1892,6 +1927,14 @@
           "name": "军工"
         },
         {
+          "code": "BK1794",
+          "name": "智算中心（AIDC）"
+        },
+        {
+          "code": "BK1781",
+          "name": "华为鲲鹏"
+        },
+        {
           "code": "BK1650",
           "name": "通信技术"
         },
@@ -1927,8 +1970,8 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-17T13:45:12",
-      "retrieved_at": "2026-11-17T13:45:16+08:00",
+      "source_timestamp": "2026-11-17T13:55:24",
+      "retrieved_at": "2026-11-17T13:55:27+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
@@ -1937,10 +1980,10 @@
       "sector": {
         "code": "BK0735",
         "name": "计算机设备",
-        "return_pct": 0.0014,
+        "return_pct": -0.0041,
         "source": "eastmoney",
         "source_timestamp": null,
-        "retrieved_at": "2026-11-17T13:45:17+08:00",
+        "retrieved_at": "2026-11-17T13:55:30+08:00",
         "return_5d": -0.052775,
         "return_20d": -0.092901,
         "previous_return_pct": -0.032272,
@@ -2064,13 +2107,13 @@
       "priority": 3,
       "selection_status": "等待确认",
       "selection_reasons": [
-        "所属计算机设备板块今日涨跌 +0.14%。",
+        "所属计算机设备板块今日涨跌 -0.41%。",
         "板块 5 日涨跌 -5.28%，状态为转弱。",
-        "个股今日涨跌 +2.25%，位于 MA20 上方 +1.85%。",
-        "当日累计成交量为前 5 个交易日均量的 73%（盘中未完成）。"
+        "个股今日涨跌 +1.73%，位于 MA20 上方 +1.36%。",
+        "当日累计成交量为前 5 个交易日均量的 76%（盘中未完成）。"
       ],
       "waiting_for": [
-        "等待量能确认，当前为 5 日均量的 73%",
+        "等待量能确认，当前为 5 日均量的 76%",
         "等待计算机设备板块进入强势区",
         "等待价格突破 13.55"
       ],
@@ -2081,10 +2124,10 @@
     "id": "astock",
     "label": "A股公开数据",
     "stage": "intraday",
-    "generated_at": "2026-11-17T13:45:25+08:00",
+    "generated_at": "2026-11-17T13:55:45+08:00",
     "source": "tencent",
-    "source_timestamp": "2026-11-17T13:45:03",
-    "retrieved_at": "2026-11-17T13:45:05+08:00",
+    "source_timestamp": "2026-11-17T13:55:03",
+    "retrieved_at": "2026-11-17T13:55:06+08:00",
     "freshness": "current",
     "last_trading_day": "2026-11-17",
     "fallback": true,
@@ -2119,11 +2162,11 @@
       "market.turnover_change"
     ],
     "request_stats": {
-      "total_requests": 23,
+      "total_requests": 34,
       "tencent_requests": 12,
-      "eastmoney_requests": 11,
+      "eastmoney_requests": 22,
       "sina_requests": 0,
-      "cache_hits": 33,
+      "cache_hits": 22,
       "negative_cache_hits": 0,
       "request_failures": 0,
       "mootdx_requests": 0,
