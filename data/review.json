@@ -2,12 +2,12 @@
   "summary": {
     "trade_date": "2026-11-23",
     "holding_count": 8,
-    "portfolio_change_pct": -0.0073,
-    "total_market_value": 16220.0,
+    "portfolio_change_pct": -0.0013,
+    "total_market_value": 16318.0,
     "total_cost_basis": 30877.4,
-    "total_unrealized_pnl": -14657.4,
-    "total_unrealized_pnl_pct": -0.4747,
-    "stronger_than_sector_count": 3,
+    "total_unrealized_pnl": -14559.4,
+    "total_unrealized_pnl_pct": -0.4715,
+    "stronger_than_sector_count": 2,
     "weaker_than_sector_count": 2,
     "above_ma20_count": 0,
     "below_ma20_count": 8,
@@ -15,7 +15,7 @@
     "abnormal_volume_count": 0,
     "trend_break_count": 8,
     "anomaly_count": 8,
-    "narrative": "最近交易日组合 -0.73%，当前市值 16,220.00 元，相对持仓成本浮动盈亏 -14,657.40 元。8 只持仓中，0 只位于 MA20 上方，2 只弱于所属板块。缩量回踩 0 只，放量异常 0 只，趋势破坏 8 只。整体继续以结构变化和板块同步性为观察重点。"
+    "narrative": "最近交易日组合 -0.13%，当前市值 16,318.00 元，相对持仓成本浮动盈亏 -14,559.40 元。8 只持仓中，0 只位于 MA20 上方，2 只弱于所属板块。缩量回踩 0 只，放量异常 0 只，趋势破坏 8 只。整体继续以结构变化和板块同步性为观察重点。"
   },
   "holdings": [
     {
@@ -36,13 +36,13 @@
       "ma10": 6.937,
       "ma20": 7.075,
       "ma20_distance": -0.0657,
-      "volume": 7720300,
+      "volume": 8452300,
       "volume_ma5": 14281229,
-      "volume_ratio_5d": 0.5406,
+      "volume_ratio_5d": 0.5918,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.008,
-      "industry_return": -0.013,
-      "relative_sector_strength": 0.004,
+      "turnover_rate": 0.0087,
+      "industry_return": -0.0106,
+      "relative_sector_strength": 0.0016,
       "concepts": [
         {
           "code": "BK0892",
@@ -69,15 +69,15 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:09",
-      "retrieved_at": "2026-11-23T11:05:13+08:00",
+      "source_timestamp": "2026-11-23T11:25:12",
+      "retrieved_at": "2026-11-23T11:25:14+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
         "sector_history:BK1259: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 -0.90%，高低 6.71/6.56，振幅 +2.25%；位于 MA20 下方，距 MA20 -6.57%。行业涨跌 -1.30%，个股相对行业 +0.40%；量能状态暂无完整数据，未触发特定日内结构规则。",
+      "what_happened": "最近交易日涨跌 -0.90%，高低 6.71/6.56，振幅 +2.25%；位于 MA20 下方，距 MA20 -6.57%。行业涨跌 -1.06%，个股相对行业 +0.16%；量能状态暂无完整数据，未触发特定日内结构规则。",
       "changes_from_yesterday": [
         "收盘由 6.67 变为 6.61，涨跌 -0.90%",
         "距 MA20 由 -6.39% 变为 -6.57%"
@@ -90,24 +90,24 @@
       "shares": 300,
       "cost": 9.097,
       "cost_basis": 2729.1,
-      "market_value": 1377.0,
-      "unrealized_pnl": -1352.1,
-      "position_return": -0.4954,
-      "change_pct": 0.0177,
+      "market_value": 1380.0,
+      "unrealized_pnl": -1349.1,
+      "position_return": -0.4943,
+      "change_pct": 0.02,
       "high": 4.63,
       "low": 4.42,
       "amplitude": 0.0466,
-      "ma5": 4.692,
-      "ma10": 5.083,
-      "ma20": 5.322,
-      "ma20_distance": -0.1375,
-      "volume": 75792700,
+      "ma5": 4.694,
+      "ma10": 5.084,
+      "ma20": 5.3225,
+      "ma20_distance": -0.1357,
+      "volume": 89750000,
       "volume_ma5": 142850776,
-      "volume_ratio_5d": 0.5306,
+      "volume_ratio_5d": 0.6283,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.0301,
-      "industry_return": -0.0111,
-      "relative_sector_strength": 0.0288,
+      "turnover_rate": 0.0356,
+      "industry_return": -0.0109,
+      "relative_sector_strength": 0.0309,
       "concepts": [
         {
           "code": "BK0906",
@@ -166,18 +166,18 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:11",
-      "retrieved_at": "2026-11-23T11:05:15+08:00",
+      "source_timestamp": "2026-11-23T11:25:14",
+      "retrieved_at": "2026-11-23T11:25:16+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
         "sector_history:BK0465: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 +1.77%，高低 4.63/4.42，振幅 +4.66%；位于 MA20 下方，距 MA20 -13.75%。行业涨跌 -1.11%，个股相对行业 +2.88%；量能状态暂无完整数据，探底回升。",
+      "what_happened": "最近交易日涨跌 +2.00%，高低 4.63/4.42，振幅 +4.66%；位于 MA20 下方，距 MA20 -13.57%。行业涨跌 -1.09%，个股相对行业 +3.09%；量能状态暂无完整数据，探底回升。",
       "changes_from_yesterday": [
-        "收盘由 4.51 变为 4.59，涨跌 +1.77%",
-        "距 MA20 由 -15.98% 变为 -13.75%"
+        "收盘由 4.51 变为 4.60，涨跌 +2.00%",
+        "距 MA20 由 -15.98% 变为 -13.57%"
       ]
     },
     {
@@ -187,24 +187,24 @@
       "shares": 200,
       "cost": 12.155,
       "cost_basis": 2431.0,
-      "market_value": 1544.0,
-      "unrealized_pnl": -887.0,
-      "position_return": -0.3649,
-      "change_pct": -0.014,
+      "market_value": 1550.0,
+      "unrealized_pnl": -881.0,
+      "position_return": -0.3624,
+      "change_pct": -0.0102,
       "high": 8.01,
       "low": 7.37,
       "amplitude": 0.0817,
-      "ma5": 8.412,
-      "ma10": 9.132,
-      "ma20": 9.3495,
-      "ma20_distance": -0.1743,
-      "volume": 2244800,
+      "ma5": 8.418,
+      "ma10": 9.135,
+      "ma20": 9.351,
+      "ma20_distance": -0.1712,
+      "volume": 2449500,
       "volume_ma5": 2915258.8,
-      "volume_ratio_5d": 0.77,
+      "volume_ratio_5d": 0.8402,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.0097,
-      "industry_return": -0.0152,
-      "relative_sector_strength": 0.0012,
+      "turnover_rate": 0.0106,
+      "industry_return": -0.0136,
+      "relative_sector_strength": 0.0034,
       "concepts": [],
       "labels": [
         "MA20下方",
@@ -218,17 +218,17 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:09",
-      "retrieved_at": "2026-11-23T11:05:17+08:00",
+      "source_timestamp": "2026-11-23T11:25:15",
+      "retrieved_at": "2026-11-23T11:25:18+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "sector_history:BK1265: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 -1.40%，高低 8.01/7.37，振幅 +8.17%；位于 MA20 下方，距 MA20 -17.43%。行业涨跌 -1.52%，个股相对行业 +0.12%；量能状态暂无完整数据，冲高回落。",
+      "what_happened": "最近交易日涨跌 -1.02%，高低 8.01/7.37，振幅 +8.17%；位于 MA20 下方，距 MA20 -17.12%。行业涨跌 -1.36%，个股相对行业 +0.34%；量能状态暂无完整数据，冲高回落。",
       "changes_from_yesterday": [
-        "收盘由 7.83 变为 7.72，涨跌 -1.40%",
-        "距 MA20 由 -17.35% 变为 -17.43%"
+        "收盘由 7.83 变为 7.75，涨跌 -1.02%",
+        "距 MA20 由 -17.35% 变为 -17.12%"
       ]
     },
     {
@@ -238,24 +238,24 @@
       "shares": 100,
       "cost": 16.04,
       "cost_basis": 1604.0,
-      "market_value": 1046.0,
-      "unrealized_pnl": -558.0,
-      "position_return": -0.3479,
-      "change_pct": -0.027,
+      "market_value": 1048.0,
+      "unrealized_pnl": -556.0,
+      "position_return": -0.3466,
+      "change_pct": -0.0251,
       "high": 10.73,
       "low": 10.26,
       "amplitude": 0.0437,
-      "ma5": 11.218,
-      "ma10": 11.526,
-      "ma20": 11.4455,
-      "ma20_distance": -0.0861,
-      "volume": 35378500,
+      "ma5": 11.222,
+      "ma10": 11.528,
+      "ma20": 11.4465,
+      "ma20_distance": -0.0844,
+      "volume": 39279000,
       "volume_ma5": 79469901.2,
-      "volume_ratio_5d": 0.4452,
+      "volume_ratio_5d": 0.4943,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.011000000000000001,
-      "industry_return": -0.0023,
-      "relative_sector_strength": -0.0247,
+      "turnover_rate": 0.012199999999999999,
+      "industry_return": -0.0003,
+      "relative_sector_strength": -0.0248,
       "concepts": [
         {
           "code": "BK0988",
@@ -386,18 +386,18 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:18",
-      "retrieved_at": "2026-11-23T11:05:19+08:00",
+      "source_timestamp": "2026-11-23T11:25:15",
+      "retrieved_at": "2026-11-23T11:25:19+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
         "sector_history:BK0735: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 -2.70%，高低 10.73/10.26，振幅 +4.37%；位于 MA20 下方，距 MA20 -8.61%。行业涨跌 -0.23%，个股相对行业 -2.47%；量能状态暂无完整数据，冲高回落。",
+      "what_happened": "最近交易日涨跌 -2.51%，高低 10.73/10.26，振幅 +4.37%；位于 MA20 下方，距 MA20 -8.44%。行业涨跌 -0.03%，个股相对行业 -2.48%；量能状态暂无完整数据，未触发特定日内结构规则。",
       "changes_from_yesterday": [
-        "收盘由 10.75 变为 10.46，涨跌 -2.70%",
-        "距 MA20 由 -6.60% 变为 -8.61%"
+        "收盘由 10.75 变为 10.48，涨跌 -2.51%",
+        "距 MA20 由 -6.60% 变为 -8.44%"
       ]
     },
     {
@@ -407,24 +407,24 @@
       "shares": 100,
       "cost": 51.208,
       "cost_basis": 5120.8,
-      "market_value": 3675.0,
-      "unrealized_pnl": -1445.8,
-      "position_return": -0.2823,
-      "change_pct": 0.0025,
+      "market_value": 3696.0,
+      "unrealized_pnl": -1424.8,
+      "position_return": -0.2782,
+      "change_pct": 0.0082,
       "high": 37.35,
       "low": 35.6,
       "amplitude": 0.0477,
-      "ma5": 39.854,
-      "ma10": 44.261,
-      "ma20": 46.44,
-      "ma20_distance": -0.2087,
-      "volume": 19858700,
+      "ma5": 39.896,
+      "ma10": 44.282,
+      "ma20": 46.4505,
+      "ma20_distance": -0.2043,
+      "volume": 21638100,
       "volume_ma5": 52223046.2,
-      "volume_ratio_5d": 0.3803,
+      "volume_ratio_5d": 0.4143,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.0187,
-      "industry_return": -0.0098,
-      "relative_sector_strength": 0.0123,
+      "turnover_rate": 0.0204,
+      "industry_return": -0.0015,
+      "relative_sector_strength": 0.0097,
       "concepts": [
         {
           "code": "BK0695",
@@ -442,8 +442,7 @@
       "labels": [
         "MA20下方",
         "趋势破坏",
-        "接近支撑",
-        "强于板块"
+        "接近支撑"
       ],
       "source": "tencent",
       "sources": {
@@ -452,18 +451,18 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:18",
-      "retrieved_at": "2026-11-23T11:05:21+08:00",
+      "source_timestamp": "2026-11-23T11:25:18",
+      "retrieved_at": "2026-11-23T11:25:21+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
         "sector_history:BK1027: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 +0.25%，高低 37.35/35.60，振幅 +4.77%；位于 MA20 下方，距 MA20 -20.87%。行业涨跌 -0.98%，个股相对行业 +1.23%；量能状态暂无完整数据，探底回升。",
+      "what_happened": "最近交易日涨跌 +0.82%，高低 37.35/35.60，振幅 +4.77%；位于 MA20 下方，距 MA20 -20.43%。行业涨跌 -0.15%，个股相对行业 +0.97%；量能状态暂无完整数据，探底回升。",
       "changes_from_yesterday": [
-        "收盘由 36.66 变为 36.75，涨跌 +0.25%",
-        "距 MA20 由 -22.01% 变为 -20.87%"
+        "收盘由 36.66 变为 36.96，涨跌 +0.82%",
+        "距 MA20 由 -22.01% 变为 -20.43%"
       ]
     },
     {
@@ -473,24 +472,24 @@
       "shares": 100,
       "cost": 20.157,
       "cost_basis": 2015.7,
-      "market_value": 900.0,
-      "unrealized_pnl": -1115.7,
-      "position_return": -0.5535,
-      "change_pct": -0.0185,
+      "market_value": 909.0,
+      "unrealized_pnl": -1106.7,
+      "position_return": -0.549,
+      "change_pct": -0.0087,
       "high": 9.37,
       "low": 8.78,
       "amplitude": 0.0643,
-      "ma5": 9.53,
-      "ma10": 10.406,
-      "ma20": 10.7605,
-      "ma20_distance": -0.1636,
-      "volume": 42005700,
+      "ma5": 9.548,
+      "ma10": 10.415,
+      "ma20": 10.765,
+      "ma20_distance": -0.1556,
+      "volume": 47904100,
       "volume_ma5": 64868932.8,
-      "volume_ratio_5d": 0.6475,
+      "volume_ratio_5d": 0.7385,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.0327,
-      "industry_return": 0.0042,
-      "relative_sector_strength": -0.0227,
+      "turnover_rate": 0.0373,
+      "industry_return": 0.0068,
+      "relative_sector_strength": -0.0155,
       "concepts": [
         {
           "code": "BK0683",
@@ -522,18 +521,18 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:19",
-      "retrieved_at": "2026-11-23T11:05:22+08:00",
+      "source_timestamp": "2026-11-23T11:25:22",
+      "retrieved_at": "2026-11-23T11:25:23+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
         "sector_history:BK0545: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 -1.85%，高低 9.37/8.78，振幅 +6.43%；位于 MA20 下方，距 MA20 -16.36%。行业涨跌 +0.42%，个股相对行业 -2.27%；量能状态暂无完整数据，冲高回落。",
+      "what_happened": "最近交易日涨跌 -0.87%，高低 9.37/8.78，振幅 +6.43%；位于 MA20 下方，距 MA20 -15.56%。行业涨跌 +0.68%，个股相对行业 -1.55%；量能状态暂无完整数据，冲高回落。",
       "changes_from_yesterday": [
-        "收盘由 9.17 变为 9.00，涨跌 -1.85%",
-        "距 MA20 由 -15.70% 变为 -16.36%"
+        "收盘由 9.17 变为 9.09，涨跌 -0.87%",
+        "距 MA20 由 -15.70% 变为 -15.56%"
       ]
     },
     {
@@ -543,24 +542,24 @@
       "shares": 100,
       "cost": 66.545,
       "cost_basis": 6654.5,
-      "market_value": 1120.0,
-      "unrealized_pnl": -5534.5,
-      "position_return": -0.8317,
-      "change_pct": -0.0311,
+      "market_value": 1147.0,
+      "unrealized_pnl": -5507.5,
+      "position_return": -0.8276,
+      "change_pct": -0.0078,
       "high": 11.75,
       "low": 10.9,
       "amplitude": 0.0735,
-      "ma5": 11.534,
-      "ma10": 12.212,
-      "ma20": 12.697,
-      "ma20_distance": -0.1179,
-      "volume": 32566900,
+      "ma5": 11.588,
+      "ma10": 12.239,
+      "ma20": 12.7105,
+      "ma20_distance": -0.0976,
+      "volume": 37510200,
       "volume_ma5": 41644830,
-      "volume_ratio_5d": 0.782,
+      "volume_ratio_5d": 0.9007,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.0287,
-      "industry_return": -0.0229,
-      "relative_sector_strength": -0.0082,
+      "turnover_rate": 0.0331,
+      "industry_return": -0.0078,
+      "relative_sector_strength": 0.0,
       "concepts": [
         {
           "code": "BK0877",
@@ -589,8 +588,7 @@
       ],
       "labels": [
         "MA20下方",
-        "趋势破坏",
-        "接近支撑"
+        "趋势破坏"
       ],
       "source": "tencent",
       "sources": {
@@ -599,18 +597,18 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:21",
-      "retrieved_at": "2026-11-23T11:05:24+08:00",
+      "source_timestamp": "2026-11-23T11:25:21",
+      "retrieved_at": "2026-11-23T11:25:25+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
         "sector_history:BK1039: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 -3.11%，高低 11.75/10.90，振幅 +7.35%；位于 MA20 下方，距 MA20 -11.79%。行业涨跌 -2.29%，个股相对行业 -0.82%；量能状态暂无完整数据，冲高回落。",
+      "what_happened": "最近交易日涨跌 -0.78%，高低 11.75/10.90，振幅 +7.35%；位于 MA20 下方，距 MA20 -9.76%。行业涨跌 -0.78%，个股相对行业 +0.00%；量能状态暂无完整数据，探底回升。",
       "changes_from_yesterday": [
-        "收盘由 11.56 变为 11.20，涨跌 -3.11%",
-        "距 MA20 由 -9.67% 变为 -11.79%"
+        "收盘由 11.56 变为 11.47，涨跌 -0.78%",
+        "距 MA20 由 -9.67% 变为 -9.76%"
       ]
     },
     {
@@ -620,24 +618,24 @@
       "shares": 100,
       "cost": 52.751,
       "cost_basis": 5275.1,
-      "market_value": 2592.0,
-      "unrealized_pnl": -2683.1,
-      "position_return": -0.5086,
-      "change_pct": -0.005,
+      "market_value": 2622.0,
+      "unrealized_pnl": -2653.1,
+      "position_return": -0.5029,
+      "change_pct": 0.0065,
       "high": 26.71,
       "low": 25.25,
       "amplitude": 0.056,
-      "ma5": 27.234,
-      "ma10": 28.724,
-      "ma20": 29.381,
-      "ma20_distance": -0.1178,
-      "volume": 4065300,
+      "ma5": 27.294,
+      "ma10": 28.754,
+      "ma20": 29.396,
+      "ma20_distance": -0.108,
+      "volume": 4708200,
       "volume_ma5": 6378347.4,
-      "volume_ratio_5d": 0.6374,
+      "volume_ratio_5d": 0.7382,
       "volume_state": "数据缺失",
-      "turnover_rate": 0.0106,
-      "industry_return": -0.0182,
-      "relative_sector_strength": 0.0132,
+      "turnover_rate": 0.0123,
+      "industry_return": -0.0151,
+      "relative_sector_strength": 0.0216,
       "concepts": [
         {
           "code": "BK0981",
@@ -689,18 +687,18 @@
         "industry": "eastmoney",
         "concepts": "eastmoney"
       },
-      "source_timestamp": "2026-11-23T11:05:22",
-      "retrieved_at": "2026-11-23T11:05:27+08:00",
+      "source_timestamp": "2026-11-23T11:25:22",
+      "retrieved_at": "2026-11-23T11:25:27+08:00",
       "freshness": "current",
       "missing_data": [
         "mootdx: mootdx is not installed",
         "concept_quotes: not requested under rate budget",
         "sector_history:BK1019: eastmoney recently failed: Remote end closed connection without response"
       ],
-      "what_happened": "最近交易日涨跌 -0.50%，高低 26.71/25.25，振幅 +5.60%；位于 MA20 下方，距 MA20 -11.78%。行业涨跌 -1.82%，个股相对行业 +1.32%；量能状态暂无完整数据，冲高回落。",
+      "what_happened": "最近交易日涨跌 +0.65%，高低 26.71/25.25，振幅 +5.60%；位于 MA20 下方，距 MA20 -10.80%。行业涨跌 -1.51%，个股相对行业 +2.16%；量能状态暂无完整数据，探底回升。",
       "changes_from_yesterday": [
-        "收盘由 26.05 变为 25.92，涨跌 -0.50%",
-        "距 MA20 由 -12.29% 变为 -11.78%"
+        "收盘由 26.05 变为 26.22，涨跌 +0.65%",
+        "距 MA20 由 -12.29% 变为 -10.80%"
       ]
     }
   ],
@@ -708,10 +706,10 @@
     "id": "astock",
     "label": "A股公开数据",
     "stage": "intraday",
-    "generated_at": "2026-11-23T11:05:29+08:00",
+    "generated_at": "2026-11-23T11:25:29+08:00",
     "source": "tencent",
-    "source_timestamp": "2026-11-23T11:05:06",
-    "retrieved_at": "2026-11-23T11:05:09+08:00",
+    "source_timestamp": "2026-11-23T11:25:06",
+    "retrieved_at": "2026-11-23T11:25:09+08:00",
     "freshness": "current",
     "last_trading_day": "2026-11-23",
     "fallback": true,
